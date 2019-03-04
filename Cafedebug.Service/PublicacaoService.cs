@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Cafedebug.Model;
 using Cafedebug.Service.Interface;
+using log4net;
 
 namespace Cafedebug.Service
 {
@@ -9,12 +10,14 @@ namespace Cafedebug.Service
     /// </summary>
     public class PublicacaoService : IPublicacaoService
     {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(PublicacaoService));
+
         /// <summary>
         /// Insere uma nova publicação
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public int Save(Publicacao obj)
+        public void Save(Publicacao obj)
         {
             throw new System.NotImplementedException();
         }
@@ -24,7 +27,7 @@ namespace Cafedebug.Service
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public bool Update(Publicacao obj)
+        public void Update(Publicacao obj)
         {
             throw new System.NotImplementedException();
         }

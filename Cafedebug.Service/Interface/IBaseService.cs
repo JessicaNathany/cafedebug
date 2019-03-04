@@ -8,9 +8,9 @@ namespace Cafedebug.Service.Interface
     /// <typeparam name="TEntity"></typeparam>
     public interface IBaseService<TEntity> where TEntity : class
     {
-        int Save(TEntity obj);
+        void Save(TEntity obj);
 
-        bool Update(TEntity obj);
+        void Update(TEntity obj);
 
         void Delete(TEntity obj);
 

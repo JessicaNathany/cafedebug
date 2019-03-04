@@ -1,57 +1,57 @@
-﻿using System.Collections.Generic;
+﻿using Cafedebug.Service.Interface;
 using Cafedebug.Model;
-using Cafedebug.Service.Interface;
+using System.Collections.Generic;
 using log4net;
 
 namespace Cafedebug.Service
 {
     /// <summary>
-    /// Serviço do Usuário
+    /// Servicço da Categoria
     /// </summary>
-    public class UsuarioService : IUsuarioService
+    public class CategoriaService : ICategoriaService
     {
-        private static readonly ILog Log = LogManager.GetLogger(typeof(UsuarioService));
+        private static readonly ILog Log = LogManager.GetLogger(typeof(CategoriaService));
 
         /// <summary>
-        /// Insere um novo usuário
+        /// Salva uma categoria
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public void Save(Usuario obj)
+        public void Save(Categoria obj)
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// Atualiza um usuario
+        /// Atualiza uma categoria
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public void Update(Usuario obj)
+        public void Update(Categoria obj)
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// Exclui um usuário
+        /// 
         /// </summary>
         /// <param name="obj"></param>
-        public void Delete(Usuario obj)
+        public void Delete(Categoria obj)
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// Recupera uma lista de usuários
+        /// Recupera uma lista de categorias
         /// </summary>
         /// <returns></returns>
-        public IList<Usuario> GetAll()
+        public IList<Categoria> GetAll()
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// REcupera um usuário por id
+        /// Recupera uma categoria pelo Id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
