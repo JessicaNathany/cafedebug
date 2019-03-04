@@ -5,6 +5,8 @@ using System;
 using log4net;
 using System.Data.SqlClient;
 using System.Configuration;
+using Cafedebug.Configuration;
+using Dapper;
 
 namespace Cafedebug.Repository
 {
@@ -28,15 +30,15 @@ namespace Cafedebug.Repository
             {
                 using (var conn = new SqlConnection(connectionString))
                 {
-                    //conn.Execute(@"INSERT tbUsuario(Nome, Email, Login, Senha)
-                    //                        VALUES (@Nome, @Email, @Login, @Senha)", entity);
+                    conn.Execute(@"INSERT tbUsuario(Nome, Email, Login, Senha)
+                                            VALUES (@Nome, @Email, @Login, @Senha)", entity);
 
-                    //Log.InfoFormat("Usuário cadastrado com sucesso! {0}", entity.Id);
+                    Log.InfoFormat("Usuário cadastrado com sucesso! {0}", entity.Id);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Log.ErrorFormat("Erro ao cadastrar um usuário! {0}", ex.Message);
                 throw;
             }
         }
@@ -76,7 +78,20 @@ namespace Cafedebug.Repository
         /// <returns></returns>
         public int GetById(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
+
+            //try
+            //{
+            //    using (var connection = new SqlConnection(connectionString))
+            //    {
+            //        var produtos = connection.Query<Usuario>(@"SELECT * FROM Products WHERE ProductID = @Id", new { id = 2 });
+            //    }
+            //}
+            //catch (Exception)
+            //{
+
+            //    throw;
+            //}
         }
     }
 }
