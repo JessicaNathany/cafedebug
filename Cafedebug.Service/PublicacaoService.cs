@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Cafedebug.Model;
 using Cafedebug.Service.Interface;
 using log4net;
@@ -11,6 +13,10 @@ namespace Cafedebug.Service
     public class PublicacaoService : IPublicacaoService
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(PublicacaoService));
+
+        // TODO: injetar as dependências que serão usadas. Tratar erro na propriedade Dependency
+       // [Dependency]
+        //public Lazy<CategoriaService> CategoriaService { get; set; }
 
         /// <summary>
         /// Insere uma nova publicação

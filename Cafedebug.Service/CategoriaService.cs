@@ -12,6 +12,9 @@ namespace Cafedebug.Service
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(CategoriaService));
 
+
+        
+
         /// <summary>
         /// Salva uma categoria
         /// </summary>
