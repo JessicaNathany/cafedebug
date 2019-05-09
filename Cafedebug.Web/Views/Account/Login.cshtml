@@ -1,0 +1,27 @@
+﻿@model Cafedebug.Model.Usuario
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<div class="wrapper fadeInDown">
+
+    <div id="formContent">
+
+        <div class="fadeIn first">
+            <img src="~/images/logo.png" id="icon" alt="Café debug" />
+        </div>
+        @using (Html.BeginForm("Login", "Account"))
+        {
+            @Html.TextBoxFor(m => m.Login, new { @class = "fadeIn second" })
+
+            @Html.TextBoxFor(m => m.Senha, new { @class = "fadeIn third" })
+
+            <input type="submit" class="fadeIn fourth" value="Login">
+        }
+        <div id="formFooter">
+            <a class="underlineHover" href="#">Esqueceu a senha?</a>
+        </div>
+    </div>
+</div>

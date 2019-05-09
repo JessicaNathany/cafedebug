@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using Cafedebug.Configuration;
 using Dapper;
+using System.Threading.Tasks;
 
 namespace Cafedebug.Repository
 {
@@ -92,6 +93,20 @@ namespace Cafedebug.Repository
 
             //    throw;
             //}
+        }
+
+        /// <summary>
+        /// Verifica a senha do usuário ao fazer o login
+        /// </summary>
+        /// <returns></returns>
+        public bool VerifyUserPassword(Usuario usuario)
+        {
+            if (string.IsNullOrEmpty(usuario.Login) || string.IsNullOrEmpty(usuario.Senha))
+            {
+                throw new ArgumentNullException();
+            }
+
+            throw new NotImplementedException();
         }
     }
 }

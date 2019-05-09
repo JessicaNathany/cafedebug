@@ -1,6 +1,4 @@
-﻿using System;
-using Cafedebug.Model;
-using Cafedebug.Configuration;
+﻿using Cafedebug.Model.DTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
@@ -8,10 +6,21 @@ namespace Cafedebug.Web.Controllers
     public class AccountController : Controller
     {
         /// <summary>
-        /// Exibe o formulário de login
+        /// Tela inicial do Login
         /// </summary>
         /// <returns></returns>
-        public IActionResult Login(string login, string senha) //TODO: verificar as diferenças entre IActionResult e AcitonResult
+        public ActionResult Index()
+        {
+
+            return View();
+        }
+
+        /// <summary>
+        /// Autentica o usuário e redireciona para tela Home
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult Login(UsuarioDTO usuarioDto) 
         {
             return View();
         }
@@ -48,7 +57,19 @@ namespace Cafedebug.Web.Controllers
         /// Configura uma nova senha para o usuário esqueci minha senha
         /// </summary>
         /// <returns></returns>
-        public ActionResult PasswordForget()
+        public ActionResult PasswordForgout()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Altera a senha do usuário
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="senha"></param>
+        /// <param name="novaSenha"></param>
+        /// <returns></returns>
+        public ActionResult ChangePassword(int id, string senha, string novaSenha)
         {
             return View();
         }
