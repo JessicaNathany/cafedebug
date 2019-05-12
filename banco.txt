@@ -1,0 +1,28 @@
+Usuario
+ - id
+ - nome
+ - email
+ - login
+ - senha
+
+Perfil
+  - id
+  - idUsuario (chave)
+  - nome (administrador/usuário)
+
+Publicação
+  - id
+  - nome
+  - titulo
+  - descricao
+  - linkUrl
+  - img
+  - tags
+  - data
+  
+Categoria
+  - id
+  - idPublicacao(chave)
+  - nome
+  - descricao
+

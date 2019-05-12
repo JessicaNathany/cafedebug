@@ -3,7 +3,7 @@
 namespace Cafedebug.Model
 {
     /// <summary>
-    /// entidade tbPublicacao
+    /// entidade tbPublicacao Obs: publicação são os episódios cadastrados ou publicados
     /// </summary>
     public class Publicacao
     {
