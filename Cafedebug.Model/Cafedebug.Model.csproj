@@ -45,6 +45,7 @@
     <Compile Include="Model\Categoria.cs" />
     <Compile Include="Model\Perfil.cs" />
     <Compile Include="Model\Publicacao.cs" />
+    <Compile Include="Model\TipoCategoria.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

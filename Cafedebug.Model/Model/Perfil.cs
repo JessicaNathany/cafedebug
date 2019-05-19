@@ -8,7 +8,7 @@
         /// <summary>
         /// Id do perfil.
         /// </summary>
-        public int Id { get; set; }
+        public int IdPerfil { get; set; }
 
         /// <summary>
         /// Id do Usuario.

@@ -10,7 +10,7 @@ namespace Cafedebug.Model
         /// <summary>
         /// Id da publicação.
         /// </summary>
-        public int Id { get; set; }
+        public int IdPublicacao { get; set; }
 
         /// <summary>
         /// Nome da publicação.

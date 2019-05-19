@@ -8,12 +8,12 @@
         /// <summary>
         /// Id da Categoria
         /// </summary>
-        public int Id { get; set; }
+        public int IdCategoria { get; set; }
 
         /// <summary>
-        /// Id da Publicação
+        /// Id do tipo da categoria
         /// </summary>
-        public int IdPublicacao { get; set; }
+        public int IdTipoCategoria { get; set; }
 
         /// <summary>
         /// Nome da Categoria
