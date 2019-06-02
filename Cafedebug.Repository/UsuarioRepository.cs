@@ -34,7 +34,7 @@ namespace Cafedebug.Repository
                     conn.Execute(@"INSERT tbUsuario(Nome, Email, Login, Senha)
                                             VALUES (@Nome, @Email, @Login, @Senha)", entity);
 
-                    Log.InfoFormat("Usuário cadastrado com sucesso! {0}", entity.Id);
+                    Log.InfoFormat("Usuário cadastrado com sucesso! {0}", entity);
                 }
             }
             catch (Exception ex)

@@ -2,6 +2,8 @@
 using Cafedebug.Model;
 using System.Collections.Generic;
 using log4net;
+using Cafedebug.Repository.Interface;
+using Unity;
 
 namespace Cafedebug.Service
 {
@@ -12,8 +14,9 @@ namespace Cafedebug.Service
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(CategoriaService));
 
+        [Dependency]
+        public ICategoriaRepository CategoriaRepository { get; set; }
 
-        
 
         /// <summary>
         /// Salva uma categoria

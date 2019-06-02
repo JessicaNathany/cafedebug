@@ -2,6 +2,8 @@
 using Cafedebug.Model;
 using Cafedebug.Service.Interface;
 using log4net;
+using Unity;
+using Cafedebug.Repository.Interface;
 
 namespace Cafedebug.Service
 {
@@ -11,6 +13,9 @@ namespace Cafedebug.Service
     public class UsuarioService : IUsuarioService
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(UsuarioService));
+
+        [Dependency]
+        public IUsuarioRepository UsuarioRepository { get; set; }
 
         /// <summary>
         /// Insere um novo usuário
