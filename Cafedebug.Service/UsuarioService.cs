@@ -4,6 +4,7 @@ using Cafedebug.Service.Interface;
 using log4net;
 using Unity;
 using Cafedebug.Repository.Interface;
+using System;
 
 namespace Cafedebug.Service
 {
@@ -14,8 +15,11 @@ namespace Cafedebug.Service
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(UsuarioService));
 
+        /// <summary>
+        /// Repositório do Usuário
+        /// </summary>
         [Dependency]
-        public IUsuarioRepository UsuarioRepository { get; set; }
+        public Lazy<IUsuarioRepository> UsuarioRepository { get; set; }
 
         /// <summary>
         /// Insere um novo usuário
@@ -24,7 +28,7 @@ namespace Cafedebug.Service
         /// <returns></returns>
         public void Save(Usuario obj)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -32,18 +36,18 @@ namespace Cafedebug.Service
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public void Update(Usuario obj)
+        public void Update(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
         /// Exclui um usuário
         /// </summary>
         /// <param name="obj"></param>
-        public void Delete(Usuario obj)
+        public void Delete(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -52,7 +56,7 @@ namespace Cafedebug.Service
         /// <returns></returns>
         public IList<Usuario> GetAll()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -62,7 +66,7 @@ namespace Cafedebug.Service
         /// <returns></returns>
         public int GetById(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

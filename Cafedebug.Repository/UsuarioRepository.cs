@@ -32,7 +32,7 @@ namespace Cafedebug.Repository
                 using (var conn = new SqlConnection(connectionString))
                 {
                     conn.Execute(@"INSERT tbUsuario(Nome, Email, Login, Senha)
-                                            VALUES (@Nome, @Email, @Login, @Senha)", entity);
+                                          VALUES (@Nome, @Email, @Login, @Senha)", entity);
 
                     Log.InfoFormat("Usuário cadastrado com sucesso! {0}", entity);
                 }
@@ -49,7 +49,7 @@ namespace Cafedebug.Repository
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public void Update(Usuario entity)
+        public void Update(int id)
         {
             throw new NotImplementedException();
         }
@@ -58,7 +58,7 @@ namespace Cafedebug.Repository
         /// Exclui um usuário na base
         /// </summary>
         /// <param name="obj"></param>
-        public void Delete(Usuario entity)
+        public void Delete(int id)
         {
             throw new NotImplementedException();
         }

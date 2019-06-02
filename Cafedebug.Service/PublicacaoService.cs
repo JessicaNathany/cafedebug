@@ -15,17 +15,34 @@ namespace Cafedebug.Service
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(PublicacaoService));
 
+        /// <summary>
+        /// Repositório Publicação
+        /// </summary>
         [Dependency]
-        public IPublicacaoRepository PublicacaoRepository { get; set; }
+        public Lazy<IPublicacaoRepository> PublicacaoRepository { get; set; }
+
+        /// <summary>
+        /// Repositório do Usuário
+        /// </summary>
+        [Dependency]
+        public Lazy<IUsuarioRepository> UsuarioRepository { get; set; }
 
         /// <summary>
         /// Insere uma nova publicação
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public void Save(Publicacao obj)
+        public void Save(Publicacao publicacao)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                PublicacaoRepository.Value.Save(publicacao);
+            }
+            catch (Exception ex)
+            {
+                Log.ErrorFormat("Erro ao salvar um usuário", ex.Message, publicacao);
+                throw;
+            }
         }
 
         /// <summary>
@@ -33,18 +50,26 @@ namespace Cafedebug.Service
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public void Update(Publicacao obj)
+        public void Update(int id)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                PublicacaoRepository.Value.Update(id);
+            }
+            catch (Exception ex)
+            {
+                Log.ErrorFormat("Erro ao atualizar um usuário", ex.Message, id);
+                throw;
+            }
         }
 
         /// <summary>
         /// Exclui uma publicação
         /// </summary>
         /// <param name="obj"></param>
-        public void Delete(Publicacao obj)
+        public void Delete(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -53,7 +78,7 @@ namespace Cafedebug.Service
         /// <returns></returns>
         public IList<Publicacao> GetAll()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -63,9 +88,7 @@ namespace Cafedebug.Service
         /// <returns></returns>
         public int GetById(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
-
-       
     }
 }

@@ -14,9 +14,9 @@ namespace Cafedebug.Repository.Interface
     {
         void Save(TEntity entity);
 
-        void Update(TEntity entity);
+        void Update(int entity);
 
-        void Delete(TEntity entity);
+        void Delete(int entity);
 
         IList<TEntity> GetAll();
 

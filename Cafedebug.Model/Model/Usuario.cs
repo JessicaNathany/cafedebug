@@ -11,6 +11,11 @@
         public int IdUsuario { get; set; }
 
         /// <summary>
+        /// Id do tbPerfil.
+        /// </summary>
+        public int IdPerfil { get; set; }
+
+        /// <summary>
         /// Nome do usuário.
         /// </summary>
         public string Nome { get; set; }

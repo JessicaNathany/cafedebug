@@ -123,9 +123,7 @@
     <Compile Include="PublicacaoRepository.cs" />
     <Compile Include="UsuarioRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="E.F\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config">
       <SubType>Designer</SubType>

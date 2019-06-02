@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriaService.cs" />
+    <Compile Include="EmailService.cs" />
     <Compile Include="Interface\IBaseService.cs" />
     <Compile Include="Interface\ICategoriaService.cs" />
     <Compile Include="Interface\IPublicacaoService.cs" />

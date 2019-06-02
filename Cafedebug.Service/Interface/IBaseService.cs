@@ -10,9 +10,9 @@ namespace Cafedebug.Service.Interface
     {
         void Save(TEntity obj);
 
-        void Update(TEntity obj);
+        void Update(int id);
 
-        void Delete(TEntity obj);
+        void Delete(int obj);
 
         IList<TEntity> GetAll();
 

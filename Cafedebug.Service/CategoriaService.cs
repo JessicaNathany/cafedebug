@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using log4net;
 using Cafedebug.Repository.Interface;
 using Unity;
+using System;
 
 namespace Cafedebug.Service
 {
@@ -14,8 +15,11 @@ namespace Cafedebug.Service
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(CategoriaService));
 
+        /// <summary>
+        /// Repositório Categoria
+        /// </summary>
         [Dependency]
-        public ICategoriaRepository CategoriaRepository { get; set; }
+        public Lazy<ICategoriaRepository> CategoriaRepository { get; set; }
 
 
         /// <summary>
@@ -25,7 +29,7 @@ namespace Cafedebug.Service
         /// <returns></returns>
         public void Save(Categoria obj)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -35,7 +39,7 @@ namespace Cafedebug.Service
         /// <returns></returns>
         public void Update(Categoria obj)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -44,7 +48,7 @@ namespace Cafedebug.Service
         /// <param name="obj"></param>
         public void Delete(Categoria obj)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -53,7 +57,7 @@ namespace Cafedebug.Service
         /// <returns></returns>
         public IList<Categoria> GetAll()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -63,7 +67,7 @@ namespace Cafedebug.Service
         /// <returns></returns>
         public int GetById(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
