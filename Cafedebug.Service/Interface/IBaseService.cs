@@ -12,7 +12,7 @@ namespace Cafedebug.Service.Interface
 
         void Update(int id);
 
-        void Delete(int obj);
+        void Delete(int id);
 
         IList<TEntity> GetAll();
 

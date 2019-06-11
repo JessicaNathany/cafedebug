@@ -117,10 +117,10 @@
     <Compile Include="CategoriaRepository.cs" />
     <Compile Include="Interface\IBaseRepository.cs" />
     <Compile Include="Interface\ICategoriaRepository.cs" />
-    <Compile Include="Interface\IPublicacaoRepository.cs" />
+    <Compile Include="Interface\IEpisodioRepository.cs" />
     <Compile Include="Interface\IUsuarioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PublicacaoRepository.cs" />
+    <Compile Include="EpisodioRepository.cs" />
     <Compile Include="UsuarioRepository.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -7,13 +7,13 @@ namespace Cafedebug.Repository
     /// <summary>
     /// Repositório do tbPublicação
     /// </summary>
-    public class PublicacaoRepository : IPublicacaoRepository
+    public class EpisodioRepository : IEpisodioRepository
     {
         /// <summary>
         /// Salva uma publicação
         /// </summary>
         /// <param name="entity"></param>
-        public void Save(Publicacao entity)
+        public void Save(Episodio entity)
         {
             throw new System.NotImplementedException();
         }
@@ -40,7 +40,7 @@ namespace Cafedebug.Repository
         /// Recupera uma lista de publicações
         /// </summary>
         /// <returns></returns>
-        public IList<Publicacao> GetAll()
+        public IList<Episodio> GetAll()
         {
             throw new System.NotImplementedException();
         }

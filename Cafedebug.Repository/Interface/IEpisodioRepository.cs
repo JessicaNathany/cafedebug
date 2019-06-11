@@ -3,9 +3,9 @@
 namespace Cafedebug.Repository.Interface
 {
     /// <summary>
-    /// Interface do repositório Publicação
+    /// Interface do repositório Episódio
     /// </summary>
-    public interface IPublicacaoRepository : IBaseRepository<Publicacao>
+    public interface IEpisodioRepository : IBaseRepository<Episodio>
     {
     }
 }

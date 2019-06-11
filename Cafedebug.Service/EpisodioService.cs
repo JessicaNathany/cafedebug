@@ -9,17 +9,17 @@ using Unity;
 namespace Cafedebug.Service
 {
     /// <summary>
-    /// Serviço da Publicação
+    /// Serviço da Episódio
     /// </summary>
-    public class PublicacaoService : IPublicacaoService
+    public class EpisodioService : IEpisodioService
     {
-        private static readonly ILog Log = LogManager.GetLogger(typeof(PublicacaoService));
+        private static readonly ILog Log = LogManager.GetLogger(typeof(EpisodioService));
 
         /// <summary>
-        /// Repositório Publicação
+        /// Repositório Episódio
         /// </summary>
         [Dependency]
-        public Lazy<IPublicacaoRepository> PublicacaoRepository { get; set; }
+        public Lazy<IEpisodioRepository> EpisodioRepository { get; set; }
 
         /// <summary>
         /// Repositório do Usuário
@@ -28,25 +28,25 @@ namespace Cafedebug.Service
         public Lazy<IUsuarioRepository> UsuarioRepository { get; set; }
 
         /// <summary>
-        /// Insere uma nova publicação
+        /// Insere uma nova Episódio
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public void Save(Publicacao publicacao)
+        public void Save(Episodio episodio)
         {
             try
             {
-                PublicacaoRepository.Value.Save(publicacao);
+                EpisodioRepository.Value.Save(episodio);
             }
             catch (Exception ex)
             {
-                Log.ErrorFormat("Erro ao salvar um usuário", ex.Message, publicacao);
+                Log.ErrorFormat("Erro ao salvar um episódio", ex.Message, episodio);
                 throw;
             }
         }
 
         /// <summary>
-        /// Atualiza uma publicação
+        /// Atualiza uma Episódio
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -54,35 +54,35 @@ namespace Cafedebug.Service
         {
             try
             {
-                PublicacaoRepository.Value.Update(id);
+                EpisodioRepository.Value.Update(id);
             }
             catch (Exception ex)
             {
-                Log.ErrorFormat("Erro ao atualizar um usuário", ex.Message, id);
+                Log.ErrorFormat("Erro ao atualizar um episódio", ex.Message, id);
                 throw;
             }
         }
 
         /// <summary>
-        /// Exclui uma publicação
+        /// Exclui uma Episódio
         /// </summary>
         /// <param name="obj"></param>
-        public void Delete(int id)
+        public void ExcluiEpisodiosExistente(int id)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Recupera uma lista de publicações
+        /// Recupera uma lista de episódios
         /// </summary>
         /// <returns></returns>
-        public IList<Publicacao> GetAll()
+        public IList<Episodio> GetAll()
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Recupera uma publicação por Id
+        /// Recupera uma Episódio por Id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

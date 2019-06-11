@@ -35,18 +35,23 @@ namespace Cafedebug.Service
         /// <summary>
         /// Atualiza uma categoria
         /// </summary>
-        /// <param name="obj"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        public void Update(Categoria obj)
+        public void Update(int id)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// 
+        /// Exclui uma categoria
         /// </summary>
         /// <param name="obj"></param>
-        public void Delete(Categoria obj)
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -56,16 +61,6 @@ namespace Cafedebug.Service
         /// </summary>
         /// <returns></returns>
         public IList<Categoria> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Recupera uma categoria pelo Id
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public int GetById(int id)
         {
             throw new NotImplementedException();
         }

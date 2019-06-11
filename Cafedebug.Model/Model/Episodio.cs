@@ -3,47 +3,47 @@
 namespace Cafedebug.Model
 {
     /// <summary>
-    /// entidade tbPublicacao Obs: publicação são os episódios cadastrados ou publicados
+    /// entidade tbEpisodio 
     /// </summary>
-    public class Publicacao
+    public class Episodio
     {
         /// <summary>
-        /// Id da publicação.
+        /// Id da episódio.
         /// </summary>
-        public int IdPublicacao { get; set; }
+        public int IdEpisodio { get; set; }
 
         /// <summary>
-        /// Nome da publicação.
+        /// Nome da episódio.
         /// </summary>
         public string Nome { get; set; }
 
         /// <summary>
-        /// Título da publicação.
+        /// Título da episódio.
         /// </summary>
         public string Titulo { get; set; }
 
         /// <summary>
-        /// Descrição da publicação.
+        /// Descrição da episódio.
         /// </summary>
         public string Descricao { get; set; }
 
         /// <summary>
-        /// Url da publicação.
+        /// Url da episódio.
         /// </summary>
         public string Url { get; set; }
 
         /// <summary>
-        /// Image da publicação.
+        /// Image da episódio.
         /// </summary>
         public string Image { get; set; } // verificar propriedade
 
         /// <summary>
-        /// Tag da publicação.
+        /// Tag da episódio.
         /// </summary>
         public string Tag { get; set; }
 
         /// <summary>
-        /// Data da publicação.
+        /// Data da episódio.
         /// </summary>
         public DateTime Data { get; set; }
     }

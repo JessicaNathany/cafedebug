@@ -60,10 +60,10 @@
     <Compile Include="EmailService.cs" />
     <Compile Include="Interface\IBaseService.cs" />
     <Compile Include="Interface\ICategoriaService.cs" />
-    <Compile Include="Interface\IPublicacaoService.cs" />
+    <Compile Include="Interface\IEpisodioService.cs" />
     <Compile Include="Interface\IUsuarioService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PublicacaoService.cs" />
+    <Compile Include="EpisodioService.cs" />
     <Compile Include="UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>

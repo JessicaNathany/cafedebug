@@ -3,9 +3,9 @@
 namespace Cafedebug.Service.Interface
 {
     /// <summary>
-    /// Interface de serviço da Publicação
+    /// Interface de serviço do Episodio
     /// </summary>
-    public interface IPublicacaoService : IBaseService<Publicacao>
+    public interface IEpisodioService : IBaseService<Episodio>
     {
     }
 }
