@@ -5,6 +5,7 @@ using Cafedebug.Service.Interface;
 using log4net;
 using Cafedebug.Repository.Interface;
 using Unity;
+using Cafedebug.Model.DTO;
 
 namespace Cafedebug.Service
 {
@@ -67,7 +68,7 @@ namespace Cafedebug.Service
         /// Exclui uma Episódio
         /// </summary>
         /// <param name="obj"></param>
-        public void ExcluiEpisodiosExistente(int id)
+        public void Delete(int id)
         {
             throw new NotImplementedException();
         }
@@ -87,6 +88,17 @@ namespace Cafedebug.Service
         /// <param name="id"></param>
         /// <returns></returns>
         public int GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        /// <summary>
+        ///Exclui um usuário  existente
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public UsuarioDTO ExcluiUsuarioExistenteNaBase(int id)
         {
             throw new NotImplementedException();
         }
