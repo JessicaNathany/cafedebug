@@ -16,11 +16,20 @@ namespace Cafedebug.Web.Controllers
         }
 
         /// <summary>
+        /// Faz a chamada para a tela de login
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        /// <summary>
         /// Autentica o usuário e redireciona para tela Home
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult Login(UsuarioDTO usuarioDto) 
+        public IActionResult Login(UsuarioDTO usuarioDTO) 
         {
             return View();
         }

@@ -7,6 +7,6 @@ namespace Cafedebug.Repository.Interface
     /// </summary>
     public interface IUsuarioRepository : IBaseRepository<Usuario>
     {
-
+       
     }
 }

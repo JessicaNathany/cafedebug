@@ -118,6 +118,7 @@
     <Compile Include="Interface\IBaseRepository.cs" />
     <Compile Include="Interface\ICategoriaRepository.cs" />
     <Compile Include="Interface\IEpisodioRepository.cs" />
+    <Compile Include="Interface\IMarcos.cs" />
     <Compile Include="Interface\IUsuarioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EpisodioRepository.cs" />

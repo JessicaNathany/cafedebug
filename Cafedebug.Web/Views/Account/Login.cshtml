@@ -4,24 +4,69 @@
     ViewBag.Title = "Login";
 }
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | Café Debug</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <link href="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" />
+    <script src="~/js/bootstrap.min.js"></script>
 
-<div class="wrapper fadeInDown">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-5">
+                <section id="pagLogin">
 
-    <div id="formContent">
+                    <form class="login">
+                        <a href="#"><div id="logologin"></div></a>
 
-        <div class="fadeIn first">
-            <img src="~/images/logo.png" id="icon" alt="Café debug" />
-        </div>
-        @using (Html.BeginForm("Login", "Account"))
-        {
-            @Html.TextBoxFor(m => m.Login, new { @class = "fadeIn second" })
+                        <div class="input-group">
+                            <input type="text" name="" required="required">
+                            <i class="fas fa-user"></i><span>login</span>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" name="" required="required">
+                            <i class="fas fa-lock"></i>
+                            <span>senha</span>
+                        </div>
 
-            @Html.TextBoxFor(m => m.Senha, new { @class = "fadeIn third" })
+                        <div class="input-group">
+                            <button type="submit" name="Login"><b>acesse agora</b></button>
 
-            <input type="submit" class="fadeIn fourth" value="Login">
-        }
-        <div id="formFooter">
-            <a class="underlineHover" href="#">Esqueceu a senha?</a>
+                        </div>
+                        <br /><br /><br />
+
+                        <div class="lembrar" class="checkbox">
+                            <label class="linhadbt"><input type="checkbox" value=""><small>lembrar senha</small></label>
+                            <label class="linhadbt"><a href="#">Esqueci minha senha</a></label>
+                        </div>
+
+                    </form>
+
+                </section>
+            </div>
         </div>
     </div>
-</div>
+</body>
+
+</html>
+
+<script>
+
+        //script da página
+
+        // aqui ficará o Ajax para fazer a chamada no controller
+
+</script>
