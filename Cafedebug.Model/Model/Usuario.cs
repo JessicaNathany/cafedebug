@@ -34,5 +34,10 @@
         /// Senha do usuário.
         /// </summary>
         public string Senha { get; set; }
+
+        /// <summary>
+        /// Flag lembrar senha
+        /// </summary>
+        public bool LembrarSenha { get; set; }
     }
 }

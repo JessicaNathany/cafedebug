@@ -1,17 +1,17 @@
 
-body{
-	font-family: 'Montserrat', sans-serif !important;
-	background:url(../img/glicthBG.png), #ed7d00; /* Old browsers */
-	background:url(../img/glicthBG.png), -moz-linear-gradient(left, #ed7d00 0%, #e96000 100%); /* FF3.6-15 */
-	background:url(../img/glicthBG.png), -webkit-linear-gradient(left, #ed7d00 0%,#e96000 100%); /* Chrome10-25,Safari5.1-6 */
-	background:url(../img/glicthBG.png), linear-gradient(to right, #ed7d00 0%,#e96000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed7d00', endColorstr='#e96000',GradientType=1 ); /* IE6-9 */
-	margin: 0px;
-	padding: 0px;
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	align-items: center;
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    background: url(../images/glicthBG.png), #ed7d00; /* Old browsers */
+    background: url(../images/glicthBG.png), -moz-linear-gradient(left, #ed7d00 0%, #e96000 100%); /* FF3.6-15 */
+    background: url(../images/glicthBG.png), -webkit-linear-gradient(left, #ed7d00 0%,#e96000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: url(../images/glicthBG.png), linear-gradient(to right, #ed7d00 0%,#e96000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed7d00', endColorstr='#e96000',GradientType=1 ); /* IE6-9 */
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 /*---------
@@ -27,7 +27,7 @@ body{
 #logologin{
 	width: 214px;
 	height: 92px;
-	background-image: url(../img/logo-line.png);
+	background-image: url(../images/logo-line.png);
 	display: block;
 	margin: auto;
 	margin-bottom: 30px;
