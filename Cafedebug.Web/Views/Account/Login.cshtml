@@ -14,6 +14,8 @@
     <link href="~/css/login.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
     <link href="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" />
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!--[if lt IE 9]>
@@ -27,24 +29,23 @@
         <div class="row justify-content-center">
             <div class="col-sm-5">
                 <section id="pagLogin">
-                    @using(Html.BeginForm(Html.BeginForm("Logar", "Account", FormMethod.Post, new { @class = "login" })))
+                    @using(Html.BeginForm("Autentication", "Account", FormMethod.Post, new { @class = "login", id = "FormLogin" }))
                     {
                         <div id="logologin" alt="café debug"></div>
 
                         <div class="input-group">
-                            @Html.TextBoxFor(u => u.Login, new { required = "required" })<i class="fas fa-user"></i><span>login</span>
+                            @Html.TextBoxFor(u => u.Login, new { required = "required", id = "Login" })<i class="fas fa-user"></i><span>login</span>
                         </div>
                         <div class="input-group">
-                            @Html.TextBoxFor(u => u.Senha, new { required = "required", type = "password" })<i class="fas fa-lock"></i><span>senha</span>
+                            @Html.TextBoxFor(u => u.Senha, new { required = "required", type = "password", id = "Password" })<i class="fas fa-lock"></i><span>senha</span>
                         </div>
                         <div class="input-group">
-                            <button type="submit" name="Login"><b>Logar</b></button>
+                            <button name="logar"><b>Logar</b></button>
                         </div>
                         <br /><br /><br />
 
                         <div class="lembrar checkbox">
-                           <label class="linhadbt" />
-                               @Html.CheckBoxFor(u => u.LembrarSenha, new { @value = "true" })<small>lembrar senha</small>
+                            <label class="linhadbt"><input type="checkbox" id="LembrarSenha" , name="LembrarSenha" value="lembrarSenha"><small>lembrar senha</small></label>
                             <label class="linhadbt">
                                 @Html.ActionLink("Esqueci minha senha", "PasswordForgout", "Account", new { id = "id" }, null)
                             </label>
@@ -58,8 +59,22 @@
 
 </html>
 
-<script>
+<script type="text/jscript">
 
-              
+    $(function () {
+        $('FormLogin').submit(function () {
+            if ($(this).valid()) {
+                $.ajax({
+                    url: this.action,
+                    type: this.method,
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        $('#result').html(result);
+                    }
+                });
+            }
+            return false;
+        });
+    });
 
 </script>

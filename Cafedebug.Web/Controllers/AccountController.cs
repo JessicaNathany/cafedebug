@@ -4,17 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Cafedebug.Web.Controllers
 {
     public class AccountController : Controller
-    {
-        /// <summary>
-        /// Tela inicial do Login
-        /// </summary>
-        /// <returns></returns>
-        public ActionResult Index()
-        {
-
-            return View();
-        }
-
+    {      
         /// <summary>
         /// Faz a chamada para a tela de login
         /// </summary>
@@ -29,9 +19,14 @@ namespace Cafedebug.Web.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult Login(UsuarioDTO usuarioDTO) 
+        public IActionResult Autentication(UsuarioDTO usuarioDTO) 
         {
-            return View();
+            // autentication
+
+            // validation
+
+
+            return View("Home", "Index");
         }
 
         /// <summary>
