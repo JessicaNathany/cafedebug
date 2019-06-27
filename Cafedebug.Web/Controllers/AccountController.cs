@@ -1,26 +1,21 @@
-﻿using Cafedebug.Model.DTO;
+﻿using Cafedebug.Configuration;
+using Cafedebug.Model;
+using Cafedebug.Model.DTO;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace Cafedebug.Web.Controllers
 {
     public class AccountController : Controller
     {
         /// <summary>
-        /// Tela inicial do Login
-        /// </summary>
-        /// <returns></returns>
-        public ActionResult Index()
-        {
-
-            return View();
-        }
-
-        /// <summary>
         /// Faz a chamada para a tela de login
         /// </summary>
         /// <returns></returns>
         public IActionResult Login()
         {
+            TempData["Mensagem"] = string.Empty;
+
             return View();
         }
 
@@ -29,9 +24,25 @@ namespace Cafedebug.Web.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult Login(UsuarioDTO usuarioDTO) 
+        public JsonResult Login([FromBody]Usuario login) 
         {
-            return View();
+            try
+            {
+                //Autentivar usuário, se estiver correto redirecionar 
+                //para a tela Home, senão retornar para a tela de Login e exibir a mensagem de erro
+
+                //IF
+                //essa variável tem que ser inserida no arquivo Web.config -  <appSettings><add key="PathCaminhoURL" value="http://localhost:44395/" /></appSettings>
+                //string url = ConfigurationManager.AppSettings["PathCaminhoURL"].ToString() + "Home/Index"";
+                //return this.Json(url);
+
+                //ELSE
+                return this.Json(Mensagem.GetDescription(EnumMensagem.MsgLoginSenhaInc));
+            }
+            catch (Exception ex)
+            {
+                return this.Json(Mensagem.GetDescription(EnumMensagem.MsgErroGenerico));
+            }
         }
 
         /// <summary>
