@@ -7,7 +7,11 @@ using System;
 namespace Cafedebug.Web.Controllers
 {
     public class AccountController : Controller
+
     {
+    
+    {      
+
         /// <summary>
         /// Faz a chamada para a tela de login
         /// </summary>
@@ -24,6 +28,7 @@ namespace Cafedebug.Web.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
+
         public JsonResult Login([FromBody]Usuario login) 
         {
             try
@@ -43,6 +48,16 @@ namespace Cafedebug.Web.Controllers
             {
                 return this.Json(Mensagem.GetDescription(EnumMensagem.MsgErroGenerico));
             }
+
+        public IActionResult Autentication(UsuarioDTO usuarioDTO) 
+        {
+            // autentication
+
+            // validation
+
+
+            return View("Home", "Index");
+
         }
 
         /// <summary>
