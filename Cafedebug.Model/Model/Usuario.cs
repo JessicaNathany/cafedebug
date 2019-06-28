@@ -39,5 +39,10 @@
         /// Flag lembrar senha
         /// </summary>
         public bool LembrarSenha { get; set; }
+
+        /// <summary>
+        /// Mensagem.
+        /// </summary>
+        public string Mensagem { get; set; }
     }
 }

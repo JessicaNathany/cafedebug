@@ -29,5 +29,10 @@
         /// Senha do usuário.
         /// </summary>
         public string Senha { get; set; }
+
+        /// <summary>
+        /// Mensagem.
+        /// </summary>
+        public string Mensagem { get; set; }
     }
 }
