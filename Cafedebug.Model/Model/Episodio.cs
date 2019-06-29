@@ -33,14 +33,14 @@ namespace Cafedebug.Model
         public string Url { get; set; }
 
         /// <summary>
-        /// Image da episódio.
+        /// Imagem de capa do episódio.
         /// </summary>
-        public string Image { get; set; } // verificar propriedade
+        public string Img { get; set; } // mudar para tipo Bitmap
 
         /// <summary>
         /// Tag da episódio.
         /// </summary>
-        public string Tag { get; set; }
+        public string Tags { get; set; }
 
         /// <summary>
         /// Data da episódio.

@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\UsuarioDTO.cs" />
+    <Compile Include="Model\Banner.cs" />
+    <Compile Include="Model\Noticia.cs" />
     <Compile Include="Model\tbEmail.cs" />
     <Compile Include="Model\Categoria.cs" />
     <Compile Include="Model\Perfil.cs" />
