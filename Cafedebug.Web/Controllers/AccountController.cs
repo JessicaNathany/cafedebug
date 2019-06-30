@@ -1,5 +1,6 @@
 ﻿using Cafedebug.Configuration;
 using Cafedebug.Model;
+using Cafedebug.Model.DTO;
 using Microsoft.AspNetCore.Mvc;
 using log4net;
 using System;
@@ -27,33 +28,31 @@ namespace Cafedebug.Web.Controllers
         /// <param name="usuarioDTO"></param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult Autentication([FromBody]Usuario usuario)
+        public JsonResult Autentication([FromBody]UsuarioDTO usuarioDto)
         {
+            try
+            {
+
+              
+
+                //Autenticar usuário, se estiver correto redirecionar 
+                //para a tela Home, senão retornar para a tela de Login e exibir a mensagem de erro
+
+                //IF
+                //essa variável tem que ser inserida no arquivo Web.config -  <appSettings><add key="PathCaminhoURL" value="http://localhost:44395/" /></appSettings>
+                //string url = ConfigurationManager.AppSettings["PathCaminhoURL"].ToString() + "Home/Index"";
+                //return this.Json(url);
+
+                //ELSE
 
 
-            return View("Home", "Index");
-
-            //try
-            //{
-            //    //Autenticar usuário, se estiver correto redirecionar 
-            //    //para a tela Home, senão retornar para a tela de Login e exibir a mensagem de erro
-
-            //    //IF
-            //    //essa variável tem que ser inserida no arquivo Web.config -  <appSettings><add key="PathCaminhoURL" value="http://localhost:44395/" /></appSettings>
-            //    //string url = ConfigurationManager.AppSettings["PathCaminhoURL"].ToString() + "Home/Index"";
-            //    //return this.Json(url);
-
-            //    //ELSE
-
-
-            //    //return this.Json(Mensagem.GetDescription(EnumMensagem.MsgLoginSenhaInc));
-
-            //    return View();
-            //}
-            //catch (Exception ex)
-            //{
-            //    //return this.Json(Mensagem.GetDescription(EnumMensagem.MsgErroGenerico));
-            //}
+               return this.Json(Mensagem.GetDescription(EnumMensagem.MsgLoginSenhaIncorreto));
+            
+            }
+            catch (Exception)
+            {
+                return this.Json(Mensagem.GetDescription(EnumMensagem.MsgErroGeneric));
+            }
         }
 
         /// <summary>

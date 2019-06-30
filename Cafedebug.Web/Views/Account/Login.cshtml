@@ -1,9 +1,12 @@
-﻿@model Cafedebug.Model.Usuario
+﻿@model Cafedebug.Model.DTO.UsuarioDTO
+
 @{
     ViewBag.Title = "Login | Café Debug";
 }
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,33 +22,27 @@
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
+
 <body>
     <!-- Modal/Pop-up - Mensagens -->
     <div id="mensagem-warning" class="alert alert-warning alert-dismissible fade hide" role="alert" style="display: none;">
         <h4 class="alert-heading">Atenção!</h4><hr>
-
-        <!--Carrega o conteúdo js-->
-        <p id="text-mensagem-warning"></p>
+        <p id="text-mensagem-warning"> @*carrega o conteúdo com javascript*@</p>
         <button type="button" class="close" data-dismiss="mensagem-warning" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
     <div id="mensagem-danger" class="alert alert-danger alert-dismissible fade hide" role="alert" style="display: none;">
         <h4 class="alert-heading">Atenção!</h4><hr>
-        <p id="text-mensagem-danger"></p>
+        <p id="text-mensagem-danger"> @*carrega o conteúdo com javascript*@</p>
         <button type="button" class="close" data-dismiss="mensagem-danger" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
     <div id="mensagem-success" class="alert alert-success alert-dismissible fade hide" role="alert" style="display: none;">
         <h4 class="alert-heading">Atenção!</h4><hr>
-        <p id="text-mensagem-success"></p>
+        <p id="text-mensagem-success"> @*carrega o conteúdo com javascript*@</p>
         <button type="button" class="close" data-dismiss="mensagem-success" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -54,142 +51,85 @@
         <div class="row justify-content-center">
             <div class="col-sm-5">
                 <section id="pagLogin">
-                    <div id="logar">
+                    @using (Html.BeginForm(Html.BeginForm("Auttentication", "Account", FormMethod.Post, new { @class = "login" })))
+                    {
+                        <div id="logologin" alt="café debug"></div>
                         <div class="input-group">
-
-                            @using (Html.BeginForm("Autentication", "Account", FormMethod.Post, new { @class = "login", id = "FormLogin" }))
-                            {
-                                <div id="logologin" alt="café debug"></div>
-
-                                <div class="input-group">
-                                    @Html.TextBoxFor(u => u.Login, new { required = "required", id = "Login" })<i class="fas fa-user"></i><span>login</span>
-                                </div>
-                                <div class="input-group">
-                                    @Html.TextBoxFor(u => u.Senha, new { required = "required", type = "password", id = "Password" })<i class="fas fa-lock"></i><span>senha</span>
-                                </div>
-                                <div class="input-group">
-                                    <button  type="submit" class="btn-login" ><b>Logar</b></button>
-                                </div>
-                                <br />
-                                <br /><br />
-                                <div class="lembrar checkbox">
-                                    <label class="linhadbt"><input type="checkbox" id="LembrarSenha" , name="LembrarSenha" value="lembrarSenha"><small>lembrar senha</small></label>
-                                    <label class="linhadbt">
-                                        @Html.ActionLink("Esqueci minha senha", "PasswordForgout", "Account", new { @name = "LembrarSenha", @id = "LembrarSenha" }, null)
-                                    </label>
-                                </div>
-                            }
+                            @Html.TextBoxFor(u => u.Login, new { required = "required", @name = "Login", @id = "Login" })<i class="fas fa-user"></i><span>login</span>
+                        </div>
+                        <div class="input-group">
+                            @Html.TextBoxFor(u => u.Senha, new { required = "required", type = "password", @name = "Senha", @id = "Senha" })<i class="fas fa-lock"></i><span>senha</span>
+                        </div>
+                        <div id="logar">
+                            <div class="input-group">
+                                
+                                <button class="btn-login" onclick="FazerLogin()"><b>Logar</b></button>
+                            </div>
+                            <br /><br /><br />
+                            <div class="lembrar checkbox">
+                                <label class="linhadbt" />
+                                @Html.CheckBoxFor(u => u.LembrarSenha, new { @value = "true" })<small>lembrar senha</small>
+                                <label class="linhadbt">
+                                    @Html.ActionLink("Esqueci minha senha", "PasswordForgout", "Account", new { id = "id" }, null)
+                                </label>
+                                <label class="linhadbt">@Html.ActionLink("Esqueci minha senha", "PasswordForgout", "Account", new { @name = "LembrarSenha", @id = "LembrarSenha" }, null)</label>
+                            </div>
+                            
                         </div>
                         <div id="loader" class="loader" width="20px" height="20px">
                             <img src="~/images/loader.gif" alt="Carregando..." />
                         </div>
-                    </div>
-                </section>
+                    }
+                    </section>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
+
 </html>
 <script type="text/jscript">
+
 
     document.addEventListener("DOMContentLoaded", function (event) {
         $('#logar').show();
         $('#loader').hide();
+
     });
 
-    function Logon() {
-        debugger;
-
-        $('FormLogin').submit(function () {
-            if ($(this).valid()) {
-                $.ajax({
-                    url: this.action,
-                    type: this.method,
-                    data: $(this).serialize(),
-                    success: function (result) {
-                        $('#result').html(result);
+    function FazerLogin() {
+        $('#logar').hide();
+        $('#loader').show();
+        let JSON_global = {
+            Login: document.getElementById("Login").value,
+            Senha: document.getElementById("Senha").value,
+            LembrarSenha: document.querySelectorAll('[name=LembrarSenha]')[0].checked
+        }
+        var Request = new XMLHttpRequest();
+        Request.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                $('#logar').show();
+                $('#loader').hide();
+                var retorno = JSON.parse(this.responseText);
+              
+                    if ((retorno.indexOf("http://") >= 0) || (retorno.indexOf("https://") >= 0)) {
+                        location.href = retorno;
                     }
-                });
+                else {
+                        document.getElementById("text-mensagem-warning").innerText = retorno;
+
+                    $('.alert-warning').alert();
+                    $('#mensagem-warning').removeClass('hide');
+                    $('#mensagem-warning').addClass('show');
+                    $('#mensagem-warning').css('display', 'block');
+                    $("#mensagem-warning").show();
+                    $(".close").click(function () {
+                        $('.alert-warning').alert('close');
+                    });
+                }
             }
-            return false;
-        });
+        };
+        Request.open("POST", 'https://' + window.location.host + '/Account/Autentication', true);
+        Request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        Request.send(JSON.stringify(JSON_global));
     }
-
-    //$(function () {
-    //    $('FormLogin').submit(function () {
-    //        if ($(this).valid()) {
-    //            $.ajax({
-    //                url: this.action,
-    //                type: this.method,
-    //                data: $(this).serialize(),
-    //                success: function (result) {
-    //                    $('#result').html(result);
-    //                }
-    //            });
-    //        }
-    //        return false;
-    //    });
-    //});
-
-    //function Logon() {
-
-    //    debugger;
-
-    //    $('#logar').hide();
-    //    $('#loader').show();
-
-    //    let JSON_global = {
-    //        Login: document.getElementById("Login").value,
-    //        Senha: document.getElementById("Senha").value,
-    //        LembrarSenha: document.querySelectorAll('[name=LembrarSenha]')[0].checked
-    //    }
-
-    //    var Request = new XMLHttpRequest();
-    //    Request.onreadystatechange = function () {
-    //        if (this.readyState == 4 && this.status == 200) {
-
-    //            $('#logar').show();
-    //            $('#loader').hide();
-
-    //            var retorno = JSON.parse(this.responseText);
-
-    //            if ((retorno.indexOf("http://") >= 0) || (retorno.indexOf("https://") >= 0)) {
-    //                location.href = retorno;
-    //            }
-    //            else {
-    //                document.getElementById("text-mensagem-warning").innerText = retorno;
-
-    //                $('.alert-warning').alert();
-    //                $('#mensagem-warning').removeClass('hide');
-    //                $('#mensagem-warning').addClass('show');
-    //                $('#mensagem-warning').css('display', 'block');
-    //                $("#mensagem-warning").show();
-
-    //                $(function () {
-    //                    $('FormLogin').submit(function () {
-    //                        if ($(this).valid()) {
-    //                            $.ajax({
-    //                                url: this.action,
-    //                                type: this.method,
-    //                                data: $(this).serialize(),
-    //                                success: function (result) {
-    //                                    $('#result').html(result);
-    //                                }
-    //                            });
-    //                        }
-    //                        return false;
-    //                    });
-    //                });
-
-    //                $(".close").click(function () {
-    //                $('.alert-warning').alert('close');
-    //                });
-    //            }
-    //        }
-    //    };
-
-    //    Request.open("POST", 'https://' + window.location.host + '/Account/Autentication', true);
-    //    Request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-    //    Request.send(JSON.stringify(JSON_global));
-    //}
 </script>

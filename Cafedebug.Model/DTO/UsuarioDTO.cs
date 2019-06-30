@@ -1,7 +1,7 @@
 ﻿namespace Cafedebug.Model.DTO
 {
     /// <summary>
-    /// Classe Usuario de transferência de dados da View
+    /// Classe Usuario de transferência de dados 
     /// </summary>
     public class UsuarioDTO
     {
@@ -31,7 +31,12 @@
         public string Senha { get; set; }
 
         /// <summary>
-        /// Mensagem.
+        /// Flag lembrar senha
+        /// </summary>
+        public bool LembrarSenha { get; set; }
+
+        /// <summary>
+        /// Mensagem do login.
         /// </summary>
         public string Mensagem { get; set; }
     }

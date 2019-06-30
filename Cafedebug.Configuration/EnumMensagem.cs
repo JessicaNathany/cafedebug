@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cafedebug.Configuration
 {
     public static class Mensagem
     {
+        /// <summary>
+        /// Retorna a descrição das mensagens dos pop-ups chamdas no controller
+        /// </summary>
+        /// <param name="enumerationValue"></param>
+        /// <returns></returns>
         public static string GetDescription(this Enum enumerationValue)
         {
             Type type = enumerationValue.GetType();
@@ -32,48 +34,119 @@ namespace Cafedebug.Configuration
         }
     }
 
+    /// <summary>
+    /// Mensagens de validação utilizadas nos popu-ups.
+    /// </summary>
     public enum EnumMensagem
     {
-        [Description("Ocorreu um erro inesperado, tente novamente mais tarde!")]
-        MsgErroGenerico = 1,
+        #region  Message - Login
 
-        #region Mensagens - Login - Acesso
+        [Description("Ocorreu um erro inesperado, tente novamente mais tarde!")]
+        MsgErroGeneric = 1,
 
         [Description("Captcha inválido, tente novamente.")]
-        MsgCaptchaInvalid = 2,
+        MsgCaptchaInvalido = 2,
 
         [Description("Login bloqueado por inatividade!")]
-        MsgLoginBloq = 3,
+        MsgLoginBlock = 3,
 
         [Description("Login e/ou senha incorretos!")]
-        MsgLoginSenhaInc = 4,
+        MsgLoginSenhaIncorreto = 4,
 
         [Description("Informe o login e senha!")]
         MsgInfoLoginSenha = 5,
 
-        #endregion
-
-        #region Mensagens - Login - Alterar Senha (primeiro acesso)
-
         [Description("A nova senha deve ser diferente das duas últimas informadas.")]
-        MsgAltSenhaPADif = 6,
+        MsgAlteraSenha = 6,
 
         [Description("Problemas na alteração de senha! Entre em contato com o Administrador do Sistema.")]
-        MsgProbAltSenha = 7,
-
-        #endregion
-
-        #region Mensagens - Login - Esqueci Minha Senha
+        MsgProblemaAlterarSenha = 7,
 
         [Description("Ocorreu um erro durante o processo de recuperação de senha. Por favor, verifique o e-mail e tente novamente. Caso o erro persista, contate o Administrador do Sistema.")]
-        MsgErroRepSenha = 8,
+        MsgErroRecuperarSenha = 8,
 
         [Description("E-mail não cadastrado no sistema!")]
-        MsgEmailNotCad = 9,
+        MsgEmailNaoCadastrado = 9,
 
-        [Description("O endereço de e-mail fornecido é inválido. Por favor, verifique o e-mail e tente novamente.")]
-        MsgEmailInvalid = 10,
+        [Description("O endereço de e-mail fornecido não é inválido. Por favor, verifique o e-mail e tente novamente.")]
+        MsgEmailInvalido = 10,
 
         #endregion
+
+        #region Message - Error
+
+        [Description("Erro ao excluir um Usuário!")]
+        MsgErroExcluirUsuario = 11,
+
+        [Description("Erro ao excluir um Episódio!")]
+        MsgErroExcluirEpisodio = 12,
+
+        [Description("Erro ao excluir uma Noticia!")]
+        MsgErroExcluirNoticia = 13,
+
+        [Description("Erro ao excluir uma Categoria!")]
+        MsgErroExcluirCategoria = 14,
+
+        [Description("Erro ao excluir um Banner!")]
+        MsgErroExcluirBanner = 15,
+
+        [Description("Erro ao excluir um Tipo de Categoria!")]
+        MsgErroExcluirTipoCategoria = 16,
+
+        [Description("Ocorreu um erro ao fazer esta requisição ! Tente mais tarde")]
+        MsgErroErrorSistema = 17,
+
+        #endregion
+
+        #region Message - Success
+
+        [Description("Usuário cadastrado com sucesso!")]
+        MsgCadastroUsuario = 18,
+
+        [Description("Episódio cadastrado com sucesso!")]
+        MsgCadastroEpisódio = 19,
+
+        [Description("Categoria cadastrada com sucesso!")]
+        MsgCadastroCategoria = 20,
+
+        [Description("Noticia cadastrada com sucesso!")]
+        MsgCadastroNoticia = 21,
+
+        [Description("Banner cadastrado com sucesso!")]
+        MsgCadastroBanner = 22,
+
+        [Description("Tipo de Categoria cadastrada com sucesso!")]
+        MsgCadastroTipoCategoria = 23,
+
+        [Description("Registro alterado com sucesso!")]
+        MsgAtualizacaoGenerica = 24,
+
+        [Description("Registro excluído com sucesso!")]
+        MsgExclusaoGenerica = 25,
+
+        #endregion
+
+        #region Message - Question
+
+        [Description("Tem certeza que deseja excluir o(s) registro?")]
+        MsgPerguntaGenerica = 26,
+
+        [Description("Tem certeza que deseja sair da aplicação ?")]
+        MsgPerguntaSairSistema = 27,
+
+        #endregion
+
+        #region Message - Alert
+
+        [Description("Você não tem permissão para executar esta ação!")]
+        MsgAlerta= 28,
+
+        [Description("Este registro não pode ser excluído!")]
+        MsgAlertaExclusao = 29,
+
+        [Description("Já existe um registro deste na base!")]
+        MsgAlertaExiste = 30,
+
+        #endregion 
     }
 }
