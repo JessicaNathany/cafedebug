@@ -8,7 +8,7 @@ namespace Cafedebug.Configuration
     public static class Mensagem
     {
         /// <summary>
-        /// Retorna a descrição das mensagens dos pop-ups chamdas no controller
+        /// Retorna a descrição (Name) das mensagens dos pop-ups chamados no controller
         /// </summary>
         /// <param name="enumerationValue"></param>
         /// <returns></returns>
@@ -22,6 +22,11 @@ namespace Cafedebug.Configuration
             return attribute?.Description != null ? attribute.Description : enumerationValue.ToString();
         }
 
+        /// <summary>
+        /// Retorna o valor (Id) das mensagens dos pop-ups chamados no controller
+        /// </summary>
+        /// <param name="description"></param>
+        /// <returns></returns>
         public static T GetEnumValue<T>(this string description)
         {
             var type = typeof(T);
@@ -30,6 +35,7 @@ namespace Cafedebug.Configuration
 
             var field = type.GetFields().SelectMany(f => f.GetCustomAttributes(typeof(DescriptionAttribute), false), (f, a) => new { Field = f, Att = a })
                                         .Where(a => ((DescriptionAttribute)a.Att).Description == description).SingleOrDefault();
+
             return field == null ? default(T) : (T)field.Field.GetRawConstantValue();
         }
     }
@@ -81,7 +87,7 @@ namespace Cafedebug.Configuration
         [Description("Erro ao excluir um Episódio!")]
         MsgErroExcluirEpisodio = 12,
 
-        [Description("Erro ao excluir uma Noticia!")]
+        [Description("Erro ao excluir uma Notícia!")]
         MsgErroExcluirNoticia = 13,
 
         [Description("Erro ao excluir uma Categoria!")]
@@ -93,7 +99,7 @@ namespace Cafedebug.Configuration
         [Description("Erro ao excluir um Tipo de Categoria!")]
         MsgErroExcluirTipoCategoria = 16,
 
-        [Description("Ocorreu um erro ao fazer esta requisição ! Tente mais tarde")]
+        [Description("Ocorreu um erro ao fazer esta requisição! Tente mais tarde.")]
         MsgErroErrorSistema = 17,
 
         #endregion
@@ -109,7 +115,7 @@ namespace Cafedebug.Configuration
         [Description("Categoria cadastrada com sucesso!")]
         MsgCadastroCategoria = 20,
 
-        [Description("Noticia cadastrada com sucesso!")]
+        [Description("Notícia cadastrada com sucesso!")]
         MsgCadastroNoticia = 21,
 
         [Description("Banner cadastrado com sucesso!")]
@@ -128,10 +134,10 @@ namespace Cafedebug.Configuration
 
         #region Message - Question
 
-        [Description("Tem certeza que deseja excluir o(s) registro?")]
+        [Description("Tem certeza que deseja excluir o(s) registro(s)?")]
         MsgPerguntaGenerica = 26,
 
-        [Description("Tem certeza que deseja sair da aplicação ?")]
+        [Description("Tem certeza que deseja sair da aplicação?")]
         MsgPerguntaSairSistema = 27,
 
         #endregion

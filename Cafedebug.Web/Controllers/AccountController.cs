@@ -32,9 +32,6 @@ namespace Cafedebug.Web.Controllers
         {
             try
             {
-
-              
-
                 //Autenticar usuário, se estiver correto redirecionar 
                 //para a tela Home, senão retornar para a tela de Login e exibir a mensagem de erro
 
@@ -44,8 +41,6 @@ namespace Cafedebug.Web.Controllers
                 //return this.Json(url);
 
                 //ELSE
-
-
                return this.Json(Mensagem.GetDescription(EnumMensagem.MsgLoginSenhaIncorreto));
             
             }
@@ -62,7 +57,6 @@ namespace Cafedebug.Web.Controllers
         public ActionResult LogOff()
         {
             return View();
-
         }
 
         /// <summary>
