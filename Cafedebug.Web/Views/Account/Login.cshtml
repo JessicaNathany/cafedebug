@@ -12,6 +12,7 @@
     <script src="~/js/jquery-1.9.1.js"></script>
     <script src="~/js/jquery-ui.min.js"></script>
     <script src="~/js/Mensagem.js"></script>
+    <script src="~/js/ValidaCampos.js"></script>
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/login.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
@@ -27,7 +28,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-5">
-                <section id="pagLogin">
+                <section class="login" id="pagLogin">
                     <div id="logologin" alt="café debug"></div>
                     <div class="input-group">
                         @Html.TextBoxFor(u => u.Login, new { required = "required", @name = "Login", @id = "Login" })<i class="fas fa-user"></i><span>login</span>
@@ -39,17 +40,18 @@
                         <div class="input-group">
                             <button class="btn-login" onclick="FazerLogin()"><b>Logar</b></button>
                         </div>
-                        <br /><br /><br />
-                        <div class="lembrar checkbox">
-                            <label class="linhadbt" />
-                            @Html.CheckBoxFor(u => u.LembrarSenha, new { @value = "true" })<small>lembrar senha</small>
-                            <label class="linhadbt">
-                                @Html.ActionLink("Esqueci minha senha", "PasswordForgout", "Account", new { id = "id" }, null)
-                            </label>
-                            <label class="linhadbt">@Html.ActionLink("Esqueci minha senha", "PasswordForgout", "Account", new { @name = "LembrarSenha", @id = "LembrarSenha" }, null)</label>
-                        </div>
-
                     </div>
+                    <br /><br /><br />
+
+                    <div class="lembrar checkbox">
+                        <label class="linhadbt" />
+                        @Html.CheckBoxFor(u => u.LembrarSenha, new { @value = "true" })<small>lembrar senha</small>
+                        <label class="linhadbt">
+                            @Html.ActionLink("Esqueci minha senha", "PasswordForgout", "Account", new { id = "id" }, null)
+                        </label>
+                        <label class="linhadbt">@Html.ActionLink("Esqueci minha senha", "PasswordForgout", "Account", new { @name = "LembrarSenha", @id = "LembrarSenha" }, null)</label>
+                    </div>
+
                     <div id="loader" class="loader" width="20px" height="20px">
                         <img src="~/images/loader.gif" alt="Carregando..." />
                     </div>
@@ -104,4 +106,8 @@
         Request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
         Request.send(JSON.stringify(JSON_global));
     }
+
+
+   
+
 </script>

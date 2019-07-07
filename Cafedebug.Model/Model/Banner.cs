@@ -36,5 +36,10 @@ namespace Cafedebug.Model.Model
         /// Data fim do Banner.
         /// </summary>
         public DateTime DataFim { get; set; }
+
+        /// <summary>
+        /// Flag indica se o bater está ativo
+        /// </summary>
+        public bool FlagAtivo { get; set; }
     }
 }

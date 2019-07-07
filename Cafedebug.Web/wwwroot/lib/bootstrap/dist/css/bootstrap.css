@@ -5053,7 +5053,7 @@ a.thumbnail.active {
   position: relative;
   top: -2px;
   right: -21px;
-  color: inherit;
+  color: #a94442;
 }
 .alert-success {
   color: #3c763d;
@@ -5090,7 +5090,8 @@ a.thumbnail.active {
 }
 .alert-danger {
   color: #a94442;
-  background-color: #f2dede;
+  background-color: #a94442;
+  /*background-color: #f2dede;*/
   border-color: #ebccd1;
 }
 .alert-danger hr {

@@ -34,5 +34,10 @@
         /// Senha do usuário.
         /// </summary>
         public string Senha { get; set; }
+
+        /// <summary>
+        /// Flag indica se o usuário está ativo
+        /// </summary>
+        public bool FlagAtivo { get; set; }
     }
 }
