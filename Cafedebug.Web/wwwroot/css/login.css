@@ -92,7 +92,7 @@ body {
         font-size: 17px;
     }
 
-button {
+btn-login {
     width: 100%;
     margin: 0;
     position: absolute;
@@ -107,7 +107,7 @@ button {
     margin-top: 30px;
 }
 
-    button:before {
+    btn-login:before {
         content: '';
         position: absolute;
         top: 0;
@@ -119,17 +119,17 @@ button {
         z-index: -1;
     }
 
-    button:hover:before {
+    btn-login:hover:before {
         left: 0;
         z-index: -1;
     }
 
-    button b {
+    btn-login b {
         color: #fff;
         z-index: 1;
     }
 
-    button:hover b {
+    btn-login:hover b {
         color: #ec7900 !important;
     }
 
