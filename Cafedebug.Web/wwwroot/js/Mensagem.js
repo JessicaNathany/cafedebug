@@ -12,7 +12,7 @@
         "</div>" +
         "<div id='mensagem-danger' class='alert alert-danger alert-dismissible fade hide' role='alert' style='display: none;' >" +
         "<h4 class='alert-heading'> Atenção!</h4><hr>" +
-        "<p id='text-mensagem-danger'></p>" +
+        "<p id='text-mensagem-danger'></p>" 
         "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>" +
         "<span align='left' aria-hidden='true'>&times;</span>" +
         "</button>" +
