@@ -3,17 +3,17 @@
     var MontarDivMensagens = "";
 
     MontarDivMensagens += 
-        "<div id='mensagem-warning' class=' alert alert-warning alert-dismissible fade hide' role='alert' style='display: none; tabindex=' - 1' role='dialog '>" +
+        "<div id='mensagem-warning' class=' alert alert-warning alert-dismissible fade hide' role='alert' style='display: none;' >" +
         "<h4 align='left' class='alert-heading'>Atenção!</h4><hr>" +
         "<p id='text-mensagem-warning'></p>" +
-        "<button type='button' class='close' data-dismiss='mensagem-warning' aria-label='Close'>" +
+        "<button type='button' align='right' class='close' data-dismiss='mensagem-warning' aria-label='Close'>" +
         "<span aria-hidden='true'>&times;</span>" +
         "</button>" +
         "</div>" +
         "<div id='mensagem-danger' class='alert alert-danger alert-dismissible fade hide' role='alert' style='display: none;' >" +
         "<h4 class='alert-heading'> Atenção!</h4><hr>" +
         "<p id='text-mensagem-danger'></p>" +
-        "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>" +
+        "<button type='button' class='close' data-dismiss='mensagem-danger' aria-label='Close'>" +
         "<span align='left' aria-hidden='true'>&times;</span>" +
         "</button>" +
         "</div>" +
