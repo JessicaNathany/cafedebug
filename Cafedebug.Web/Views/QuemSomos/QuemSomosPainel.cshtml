@@ -1,0 +1,266 @@
+﻿@model Cafedebug.Model.Usuario
+
+@{
+    ViewData["Title"] = "QuemSomos | Café Debug";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/stylepainel.css" rel="stylesheet" />
+    <link href="~/css/mdb.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header text-center">
+                <h3><img src="../images/logo-line.png" class="p-2"></h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#">Quem Somos</a>
+                </li>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Adicionar Novo</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Episódio</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Notícia</a>
+                            <a href="#">Patrocinador</a>
+                            <a href="#">Banner</a>
+                            <a href="#">Usuário</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Episódio Publicados</a>
+                </li>
+                <li>
+                    <a href="#">Configurações</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="#" class="download">Botão Adicional 02</a>
+                </li>
+                <li>
+                    <a href="#" class="article">Sair</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content Holder -->
+        <div id="content">
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="container">
+                <div class="row">
+                    <div id="boxmeio" class="col-sm-10 center-block">
+                        <legend>Quem Somos</legend>
+                        <div id="boxscroll">
+                            <form class="form-horizontal episodioo">
+                                <fieldset>
+                                    <!-- Form Name -->
+                                    <!-- Textarea -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="noticia">Quem Somos</label>
+                                        <div class="col-md-12">
+                                            <textarea class="form-control boxnoticia" id="noticia" name="noticia" required>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
+                                        </div>
+                                    </div>
+                                    <!-- Button -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="publicar"></label>
+                                        <div class="col-md-4">
+                                            <button id="publicar" name="publicar" class="btn btn-primary">Atualizar Pagina</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <!-- Form Name -->
+                            <div class="col-md-12">
+                                <div class="boxusuario ">
+                                    <div class="boximagem"><img src="~/images/img-jessica.jpg" /></div>
+                                    <!--carregar do banco os dados da pessoa-->
+                                    <div class="boxpessoa">
+                                        <h4>Jéssica Nathany</h4>
+                                        <p>Desenvolvedora de software e host</p>
+                                        <div class="icon-socmed">
+                                            <a href=""> <i class="fab fa-instagram"></i></a>
+                                            <a href=""> <i class="fab fa-facebook-square"></i></a>
+                                            <a href=""> <i class="fab fa-twitter"></i></a>
+                                        </div>
+                                        <div class="botoessmall">
+                                            <a href="#" class="btn btn-sm btn-primary">editar</a>
+                                            <a href="#" class="btn btn-sm btn-danger">excluir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxusuario ">
+                                    <div class="boximagem"><img src="~/images/image-austin.jpg" /></div>
+                                    <!--carregar do banco os dados da pessoa-->
+                                    <div class="boxpessoa">
+                                        <h4>Austin Felipe</h4>
+                                        <p>Desenvolvedor de software e co-host</p>
+                                        <div class="icon-socmed">
+                                            <a href=""> <i class="fab fa-instagram"></i></a>
+                                            <a href=""> <i class="fab fa-facebook-square"></i></a>
+                                            <a href=""> <i class="fab fa-twitter"></i></a>
+                                        </div>
+                                        <div class="botoessmall">
+                                            <a href="#" class="btn btn-sm btn-primary">editar</a>
+                                            <a href="#" class="btn btn-sm btn-danger">excluir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxusuario ">
+                                    <div class="boximagem"><img src="~/images/img-douglas.jpg" /></div>
+                                    <!--carregar do banco os dados da pessoa-->
+                                    <div class="boxpessoa">
+                                        <h4>Douglas Pires</h4>
+                                        <p>Desenvolvedor de software e co-host</p>
+                                        <div class="icon-socmed">
+                                            <a href=""> <i class="fab fa-instagram"></i></a>
+                                            <a href=""> <i class="fab fa-facebook-square"></i></a>
+                                            <a href=""> <i class="fab fa-twitter"></i></a>
+                                        </div>
+                                        <div class="botoessmall">
+                                            <a href="#" class="btn btn-sm btn-primary">editar</a>
+                                            <a href="#" class="btn btn-sm btn-danger">excluir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxusuario ">
+                                    <div class="boximagem"><img src="~/images/img-yunnes.jpg" /></div>
+                                    <!--carregar do banco os dados da pessoa-->
+                                    <div class="boxpessoa">
+                                        <h4>Yunnes Abdul</h4>
+                                        <p>Editor vídeos e áudio e co-host</p>
+                                        <div class="icon-socmed">
+                                            <a href=""> <i class="fab fa-instagram"></i></a>
+                                            <a href=""> <i class="fab fa-facebook-square"></i></a>
+                                            <a href=""> <i class="fab fa-twitter"></i></a>
+                                        </div>
+                                        <div class="botoessmall">
+                                            <a href="#" class="btn btn-sm btn-primary">editar</a>
+                                            <a href="#" class="btn btn-sm btn-danger">excluir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxeditorbio ">
+                                    <!-- Text input-->
+                                    <div class="form-group">
+                                        <label class="col-md-12 control-label" for="textinput">Nome do Participante</label>
+                                        <div class="col-md-12">
+                                            <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                        </div>
+                                    </div>
+                                    <!-- Textarea -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="noticia">BIO</label>
+                                        <div class="col-md-12">
+                                            <textarea class="form-control " id="campobio" name="campobio" required>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</textarea>
+                                        </div>
+                                    </div>
+                                    <!-- Text input-->
+                                    <div class="form-group">
+                                        <div class="form-group col-md-2  text-left">
+                                            <label class="control-label  " for="textinput">Facebook</label>
+                                        </div>
+                                        <!-- Text input-->
+                                        <div class="form-group col-md-12 ">
+                                            <div class="">
+                                                <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                            </div>
+                                        </div>
+                                        <!-- Text input-->
+                                        <div class="form-group w-100">
+                                            <div class="form-group col-md-2  text-left">
+                                                <label class="control-label  " for="textinput">Instagram</label>
+                                            </div>
+                                            <!-- Text input-->
+                                            <div class="form-group col-md-12 ">
+                                                <div class="">
+                                                    <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                                </div>
+                                            </div>
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                                <div class="form-group col-md-2  text-left">
+                                                    <label class="control-label  " for="textinput">Twitter</label>
+                                                </div>
+                                                <!-- Text input-->
+                                                <div class="form-group col-md-12 ">
+                                                    <div class="">
+                                                        <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                                    </div>
+                                                </div>
+                                                <div class="text-right">
+                                                    <a href="#" class="btn btn-sm btn-success">Salvar</a>
+                                                    <a href="#" class="btn btn-sm btn-danger">Cancelar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MODAL ERROR -->
+                    <a class="iconerror" data-toggle="modal" data-target="#modalExemplo">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-exclamation-triangle"></i> <b>Algo de errado não está certo!</b></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Hey fera, acho que tem um erro ai heim!<br />
+                                    <b>Que tal dar uma olhada melhor?</b>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- jQuery CDN - Slim version (=without AJAX) -->
+                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                    <!-- Bootstrap JS -->
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+                    
+</body>
+</html>
+
+<script type="text/jscript">
+
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+            $(this).toggleClass('active');
+        });
+    });
+
+</script>

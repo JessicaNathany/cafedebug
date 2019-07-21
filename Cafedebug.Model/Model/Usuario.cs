@@ -39,5 +39,10 @@
         /// Flag indica se o usuário está ativo
         /// </summary>
         public bool FlagAtivo { get; set; }
+
+        /// <summary>
+        /// Imagem do usuário
+        /// </summary>
+        public string Imagem { get; set; } // verificar tipo ou usar o Bitmap
     }
 }
