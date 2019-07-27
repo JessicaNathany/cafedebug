@@ -12,5 +12,14 @@ namespace Cafedebug.Web.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// Exibe a tela para criar um Novo episódio
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult NovoEpisodio()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,177 @@
+﻿@model Cafedebug.Model.Episodio
+
+@{
+    ViewData["Title"] = "Novo episódio | Café Debug";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/stylepainel.css" rel="stylesheet" />
+    <link href="~/css/mdb.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header text-center">
+                 <h3><img src="../images/logo-line.png" class="p-2"></h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#">Quem Somos</a>
+                </li>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Adicionar Novo</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Novo Episódio</a>
+                            <a href="#">Nova Notícia</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Episódio Publicados</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="#" class="download">Botão Adicional 02</a>
+                </li>
+                <li>
+                    <a href="#" class="article">Botão Adicional 01</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content Holder -->
+        <div id="content">
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="container">
+                <div class="row">
+                    <div id="boxmeio" class="col-sm-10 center-block">
+                        <legend>Novo Episódio</legend>
+                        <div id="boxscroll">
+                            <form class="form-horizontal episodioo">
+                                <fieldset>
+                                    <!-- Form Name -->
+                                    <!-- Text input-->
+                                    <div class="form-group col-md-9 floatl">
+                                        <label class="control-label" for="textinput">Título do Episódio</label>
+                                        <div class="">
+                                            <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                        </div>
+                                    </div>
+                                    <!-- Textarea -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="noticia">Descrição</label>
+                                        <div class="col-md-12">
+                                            <textarea class="form-control boxnoticia" id="noticia" name="noticia" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group text-center text-muted">_____________________________________</div>
+                                    <!-- Upload Image -->
+                                    <div class="form-group linhaupload">
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">Upload da imagem</span>
+                                            </div>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="fileInput" aria-describedby="fileInput" required>
+                                                <label class="custom-file-label" for="fileInput">Selecionar arquivo...</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 floatl">
+                                        <!-- Text input-->
+                                        <div class="form-group col-md-2 floatl text-left">
+                                            <label class="control-label publicaag " for="textinput">Link</label>
+                                        </div>
+                                        <!-- Text input-->
+                                        <div class="form-group col-md-10 floatl">
+                                            <div class="">
+                                                <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Prepended checkbox -->
+                                    <div class="col-md-6 floatl">
+                                        <select class="browser-default custom-select mb-4" id="select">
+                                            <option value="" disabled="" selected="" required>Selecione uma Categoria</option>
+                                            <option value="1">Categoria 1</option>
+                                            <option value="2">Categoria 2</option>
+                                            <option value="3">Categoria 3</option>
+                                            <option value="4">Categoria 4</option>
+                                            <option value="5">Categoria 5</option>
+                                            <option value="6">Categoria 6</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 floatl publicaag">
+                                        <div class="custom-control custom-switch swicth">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                            <label class="custom-control-label" for="customSwitch1">Ativo</label>
+                                        </div>
+                                    </div>
+                                    <!-- Button -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="publicar"></label>
+                                        <div class="col-md-4">
+                                            <button id="publicar" name="publicar" class="btn btn-primary">Publicar Episódio</button>
+                                            <button id="publicar" name="publicar" class="btn btn-danger">Cancelar</button>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-exclamation-triangle"></i> <b>Algo de errado não está certo!</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Hey fera, acho que tem um erro ai heim!<br />
+                    <b>Que tal dar uma olhada melhor?</b>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script type="text/javascript">$(document).ready(function () {
+             $('#sidebarCollapse').on('click', function () {
+                 $('#sidebar').toggleClass('active');
+                 $(this).toggleClass('active');
+             });
+         });</script>
+</body>
+</html>
