@@ -1,8 +1,46 @@
-﻿
-@{
-    ViewData["Title"] = "_layout";
-}
-
-<h2>_layout</h2>
-
-<!--configurar a masterpage para ser usadas nas demais views-->
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/stylepainel.css" rel="stylesheet" />
+    <link href="~/css/mdb.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="wrapper">
+        @RenderBody()
+        <nav id="sidebar">
+            <div class="sidebar-header text-center">
+                <h3><img src="../images/logo-line.png" class="p-2"></h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li><a href="#">Banner</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Episódio</a></li>
+                <li><a href="#">Tipo de Categoria</a></li>
+                <li><a href="#">Notícia</a></li>
+                <li><a href="#">Minha conta</a></li>
+                <li><a href="#">Usuário</a></li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="#" class="article">Sair</a>
+                </li>
+            </ul>
+        </nav>
+</body>
+</html>
+@RenderSection("Scripts", required: false)

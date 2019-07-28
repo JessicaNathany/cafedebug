@@ -12,5 +12,14 @@ namespace Cafedebug.Web.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// Exibe a tela para cadastro de usuário
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult CadastrarUsuario()
+        {
+            return View();
+        }
     }
 }

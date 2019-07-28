@@ -27,6 +27,15 @@ namespace Cafedebug.Web.Controllers
         }
 
         /// <summary>
+        /// Adiciona um novo participante na tela de Quem Somos
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult NovoParticipante()
+        {
+            return View();
+        }
+
+        /// <summary>
         /// Exibe a tela para edição do painel de controle
         /// </summary>
         /// <returns></returns>

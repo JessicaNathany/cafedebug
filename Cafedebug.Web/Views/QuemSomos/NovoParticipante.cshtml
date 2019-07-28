@@ -1,0 +1,82 @@
+﻿@model Cafedebug.Model.Usuario
+
+@{
+    ViewData["Novo Participante"] = "NovoParticipante";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<html>
+<body>
+   <div id="content">
+        <div class="container">
+            <div class="row">
+                <div id="boxmeio" class="col-sm-10 center-block">
+                    <div id="boxscroll">
+                        <div class="form-group">
+                            <div class="form-group col-md-2  text-left">
+                                <label class="control-label  " for="textinput">Nome</label>
+                            </div>
+                            <div class="form-group col-md-12 ">
+                                <div class="">
+                                    <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                </div>
+                            </div>
+                            <div class="form-group w-100">
+                                <div class="form-group col-md-2  text-left">
+                                    <label class="control-label  " for="textinput">Profissão</label>
+                                </div>
+                                <div class="form-group col-md-12 ">
+                                    <div class="">
+                                        <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group col-md-2  text-left">
+                                        <label class="control-label  " for="textinput">Twitter</label>
+                                    </div>
+                                    <div class="form-group col-md-12 ">
+                                        <div class="">
+                                            <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-2  text-left">
+                                        <label class="control-label  " for="textinput">Linkedin</label>
+                                    </div>
+                                    <div class="form-group col-md-12 ">
+                                        <div class="">
+                                            <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                        </div>
+                                    </div>
+                                    <!-- Upload Image -->
+                                    <div class="form-group linhaupload">
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">Upload</span>
+                                            </div>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="fileInput" aria-describedby="fileInput" required>
+                                                <label class="custom-file-label" for="fileInput">Carregar imagem...</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Textarea -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="noticia">BIO</label>
+                                        <div class="col-md-12">
+                                            <textarea class="form-control " id="campobio" name="campobio" required></textarea>
+                                        </div>
+                                    </div>
+                                     <div class="text-right">
+                                        <a href="#" class="btn btn-sm btn-success">Salvar</a>
+                                        <a href="#" class="btn btn-sm btn-danger">Cancelar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

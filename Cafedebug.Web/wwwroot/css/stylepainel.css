@@ -229,7 +229,16 @@ a.article:hover {
 
 #boxmeio {
     background-color: #fff;
-    height: 85vh;
+    margin: auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+#boxmeio_quemsomos {
+    height: 95vh;
+    background-color: #fff;
     margin: auto;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -238,6 +247,12 @@ a.article:hover {
 }
 
 #boxscroll {
+    width: 100%;
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+#boxscroll_quemsomos {
     width: 100%;
     height: 70vh;
     overflow-y: scroll;
@@ -286,6 +301,9 @@ textarea {
     border-top: 8px solid #fff;
 }
 
+.flag_ativo {
+    border-top: 8px solid #fff;
+}
 .episodioo {
     margin-top: 30px;
 }
