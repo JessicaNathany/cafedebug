@@ -18,13 +18,19 @@
                         <form class="form-horizontal episodioo">
                             <fieldset>
                                 <div class="form-group col-md-9 floatl">
+                                    <label class="control-label" for="textinput">Nome do Episódio</label>
+                                    <div class="">
+                                        <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-9 floatl">
                                     <label class="control-label" for="textinput">Título do Episódio</label>
                                     <div class="">
                                         <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-9 floatl">
-                                    <label class="control-label" for="textinput">Link</label>
+                                    <label class="control-label" for="textinput">Url</label>
                                     <div class="">
                                         <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
                                     </div>
@@ -36,6 +42,26 @@
                                         <textarea class="form-control boxnoticia" id="episodio" name="episodio" required></textarea>
                                     </div>
                                 </div>
+                                <div class="form-group col-md-9 floatl">
+                                    <label class="control-label" for="textinput">Data</label>
+                                    <div class="">
+                                        <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="noticia">Tags</label>
+                                    <div class="col-md-12">
+                                        <label class="linhadbt">
+                                            <input type="checkbox" value="">&nbsp;<small>Café debug</small><br />
+                                            <input type="checkbox" value="">&nbsp;<small>Não técnico</small><br />
+                                            <input type="checkbox" value="">&nbsp;<small>Linguagens de Programação</small><br />
+                                            <input type="checkbox" value="">&nbsp;<small>Entrevistas</small><br />
+                                            <input type="checkbox" value="">&nbsp;<small>Ferramentas</small><br />
+                                            <input type="checkbox" value="">&nbsp;<small>Metodolodias e Conceitos</small><br />
+                                            <input type="checkbox" value="">&nbsp;<small>Outros</small><br />
+                                        </label>
+                                    </div>
+                                </div>
                                 <!-- Upload Image -->
                                 <div class="form-group linhaupload">
                                     <div class="input-group mb-4">
@@ -44,23 +70,24 @@
                                         </div>
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="fileInput" aria-describedby="fileInput" required>
-                                            <label class="custom-file-label" for="fileInput">Selecionar arquivo...</label>
+                                            <label class="custom-file-label" for="fileInput">carregar imagem...</label>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-md-6 floatl">
                                     <select class="browser-default custom-select mb-4" id="select">
                                         <option value="" disabled="" selected="" required>Selecione uma Categoria</option>
-                                        <option value="1">Categoria 1</option>
-                                        <option value="2">Categoria 2</option>
-                                        <option value="3">Categoria 3</option>
-                                        <option value="4">Categoria 4</option>
-                                        <option value="5">Categoria 5</option>
-                                        <option value="6">Categoria 6</option>
+                                        <option value="1">Linguangens de Programação</option>
+                                        <option value="2">Entrevista</option>
+                                        <option value="3">IOT</option>
+                                        <option value="4">Fintechs</option>
+                                        <option value="5">Cultura Pop</option>
+                                        <option value="5">Ferramentas</option>
+                                        <option value="6">Conceitos e Metodologias</option>
+                                        <option value="5">Outros</option>
                                     </select>
                                 </div>
-                                <div class="col-md-6 floatl publicaag">
+                                <div class="col-md-6 floatl flag_ativo">
                                     <div class="custom-control custom-switch swicth">
                                         <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
                                         <label class="custom-control-label" for="customSwitch1">Ativo</label>
@@ -83,6 +110,7 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
+
         $('#sidebarCollapse').on('click', function () {
             $('#sidebar').toggleClass('active');
             $(this).toggleClass('active');

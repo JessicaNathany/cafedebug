@@ -14,10 +14,10 @@ namespace Cafedebug.Web.Controllers
         }
 
         /// <summary>
-        /// Exibe a tela para cadastro de usuário
+        /// Exibe a tela para cadastrar um novo usuário
         /// </summary>
         /// <returns></returns>
-        public ActionResult CadastrarUsuario()
+        public ActionResult NovoUsuario()
         {
             return View();
         }

@@ -1,0 +1,61 @@
+﻿@model Cafedebug.Model.Usuario
+
+@{
+    ViewData["Novo Usuário"] = "Nova Categoria | Café Debug";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<html>
+<body>
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div id="boxmeio" class="col-sm-10 center-block">
+                    <legend>Nova Categoria</legend>
+                    <div id="boxscroll">
+                        <div class="form-group">
+                            <div class="form-group col-md-2  text-left">
+                                <label class="control-label  " for="textinput">Nome</label>
+                            </div>
+                            <div class="form-group col-md-12 ">
+                                <div class="">
+                                    <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                </div>
+                            </div>
+                            <div class="form-group w-100">
+                                <div class="form-group col-md-2  text-left">
+                                    <label class="control-label  " for="textinput">Descrição</label>
+                                </div>
+                                <div class="form-group col-md-12 ">
+                                    <div class="">
+                                        <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-2  text-left">
+                                    <label class="control-label" for="textinput">Tipo de Categoria</label>
+                                </div>
+                                <div class="col-md-6 floatl">
+                                    <select class="browser-default custom-select mb-4" id="select">
+                                        <option value="" disabled="" selected="" required>Selecione uma Categoria</option>
+                                        <option value="1">Podcast</option>
+                                        <option value="2">Eventos</option>
+                                        <option value="3">Jobs</option>
+                                        <option value="4">Banner</option>
+                                        <option value="5">Outros</option>
+                                    </select>
+                                </div><br /><br />
+                                <div class="form-group">
+                                    <div class="text-right">
+                                        <a href="#" class="btn btn-sm btn-success">Salvar</a>
+                                        <a href="#" class="btn btn-sm btn-danger">Cancelar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

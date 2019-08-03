@@ -2115,6 +2115,13 @@ textarea.form-control {
         margin-left: 0
     }
 
+    .form-check-inline .form-checkbox {
+        position: static;
+        margin-top: 0;
+        margin-right: .3125rem;
+        margin-left: 0
+    }
+
 .valid-feedback {
     display: none;
     width: 100%;
@@ -9862,6 +9869,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 .text-right {
     text-align: right !important
 }
+
 
 .text-center {
     text-align: center !important

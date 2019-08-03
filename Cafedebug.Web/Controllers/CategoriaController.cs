@@ -9,8 +9,20 @@ namespace Cafedebug.Web.Controllers
 {
     public class CategoriaController : Controller
     {
-        // GET: Categoria
+        /// <summary>
+        /// Exibe a tela da Categoria
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Exibe a tela de criação da Categoria
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult NovoCategoria()
         {
             return View();
         }

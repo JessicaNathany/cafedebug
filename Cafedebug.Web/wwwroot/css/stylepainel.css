@@ -261,7 +261,7 @@ a.article:hover {
 legend {
     font-size: 30px;
     color: #ed7d00;
-    font-weight: 900;
+    font-weight: 500;
     text-align: right;
 }
 
@@ -308,6 +308,18 @@ textarea {
     margin-top: 30px;
 }
 
+.boxgrid {
+    width: 100%;
+    min-height: 240px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: #ececec
+}
+
 .boxusuario {
     width: 100%;
     min-height: 240px;
@@ -334,6 +346,12 @@ textarea {
     border-radius: 10px;
     display: block;
     margin: auto;
+}
+
+.box-grid-banner {
+    width: 100%;
+    display: inline-block;
+    float: left;
 }
 
 .boxpessoa {
@@ -494,7 +512,7 @@ textarea {
         transform: rotate(-45deg) translate(1px, -1px);
     }
     legend {
-        font-size: 15px !important;
+        font-size: 14px !important;
     }
     .custom-file-label {
         color: #fff;
