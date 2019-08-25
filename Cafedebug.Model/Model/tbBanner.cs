@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Cafedebug.Model.Model
+namespace Cafedebug.Model
 {
     /// <summary>
     /// Entidade Banner
     /// </summary>
-    public class Banner
+    public class tbBanner
     {
         /// <summary>
         /// Id do Banner.

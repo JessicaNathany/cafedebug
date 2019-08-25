@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cafedebug.Model.Model
+namespace Cafedebug.Model
 {
     /// <summary>
     /// Entidade Noticia
     /// </summary>
-    public class Noticia
+    public class tbNoticia
     {
         /// <summary>
         /// Id do Noticia.

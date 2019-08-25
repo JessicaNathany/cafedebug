@@ -1,9 +1,9 @@
-﻿namespace cafedebug.web.Models
+﻿namespace Cafedebug.Model
 {
     /// <summary>
     /// entidade tbPerfil
     /// </summary>
-    public class Perfil
+    public class tbPerfil
     {
         /// <summary>
         /// Id do perfil.

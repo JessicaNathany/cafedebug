@@ -26,7 +26,7 @@ namespace Cafedebug.Service
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public void Save(Usuario obj)
+        public void Save(tbUsuario obj)
         {
             throw new NotImplementedException();
         }
@@ -54,7 +54,7 @@ namespace Cafedebug.Service
         /// Recupera uma lista de usuários
         /// </summary>
         /// <returns></returns>
-        public IList<Usuario> GetAll()
+        public IList<tbUsuario> GetAll()
         {
             throw new NotImplementedException();
         }

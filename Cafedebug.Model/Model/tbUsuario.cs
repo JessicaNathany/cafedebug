@@ -3,7 +3,7 @@
     /// <summary>
     /// entidade tbUsuario
     /// </summary>
-    public class Usuario
+    public class tbUsuario
     {
         /// <summary>
         /// Id do usuário.

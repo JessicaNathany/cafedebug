@@ -5,7 +5,7 @@ namespace Cafedebug.Model
     /// <summary>
     /// entidade tbEpisodio 
     /// </summary>
-    public class Episodio
+    public class tbEpisodio
     {
         /// <summary>
         /// Id da episódio.

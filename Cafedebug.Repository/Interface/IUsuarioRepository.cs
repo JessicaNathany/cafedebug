@@ -5,7 +5,7 @@ namespace Cafedebug.Repository.Interface
     /// <summary>
     /// Interface do repositório Usuario
     /// </summary>
-    public interface IUsuarioRepository : IBaseRepository<Usuario>
+    public interface IUsuarioRepository : IBaseRepository<tbUsuario>
     {
        
     }

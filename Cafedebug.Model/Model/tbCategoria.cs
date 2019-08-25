@@ -3,7 +3,7 @@
     /// <summary>
     /// entidade tbCategoria
     /// </summary>
-    public class Categoria
+    public class tbCategoria
     {
         /// <summary>
         /// Id da Categoria

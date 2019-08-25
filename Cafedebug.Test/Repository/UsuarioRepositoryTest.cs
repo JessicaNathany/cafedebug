@@ -14,7 +14,7 @@ namespace Cafedebug.Test.Repository
         public void SaveTest()
         {
             var repo = new UsuarioRepository();
-            var entity = new Usuario()
+            var entity = new tbUsuario()
             {
                 Nome = "Teste 1",
                 Email = "teste@teste.com",

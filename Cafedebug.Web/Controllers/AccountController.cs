@@ -15,11 +15,29 @@ namespace Cafedebug.Web.Controllers
         /// Faz a chamada para a tela de login
         /// </summary>
         /// <returns></returns>
-        public IActionResult Login()
+        public ActionResult Login()
         {
             TempData["Mensagem"] = string.Empty;
 
             return View();
+        }
+
+        /// <summary>
+        /// Exibe os dados da tela Minha Conta
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Salva os dados da conta
+        /// </summary>
+        /// <returns></returns>
+        public void SaveAccount()
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>

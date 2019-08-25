@@ -3,9 +3,9 @@
 namespace Cafedebug.Model
 {
     /// <summary>
-    /// entidade Email
+    /// entidade tbEmail
     /// </summary>
-    public class Email
+    public class tbEmail
     {
         /// <summary>
         /// Id do email

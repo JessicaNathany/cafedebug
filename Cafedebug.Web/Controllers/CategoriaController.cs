@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Cafedebug.Model;
 
 namespace Cafedebug.Web.Controllers
 {
@@ -23,6 +24,15 @@ namespace Cafedebug.Web.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult NovoCategoria()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Exibe um grid com todas as categorias na tela
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetCategoria()
         {
             return View();
         }

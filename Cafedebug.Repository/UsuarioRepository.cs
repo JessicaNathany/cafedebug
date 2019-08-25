@@ -25,7 +25,7 @@ namespace Cafedebug.Repository
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public void Save(Usuario entity)
+        public void Save(tbUsuario entity)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace Cafedebug.Repository
         /// Recupera uma lista de usuários na base
         /// </summary>
         /// <returns></returns>
-        public IList<Usuario> GetAll()
+        public IList<tbUsuario> GetAll()
         {
             throw new NotImplementedException();
         }
@@ -96,10 +96,10 @@ namespace Cafedebug.Repository
         }
 
         /// <summary>
-        /// Verifica a senha do usuário ao fazer o login
+        /// Verifica a senha do usuário antes de fazer o login
         /// </summary>
         /// <returns></returns>
-        public bool VerifyUserPassword(Usuario usuario)
+        public bool VerifyUserPassword(tbUsuario usuario)
         {
             if (string.IsNullOrEmpty(usuario.Login) || string.IsNullOrEmpty(usuario.Senha))
             {

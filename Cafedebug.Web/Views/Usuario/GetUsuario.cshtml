@@ -1,7 +1,7 @@
 ﻿@model Cafedebug.Model.tbBanner
 
 @{
-    ViewData["Title"] = "Listar Banner | Café Debug";
+    ViewData["Title"] = "Listar Usuários | Café Debug";
     Layout = "~/Views/Shared/_layout.cshtml";
 }
 
@@ -18,7 +18,7 @@
                     <legend>Listar Banner</legend>
                     <div class="form-group col-md-9 floatl">
                         <label class="control-label" for="textinput">Pesquisar</label>
-                            <a href="#" class="btn btn-sm btn-primary">Pesquisar</a>
+                        <a href="#" class="btn btn-sm btn-primary">Pesquisar</a>
                         <div class="">
                             <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
                         </div>
@@ -36,12 +36,12 @@
                                 </div>
                             </div>
                             <div class="" botoessmall">
-                                <a href="@Url.Action("NovoBanner", "Banner")" class="btn btn-sm btn-primary">Adicionar Novo</a>
+                                <a href="@Url.Action("NovoUsuario", "Usuario")" class="btn btn-sm btn-primary">Adicionar Novo</a>
                             </div>
                         </div>
                         <div class="botoessmall">
-                            <a href="#" class="btn btn-sm btn-primary">editar</a>
-                            <a href="#" class="btn btn-sm btn-danger">excluir</a>
+                            <a href="@Url.Action("Update", "Usuario")" class="btn btn-sm btn-primary">Editar</a>
+                            <a href="@Url.Action("Delete", "Usuario")" class="btn btn-sm btn-primary">Excluir</a>
                         </div>
                     </div>
                 </div>

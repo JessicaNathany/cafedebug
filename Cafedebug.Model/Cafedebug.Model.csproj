@@ -42,14 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\UsuarioDTO.cs" />
-    <Compile Include="Model\Banner.cs" />
-    <Compile Include="Model\Noticia.cs" />
+    <Compile Include="Model\tbBanner.cs" />
+    <Compile Include="Model\tbNoticia.cs" />
     <Compile Include="Model\tbEmail.cs" />
-    <Compile Include="Model\Categoria.cs" />
-    <Compile Include="Model\Perfil.cs" />
-    <Compile Include="Model\Episodio.cs" />
-    <Compile Include="Model\TipoCategoria.cs" />
-    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Model\tbCategoria.cs" />
+    <Compile Include="Model\tbParticipante.cs" />
+    <Compile Include="Model\tbPerfil.cs" />
+    <Compile Include="Model\tbEpisodio.cs" />
+    <Compile Include="Model\tbTipoCategoria.cs" />
+    <Compile Include="Model\tbUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

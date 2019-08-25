@@ -33,19 +33,21 @@
             <ul class="list-unstyled components">
                 <li>@Html.ActionLink("Banner", "GetBanner", "Banner")</li>
                 <li>@Html.ActionLink("Quem Somos", "QuemSomosPainel", "QuemSomos")</li>
-                <li><a href="#">Categoria</a></li>
-                <li><a href="#">Episódio</a></li>
-                <li><a href="#">Tipo de Categoria</a></li>
-                <li><a href="#">Notícia</a></li>
-                <li><a href="#">Minha conta</a></li>
-                <li><a href="#">Usuário</a></li>
+                <li>@Html.ActionLink("Categoria", "GetCategoria", "Categoria")</li>
+                <li>@Html.ActionLink("Episódio", "GetEpisodio", "Episodio")</li>
+                <li>@Html.ActionLink("Notícia", "GetNoticia", "Noticia")</li>
+                <li>@Html.ActionLink("Minha Conta", "Index", "Account")</li>
+                <li>@Html.ActionLink("Usuário", "GetUsuario", "Usuario")</li>
             </ul>
             <ul class="list-unstyled CTAs">
                 <li>
                     <a href="#" class="article">Sair</a>
+                    @*@Html.ActionLink("Sair", "LogOff", "Account", new { @class = "article" })*@
                 </li>
             </ul>
         </nav>
+    </div>
 </body>
 </html>
+
 @RenderSection("Scripts", required: false)
