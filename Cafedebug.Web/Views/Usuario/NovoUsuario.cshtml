@@ -15,11 +15,12 @@
                     <div id="boxscroll">
                         <div class="form-group">
                             <div class="form-group col-md-2  text-left">
-                                <label class="control-label  " for="textinput">Nome</label>
+                                @Html.LabelFor(u => u.Nome, "Nome")
                             </div>
                             <div class="form-group col-md-12 ">
                                 <div class="">
-                                    <input id="textinput" name="textinput" type="text" class="form-control input-md" required>
+                                    @Html.TextBoxFor(u => u.Nome, new { required = "required", @name = "Nome", @id = "Nome" , @class = "form-control input-md" })
+                                    @*<input id="textinput" name="textinput" type="text" class="form-control input-md" required>*@
                                 </div>
                             </div>
                             <div class="form-group w-100">

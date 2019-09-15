@@ -49,6 +49,7 @@
     <Compile Include="Model\tbParticipante.cs" />
     <Compile Include="Model\tbPerfil.cs" />
     <Compile Include="Model\tbEpisodio.cs" />
+    <Compile Include="Model\tbTag.cs" />
     <Compile Include="Model\tbTipoCategoria.cs" />
     <Compile Include="Model\tbUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

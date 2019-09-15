@@ -62,8 +62,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repository\UsuarioRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\CategoriaServiceTest.cs" />
+    <Compile Include="Service\EpisodioServiceTest.cs" />
+    <Compile Include="Service\NoticiaServiceTest.cs" />
+    <Compile Include="Service\BannerServiceTest.cs" />
+    <Compile Include="Service\PerfilServiceTest.cs" />
+    <Compile Include="Service\EmailServiceTest.cs" />
+    <Compile Include="Service\UsuarioServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -83,9 +89,7 @@
       <Name>Cafedebug.Service</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Service\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
