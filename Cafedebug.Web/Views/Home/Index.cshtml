@@ -1,5 +1,6 @@
-﻿@{
-    ViewData["Title"] = "Café Debug | Seu Podcast de Tecnologia";
+﻿@model Cafedebug.Model.DTO.HomeDTO
+@{
+    ViewData["Title"] = "";
 }
 
 <!DOCTYPE html>
@@ -12,6 +13,8 @@
     <link href="~/css/style.css" rel="stylesheet" />
     <link href="~/css/swiper.min.css" rel="stylesheet" />
     <script src="~/js/swiper/swiper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -23,61 +26,16 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
-    <header>
-        <!-- HEADER -->
-        <div id="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4"><a href="#"><img src="~/images/logo-cafedebug.png" class="logo" /></a></div>
-                    <div class="col-md-8">
-                        <div class="topheader">
-                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                            <a href="https://twitter.com/cafedebug" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                        </div>
-                        <nav class="navbar navbar-expand-lg navbar-light ">
-                            <button class="navbar-toggler nvbt" type="button" data-toggle="collapse"
-                                    data-target="#bs-example-navbar-collapse-1">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul class="navbar-nav ml-md-auto menutop">
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="#">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#quemsomos">Quem Somos</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#servicos">Episódios</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#depoimentos">Patrocinadores</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#contato">Fale Conosco</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- FECHA TOPO -->
-
-    <!-- BANNER -->
+    @{
+        @Html.Partial("_MenuHome")
+    }
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 @*<div class="slide-inner" style="background-image:url(../../wwwroot/images/banner.jpg)">*@
-                   <div class="slide-inner" style="background-image:url(~/images/banner.jpg)">
+                <div class="slide-inner" style="background-image:url(~/images/banner.jpg)">
                     <div class="conteudobanner">
                         <strong>Cafê Debug <b>#24</b></strong>
                         <h2 style="color: #fff; font-size: 52px;">Startups e Aceleradoras</h2>
@@ -93,7 +51,6 @@
     </div>
     <!-- FECHA BANNER -->
 
-    <!-- ULTIMOS-EPS -->
     <section id="novosepisodios">
         <div class="container">
             <div class="row boxultimoeps">
@@ -131,64 +88,10 @@
                 <div class="col-sm-12"> <a href="#" class="vermaiseps"><i class="fas fa-plus-circle"></i>ver mais episodios</a></div>
             </div>
     </section>
-    <!-- FECHA/ULTIMOS-EPS -->
-    <!-- NOTICIAS -->
-    <section id="noticias" class="aboxnoticia">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 titulonotic">
-                    <h3>Desbugando<br /><b>Noticías</b></h3>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="boxnoticia">
-                        <a href="#" class="noticia">
-                            <b class="tag"> Noticías</b>
-                            <span>Lavar bem as mãos dura menos de um minuto e salva vidas</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-8">
-                    <div class="boxnoticia">
-                        <a href="#" class="noticia">
-                            <b class="tag"> Noticías</b>
-                            <span>Guia de cores dos alimentos ajuda a criar um cardápio saudável para prevenir o câncer e aumentar sua qualidade de vida</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="boxnoticia">
-                        <a href="#" class="noticia">
-                            <b href="#" class="tag"> Noticías</b>
-                            <span>Chelsea vence e fará clássico com o Arsenal na final</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="boxnoticia">
-                        <a href="#" class="noticia">
-                            <b href="#" class="tag"> Noticías</b>
-                            <span>Apotecários, os drinks que têm poder curativo</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="boxnoticia">
-                        <a href="#" class="noticia">
-                            <b class="tag"> Noticías</b>
-                            <span>‘Friends’ ainda arrecada US$ 1 bi por ano</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <!-- FECHA/NOTICIAS -->
-    <!-- QUEMFAZ -->
+    @{
+        @Html.Partial("_DesbugandoNoticia")
+    }
+
     <section id="quemfaz">
         <div class="container">
             <div class="row">
@@ -259,47 +162,17 @@
             </div>
         </div>
     </section>
-    <!-- FECHA/QUEMFAZ -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3"><img src="~/images/logo-cafedebug-rodape.png" class="logorodape"></div>
-                <div class="col-sm-9">
-                    <div id="linharodape">
-                    </div>
-                    <div id="nav-rodape2">
-                        <ul>
-                            <li>
-                                <a href="#">Home</a>
-                            </li>
-                            <li>
-                                <a href="#">Quem Somos</a>
-                            </li>
-                            <li>
-                                <a href="#">Episódios</a>
-                            </li>
-                            <li>
-                                <a href="#">Categorias</a>
-                            </li>
-                            <li>
-                                <a href="#">Patrocinadores</a>
-                            </li>
-                            <li>
-                                <a href="#">Contato</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @{
+        @Html.Partial("_LayoutFooter")
+    }
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script>
-      var interleaveOffset = 0.5;
 
-      var swiperOptions = {
+
+<script type="text/jscript">
+
+    var interleaveOffset = 0.5;
+
+    var swiperOptions = {
         loop: true,
         speed: 1000,
         grabCursor: true,
@@ -308,40 +181,38 @@
         mousewheelControl: true,
         keyboardControl: true,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
         },
         on: {
-          progress: function() {
-            var swiper = this;
-            for (var i = 0; i < swiper.slides.length; i++) {
-              var slideProgress = swiper.slides[i].progress;
-              var innerOffset = swiper.width * interleaveOffset;
-              var innerTranslate = slideProgress * innerOffset;
-              swiper.slides[i].querySelector(".slide-inner").style.transform =
-                "translate3d(" + innerTranslate + "px, 0, 0)";
+            progress: function () {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slideProgress = swiper.slides[i].progress;
+                    var innerOffset = swiper.width * interleaveOffset;
+                    var innerTranslate = slideProgress * innerOffset;
+                    swiper.slides[i].querySelector(".slide-inner").style.transform =
+                        "translate3d(" + innerTranslate + "px, 0, 0)";
+                }
+            },
+            touchStart: function () {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = "";
+                }
+            },
+            setTransition: function (speed) {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = speed + "ms";
+                    swiper.slides[i].querySelector(".slide-inner").style.transition =
+                        speed + "ms";
+                }
             }
-          },
-          touchStart: function() {
-            var swiper = this;
-            for (var i = 0; i < swiper.slides.length; i++) {
-              swiper.slides[i].style.transition = "";
-            }
-          },
-          setTransition: function(speed) {
-            var swiper = this;
-            for (var i = 0; i < swiper.slides.length; i++) {
-              swiper.slides[i].style.transition = speed + "ms";
-              swiper.slides[i].querySelector(".slide-inner").style.transition =
-                speed + "ms";
-            }
-          }
         }
-      };
+    };
 
-      var swiper = new Swiper(".swiper-container", swiperOptions);
-
-
+    var swiper = new Swiper(".swiper-container", swiperOptions);
 
 </script>
 </html>

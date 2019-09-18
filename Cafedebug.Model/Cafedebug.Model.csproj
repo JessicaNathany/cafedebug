@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\HomeDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="Model\tbBanner.cs" />
     <Compile Include="Model\tbNoticia.cs" />
