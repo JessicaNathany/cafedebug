@@ -1,7 +1,7 @@
 ﻿@model Cafedebug.Model.tbEpisodio
 
 @{
-    ViewData["Title"] = "Café Debug | Episódios";
+    ViewData["Title"] = "Episódio | Café Debug";
 }
 
 <!DOCTYPE html>
@@ -33,51 +33,9 @@
 
 </head>
 <body>
-    <header>
-        <!-- HEADER -->
-        <div id="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4"><a href="#"><img src="~/images/logo-cafedebug.png" class="logo" /></a></div>
-                    <div class="col-md-8">
-                        <div class="topheader">
-                            <a href="#" target="_blank"><i class="fab fa-instagram "></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-facebook-square "></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                        </div>
-                        <nav class="navbar navbar-expand-lg navbar-light ">
-                            <button class="navbar-toggler nvbt" type="button" data-toggle="collapse"
-                                    data-target="#bs-example-navbar-collapse-1">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul class="navbar-nav ml-md-auto menutop">
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="#">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#quemsomos">Quem Somos</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#servicos">Episódios</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#depoimentos">Patrocinadores</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#contato">Fale Conosco</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- FECHA TOPO -->
-
-    <!-- EPISODIOUNICO -->
+    @{
+        @Html.Partial("_MenuHome")
+    }
     <section id="episodiounico">
         <div class="container">
             <div class="row">
@@ -95,43 +53,32 @@
                         <strong>Cafê Debug <b>#24</b></strong>
                         <h2>Bancos de Dados NOSQL</h2>
                     </div>
-
                     <p>
+                        <!-- carregar do banco-->
                         Descrição do episódio, carregar do banco.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-
                         <br /><br />
-                        <h6>Participantes:</h6>
-                        <ul>
-                            <a href="#"><li>Jessica Nathany</li></a>
-                            <a href="#"><li>Douglas Pires</li></a>
-                            <a href="#"><li>Austin Felipe</li></a>
-                            <a href="#"><li>Yunnes Abdul</li></a>
-                        </ul>
                     </p>
 
                     <div id="boxsoundcloud">
-
-                        <h4>OUÇA através do player abaixo ou pelo <a href="">Spotify</a></h4>
-                        <p>Carregar o link dó episódio spotify</p>
+                        <h4>OUÇA através do player abaixo ou pelo <a href="">Sondcloud</a></h4><!--carregar url do soundcloud ou spotify da base-->
+                        <p>Carregar o link dó episódio soundcloud</p>
                         <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/352561763&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
                         <div class="compartilheep">
 
                             <div class="eplinkshe">
                                 <h4>Compartilhe:</h4>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw"><i class="fab fa-youtube"></i></a>
+                                <a href="https://twitter.com/cafedebug"><i class="fab fa-twitter"></i></a>
                             </div>
 
                             <div class="linksrepositorios">
                                 <ul>
-                                    <a href="#"><li>Download</li></a>
+                                    <a href="#"><li>Android</li></a>
                                     <a href="#"><li>Itunes</li></a>
                                     <a href="#"><li>Feed</li></a>
                                     <a href="#"><li class="bdnn">Spotify</li></a>
@@ -140,85 +87,23 @@
                             <div id="envieemail">
                                 <img src="~/images/iconbugemail.png">
                                 <p>
-                                   Dicas? Sugestões? Comentarios? Envie para:<br />
-                                   <a href="mailto:debugcafe@gmail.com">debugcafe@gmail.com</a>
+                                    Dicas? Sugestões? Comentarios? Envie para:<br />
+                                    <a href="mailto:debugcafe@gmail.com">debugcafe@gmail.com</a>
                                 </p>
                             </div>
                         </div>
                     </div>
 
                 </div><!-- FECHA/CONTEUDOEPISODIO -->
-                <!-- BARRALATERAL -->
-                <div class="col-sm-4">
-                    <div class="coluna3">
-                        <h3>
-                            Desbugando<br />
-                            <b>Noticías</b><strong>___________</strong>
-                        </h3>
-                        <ul>
-                            <li>
-                                <a href="#" class="noticialista">
-                                    <b href="#" class="taglista"> Noticías</b>
-                                    <span>Exportação de carne de frango cresce 35% em abril</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="noticialista">
-                                    <b href="#" class="taglista"> Noticías</b>
-                                    <span>Chelsea bate Eintracht Frankfurt nos pênaltis  </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="noticialista">
-                                    <b href="#" class="taglista"> Noticías</b>
-                                    <span>Marinha alerta para vento de mais de 60 km/h no litoral</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="anunciobrlateral">
-                        <img src="~/images/anuncios.jpg">
-                    </div>
-                </div><!-- FECHA BARRALATERAL -->
+                @{
+                    @Html.Partial("_DesbugandoNoticia_Episodio")
+                }
             </div>
         </div>
-    </section><!-- FECHA EPISODIOUNICO -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3"><img src="~/images/logo-cafedebug-rodape.png" class="logorodape"></div>
-                <div class="col-sm-9">
-                    <div id="linharodape">
-                    </div>
-                    <div id="nav-rodape2">
-                        <ul>
-                            <li>
-                                <a href="#">Home</a>
-                            </li>
-                            <li>
-                                <a href="#">Quem Somos</a>
-                            </li>
-                            <li>
-                                <a href="#">Episódios</a>
-                            </li>
-                            <li>
-                                <a href="#">Categorias</a>
-                            </li>
-                            <li>
-                                <a href="#">Patrocinadores</a>
-                            </li>
-                            <li>
-                                <a href="#">Contato</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </section>
+    @{
+        @Html.Partial("_LayoutFooter")
+    }
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
 </html>
 

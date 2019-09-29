@@ -1,6 +1,131 @@
-﻿@model Cafedebug.Model.tbParticipante
+﻿@model Cafedebug.Model.DTO.HomeDTO
 @{
-    ViewData["Title"] = "Quem Somos";
+    ViewData["Title"] = "Quem Somos | Café Debug";
 }
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/swiper.min.css" rel="stylesheet" />
+    <script src="~/js/swiper/swiper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-<h2>Quem Somos</h2>
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    @{
+        @Html.Partial("_MenuHome")
+    }
+    <!-- FECHA TOPO -->
+    <section id="quemsomos">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 colcenter">
+                    <img src="~/images/logo-quemsomos.png" />
+                    <p class="txtquemsomos">
+                        Amamos tecnologia. Somos apaixonados por codificar e estamos sempre ligados as tendências tecnológicas. Com isso, criamos o Café Debug para criar e compartilhar conteúdo. Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-10 colcenter tituloquemsomos">
+                            <h4>Quem faz ?</h4>
+                        </div>
+                    </div>
+                    <!-- linha usuario -->
+                    <div class="row linhausuario">
+                        <div class="col-sm-3 userquemfaz">
+                            <div class="square">
+                                <div class="block" style="background-image: url(img/img-jessica.jpg);">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 textquemuser">
+                            <h5>Jéssica Nathany </h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <div class="socialuser socialright">
+                                <a href="#" target="_blank"><i class="fab fa-instagram "></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-facebook-square "></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fecha/linha usuario -->
+                    <!-- linha usuario -->
+                    <div class="row linhausuario">
+                        <div class="col-sm-3 userquemfaz">
+                            <div class="square">
+                                <div class="block" style="background-image: url(img/user2.jpg);">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 textquemuser">
+                            <h5>Jéssica Nathany </h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <div class="socialuser socialright">
+                                <a href="#" target="_blank"><i class="fab fa-instagram "></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-facebook-square "></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fecha/linha usuario -->
+                    <!-- linha usuario -->
+                    <div class="row linhausuario">
+                        <div class="col-sm-3 userquemfaz">
+                            <div class="square">
+                                <div class="block" style="background-image: url(img/user3.jpg);">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 textquemuser">
+                            <h5>Jéssica Nathany </h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <div class="socialuser socialright">
+                                <a href="#" target="_blank"><i class="fab fa-instagram "></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-facebook-square "></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fecha/linha usuario -->
+                    <!-- linha usuario -->
+                    <div class="row linhausuario">
+                        <div class="col-sm-3 userquemfaz">
+                            <div class="square">
+                                <div class="block" style="background-image: url(img/user4.jpg);">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 textquemuser">
+                            <h5>Jéssica Nathany </h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <div class="socialuser socialright">
+                                <a href="#" target="_blank"><i class="fab fa-instagram "></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-facebook-square "></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fecha/linha usuario -->
+                </div>
+            </div>
+        </div>
+    </section>
+    @{
+        @Html.Partial("_LayoutFooter")
+    }
+</body>
+
+</html>

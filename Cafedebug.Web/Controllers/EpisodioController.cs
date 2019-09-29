@@ -35,5 +35,14 @@ namespace Cafedebug.Web.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// Exibe a tela com todos os episódios da Home (Frontend)
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult MaisEpisodios()
+        {
+            return View();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿@model Cafedebug.Model.DTO.HomeDTO
 @{
-    ViewData["Title"] = "";
+    ViewData["Title"] = "Home | Café Debug";
 }
 
 <!DOCTYPE html>
@@ -85,8 +85,10 @@
                 </div>
             </div>
             <div class="row linhamaisep ">
-                <div class="col-sm-12"> <a href="#" class="vermaiseps"><i class="fas fa-plus-circle"></i>ver mais episodios</a></div>
-            </div>
+                <div class="col-sm-12">
+                    @*<li class="fas fa-plus-circle">@Html.ActionLink("ver mais episódios", "MaisEpisodios", "Episodio", new { @class = "vermaiseps" })</li>*@
+                    <a href="#" class="vermaiseps"><i class="fas fa-plus-circle"></i>ver mais episodios</a></div>
+                </div>
     </section>
     @{
         @Html.Partial("_DesbugandoNoticia")
