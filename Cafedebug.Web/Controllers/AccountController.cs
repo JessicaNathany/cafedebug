@@ -4,9 +4,12 @@ using Cafedebug.Model.DTO;
 using Microsoft.AspNetCore.Mvc;
 using log4net;
 using System;
+using Microsoft.AspNetCore.Authorization;
+using Cafedebug.Web.Models;
 
 namespace Cafedebug.Web.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(AccountController));
@@ -46,10 +49,15 @@ namespace Cafedebug.Web.Controllers
         /// <param name="usuarioDTO"></param>
         /// <returns></returns>
         [HttpPost]
-        public JsonResult Autentication([FromBody]UsuarioDTO usuarioDto)
+        public JsonResult Autentication([FromBody]UsuarioModel model)
         {
             try
             {
+                if(!ModelState.IsValid)
+                {
+                    return this.Json(Mensagem.GetDescription(EnumMensagem.MsgErroErrorSistema));
+                }
+
                 //Autenticar usuário, se estiver correto redirecionar 
                 //para a tela Home, senão retornar para a tela de Login e exibir a mensagem de erro
 

@@ -67,6 +67,7 @@
     <Compile Include="UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="log4net.config" />
     <None Include="packages.config" />
   </ItemGroup>
