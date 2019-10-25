@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Cafedebug.Configuration;
+using Cafedebug.Model;
+using Cafedebug.Model.DTO;
+using Microsoft.AspNetCore.Mvc;
+using log4net;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Cafedebug.Web.Models;
 
 namespace Cafedebug.Web.Controllers
 {
@@ -12,6 +15,7 @@ namespace Cafedebug.Web.Controllers
         /// Exibe a tela do Banner
         /// </summary>
         /// <returns></returns>
+        
         public ActionResult Index()
         {
             return View();

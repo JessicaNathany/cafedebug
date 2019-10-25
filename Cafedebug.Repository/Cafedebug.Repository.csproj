@@ -153,10 +153,6 @@
       <Project>{146c48e6-7d9f-45da-8df1-5c6d92de6c04}</Project>
       <Name>Cafedebug.Configuration</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Cafedebug.Model\Cafedebug.Model.csproj">
-      <Project>{2353212b-3fe2-480a-9c26-d1f23149b1a8}</Project>
-      <Name>Cafedebug.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

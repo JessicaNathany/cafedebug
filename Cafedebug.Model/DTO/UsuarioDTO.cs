@@ -1,4 +1,8 @@
-﻿namespace Cafedebug.Model.DTO
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cafedebug.Model.DTO
 {
     /// <summary>
     /// Classe Usuario de transferência de dados 
@@ -41,3 +45,4 @@
         public string Mensagem { get; set; }
     }
 }
+

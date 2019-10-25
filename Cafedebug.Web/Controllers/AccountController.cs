@@ -49,6 +49,7 @@ namespace Cafedebug.Web.Controllers
         /// <param name="usuarioDTO"></param>
         /// <returns></returns>
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public JsonResult Autentication([FromBody]UsuarioModel model)
         {
             try

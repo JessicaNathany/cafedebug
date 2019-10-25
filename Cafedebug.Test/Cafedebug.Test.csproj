@@ -76,10 +76,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cafedebug.Model\Cafedebug.Model.csproj">
-      <Project>{2353212b-3fe2-480a-9c26-d1f23149b1a8}</Project>
-      <Name>Cafedebug.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Cafedebug.Repository\Cafedebug.Repository.csproj">
       <Project>{123a8a8c-f0b8-4a3b-a20c-c621f99fb7fa}</Project>
       <Name>Cafedebug.Repository</Name>
