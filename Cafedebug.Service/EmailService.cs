@@ -6,7 +6,6 @@ using log4net;
 using Cafedebug.Repository.Interface;
 using Unity;
 
-
 namespace Cafedebug.Service
 {
     /// <summary>

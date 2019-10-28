@@ -145,7 +145,7 @@ namespace Cafedebug.Configuration
         #region Message - Alert
 
         [Description("Você não tem permissão para executar esta ação!")]
-        MsgAlerta= 28,
+        MsgAlerta = 28,
 
         [Description("Este registro não pode ser excluído!")]
         MsgAlertaExclusao = 29,

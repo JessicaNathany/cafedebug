@@ -18,7 +18,7 @@ namespace Cafedebug.Repository
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(UsuarioRepository));
 
-        static string connectionString = ConfigurationManager.ConnectionStrings["CafedeBugConnectionString"].ConnectionString;
+        //static string connectionString = ConfigurationManager.ConnectionStrings["CafedeBugConnectionString"].ConnectionString;
 
         /// <summary>
         /// Salva um usuário na base
@@ -27,21 +27,21 @@ namespace Cafedebug.Repository
         /// <returns></returns>
         public void Save(tbUsuario entity)
         {
-            try
-            {
-                using (var conn = new SqlConnection(connectionString))
-                {
-                    conn.Execute(@"INSERT tbUsuario(Nome, Email, Login, Senha)
-                                          VALUES (@Nome, @Email, @Login, @Senha)", entity);
+            //try
+            //{
+            //    using (var conn = new SqlConnection(connectionString))
+            //    {
+            //        conn.Execute(@"INSERT tbUsuario(Nome, Email, Login, Senha)
+            //                              VALUES (@Nome, @Email, @Login, @Senha)", entity);
 
-                    Log.InfoFormat("Usuário cadastrado com sucesso! {0}", entity);
-                }
-            }
-            catch (Exception ex)
-            {
-                Log.ErrorFormat("Erro ao cadastrar um usuário! {0}", ex.Message);
-                throw;
-            }
+            //        Log.InfoFormat("Usuário cadastrado com sucesso! {0}", entity);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Log.ErrorFormat("Erro ao cadastrar um usuário! {0}", ex.Message);
+            //    throw;
+            //}
         }
 
         /// <summary>
@@ -80,19 +80,6 @@ namespace Cafedebug.Repository
         public int GetById(int id)
         {
             throw new NotImplementedException();
-
-            //try
-            //{
-            //    using (var connection = new SqlConnection(connectionString))
-            //    {
-            //        var produtos = connection.Query<Usuario>(@"SELECT * FROM Products WHERE ProductID = @Id", new { id = 2 });
-            //    }
-            //}
-            //catch (Exception)
-            //{
-
-            //    throw;
-            //}
         }
 
         /// <summary>
