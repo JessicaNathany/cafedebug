@@ -2,15 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cafedebug.Model\Cafedebug.Model.csproj" />
-    <ProjectReference Include="..\Cafedebug.Repository\Cafedebug.Repository.csproj" />
+    <Folder Include="Controller\" />
   </ItemGroup>
 
 </Project>

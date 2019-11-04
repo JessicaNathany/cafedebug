@@ -1,18 +1,17 @@
-﻿//using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Cafedebug.Model.Model;
-//using Cafedebug.Service;
-using Moq;
-//using Cafedebug.Service.Interface;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Cafedebug.Test.Service
+namespace Cafedebug.UnitTest
 {
     /// <summary>
-    ///// Test do serviço Usuário
-    ///// </summary>
-    //[TestClass]
-    //public class UsuarioServiceTest
-    //{
-       
-        
-    //}
+    /// UsuarioServiceTest classe para testar o servi�o do Usuario
+    /// </summary>
+    [TestClass]
+    public class UsuarioServiceTest
+    {
+        [TestMethod]
+        public void VerificaUsuarioExistente_Success()
+        {
+            
+        }
+    }
 }

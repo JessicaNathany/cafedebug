@@ -19,13 +19,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6- Configuration", "6- Conf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Model", "Cafedebug.Model\Cafedebug.Model.csproj", "{EB6EB823-1F2A-44CC-BBDE-9C9A152E7227}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafedebug.Repository", "Cafedebug.Repository\Cafedebug.Repository.csproj", "{6AE25E36-D48C-4D36-AF51-EA25E9F64266}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Repository", "Cafedebug.Repository\Cafedebug.Repository.csproj", "{6AE25E36-D48C-4D36-AF51-EA25E9F64266}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafedebug.Service", "Cafedebug.Service\Cafedebug.Service.csproj", "{7D02E7E1-EA1B-4F89-BE73-57C03D145BEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Service", "Cafedebug.Service\Cafedebug.Service.csproj", "{7D02E7E1-EA1B-4F89-BE73-57C03D145BEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafedebug.Configuration", "Cafedebug.Configuration\Cafedebug.Configuration.csproj", "{D1DD2AB7-585C-46D7-8CE6-565A0084E11D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Configuration", "Cafedebug.Configuration\Cafedebug.Configuration.csproj", "{D1DD2AB7-585C-46D7-8CE6-565A0084E11D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafedebug.UnitTest", "Cafedebug.UnitTest\Cafedebug.UnitTest.csproj", "{3D4C8CB2-B6DD-491E-B9CF-B5BD0DD553E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafedebug.UnitTest", "Cafedebug.UnitTest\Cafedebug.UnitTest.csproj", "{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +53,10 @@ Global
 		{D1DD2AB7-585C-46D7-8CE6-565A0084E11D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1DD2AB7-585C-46D7-8CE6-565A0084E11D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1DD2AB7-585C-46D7-8CE6-565A0084E11D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D4C8CB2-B6DD-491E-B9CF-B5BD0DD553E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D4C8CB2-B6DD-491E-B9CF-B5BD0DD553E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D4C8CB2-B6DD-491E-B9CF-B5BD0DD553E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D4C8CB2-B6DD-491E-B9CF-B5BD0DD553E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,7 +67,7 @@ Global
 		{6AE25E36-D48C-4D36-AF51-EA25E9F64266} = {92AC78F2-5AAE-4B0D-80BF-DE8E6172C356}
 		{7D02E7E1-EA1B-4F89-BE73-57C03D145BEB} = {6FA25A94-AC6E-47E6-96AE-B92FDBDA3A85}
 		{D1DD2AB7-585C-46D7-8CE6-565A0084E11D} = {FAD13D42-5A81-47B0-B5C5-E63F90D7DE68}
-		{3D4C8CB2-B6DD-491E-B9CF-B5BD0DD553E5} = {1AC21126-4B99-4B26-B7F4-8021B885295D}
+		{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE} = {1AC21126-4B99-4B26-B7F4-8021B885295D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A4F312B-CD53-4DEA-A64D-2C249AABB789}
