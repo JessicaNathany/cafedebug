@@ -18,9 +18,9 @@ namespace Cafedebug.Model
         public string Nome { get; set; }
 
         /// <summary>
-        /// Imagem do Banner
+        /// Url Imagem do Banner
         /// </summary>
-        public string Imagem { get; set; }  // mudar para tipo Bitmap
+        public string UrlImagem { get; set; }  
 
         /// <summary>
         /// Url do redirecionamento do Banner.

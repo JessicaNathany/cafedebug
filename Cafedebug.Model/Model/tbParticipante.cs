@@ -24,5 +24,10 @@
         /// Url do Linkedin
         /// </summary>
         public string UrlLinkedin { get; set; }
+
+        /// <summary>
+        /// Url da imagem do participante
+        /// </summary>
+        public string UrlImagem { get; set; }
     }
 }

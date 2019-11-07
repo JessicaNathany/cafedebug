@@ -38,6 +38,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Cafedebug.Configuration\Cafedebug.Configuration.csproj" />
     <ProjectReference Include="..\Cafedebug.Model\Cafedebug.Model.csproj" />
+    <ProjectReference Include="..\Cafedebug.Repository\Cafedebug.Repository.csproj" />
   </ItemGroup>
 
 </Project>

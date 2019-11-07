@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+using Cafedebug.Model.Model;
 using Microsoft.Extensions.DependencyInjection;
+using Cafedebug.Repository;
 
 namespace Cafedebug.Web
 {
@@ -29,6 +27,9 @@ namespace Cafedebug.Web
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
+                services.AddDbContext<CafedebugContext>(option =>
+                option.UseSqlServer(Configuration.GetConnectionString("CafedebugConnectionString")));
+
             });
 
            

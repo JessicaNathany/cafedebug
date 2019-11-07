@@ -43,6 +43,6 @@
         /// <summary>
         /// Imagem do usuário
         /// </summary>
-        public string Imagem { get; set; } // verificar tipo ou usar o Bitmap
+        public string UrlImagem { get; set; } 
     }
 }
