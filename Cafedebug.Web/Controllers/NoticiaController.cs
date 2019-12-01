@@ -37,7 +37,7 @@ namespace Cafedebug.Web.Controllers
         /// <summary>
         /// Salva uma nova noticia na base
         /// </summary>
-        public void Save(tbNoticia noticia)
+        public void Save(Noticia noticia)
         {
             throw new NotImplementedException();
         }

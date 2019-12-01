@@ -5,7 +5,7 @@ namespace Cafedebug.Service.Interface
     /// <summary>
     /// Interface de serviço do Usuario
     /// </summary>
-    public interface IUsuarioService : IBaseService<tbUsuario>
+    public interface IUsuarioService : IBaseService<Usuario>
     {
     }
 }

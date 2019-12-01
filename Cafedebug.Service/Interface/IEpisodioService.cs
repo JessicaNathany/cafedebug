@@ -5,7 +5,7 @@ namespace Cafedebug.Service.Interface
     /// <summary>
     /// Interface de serviço do Episodio
     /// </summary>
-    public interface IEpisodioService : IBaseService<tbEpisodio>
+    public interface IEpisodioService : IBaseService<Episodio>
     {
     }
 }

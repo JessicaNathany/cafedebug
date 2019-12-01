@@ -5,7 +5,7 @@ namespace Cafedebug.Repository.Interface
     /// <summary>
     /// Interface do repositório Categoria
     /// </summary>
-    public interface ICategoriaRepository : IBaseRepository<tbCategoria>
+    public interface ICategoriaRepository : IBaseRepository<Categoria>
     {
     }
 }

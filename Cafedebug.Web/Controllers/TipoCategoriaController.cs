@@ -12,7 +12,7 @@ namespace Cafedebug.Web.Controllers
         /// Recupera a lista dos tipos da categoria
         /// </summary>
         /// <returns></returns>
-        public IList<tbTipoCategoria> GetAllTipoCategoria()
+        public IList<TipoCategoria> GetAllTipoCategoria()
         {
             throw new NotImplementedException();
         }

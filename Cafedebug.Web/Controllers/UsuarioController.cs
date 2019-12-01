@@ -27,7 +27,7 @@ namespace Cafedebug.Web.Controllers
         /// Salva um usuário
         /// </summary>
         /// <returns></returns>
-        public void Save(tbUsuario usuario)
+        public void Save(Usuario usuario)
         {
             throw new NotImplementedException();
         }
@@ -62,7 +62,7 @@ namespace Cafedebug.Web.Controllers
         /// Recupera uma lista de usuários
         /// </summary>
         /// <returns></returns>
-        public IList<tbUsuario>GetAllUsuario()
+        public IList<Usuario>GetAllUsuario()
         {
             throw new NotImplementedException(); 
         }
@@ -72,7 +72,7 @@ namespace Cafedebug.Web.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public tbUsuario GetById(int id)
+        public Usuario GetById(int id)
         {
             throw new NotImplementedException();
         }

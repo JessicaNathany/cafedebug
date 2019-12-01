@@ -33,7 +33,7 @@ namespace Cafedebug.Service
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public void Save(tbEpisodio episodio)
+        public void Save(Episodio episodio)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace Cafedebug.Service
         /// Recupera uma lista de episódios
         /// </summary>
         /// <returns></returns>
-        public IList<tbEpisodio> GetAll()
+        public IList<Episodio> GetAll()
         {
             throw new NotImplementedException();
         }

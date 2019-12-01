@@ -27,7 +27,7 @@ namespace Cafedebug.Service
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public void Save(tbCategoria obj)
+        public void Save(Categoria obj)
         {
             throw new NotImplementedException();
         }
@@ -60,7 +60,7 @@ namespace Cafedebug.Service
         /// Recupera uma lista de categorias
         /// </summary>
         /// <returns></returns>
-        public IList<tbCategoria> GetAll()
+        public IList<Categoria> GetAll()
         {
             throw new NotImplementedException();
         }
