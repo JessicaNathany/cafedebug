@@ -1,24 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cafedebug.Model
 {
     /// <summary>
-    /// Entidade tbTipoCategoria
+    /// Entidade TipoCategoria
     /// </summary>
-    public class tbTipoCategoria
+    [Table("TipoCategoria")]
+    public class TipoCategoria
     {
         /// <summary>
         /// Id do tipo da categoria
         /// </summary>
-        public int IdTipoCategoria { get; set; }
+        [Key]
+        public int Id { get; set; }
 
         /// <summary>
         /// nome do tipo da categoria
         /// </summary>
+        [StringLength(100)]
         public int Nome { get; set; }
     }
 }

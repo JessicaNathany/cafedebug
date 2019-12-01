@@ -1,14 +1,19 @@
-﻿namespace Cafedebug.Model
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Cafedebug.Model
 {
     /// <summary>
-    /// entidade tbCategoria
+    /// entidade Categoria
     /// </summary>
-    public class tbCategoria
+    [Table("Categoria")]
+    public class Categoria
     {
         /// <summary>
         /// Id da Categoria
         /// </summary>
-        public int IdCategoria { get; set; }
+        [Key]
+        public int Id { get; set; }
 
         /// <summary>
         /// Id do tipo da categoria
@@ -18,6 +23,7 @@
         /// <summary>
         /// Nome da Categoria
         /// </summary>
+        [StringLength(50)]
         public string Nome { get; set; }
 
         /// <summary>

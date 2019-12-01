@@ -1,25 +1,31 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cafedebug.Model
 {
     /// <summary>
-    /// entidade tbEpisodio 
+    /// entidade Episodio 
     /// </summary>
-    public class tbEpisodio
+    [Table("Episodio")]
+    public class Episodio
     {
         /// <summary>
         /// Id da episódio.
-        /// </summary>
-        public int IdEpisodio { get; set; }
+        ///</summary>
+        [Key]
+        public int Id { get; set; }
 
         /// <summary>
         /// Nome da episódio.
         /// </summary>
+        [StringLength(50)]
         public string Nome { get; set; }
 
         /// <summary>
         /// Título da episódio.
         /// </summary>
+        [StringLength(50)]
         public string Titulo { get; set; }
 
         /// <summary>
@@ -28,13 +34,15 @@ namespace Cafedebug.Model
         public string Descricao { get; set; }
 
         /// <summary>
-        /// Url da episódio.
+        /// Url link do episódio. (SoundCloud / Spotity)
         /// </summary>
+        [StringLength(250)]
         public string Url { get; set; }
 
         /// <summary>
         /// Url da Imagem de capa do episódio.
         /// </summary>
+        [StringLength(250)]
         public string UrlImagem { get; set; }
 
         /// <summary>
@@ -45,6 +53,7 @@ namespace Cafedebug.Model
         /// <summary>
         /// Data da episódio.
         /// </summary>
+        [DataType(DataType.DateTime)]
         public DateTime Data { get; set; }
     }
 }

@@ -1,14 +1,19 @@
-﻿namespace Cafedebug.Model
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Cafedebug.Model
 {
     /// <summary>
-    /// entidade tbUsuario
+    /// entidade Usuario
     /// </summary>
-    public class tbUsuario
+    [Table("Usuario")]
+    public class Usuario
     {
         /// <summary>
         /// Id do usuário.
         /// </summary>
-        public int IdUsuario { get; set; }
+        [Key]
+        public int Id { get; set; }
 
         /// <summary>
         /// Id do tbPerfil.
@@ -18,21 +23,28 @@
         /// <summary>
         /// Nome do usuário.
         /// </summary>
+        [StringLength(50)]
+        [Required]
         public string Nome { get; set; }
 
         /// <summary>
         /// Email do usuário.
         /// </summary>
+        [StringLength(100)]
         public string Email { get; set; }
 
         /// <summary>
         /// Login do usuário.
         /// </summary>
+        [StringLength(10)]
+        [Required]
         public string Login { get; set; }
 
         /// <summary>
         /// Senha do usuário.
         /// </summary>
+        [StringLength(10)]
+        [Required]
         public string Senha { get; set; }
 
         /// <summary>
@@ -43,6 +55,7 @@
         /// <summary>
         /// Imagem do usuário
         /// </summary>
+        [StringLength(250)]
         public string UrlImagem { get; set; } 
     }
 }

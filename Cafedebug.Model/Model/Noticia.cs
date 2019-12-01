@@ -1,29 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace Cafedebug.Model
 {
     /// <summary>
     /// Entidade Noticia
     /// </summary>
-    public class tbNoticia
+    [Table("Noticia")]
+    public class Noticia
     {
         /// <summary>
         /// Id do Noticia.
         /// </summary>
+        [Key]
         public int Id { get; set; }
 
         /// <summary>
         /// Nome do Noticia.
         /// </summary>
+        [StringLength(50)]
         public string Nome { get; set; }
 
         /// <summary>
         /// Titulo da Noticia.
         /// </summary>
+        [StringLength(100)]
         public string Titulo { get; set; }
 
         /// <summary>
@@ -32,18 +34,21 @@ namespace Cafedebug.Model
         public string Descricao { get; set; }
 
         /// <summary>
-        /// Imagem do Noticia
+        /// Url da imagem do Noticia
         /// </summary>
-        public string Imagem { get; set; }  // mudar para tipo Bitmap
+        [StringLength(250)]
+        public string UrlImagem { get; set; }
 
         /// <summary>
-        /// Url do redirecionamento do Noticia.
+        /// Link da Noticia.
         /// </summary>
-        public string Url { get; set; }
+        [StringLength(250)]
+        public string LinkNoticia { get; set; }
 
         /// <summary>
-        /// Data da Noticia
+        /// Data publicação da Noticia
         /// </summary>
-        public DateTime Data { get; set; }
+        [DataType(DataType.DateTime)]
+        public DateTime DataPublicacao { get; set; }
     }
 }

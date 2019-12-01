@@ -1,20 +1,25 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cafedebug.Model
 {
     /// <summary>
-    /// entidade tbEmail
+    /// entidade Email
     /// </summary>
-    public class tbEmail
+    [Table("Email")]
+    public class Email
     {
         /// <summary>
         /// Id do email
         /// </summary>
-        public int IdEmail { get; set; }
+        [Key]
+        public int Id { get; set; }
 
         /// <summary>
         /// Assunto do tbEmail
         /// </summary>
+        [StringLength(50)]
         public string Assunto { get; set; }
 
         /// <summary>
@@ -40,6 +45,7 @@ namespace Cafedebug.Model
         /// <summary>
         /// Data do envio do email
         /// </summary>
+        [DataType(DataType.DateTime)]
         public DateTime? DataEnvio { get; set; }
     }
 }
