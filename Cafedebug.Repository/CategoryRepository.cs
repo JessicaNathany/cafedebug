@@ -1,4 +1,5 @@
 ﻿using Cafedebug.Model;
+using log4net;
 
 namespace Cafedebug.Repository
 {
@@ -7,6 +8,8 @@ namespace Cafedebug.Repository
     /// </summary>
     public class CategoriaRepository
     {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(UsuarioRepository));
 
+        private readonly CafedebugContext _contexto;
     }
 }

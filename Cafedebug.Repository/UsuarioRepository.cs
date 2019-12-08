@@ -18,7 +18,7 @@ namespace Cafedebug.Repository
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(UsuarioRepository));
 
-        //static string connectionString = ConfigurationManager.ConnectionStrings["CafedeBugConnectionString"].ConnectionString;
+        private readonly CafedebugContext _contexto;
 
         /// <summary>
         /// Salva um usuário na base

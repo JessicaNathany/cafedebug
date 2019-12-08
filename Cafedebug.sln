@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Service", "Cafede
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Configuration", "Cafedebug.Configuration\Cafedebug.Configuration.csproj", "{D1DD2AB7-585C-46D7-8CE6-565A0084E11D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafedebug.UnitTest", "Cafedebug.UnitTest\Cafedebug.UnitTest.csproj", "{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.UnitTest", "Cafedebug.UnitTest\Cafedebug.UnitTest.csproj", "{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

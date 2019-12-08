@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Cafedebug.Model.Model
+namespace Cafedebug.Model
 {
     /// <summary>
     /// Entidade Tag

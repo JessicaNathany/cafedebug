@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Cafedebug.Model;
 using Cafedebug.Repository.Interface;
+using log4net;
 
 namespace Cafedebug.Repository
 {
@@ -9,6 +10,10 @@ namespace Cafedebug.Repository
     /// </summary>
     public class EpisodioRepository : IEpisodioRepository
     {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(UsuarioRepository));
+
+        private readonly CafedebugContext _contexto;
+
         /// <summary>
         /// Salva uma publicação
         /// </summary>

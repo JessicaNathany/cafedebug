@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
-using Cafedebug.Model.Model;
+using Cafedebug.Model;
 using Microsoft.Extensions.DependencyInjection;
 using Cafedebug.Repository;
 
@@ -12,6 +12,7 @@ namespace Cafedebug.Web
 {
     public class Startup
     {
+       // recebe a injeção da classe configuration
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -28,14 +29,12 @@ namespace Cafedebug.Web
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
                 services.AddDbContext<CafedebugContext>(option =>
-                option.UseSqlServer(Configuration.GetConnectionString("CafedebugConnectionString")));
+                option.UseSqlServer(Configuration.GetConnectionString("CafedebugContext")));
 
             });
 
-           
-
-
-
+            //configuração da classe DbContext
+            services.AddDbContext<CafedebugContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CafedebugContext")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
