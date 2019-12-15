@@ -20,17 +20,13 @@ namespace Cafedebug.Web
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
-                services.AddDbContext<CafedebugContext>(option =>
-                option.UseSqlServer(Configuration.GetConnectionString("CafedebugContext")));
-
+                services.AddDbContext<CafedebugContext>(option => option.UseSqlServer(Configuration.GetConnectionString("CafedebugConnectionString")));
             });
 
             //configuração da classe DbContext
@@ -38,7 +34,6 @@ namespace Cafedebug.Web
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -54,6 +49,8 @@ namespace Cafedebug.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            //configura a autenticação do identity para funcionar na aplicação
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {
