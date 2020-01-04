@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Cafedebug.Model;
 
 namespace Cafedebug.Web.Controllers
 {

@@ -4,9 +4,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
-using Cafedebug.Model;
 using Microsoft.Extensions.DependencyInjection;
-using Cafedebug.Repository;
+using Cafedebug.Data;
 
 namespace Cafedebug.Web
 {

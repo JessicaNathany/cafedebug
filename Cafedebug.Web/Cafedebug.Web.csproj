@@ -37,9 +37,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cafedebug.Configuration\Cafedebug.Configuration.csproj" />
-    <ProjectReference Include="..\Cafedebug.Model\Cafedebug.Model.csproj" />
-    <ProjectReference Include="..\Cafedebug.Repository\Cafedebug.Repository.csproj" />
+    <ProjectReference Include="..\Cafedebug.Business\Cafedebug.Business.csproj" />
+    <ProjectReference Include="..\Cafedebug.Data\Cafedebug.Data.csproj" />
   </ItemGroup>
 
 </Project>

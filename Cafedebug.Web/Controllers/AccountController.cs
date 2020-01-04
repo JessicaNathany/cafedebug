@@ -1,7 +1,4 @@
-﻿using Cafedebug.Configuration;
-using Cafedebug.Model;
-using Cafedebug.Model.DTO;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using log4net;
 using System;
 using Microsoft.AspNetCore.Authorization;
@@ -56,7 +53,7 @@ namespace Cafedebug.Web.Controllers
             {
                 if(!ModelState.IsValid)
                 {
-                    return this.Json(Mensagem.GetDescription(EnumMensagem.MsgErroErrorSistema));
+                    //return this.Json(Mensagem.GetDescription(EnumMensagem.MsgErroErrorSistema));
                 }
 
                 //Autenticar usuário, se estiver correto redirecionar 
@@ -68,12 +65,12 @@ namespace Cafedebug.Web.Controllers
                 //return this.Json(url);
 
                 //ELSE
-               return this.Json(Mensagem.GetDescription(EnumMensagem.MsgLoginSenhaIncorreto));
-            
+                //return this.Json(Mensagem.GetDescription(EnumMensagem.MsgLoginSenhaIncorreto));
+                return Json("");
             }
             catch (Exception)
             {
-                return this.Json(Mensagem.GetDescription(EnumMensagem.MsgErroGeneric));
+                return Json("");
             }
         }
 

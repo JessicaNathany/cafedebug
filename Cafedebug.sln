@@ -5,25 +5,9 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Web", "Cafedebug.Web\Cafedebug.Web.csproj", "{6DA1B430-49C6-43AA-BF97-DB3C7BB3775E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Apresentation", "1-Apresentation", "{5921B46C-84A1-4E1F-BB2D-F5D96E2DC748}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Business", "Cafedebug.Business\Cafedebug.Business.csproj", "{EB6EB823-1F2A-44CC-BBDE-9C9A152E7227}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4- Repository", "4- Repository", "{92AC78F2-5AAE-4B0D-80BF-DE8E6172C356}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5- Tests", "5- Tests", "{1AC21126-4B99-4B26-B7F4-8021B885295D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3- Service", "3- Service", "{6FA25A94-AC6E-47E6-96AE-B92FDBDA3A85}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Model", "2-Model", "{83DDD186-DFD9-4891-A720-574AD42FA192}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6- Configuration", "6- Configuration", "{FAD13D42-5A81-47B0-B5C5-E63F90D7DE68}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Model", "Cafedebug.Model\Cafedebug.Model.csproj", "{EB6EB823-1F2A-44CC-BBDE-9C9A152E7227}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Repository", "Cafedebug.Repository\Cafedebug.Repository.csproj", "{6AE25E36-D48C-4D36-AF51-EA25E9F64266}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Service", "Cafedebug.Service\Cafedebug.Service.csproj", "{7D02E7E1-EA1B-4F89-BE73-57C03D145BEB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Configuration", "Cafedebug.Configuration\Cafedebug.Configuration.csproj", "{D1DD2AB7-585C-46D7-8CE6-565A0084E11D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.Data", "Cafedebug.Data\Cafedebug.Data.csproj", "{7D02E7E1-EA1B-4F89-BE73-57C03D145BEB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafedebug.UnitTest", "Cafedebug.UnitTest\Cafedebug.UnitTest.csproj", "{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE}"
 EndProject
@@ -41,18 +25,10 @@ Global
 		{EB6EB823-1F2A-44CC-BBDE-9C9A152E7227}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB6EB823-1F2A-44CC-BBDE-9C9A152E7227}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB6EB823-1F2A-44CC-BBDE-9C9A152E7227}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6AE25E36-D48C-4D36-AF51-EA25E9F64266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AE25E36-D48C-4D36-AF51-EA25E9F64266}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AE25E36-D48C-4D36-AF51-EA25E9F64266}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AE25E36-D48C-4D36-AF51-EA25E9F64266}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D02E7E1-EA1B-4F89-BE73-57C03D145BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7D02E7E1-EA1B-4F89-BE73-57C03D145BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D02E7E1-EA1B-4F89-BE73-57C03D145BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D02E7E1-EA1B-4F89-BE73-57C03D145BEB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D1DD2AB7-585C-46D7-8CE6-565A0084E11D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1DD2AB7-585C-46D7-8CE6-565A0084E11D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1DD2AB7-585C-46D7-8CE6-565A0084E11D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1DD2AB7-585C-46D7-8CE6-565A0084E11D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -60,14 +36,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{6DA1B430-49C6-43AA-BF97-DB3C7BB3775E} = {5921B46C-84A1-4E1F-BB2D-F5D96E2DC748}
-		{EB6EB823-1F2A-44CC-BBDE-9C9A152E7227} = {83DDD186-DFD9-4891-A720-574AD42FA192}
-		{6AE25E36-D48C-4D36-AF51-EA25E9F64266} = {92AC78F2-5AAE-4B0D-80BF-DE8E6172C356}
-		{7D02E7E1-EA1B-4F89-BE73-57C03D145BEB} = {6FA25A94-AC6E-47E6-96AE-B92FDBDA3A85}
-		{D1DD2AB7-585C-46D7-8CE6-565A0084E11D} = {FAD13D42-5A81-47B0-B5C5-E63F90D7DE68}
-		{BF624638-A8E6-4BE1-9C65-FFBD235DE7BE} = {1AC21126-4B99-4B26-B7F4-8021B885295D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A4F312B-CD53-4DEA-A64D-2C249AABB789}

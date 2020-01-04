@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using Cafedebug.Business;
 using Microsoft.AspNetCore.Mvc;
-using Cafedebug.Model;
 
 namespace Cafedebug.Web.Controllers
 {

@@ -1,11 +1,4 @@
-﻿using Cafedebug.Configuration;
-using Cafedebug.Model;
-using Cafedebug.Model.DTO;
-using Microsoft.AspNetCore.Mvc;
-using log4net;
-using System;
-using Microsoft.AspNetCore.Authorization;
-using Cafedebug.Web.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
 {

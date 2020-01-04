@@ -1,8 +1,6 @@
 ﻿using System;
-using Cafedebug.Model;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Cafedebug.Business;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
