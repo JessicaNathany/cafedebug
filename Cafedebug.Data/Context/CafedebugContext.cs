@@ -1,7 +1,7 @@
-﻿using Cafedebug.Business;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
-namespace Cafedebug.Data
+namespace Cafedebug.Data.Context
 {
     /// <summary>
     /// Classe DbContext
@@ -12,26 +12,18 @@ namespace Cafedebug.Data
             : base(options)
         { }
 
-        public DbSet<Banner> Banner { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            foreach (var property in modelBuilder.Model.GetEntityTypes()
+                .SelectMany(e => e.GetProperties()
+                    .Where(p => p.ClrType == typeof(string))))
+                property.Relational().ColumnType = "varchar(100)";
 
-        public DbSet<Categoria> Categoria { get; set; }
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CafedebugContext).Assembly);
 
-        public DbSet<Email> Email { get; set; }
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
 
-        public DbSet<Episodio> Episodio { get; set; }
-
-        public DbSet<Noticia> Noticia { get; set; }
-
-        public DbSet<Participante> Participante { get; set; }
-
-        public DbSet<Perfil> Perfil { get; set; }
-
-        public DbSet<Tag> Tag { get; set; }
-
-        public DbSet<TipoCategoria> TipoCategoria { get; set; }
-
-        public DbSet<Usuario> Usuario { get; set; }
-
-        
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

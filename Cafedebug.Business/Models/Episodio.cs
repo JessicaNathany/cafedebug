@@ -1,31 +1,16 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
-namespace Cafedebug.Business
+namespace Cafedebug.Business.Models
 {
     /// <summary>
     /// entidade Episodio 
     /// </summary>
-    [Table("Episodio")]
-    public class Episodio
+    public class Episodio : Entity
     {
-        /// <summary>
-        /// Id da episódio.
-        ///</summary>
-        [Key]
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Nome da episódio.
-        /// </summary>
-        [StringLength(50)]
-        public string Nome { get; set; }
-
         /// <summary>
         /// Título da episódio.
         /// </summary>
-        [StringLength(50)]
         public string Titulo { get; set; }
 
         /// <summary>
@@ -36,24 +21,26 @@ namespace Cafedebug.Business
         /// <summary>
         /// Url link do episódio. (SoundCloud / Spotity)
         /// </summary>
-        [StringLength(250)]
         public string Url { get; set; }
 
         /// <summary>
         /// Url da Imagem de capa do episódio.
         /// </summary>
-        [StringLength(250)]
         public string UrlImagem { get; set; }
 
         /// <summary>
-        /// Tag da episódio.
+        /// Tags da episódio.
         /// </summary>
-        public string Tags { get; set; }
+        public IList<Tag> Tags { get; set; }
 
         /// <summary>
         /// Data da episódio.
         /// </summary>
-        [DataType(DataType.DateTime)]
         public DateTime Data { get; set; }
+
+        /// <summary>
+        /// Indica se o episodio está ativo
+        /// </summary>
+        public bool Ativo { get; set; }
     }
 }

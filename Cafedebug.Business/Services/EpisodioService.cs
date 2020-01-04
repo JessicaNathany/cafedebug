@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using Cafedebug.Business.Interfaces;
+using Cafedebug.Business.Models;
 using log4net;
 
-namespace Cafedebug.Business
+namespace Cafedebug.Business.Services
 {
     /// <summary>
     /// Serviço da Episódio
     /// </summary>
-    public class EpisodioService : IEpisodioService
+    public class EpisodioService : BaseService, IEpisodioService
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(EpisodioService));
 
@@ -20,6 +22,12 @@ namespace Cafedebug.Business
         /// Repositório do Usuário
         /// </summary>
         public Lazy<IUsuarioRepository> UsuarioRepository { get; set; }
+
+        public EpisodioService(INotificador notificador) : base(notificador)
+        {
+
+        }
+
 
         /// <summary>
         /// Insere uma nova Episódio
@@ -92,6 +100,11 @@ namespace Cafedebug.Business
         /// <param name="id"></param>
         /// <returns></returns>
         public Usuario ExcluiUsuarioExistenteNaBase(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
         {
             throw new NotImplementedException();
         }

@@ -1,5 +1,5 @@
 ﻿using System;
-using Cafedebug.Business;
+using Cafedebug.Business.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers

@@ -1,9 +1,8 @@
 ﻿using log4net;
 using System;
 using Cafedebug.Business.Interfaces;
-using Cafedebug.Business.Services;
 
-namespace Cafedebug.Service
+namespace Cafedebug.Business.Services
 {
     /// <summary>
     /// Serviço do Usuário

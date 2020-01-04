@@ -1,9 +1,11 @@
-﻿namespace Cafedebug.Business
+﻿using System;
+
+namespace Cafedebug.Business.Interfaces
 {
     /// <summary>
     /// Interface do serviço Categoria
     /// </summary>
-    public interface ICategoriaService : IBaseService<Categoria>
+    public interface ICategoriaService : IDisposable
     {
 
     }

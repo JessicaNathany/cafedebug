@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Cafedebug.Data;
+using Cafedebug.Data.Context;
 
 namespace Cafedebug.Web
 {

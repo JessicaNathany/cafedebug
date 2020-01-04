@@ -1,24 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
 
-namespace Cafedebug.Business
+namespace Cafedebug.Business.Models
 {
     /// <summary>
     /// Entidade Tag
     /// </summary>
-    [Table("Tag")]
-    public class Tag
+    public class Tag : Entity
     {
-        /// <summary>
-        /// Id da Tag.
-        /// </summary>
-        [Key]
-        public int Id { get; set; }
-
         /// <summary>
         /// Descrição da Tag
         /// </summary>
-        [StringLength(50)]
         public string Descricao { get; set; }
+
+        /// <summary>
+        /// Lista de episodios que está relacionado a tag
+        /// </summary>
+        public IList<Episodio> Episodios { get; set; }
     }
 }
