@@ -17,10 +17,13 @@ namespace Cafedebug.Business.Models
         /// </summary>
         public string Nome { get; set; }
 
+        // relation
+        public int ImagemId { get; set; }
+        
         /// <summary>
-        /// Url Imagem do Banner
+        /// Imagem do Banner
         /// </summary>
-        public string UrlImagem { get; set; }
+        public Imagem Imagem { get; set; }
 
         /// <summary>
         /// Url do redirecionamento do Banner.
@@ -41,5 +44,6 @@ namespace Cafedebug.Business.Models
         /// Flag indica se o bater está ativo
         /// </summary>
         public bool Ativo { get; set; }
+
     }
 }

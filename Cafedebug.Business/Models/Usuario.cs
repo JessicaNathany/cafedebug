@@ -5,12 +5,6 @@
     /// </summary>
     public class Usuario : Entity
     {
-
-        /// <summary>
-        /// Id do tbPerfil.
-        /// </summary>
-        public int IdPerfil { get; set; }
-
         /// <summary>
         /// Nome do usuário.
         /// </summary>
@@ -31,9 +25,12 @@
         /// </summary>
         public bool Ativo { get; set; }
 
+        // relation
+        public int ImagemId { get; set; }
+
         /// <summary>
-        /// Imagem do usuário
+        /// Imagem do Banner
         /// </summary>
-        public string UrlImagem { get; set; } 
+        public Imagem Imagem { get; set; }
     }
 }

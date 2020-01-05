@@ -25,9 +25,8 @@ namespace Cafedebug.Data.Mappings
             builder.Property(b => b.Ativo)
                .HasColumnType("bit");
 
-            builder.Property(b => b.UrlImagem)
-                .IsRequired()
-                .HasColumnType("varchar(200)");
+            builder.Property(b => b.ImagemId)
+                .IsRequired();
             
             builder.ToTable("Usuario");
         }

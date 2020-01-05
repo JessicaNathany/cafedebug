@@ -14,10 +14,6 @@ namespace Cafedebug.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(50)");
 
-            builder.Property(b => b.Descricao)
-                .IsRequired()
-                .HasColumnType("varchar(100)");
-            
             builder.ToTable("Categoria");
         }
     }

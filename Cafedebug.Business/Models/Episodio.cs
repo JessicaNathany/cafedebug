@@ -23,10 +23,13 @@ namespace Cafedebug.Business.Models
         /// </summary>
         public string Url { get; set; }
 
+        // relation
+        public int ImagemId { get; set; }
+
         /// <summary>
-        /// Url da Imagem de capa do episódio.
+        /// Imagem do Banner
         /// </summary>
-        public string UrlImagem { get; set; }
+        public Imagem Imagem { get; set; }
 
         /// <summary>
         /// Tags do episódio.
@@ -34,9 +37,14 @@ namespace Cafedebug.Business.Models
         public IList<EpisodioTag> EpisodiosTags { get; set; }
 
         /// <summary>
-        /// Data da episódio.
+        /// Data da publicação do episódio.
         /// </summary>
-        public DateTime Data { get; set; }
+        public DateTime DataPublicacao { get; set; }
+
+        /// <summary>
+        /// Data da atualização do episódio.
+        /// </summary>
+        public DateTime DataAtualizacao { get; set; }
 
         /// <summary>
         /// Indica se o episodio está ativo

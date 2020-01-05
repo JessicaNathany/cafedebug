@@ -17,10 +17,13 @@ namespace Cafedebug.Business.Models
         /// </summary>
         public string Descricao { get; set; }
 
+        // relation
+        public int ImagemId { get; set; }
+
         /// <summary>
-        /// Url da imagem do Noticia
+        /// Imagem do Banner
         /// </summary>
-        public string UrlImagem { get; set; }
+        public Imagem Imagem { get; set; }
 
         /// <summary>
         /// Link da Noticia.
@@ -31,5 +34,10 @@ namespace Cafedebug.Business.Models
         /// Data publicação da Noticia
         /// </summary>
         public DateTime DataPublicacao { get; set; }
+
+        /// <summary>
+        /// Data da atualização da noticia
+        /// </summary>
+        public DateTime DataAtualizacao { get; set; }
     }
 }

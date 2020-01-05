@@ -15,16 +15,13 @@ namespace Cafedebug.Data.Mappings
                 .HasColumnType("varchar(80)");
 
             builder.Property(b => b.UrlTwitter)
-                .IsRequired()
                 .HasColumnType("varchar(200)");
 
             builder.Property(b => b.UrlLinkedin)
-                .IsRequired()
                 .HasColumnType("varchar(200)");
 
-            builder.Property(b => b.UrlImagem)
-               .IsRequired()
-               .HasColumnType("varchar(200)");
+            builder.Property(b => b.ImagemId)
+               .IsRequired();
 
             builder.Property(b => b.Bio)
                 .IsRequired()

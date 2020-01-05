@@ -5,7 +5,6 @@
     /// </summary>
     public class Participante : Entity
     {
-
         /// <summary>
         /// Nome do participante
         /// </summary>
@@ -21,10 +20,13 @@
         /// </summary>
         public string UrlLinkedin { get; set; }
 
+        // relation
+        public int ImagemId { get; set; }
+
         /// <summary>
-        /// Url da imagem do participante
+        /// Imagem do Banner
         /// </summary>
-        public string UrlImagem { get; set; }
+        public Imagem Imagem { get; set; }
 
         /// <summary>
         /// Mini Bio do participante

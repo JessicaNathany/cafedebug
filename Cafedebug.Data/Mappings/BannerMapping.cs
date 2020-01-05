@@ -14,7 +14,7 @@ namespace Cafedebug.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(50)");
 
-            builder.Property(b => b.UrlImagem)
+            builder.Property(b => b.ImagemId)
                 .IsRequired()
                 .HasColumnType("varchar(300)");
 
