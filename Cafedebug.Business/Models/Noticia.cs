@@ -8,11 +8,6 @@ namespace Cafedebug.Business.Models
     public class Noticia : Entity
     {
         /// <summary>
-        /// Nome do Noticia.
-        /// </summary>
-        public string Nome { get; set; }
-
-        /// <summary>
         /// Titulo da Noticia.
         /// </summary>
         public string Titulo { get; set; }

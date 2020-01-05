@@ -29,9 +29,9 @@ namespace Cafedebug.Business.Models
         public string UrlImagem { get; set; }
 
         /// <summary>
-        /// Tags da episódio.
+        /// Tags do episódio.
         /// </summary>
-        public IList<Tag> Tags { get; set; }
+        public IList<EpisodioTag> EpisodiosTags { get; set; }
 
         /// <summary>
         /// Data da episódio.
