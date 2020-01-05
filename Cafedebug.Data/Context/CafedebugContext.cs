@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Cafedebug.Business.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace Cafedebug.Data.Context
@@ -11,6 +12,8 @@ namespace Cafedebug.Data.Context
         public CafedebugContext(DbContextOptions options)
             : base(options)
         { }
+
+        public DbSet<Banner> Banners { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

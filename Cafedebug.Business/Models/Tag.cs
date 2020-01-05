@@ -10,11 +10,11 @@ namespace Cafedebug.Business.Models
         /// <summary>
         /// Descrição da Tag
         /// </summary>
-        public string Descricao { get; set; }
+        public string Nome { get; set; }
 
         /// <summary>
         /// Lista de episodios que está relacionado a tag
         /// </summary>
-        public IList<Episodio> Episodios { get; set; }
+        public IList<EpisodioTag> EpisodiosTags { get; set; }
     }
 }
