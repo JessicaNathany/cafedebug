@@ -3,10 +3,6 @@ using System.Collections.Generic;
 
 namespace Cafedebug.Business.Interfaces
 {
-    /// <summary>
-    /// Repositório base
-    /// </summary>
-    /// <typeparam name="TEntity"></typeparam>
     public interface IBaseRepository<TEntity> where TEntity : Entity
     {
         void Save(TEntity entity);

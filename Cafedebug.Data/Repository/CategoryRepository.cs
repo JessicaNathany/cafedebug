@@ -5,9 +5,6 @@ using log4net;
 
 namespace Cafedebug.Data.Repository
 {
-    /// <summary>
-    /// Repositório da tbCategoria
-    /// </summary>
     public class CategoriaRepository : Repository<Categoria>, ICategoriaRepository
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(UsuarioRepository));

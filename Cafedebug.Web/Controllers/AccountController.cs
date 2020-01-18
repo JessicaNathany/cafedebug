@@ -22,10 +22,6 @@ namespace Cafedebug.Web.Controllers
             return View();
         }
 
-        /// <summary>
-        /// Exibe os dados da tela Minha Conta
-        /// </summary>
-        /// <returns></returns>
         public ActionResult Index()
         {
             return View();
@@ -40,11 +36,6 @@ namespace Cafedebug.Web.Controllers
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Autentica o usuário e redireciona para tela Home
-        /// </summary>
-        /// <param name="usuarioDTO"></param>
-        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public JsonResult Autentication([FromBody]UsuarioModel model)
@@ -74,31 +65,17 @@ namespace Cafedebug.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Faz o logoff do usuário
-        /// </summary>
-        /// <returns></returns>
         public ActionResult LogOff()
         {
             return View();
         }
 
-        /// <summary>
-        /// Registar uma nova senha para usuário
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
         public ActionResult NewPassword(string returnUrl)
         {
             return View();
         }
 
-        /// <summary>
-        /// Quando chamado via Post, envia uma nova senha por e-mail para o usuário.
-        /// </summary>
-        /// <param name="email">E-mail do usuário.</param>
-        /// <param name="returnUrl">Url para redirecionar após fazer login com sucesso.</param>
-        /// <returns>Json.</returns>
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult NewPassword(string email, string returnUrl)
@@ -126,31 +103,16 @@ namespace Cafedebug.Web.Controllers
             //}
         }
 
-        /// <summary>
-        /// Reseta a senha do usuário
-        /// </summary>
-        /// <returns></returns>
         public ActionResult ResetPassword()
         {
             return View();
         }
 
-        /// <summary>
-        /// Configura uma nova senha para o usuário esqueci minha senha
-        /// </summary>
-        /// <returns></returns>
         public ActionResult PasswordForgout()
         {
             return View();
         }
 
-        /// <summary>
-        /// Altera a senha do usuário
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="senha"></param>
-        /// <param name="novaSenha"></param>
-        /// <returns></returns>
         public ActionResult ChangePassword(int id, string senha, string novaSenha)
         {
             return View();
