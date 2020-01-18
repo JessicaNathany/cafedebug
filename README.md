@@ -1,5 +1,5 @@
 # cafedebug
-Novo site do Café debug na versão ASp.NetCore
+Novo site do Café debug na versão Asp.NetCore 2.2
 
 1. Cafedebug.Web  => aplicação visualização
 2. Cafedebug.Business => regras de negócios
