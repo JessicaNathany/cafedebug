@@ -22,13 +22,16 @@ namespace Cafedebug.Data.Mappings
                .IsRequired()
                .HasColumnType("varchar(250)");
 
-            builder.Property(b => b.UrlImagem)
-                .IsRequired()
-                .HasColumnType("varchar(250)");
+            builder.Property(b => b.ImagemId)
+                .IsRequired();
 
-            builder.Property(b => b.Data)
+            builder.Property(b => b.DataPublicacao)
                 .IsRequired()
                 .HasColumnType("datetime");
+
+            builder.Property(b => b.DataAtualizacao)
+            .IsRequired()
+            .HasColumnType("datetime");
 
             builder.Property(b => b.Ativo)
                 .HasColumnType("bit");

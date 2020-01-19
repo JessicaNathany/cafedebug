@@ -2,34 +2,21 @@
 
 namespace Cafedebug.Business.Models
 {
-    /// <summary>
-    /// Entidade Noticia
-    /// </summary>
     public class Noticia : Entity
     {
-        /// <summary>
-        /// Titulo da Noticia.
-        /// </summary>
         public string Titulo { get; set; }
 
-        /// <summary>
-        /// Descricao da Noticia.
-        /// </summary>
         public string Descricao { get; set; }
 
-        /// <summary>
-        /// Url da imagem do Noticia
-        /// </summary>
-        public string UrlImagem { get; set; }
+        // relation
+        public int ImagemId { get; set; }
 
-        /// <summary>
-        /// Link da Noticia.
-        /// </summary>
+        public Imagem Imagem { get; set; }
+
         public string LinkNoticia { get; set; }
 
-        /// <summary>
-        /// Data publicação da Noticia
-        /// </summary>
         public DateTime DataPublicacao { get; set; }
+
+        public DateTime DataAtualizacao { get; set; }
     }
 }

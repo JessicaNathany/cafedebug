@@ -3,19 +3,10 @@ using System.Collections.Generic;
 
 namespace Cafedebug.Business.Models
 {
-    /// <summary>
-    /// entidade Episodio 
-    /// </summary>
     public class Episodio : Entity
     {
-        /// <summary>
-        /// Título da episódio.
-        /// </summary>
         public string Titulo { get; set; }
 
-        /// <summary>
-        /// Descrição da episódio.
-        /// </summary>
         public string Descricao { get; set; }
 
         /// <summary>
@@ -23,24 +14,16 @@ namespace Cafedebug.Business.Models
         /// </summary>
         public string Url { get; set; }
 
-        /// <summary>
-        /// Url da Imagem de capa do episódio.
-        /// </summary>
-        public string UrlImagem { get; set; }
+        public int ImagemId { get; set; }
 
-        /// <summary>
-        /// Tags do episódio.
-        /// </summary>
+        public Imagem Imagem { get; set; }
+
         public IList<EpisodioTag> EpisodiosTags { get; set; }
 
-        /// <summary>
-        /// Data da episódio.
-        /// </summary>
-        public DateTime Data { get; set; }
+        public DateTime DataPublicacao { get; set; }
 
-        /// <summary>
-        /// Indica se o episodio está ativo
-        /// </summary>
+        public DateTime DataAtualizacao { get; set; }
+
         public bool Ativo { get; set; }
     }
 }

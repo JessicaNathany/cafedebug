@@ -18,9 +18,8 @@ namespace Cafedebug.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(200)");
 
-            builder.Property(b => b.UrlImagem)
-                .IsRequired()
-                .HasColumnType("varchar(300)");
+            builder.Property(b => b.ImagemId)
+                .IsRequired();
 
             builder.Property(b => b.LinkNoticia)
                .IsRequired()
@@ -29,7 +28,11 @@ namespace Cafedebug.Data.Mappings
             builder.Property(b => b.DataPublicacao)
                 .IsRequired()
                 .HasColumnType("datetime");
-            
+
+            builder.Property(b => b.DataAtualizacao)
+             .IsRequired()
+             .HasColumnType("datetime");
+
             builder.ToTable("Noticia");
         }
     }
