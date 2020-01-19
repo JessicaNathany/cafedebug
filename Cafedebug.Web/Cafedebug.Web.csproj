@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.3.1" />
+    <PackageReference Include="bootstrap.sass" Version="4.4.1" />
     <PackageReference Include="jQuery" Version="3.3.1" />
     <PackageReference Include="log4net" Version="2.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
