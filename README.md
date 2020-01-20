@@ -11,6 +11,6 @@ O projeto é o site do podcast Café debug, que tem como objetivo publicar os ep
 
 
 
-1. ASP.NetCore 2.2
-2. Bootstrap.sass: 4.4.1
-3. Jquery: 3.3.1
+. ASP.NetCore 2.2
+. Bootstrap.sass: 4.4.1
+. Jquery: 3.3.1
