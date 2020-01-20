@@ -1,5 +1,10 @@
 # cafedebug
-Novo site do Café debug na versão Asp.NetCore 2.2
+Novo site do Café debug na versão
+
+ASP.NetCore 2.2
+Bootstrap.sass: 4.4.1
+Jquery: 3.3.1
+
 
 1. Cafedebug.Web  => aplicação visualização
 2. Cafedebug.Business => regras de negócios
