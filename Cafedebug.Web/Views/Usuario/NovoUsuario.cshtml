@@ -4,7 +4,7 @@
     ViewData["Novo Usuário"] = "Novo Usuário | Café Debug";
     Layout = "~/Views/Shared/_layout.cshtml";
 }
-
+@System.Globalization.CultureInfo.CurrentCulture
 <html>
 <body>
     <div id="content">
@@ -19,7 +19,7 @@
                             </div>
                             <div class="form-group col-md-12 ">
                                 <div class="">
-                                    @Html.TextBoxFor(u => u.Nome, new { required = "required", @name = "Nome", @id = "Nome" , @class = "form-control input-md" })
+                                    @Html.TextBoxFor(u => u.Nome, new { required = "required", @name = "Nome", @id = "Nome", @class = "form-control input-md" })
                                     @*<input id="textinput" name="textinput" type="text" class="form-control input-md" required>*@
                                 </div>
                             </div>

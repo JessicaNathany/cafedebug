@@ -33,7 +33,7 @@ namespace Cafedebug.Web.Controllers
             throw new NotImplementedException();
         }
 
-        public ActionResult GetUsuario()
+        public ActionResult UsuarioEdit()
         {
             return View();
         }

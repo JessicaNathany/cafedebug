@@ -7,6 +7,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Cafedebug.Data;
 using Cafedebug.Data.Context;
+using System.Globalization;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Localization;
 
 namespace Cafedebug.Web
 {
@@ -49,8 +52,20 @@ namespace Cafedebug.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
             //configura a autenticação do identity para funcionar na aplicação
             app.UseAuthentication();
+
+            // configuração da cultura do site podendo add mais de uma cultura
+            var defaultCulture = new CultureInfo("pt-BR");
+            var localizationOptions = new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture (defaultCulture),
+                SupportedCultures = new List<CultureInfo> { defaultCulture },
+                SupportedUICultures = new List<CultureInfo> { defaultCulture },
+            };
+
+            app.UseRequestLocalization(localizationOptions);
 
             app.UseMvc(routes =>
             {
