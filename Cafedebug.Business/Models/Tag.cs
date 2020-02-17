@@ -6,6 +6,6 @@ namespace Cafedebug.Business.Models
     {
         public string Nome { get; set; }
 
-        public IList<EpisodioTag> EpisodiosTags { get; set; }
+        public IList<EpisodeTag> EpisodiosTags { get; set; }
     }
 }

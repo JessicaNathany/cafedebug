@@ -2,8 +2,7 @@
 
 namespace Cafedebug.Business.Interfaces
 {
-    public interface IUsuarioRepository : IBaseRepository<User>
+    public interface IEpisodeRepository : IBaseRepository<Episode>
     {
-
     }
 }

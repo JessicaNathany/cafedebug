@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Cafedebug.Data.Mappings
 {
-    public class ParticipanteMapping : IEntityTypeConfiguration<Participante>
+    public class ParticipanteMapping : IEntityTypeConfiguration<Sponsor>
     {
-        public void Configure(EntityTypeBuilder<Participante> builder)
+        public void Configure(EntityTypeBuilder<Sponsor> builder)
         {
             builder.HasKey(b => b.Id);
 
@@ -20,14 +20,14 @@ namespace Cafedebug.Data.Mappings
             builder.Property(b => b.UrlLinkedin)
                 .HasColumnType("varchar(200)");
 
-            builder.Property(b => b.ImagemId)
+            builder.Property(b => b.ImageId)
                .IsRequired();
 
             builder.Property(b => b.Bio)
                 .IsRequired()
                 .HasColumnType("varchar(300)");
             
-            builder.ToTable("Participante");
+            builder.ToTable("Sponsor");
         }
     }
 }
