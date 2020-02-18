@@ -10,7 +10,7 @@ namespace Cafedebug.Business.Models
 
         public int ImagemId { get; set; }
         
-        public Imagem Imagem { get; set; }
+        public Image Imagem { get; set; }
 
         public string Url { get; set; }
 

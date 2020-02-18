@@ -4,17 +4,17 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Cafedebug.Data.Mappings
 {
-    public class ImagemMapping : IEntityTypeConfiguration<Imagem>
+    public class ImagemMapping : IEntityTypeConfiguration<Image>
     {
-        public void Configure(EntityTypeBuilder<Imagem> builder)
+        public void Configure(EntityTypeBuilder<Image> builder)
         {
             builder.HasKey(i => i.Id);
 
-           builder.Property(i => i.UrlImagem)
+           builder.Property(i => i.UrlImage)
                 .IsRequired()
                 .HasColumnType("varchar(250)");
 
-            builder.Property(i => i.Tipo)
+            builder.Property(i => i.Type)
                 .IsRequired()
                 .HasColumnType("varchar(10)");
 

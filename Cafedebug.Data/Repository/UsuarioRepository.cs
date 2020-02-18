@@ -5,7 +5,7 @@ using Cafedebug.Business.Models;
 
 namespace Cafedebug.Data.Repository
 {
-    public class UsuarioRepository : Repository<Usuario>, IUsuarioRepository
+    public class UsuarioRepository : Repository<User>, IUsuarioRepository
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(UsuarioRepository));
 
