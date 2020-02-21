@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Cafedebug.Business.Interfaces;
 using Cafedebug.Business.Models;
+using FluentValidation;
 using log4net;
 
 namespace Cafedebug.Business.Services
@@ -23,6 +24,8 @@ namespace Cafedebug.Business.Services
         {
             try
             {
+                
+
                 EpisodioRepository.Value.Save(episodio);
             }
             catch (Exception ex)

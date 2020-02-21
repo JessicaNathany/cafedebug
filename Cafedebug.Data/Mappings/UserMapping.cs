@@ -18,6 +18,10 @@ namespace Cafedebug.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(200)");
 
+            builder.Property(b => b.Login)
+                .IsRequired()
+                .HasColumnType("varchar(8)");
+
             builder.Property(b => b.Password)
                 .IsRequired()
                 .HasColumnType("varchar(400)");

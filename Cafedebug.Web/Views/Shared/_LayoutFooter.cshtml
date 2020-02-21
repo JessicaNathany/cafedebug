@@ -34,10 +34,10 @@
                     </div>
                     <div id="nav-rodape2">
                         <ul>
-                            <li class="nav-item">@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li class="nav-item">@Html.ActionLink("Quem Somos", "Index", "About")</li>
-                            <li class="nav-item">@Html.ActionLink("Episódios", "Index", "Episode")</li>
-                            <li class="nav-item">@Html.ActionLink("Categorias", "Index", "Category")</li>
+                            <li class="nav-item">@Url.Action("Home", "Index", "Newslater")</li>
+                            <li class="nav-item">@Html.ActionLink("Quem Somos", "Index", "Projetos")</li>
+                            <li class="nav-item">@Html.ActionLink("Episódios", "Index", "Artigos")</li>
+                            <li class="nav-item">@Html.ActionLink("Categorias", "Index", "Jobs")</li>
                             @*<li class="nav-item">@Html.ActionLink("Patrocinadores", "Index", "Sponsor")</li>*@
                             <li class="nav-item">@Html.ActionLink("Fale Conosco", "Index", "Contact")</li>
                         </ul>
