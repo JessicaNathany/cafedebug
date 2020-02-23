@@ -10,4 +10,8 @@
     <PackageReference Include="Unity" Version="5.11.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Validation\" />
+  </ItemGroup>
+
 </Project>
