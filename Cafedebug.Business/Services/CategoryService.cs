@@ -15,13 +15,11 @@ namespace Cafedebug.Business.Services
         public CategoryService(INotifier notifier) : base(notifier)
         { }
 
-        public Category Save(Category category)
+        public void Save(Category category)
         {
-            var validator = new CategoryValidation();
-            var result = validator.Validate(category);
+            if (!ExecutarValidacao(new CategoryValidation(), category)) return;
 
-
-            throw new NotImplementedException();
+            CategoriaRepository.Value.Save(category);
         }
 
         public Category Update(Category category)

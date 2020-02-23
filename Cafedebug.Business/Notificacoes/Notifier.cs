@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Cafedebug.Business.Interfaces;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Cafedebug.Business.Notificacoes
 {
-    public class Notifier
+    public class Notifier : INotifier
     {
         private List<Notification> _notifications;
 

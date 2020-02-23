@@ -5,7 +5,7 @@ namespace Cafedebug.Business.Interfaces
 {
     public interface ICategoryService : IDisposable
     {
-        Category Save(Category category);
+        void Save(Category category);
 
         Category Update(Category category);
 
