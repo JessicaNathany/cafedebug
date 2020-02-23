@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Cafedebug.Business;
-using Cafedebug.Business.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
 {
@@ -16,36 +12,6 @@ namespace Cafedebug.Web.Controllers
         public ActionResult NewUser()
         {
             return View();
-        }
-
-        public void Save(User usuario)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ActionResult UserEdit()
-        {
-            return View();
-        }
-
-        public IList<User>GetAllUser()
-        {
-            throw new NotImplementedException(); 
-        }
-
-        public User GetById(int id)
-        {
-            throw new NotImplementedException();
         }
     }
 }

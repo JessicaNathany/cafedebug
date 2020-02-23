@@ -12,8 +12,6 @@ namespace Cafedebug.Business.Services
 
         public Lazy<IEpisodeRepository> EpisodioRepository { get; set; }
 
-        public Lazy<IUsuarioRepository> UsuarioRepository { get; set; }
-
         public EpisodeService(INotificador notificador) : base(notificador)
         {
 
@@ -56,11 +54,6 @@ namespace Cafedebug.Business.Services
         }
 
         public int GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public User ExcluiUsuarioExistenteNaBase(int id)
         {
             throw new NotImplementedException();
         }

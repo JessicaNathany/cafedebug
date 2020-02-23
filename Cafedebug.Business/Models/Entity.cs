@@ -6,6 +6,6 @@ namespace Cafedebug.Business.Models
     {
         public int Id { get; set; }
 
-        public Guid Codigo { get; set; }
+        public Guid Code { get; set; }
     }
 }

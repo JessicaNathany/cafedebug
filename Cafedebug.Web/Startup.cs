@@ -10,6 +10,8 @@ using Cafedebug.Data.Context;
 using System.Globalization;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Localization;
+using Cafedebug.Web.Areas.Identity.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace Cafedebug.Web
 {
@@ -32,8 +34,15 @@ namespace Cafedebug.Web
                 services.AddDbContext<CafedebugContext>(option => option.UseSqlServer(Configuration.GetConnectionString("CafedebugConnectionString")));
             });
 
+            services.AddDbContext<CafedebugIdentityContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("CafedebugConnectionString")));
+
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddDefaultUI(Microsoft.AspNetCore.Identity.UI.UIFramework.Bootstrap4)
+                .AddEntityFrameworkStores<CafedebugIdentityContext>();
+
             //configuração da classe DbContext
-            services.AddDbContext<CafedebugContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CafedebugContext")));
+            services.AddDbContext<CafedebugContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CafedebugConnectionString")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
