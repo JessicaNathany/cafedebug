@@ -13,7 +13,7 @@ namespace Cafedebug.Business.Services
 
         public Lazy<IEpisodeRepository> EpisodioRepository { get; set; }
 
-        public EpisodeService(INotificador notificador) : base(notificador)
+        public EpisodeService(INotifier notifier) : base(notifier)
         {
 
         }

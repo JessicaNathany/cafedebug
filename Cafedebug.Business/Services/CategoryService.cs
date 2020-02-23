@@ -1,6 +1,8 @@
 ﻿using System;
 using log4net;
 using Cafedebug.Business.Interfaces;
+using Cafedebug.Business.Models;
+using Cafedebug.Business.Validations;
 
 namespace Cafedebug.Business.Services
 {
@@ -10,8 +12,27 @@ namespace Cafedebug.Business.Services
         
         public Lazy<ICategoryRepository> CategoriaRepository { get; set; }
 
-        public CategoryService(INotificador notificador) : base(notificador)
+        public CategoryService(INotifier notifier) : base(notifier)
         { }
+
+        public Category Save(Category category)
+        {
+            var validator = new CategoryValidation();
+            var result = validator.Validate(category);
+
+
+            throw new NotImplementedException();
+        }
+
+        public Category Update(Category category)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Category Remove(int id)
+        {
+            throw new NotImplementedException();
+        }
 
         public void Dispose()
         {
