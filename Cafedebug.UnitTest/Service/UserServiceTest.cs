@@ -6,10 +6,10 @@ namespace Cafedebug.UnitTest
     /// UsuarioServiceTest classe para testar o serviço do Usuario
     /// </summary>
     [TestClass]
-    public class UsuarioServiceTest
+    public class UserServiceTest
     {
         [TestMethod]
-        public void VerificaUsuarioExistente_Success()
+        public void VerifyExistUser_Success()
         {
             
         }
