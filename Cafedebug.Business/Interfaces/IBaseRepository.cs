@@ -5,7 +5,7 @@ namespace Cafedebug.Business.Interfaces
 {
     public interface IBaseRepository<TEntity> where TEntity : Entity
     {
-        void Save(TEntity entity);
+        TEntity Save(TEntity entity);
 
         void Update(int entity);
 
@@ -13,6 +13,6 @@ namespace Cafedebug.Business.Interfaces
 
         IList<TEntity> GetAll();
 
-        int GetById(int id);
+        TEntity GetById(int id);
     }
 }
