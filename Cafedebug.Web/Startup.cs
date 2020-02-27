@@ -7,15 +7,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Cafedebug.Data;
 using Cafedebug.Data.Context;
-<<<<<<< HEAD
-=======
 using System.Globalization;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Localization;
 using Cafedebug.Web.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Cafedebug.Web.Configurations;
->>>>>>> 2df6f05dbded26c7c444d6acc0d6e3ceb23109bc
+
 
 namespace Cafedebug.Web
 {
