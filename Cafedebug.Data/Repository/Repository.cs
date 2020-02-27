@@ -29,12 +29,12 @@ namespace Cafedebug.Data.Repository
             throw new NotImplementedException();
         }
 
-        public int GetById(int id)
+        public TEntity GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Save(TEntity entity)
+        public TEntity Save(TEntity entity)
         {
             throw new NotImplementedException();
         }

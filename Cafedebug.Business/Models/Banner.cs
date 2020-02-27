@@ -6,18 +6,18 @@ namespace Cafedebug.Business.Models
     {
         public int Id { get; set; }
 
-        public string Nome { get; set; }
+        public string Name { get; set; }
 
-        public int ImagemId { get; set; }
+        public int ImageId { get; set; }
         
-        public Image Imagem { get; set; }
+        public Image Image { get; set; }
 
         public string Url { get; set; }
 
-        public DateTime DataInicio { get; set; }
+        public DateTime StartDate { get; set; }
 
-        public DateTime DataFim { get; set; }
+        public DateTime EndDate { get; set; }
 
-        public bool Ativo { get; set; }
+        public bool Active { get; set; }
     }
 }

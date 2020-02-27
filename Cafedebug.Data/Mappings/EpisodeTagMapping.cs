@@ -10,16 +10,16 @@ namespace Cafedebug.Data.Mappings
         {
             builder.HasKey(b => b.Id);
 
-            builder.HasOne(ep => ep.Episodio)
+            builder.HasOne(ep => ep.Episode)
                 .WithMany(et => et.EpisodiesTags)
-                .HasForeignKey(e => e.EpisodioId);
+                .HasForeignKey(e => e.EpisodeId);
 
             builder.HasOne(ep => ep.Tag)
-                .WithMany(et => et.EpisodiosTags)
+                .WithMany(et => et.EpisodesTags)
                 .HasForeignKey(e => e.TagId);
 
 
-            builder.ToTable("EpisodioTag");
+            builder.ToTable("EpisodeTag");
         }
     }
 }

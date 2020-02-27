@@ -4,9 +4,9 @@
     {
         public int Id { get; set; }
 
-        public int EpisodioId { get; set; }
+        public int EpisodeId { get; set; }
 
-        public Episode Episodio { get; set; }
+        public Episode Episode { get; set; }
 
         public int TagId { get; set; }
 

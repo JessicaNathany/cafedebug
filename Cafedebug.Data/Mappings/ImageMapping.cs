@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Cafedebug.Data.Mappings
 {
-    public class ImagemMapping : IEntityTypeConfiguration<Image>
+    public class ImageMapping : IEntityTypeConfiguration<Image>
     {
         public void Configure(EntityTypeBuilder<Image> builder)
         {
@@ -18,7 +18,7 @@ namespace Cafedebug.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(10)");
 
-            builder.ToTable("Imagem");
+            builder.ToTable("Image");
         }
     }
 }
