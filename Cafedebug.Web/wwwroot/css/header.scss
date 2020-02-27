@@ -1,0 +1,127 @@
+﻿$barcolor: #55595c;
+$barheight: 3px;
+
+
+nav {
+    height: auto;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+    border-bottom: 15px solid #ed7d00;
+
+    .nav-logo {
+        .Logo {
+            height: auto;
+            width: 25%;
+
+            img {
+                height: 90%;
+                width: 90%;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        width: 100%;
+        height: auto;
+        position: relative;
+        #wrapper {
+            background: #0d6fba;
+            display: inline-block;
+            border-radius: 500px;
+            margin: 5%;
+            position: relative;
+            padding: 10%;
+            cursor: pointer;
+
+            .circle {
+                width: 50%;
+                height: 50%;
+                position: relative;
+            }
+
+            .line {
+                position: absolute;
+                height: 10px;
+                border-radius: 8px;
+                width: 100%;
+                background: #fff;
+                transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+            }
+
+            .top {
+                top: 18%;
+            }
+
+            .middle {
+                top: 48%;
+            }
+
+            .bottom {
+                top: 78%;
+            }
+        }
+
+        .icon.close .top {
+            transform: rotate(45deg);
+            top: 48%;
+        }
+
+        .icon.close .middle,
+        .icon.close .bottom {
+            transform: rotate(-45deg);
+            top: 48%;
+        }
+    }
+
+    .navbar-nav {
+        width: 100%;
+        list-style-type: none;
+        border: none;
+        margin: 3% 0 0 2%;
+
+        .nav-item {
+            margin: 3%;
+            text-align: center;
+            border: none;
+
+            a {
+                color: black;
+                font-size: 25px;
+                font-weight: 600;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+    .soical-media {
+        height: auto;
+        padding-right: 1%;
+        margin-right: 3%;
+
+        i {
+            color: #eb6c01;
+            font-size: 35px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .nav-logo {
+        .Logo {
+            height: auto;
+            width: 100%;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

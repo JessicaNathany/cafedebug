@@ -4,50 +4,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/css/stylepainel.css" rel="stylesheet" />
-    <link href="~/css/mdb.min.css" rel="stylesheet" />
-    <script src="~/js/jquery.js"></script>
-    <script src="~/js/jquery-1.9.1.js"></script>
-    <script src="~/js/jquery-1.9.1.min.js"></script>
-    <script src="~/js/jquery-ui.js"></script>
+    <title>@ViewData["Title"]</title>
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="~/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="~/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-reboot.css" rel="stylesheet" />
+    <link href="~/lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/lib/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="~/css/body.min.css" rel="stylesheet" />
+    <link href="~/css/footer.min.css" rel="stylesheet" />
+    <link href="~/css/header.min.css" rel="stylesheet" />
+    <link href="~/css/html.min.css" rel="stylesheet" />
+
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <partial name="_Header" />
+    <div class="container-fluid">
         @RenderBody()
-        <nav id="sidebar">
-            <div class="sidebar-header text-center">
-                <h3><img src="~/images/logo-line.png" class="p-2"></h3>
-            </div>
-            <ul class="list-unstyled components">
-                <li>@Html.ActionLink("Banner", "Banner", "Banner")</li>
-                <li>@Html.ActionLink("Quem Somos", "QuemSomosPainel", "QuemSomos")</li>
-                <li>@Html.ActionLink("Categoria", "GetCategoria", "Categoria")</li>
-                <li>@Html.ActionLink("Episódio", "GetEpisodio", "Episodio")</li>
-                <li>@Html.ActionLink("Notícia", "GetNoticia", "Noticia")</li>
-                <li>@Html.ActionLink("Minha Conta", "Index", "Account")</li>
-                <li>@Html.ActionLink("Usuário", "GetUsuario", "Usuario")</li>
-            </ul>
-            <ul class="list-unstyled CTAs">
-                <li>
-                    <a href="#" class="article">Sair</a>
-                    @*@Html.ActionLink("Sair", "LogOff", "Account", new { @class = "article" })*@
-                </li>
-            </ul>
-        </nav>
     </div>
+
+    <footer class="border-top footer text-muted">
+        <partial name="_Footer" />
+    </footer>
+
+    <script src="~/js/Mensagem.js"></script>
+    <script src="~/js/ValidaCampos.js"></script>
+    <script src="~/lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
 
-@RenderSection("Scripts", required: false)
+

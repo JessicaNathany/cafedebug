@@ -7,9 +7,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Cafedebug.Data;
 using Cafedebug.Data.Context;
+<<<<<<< HEAD
+=======
 using System.Globalization;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Localization;
+using Cafedebug.Web.Areas.Identity.Data;
+using Microsoft.AspNetCore.Identity;
+using Cafedebug.Web.Configurations;
+>>>>>>> 2df6f05dbded26c7c444d6acc0d6e3ceb23109bc
 
 namespace Cafedebug.Web
 {
@@ -32,8 +38,17 @@ namespace Cafedebug.Web
                 services.AddDbContext<CafedebugContext>(option => option.UseSqlServer(Configuration.GetConnectionString("CafedebugConnectionString")));
             });
 
+            services.AddDbContext<CafedebugIdentityContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("CafedebugConnectionString")));
+
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddDefaultUI(Microsoft.AspNetCore.Identity.UI.UIFramework.Bootstrap4)
+                .AddEntityFrameworkStores<CafedebugIdentityContext>();
+
+            services.ResolveDependencies();
+
             //configuração da classe DbContext
-            services.AddDbContext<CafedebugContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CafedebugContext")));
+            services.AddDbContext<CafedebugContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CafedebugConnectionString")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -52,20 +67,8 @@ namespace Cafedebug.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
             //configura a autenticação do identity para funcionar na aplicação
             app.UseAuthentication();
-
-            // configuração da cultura do site podendo add mais de uma cultura
-            var defaultCulture = new CultureInfo("pt-BR");
-            var localizationOptions = new RequestLocalizationOptions
-            {
-                DefaultRequestCulture = new RequestCulture (defaultCulture),
-                SupportedCultures = new List<CultureInfo> { defaultCulture },
-                SupportedUICultures = new List<CultureInfo> { defaultCulture },
-            };
-
-            app.UseRequestLocalization(localizationOptions);
 
             app.UseMvc(routes =>
             {

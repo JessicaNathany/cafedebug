@@ -11,10 +11,6 @@ namespace Cafedebug.Web.Controllers
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(AccountController));
 
-        /// <summary>
-        /// Faz a chamada para a tela de login
-        /// </summary>
-        /// <returns></returns>
         public ActionResult Login()
         {
             TempData["Mensagem"] = string.Empty;
@@ -27,10 +23,6 @@ namespace Cafedebug.Web.Controllers
             return View();
         }
 
-        /// <summary>
-        /// Salva os dados da conta
-        /// </summary>
-        /// <returns></returns>
         public void SaveAccount()
         {
             throw new NotImplementedException();

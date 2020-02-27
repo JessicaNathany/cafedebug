@@ -10,7 +10,7 @@ namespace Cafedebug.Data.Mappings
         {
             builder.HasKey(b => b.Id);
 
-            builder.Property(b => b.Nome)
+            builder.Property(b => b.Name)
                 .IsRequired()
                 .HasColumnType("varchar(80)");
             

@@ -1,0 +1,297 @@
+﻿$ThemeColor: #ed7d00;
+$paragraph: #565656;
+
+
+
+/*Home*/
+
+
+//Banner
+.owl-carousel {
+    .banner {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70vh;
+        background: url(../images/banner.jpg)center content-box no-repeat;
+        background-size: cover;
+
+        .banner-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 70vh;
+        }
+
+        .content {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 8%;
+            strong {
+                color: white;
+                background-color: $ThemeColor;
+                font-size: 2rem;
+            }
+
+            p {
+                color: white;
+                font-size: 5rem;
+            }
+
+            .bottoms {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+
+                .oucaagora,
+                .spotifybt {
+                    text-decoration: none;
+                    margin: 5px;
+                    font-size: x-large;
+                }
+
+                .oucaagora {
+                }
+
+                .spotifybt {
+                    border: 2px solid white;
+                }
+            }
+        }
+    }
+}
+//End Banner
+
+.novosepisodios {
+    margin-top: 5%;
+
+    .ladoinfoseps {
+        text-align: left;
+        margin-top: 55%;
+
+        h1 {
+            color: $ThemeColor;
+            font-size: 6rem;
+            font-weight: 600;
+            line-height: 0.8;
+            position: relative;
+            margin-bottom: 15%;
+
+
+            span {
+                position: absolute;
+                margin-left: 5px;
+                padding: 0;
+                line-height: 0.8;
+                height: 10px;
+                right: 37%;
+                top: 70%;
+            }
+        }
+
+        p {
+            color: $paragraph;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        h4 {
+            color: $ThemeColor;
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 0.8;
+            position: relative;
+            margin-bottom: 15%;
+
+
+            span {
+                position: absolute;
+                margin-left: 5px;
+                padding: 0;
+                line-height: 0.8;
+                height: 10px;
+                right: 59%;
+                top: 36%;
+            }
+        }
+
+        .compartilharhome {
+            a {
+                i {
+                    font-size: 3rem;
+                    color: $ThemeColor;
+                    margin: 2%;
+                }
+            }
+        }
+    }
+
+    .ver-mais {
+        display: flex;
+        justify-content: end;
+
+        a {
+            font-size: 23px;
+            border: 4px solid $ThemeColor;
+            border-radius: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: $ThemeColor;
+            font-weight: 500;
+            margin-right: 3%;
+
+            i {
+                color: $ThemeColor;
+            }
+        }
+    }
+
+    .episodiounico {
+        img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+
+.noticias {
+    background-color: $ThemeColor;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 2rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    .tituloNoticias {
+        h3 {
+            color: white;
+            margin-left: 1%;
+            font-weight: 600;
+            font-size: 4rem;
+            margin-left: 3%;
+            line-height: 0.5em;
+            margin-bottom: 5%;
+
+            span::after {
+                content: "";
+                border: 3px solid white;
+                display: block;
+                width: 65%;
+                margin-left: 32%;
+            }
+        }
+    }
+
+    .boxnoticia {
+        margin: 5%;
+        font-weight: 600;
+        font-size: 2rem;
+        border-left: 7px solid white;
+        padding-left: 5%;
+
+        .tag {
+            background-color: white;
+            color: $ThemeColor;
+            font-size: 18px;
+            padding: 5px;
+        }
+
+        .noticia {
+            color: white;
+            outline: none;
+            text-decoration: none;
+        }
+    }
+}
+
+
+.quemfaz {
+    margin-bottom: 5%;
+
+    .tituloquem {
+        h3 {
+            color: $ThemeColor;
+            font-size: 4rem;
+            margin-left: 5%;
+        }
+
+        h3::after {
+            content: "";
+            border: 3px solid $ThemeColor;
+            display: block;
+            width: 65%;
+            margin-left: 32%;
+            margin-bottom: 5%;
+        }
+    }
+
+
+    .userquemfaz {
+        background: url(../images/bordsomb.png);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        text-align: center;
+        margin: auto;
+
+        .square {
+
+
+            img {
+                height: 80%;
+                width: 80%;
+                padding-top: 8%;
+            }
+        }
+
+        .userhome {
+            color: $ThemeColor;
+
+            p {
+                font-size: 20px;
+                line-height: 16px;
+                margin-bottom: 0;
+                color: $paragraph;
+                margin: 5%;
+            }
+
+            .socialuser {
+                font-size: 2rem;
+
+                a {
+                    i {
+                        color: $ThemeColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.loading {
+    background: url('../images/Ripple-1s-200px.gif') no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+}
+
+.hide {
+    display: none;
+}
+
+/*End Home*/
+
+
+

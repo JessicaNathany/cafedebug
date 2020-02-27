@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/header.css",
+    "inputFile": "wwwroot/css/header.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/body.css",
+    "inputFile": "wwwroot/css/body.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/footer.css",
+    "inputFile": "wwwroot/css/footer.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/html.css",
+    "inputFile": "wwwroot/css/html.scss"
+  }
+]

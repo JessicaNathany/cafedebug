@@ -1,0 +1,128 @@
+﻿@model Cafedebug.Business.Models.Episode
+
+@{
+    ViewData["Title"] = "Todos Episódios | Café Debug";
+}
+    <!-- FECHA TOPO -->
+    <!-- BANNER -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-inner" style="background-image:url(img/banner.jpg)">
+                    <div class="conteudobanner">
+                        <strong>Cafê Debug <b>#24</b></strong>
+                        <h2 style="color: #fff; font-size: 52px;">Startups e Aceleradoras</h2>
+                        <a href="#" class="oucaagora"><i class="fas fa-plus-circle"></i>ver mais episodios</a>
+                        <a href="#" class="spotifybt"><i class="fab fa-spotify"></i>ver mais episodios</a>
+                    </div>
+                    <div class="mask"></div>
+                </div>
+            </div>
+            <!--<div class="swiper-slide">
+               <div class="slide-inner">
+                 <img src="img/banner.jpg">
+               </div>
+               </div>-->
+        </div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+    <!-- FECHA BANNER -->
+    <section id="listagemdeepisodio">
+        <div class="container">
+            <div class="row linhaep">
+                <div class="col-sm-3 vitrineep">
+                    <a href="#">
+                        <div class="episodiounico"><img src="img/Image-EP.jpg" /></div>
+                    </a>
+                </div>
+                <div class="col-sm-9 dadoseps">
+                    <strong class="numeroep">Cafê Debug <b>#23</b></strong>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <a href="#" class="vermaislist"><i class="fas fa-plus-circle"></i> ver mais</a>
+                </div>
+            </div>
+            <div class="row linhaep">
+                <div class="col-sm-3 vitrineep">
+                    <a href="#">
+                        <div class="episodiounico"><img src="img/Image-EP.jpg" /></div>
+                    </a>
+                </div>
+                <div class="col-sm-9 dadoseps">
+                    <strong class="numeroep">Cafê Debug <b>#23</b></strong>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <a href="#" class="vermaislist"><i class="fas fa-plus-circle"></i> ver mais</a>
+                </div>
+            </div>
+            <div class="row linhaep">
+                <div class="col-sm-3 vitrineep">
+                    <a href="#">
+                        <div class="episodiounico"><img src="img/Image-EP.jpg" /></div>
+                    </a>
+                </div>
+                <div class="col-sm-9 dadoseps">
+                    <strong class="numeroep">Cafê Debug <b>#23</b></strong>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <a href="#" class="vermaislist"><i class="fas fa-plus-circle"></i> ver mais</a>
+                </div>
+            </div>
+            <div class="row linhaep">
+                <div class="col-sm-3 vitrineep">
+                    <a href="#">
+                        <div class="episodiounico"><img src="img/Image-EP.jpg" /></div>
+                    </a>
+                </div>
+                <div class="col-sm-9 dadoseps">
+                    <strong class="numeroep">Cafê Debug <b>#23</b></strong>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <a href="#" class="vermaislist"><i class="fas fa-plus-circle"></i> ver mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        var interleaveOffset = 0.5;
+
+        var swiperOptions = {
+            loop: true,
+            speed: 1000,
+            grabCursor: true,
+            autoplay: true,
+            watchSlidesProgress: true,
+            mousewheelControl: true,
+            keyboardControl: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            on: {
+                progress: function () {
+                    var swiper = this;
+                    for (var i = 0; i < swiper.slides.length; i++) {
+                        var slideProgress = swiper.slides[i].progress;
+                        var innerOffset = swiper.width * interleaveOffset;
+                        var innerTranslate = slideProgress * innerOffset;
+                        swiper.slides[i].querySelector(".slide-inner").style.transform =
+                            "translate3d(" + innerTranslate + "px, 0, 0)";
+                    }
+                },
+                touchStart: function () {
+                    var swiper = this;
+                    for (var i = 0; i < swiper.slides.length; i++) {
+                        swiper.slides[i].style.transition = "";
+                    }
+                },
+                setTransition: function (speed) {
+                    var swiper = this;
+                    for (var i = 0; i < swiper.slides.length; i++) {
+                        swiper.slides[i].style.transition = speed + "ms";
+                        swiper.slides[i].querySelector(".slide-inner").style.transition =
+                            speed + "ms";
+                    }
+                }
+            }
+        };
+
+        var swiper = new Swiper(".swiper-container", swiperOptions);
+    </script>
