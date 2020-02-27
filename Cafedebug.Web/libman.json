@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "bootstrap@4.4.1",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "bootstrap-sass@3.4.1",
+      "destination": "wwwroot/lib/bootstrap-sass/"
+    },
+    {
+      "library": "jquery-validation@1.19.1",
+      "destination": "wwwroot/lib/jquery-validation/"
+    },
+    {
+      "library": "jquery-form-validation@1.0.4",
+      "destination": "wwwroot/lib/jquery-form-validation/"
+    },
+    {
+      "library": "swiper@5.3.0",
+      "destination": "wwwroot/lib/swiper/"
+    },
+    {
+      "library": "jquery@3.4.1",
+      "destination": "wwwroot/lib/jquery/"
+    }
+  ]
+}

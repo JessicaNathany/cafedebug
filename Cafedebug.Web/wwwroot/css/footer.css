@@ -1,0 +1,21 @@
+﻿footer {
+  background-color: #2c2a2b; }
+  footer .logorodape {
+    padding: 5% 2% 2% 5%;
+    margin: 2%; }
+  footer .nav-rodape2 ul {
+    margin-left: 3%;
+    margin-top: 10%;
+    border-top: 7px solid white;
+    list-style-type: none;
+    align-items: center;
+    align-content: center;
+    justify-content: center; }
+    footer .nav-rodape2 ul li {
+      margin: 1%;
+      text-align: center; }
+      footer .nav-rodape2 ul li a {
+        color: white;
+        font-weight: 600;
+        font-size: 25px;
+        text-decoration: none; }

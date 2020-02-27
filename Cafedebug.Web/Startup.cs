@@ -14,6 +14,7 @@ using Cafedebug.Web.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Cafedebug.Web.Configurations;
 
+
 namespace Cafedebug.Web
 {
     public class Startup
@@ -64,20 +65,8 @@ namespace Cafedebug.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
             //configura a autenticação do identity para funcionar na aplicação
             app.UseAuthentication();
-
-            // configuração da cultura do site podendo add mais de uma cultura
-            var defaultCulture = new CultureInfo("pt-BR");
-            var localizationOptions = new RequestLocalizationOptions
-            {
-                DefaultRequestCulture = new RequestCulture (defaultCulture),
-                SupportedCultures = new List<CultureInfo> { defaultCulture },
-                SupportedUICultures = new List<CultureInfo> { defaultCulture },
-            };
-
-            app.UseRequestLocalization(localizationOptions);
 
             app.UseMvc(routes =>
             {
