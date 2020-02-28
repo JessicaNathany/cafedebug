@@ -4,6 +4,7 @@ namespace Cafedebug.Web.Controllers
 {
     public class AboutController : Controller
     {
+        [Route("quemsomos")]
         public ActionResult Index()
         {
             return View();
@@ -19,12 +20,14 @@ namespace Cafedebug.Web.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        [Route("atualiza")]
+        public ActionResult Edit(int id)
         {
 
             return View();
         }
 
+       
         public ActionResult Insert()
         {
             return View();
