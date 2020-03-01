@@ -1,0 +1,11 @@
+[
+  {
+    "outputFileName": "wwwroot/js/cafeDebug.min.js",
+    "inputFiles": [
+      "wwwroot/js/cafeDebug.js"
+    ],
+    "minify": {
+      "enabled": true
+    }
+  }
+]
