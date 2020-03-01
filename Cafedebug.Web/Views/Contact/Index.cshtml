@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Contato | Café Debug";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/swiper.min.css" rel="stylesheet" />
+    <script src="~/js/swiper/swiper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    @{
+        @Html.Partial("_MenuHome")
+    }
+    <!-- FECHA TOPO -->
+    <section id="quemsomos">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 colcenter">
+                    <img src="~/images/logo-quemsomos.png" />
+                    <div class="form-group w-100">
+                        <div class="col-md-4 control-label  text-left">
+                            <label class="control-label  " for="textinput">Nome</label>
+                        </div>
+                        <div class="form-group col-md-12 ">
+                            <div class="">
+                                <input id="nome" name="textinput" type="text" class="form-control input-md" required>
+                            </div>
+                        </div>
+                        <fieldset>
+                            <div class="form-group">
+                                <div class="form-group col-md-2  text-left">
+                                    <label class="control-label  " for="textinput">Email</label>
+                                </div>
+                                <div class="form-group col-md-12 ">
+                                    <div class="">
+                                        <input id="email" name="textinput" type="text" class="form-control input-md" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-2  text-left">
+                                    <label class="control-label  " for="textinput">Telefone</label>
+                                </div>
+                                <div class="form-group col-md-12 ">
+                                    <div class="">
+                                        <input id="telefone" name="textinput" type="text" class="form-control input-md" required>
+                                    </div>
+                                </div><br />
+                                <!--Assunto-->
+                                <div class="form-group col-md-2  text-left">
+                                    <label class="control-label  " for="textinput">Assunto</label>
+                                </div>
+                                <div class="col-md-6 floatl">
+                                    <select class="browser-default custom-select mb-4" id="select">
+                                        <option value="" disabled="" selected="" required>Selecione um assunto</option>
+                                        <option value="1">Sugestões</option>
+                                        <option value="2">Elogios</option>
+                                        <option value="2">Críticas</option>
+                                        <option value="2">Parceria</option>
+                                        <option value="2">Eventos</option>
+                                        <option value="2">Outros</option>
+                                    </select>
+                                </div>
+                                <!-- Textarea -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="noticia">Mensagem</label>
+                                    <div class="col-md-12">
+                                        <textarea class="form-control " id="campobio" name="campobio" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <a href="#" class="btn btn-sm btn-success">Enviar</a>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @{
+        @Html.Partial("_LayoutFooter")
+    }
+</body>
+

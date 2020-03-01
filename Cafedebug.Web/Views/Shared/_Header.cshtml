@@ -2,7 +2,7 @@
     ViewData["Title"] = "Café Debug | Seu Podcast de Tecnologia";
 }
 
-<div class="container-fluid">
+<header>
     <div class="row">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class=" col-sm-12 col-md-3 col-lg-3">
@@ -34,13 +34,16 @@
                             <a class="nav-link" href="#">@Html.ActionLink("Home", "Index", "Home") <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">@Html.ActionLink("Quem Somos", "Index", "QuemSomos")</a>
+                            <a class="nav-link" href="#">@Html.ActionLink("Quem Somos", "Index", "About")</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">@Html.ActionLink("Episódios", "Index", "Episodio")</a>
+                            <a class="nav-link" href="#">@Html.ActionLink("Episódios", "Index", "Episode")</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">@Html.ActionLink("Fale Conosco", "Index", "Contato")</a>
+                            <a class="nav-link" href="#">@Html.ActionLink("Fale Conosco", "Index", "Contact")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">@Html.ActionLink("Patrocinadores", "Index", "Sponsor")</a>
                         </li>
 
                     </ul>
@@ -50,7 +53,7 @@
             </div>
         </nav>
     </div>
-</div>
+</header>
 @section Scripts{
     <script type="text/javascript">
         debugger;

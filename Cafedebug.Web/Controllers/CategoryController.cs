@@ -9,12 +9,16 @@ namespace Cafedebug.Web.Controllers
             return View();
         }
 
-        public ActionResult NovoCategoria()
+        public ActionResult NewCatecory()
         {
             return View();
         }
 
-        public ActionResult GetCategoria()
+        /// <summary>
+        /// Exibe a tela com todas as categorias
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Categories()
         {
             return View();
         }

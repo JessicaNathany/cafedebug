@@ -9,12 +9,17 @@ namespace Cafedebug.Web.Controllers
             return View();
         }
 
-        public ActionResult NovoBanner()
+        public ActionResult NewBanner()
         {
             return View();
         }
 
-        public ActionResult Banner()
+        public ActionResult Banners()
+        {
+            return View();
+        }
+
+        public ActionResult Edit()
         {
             return View();
         }
