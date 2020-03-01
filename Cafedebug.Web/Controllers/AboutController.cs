@@ -4,13 +4,16 @@ namespace Cafedebug.Web.Controllers
 {
     public class AboutController : Controller
     {
-        [Route("quemsomos")]
+        /// <summary>
+        /// Tela QuemSomos área do visitante
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult PanelAbout()
+        public ActionResult Admin()
         {
             return View();
         }
@@ -20,7 +23,6 @@ namespace Cafedebug.Web.Controllers
             return View();
         }
 
-        [Route("atualiza")]
         public ActionResult Edit(int id)
         {
 
