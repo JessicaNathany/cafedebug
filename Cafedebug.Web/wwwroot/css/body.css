@@ -1,4 +1,16 @@
-﻿/*Home*/
+﻿/*#region comon classes*/
+.title-page {
+  text-align: left;
+  margin-left: 3%;
+  width: 100%; }
+  .title-page p {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 15px;
+    color: dimgray; }
+
+/*#endregion */
+/*#region Home*/
 .owl-carousel .banner {
   position: relative;
   top: 0;
@@ -188,4 +200,49 @@
 .hide {
   display: none; }
 
-/*End Home*/
+/*#endregion */
+/*#region About us*/
+.about-us .logo {
+  margin: 5%; }
+
+.about-us .text-1 {
+  color: gray;
+  font-size: 22px;
+  padding: 5%; }
+
+.about-us .quemfaz {
+  width: 100%;
+  list-style-type: none; }
+  .about-us .quemfaz li {
+    margin-top: 3%;
+    margin-left: 0; }
+    .about-us .quemfaz li .userQuemfaz {
+      display: flex;
+      justify-content: flex-start;
+      align-content: flex-start; }
+      .about-us .quemfaz li .userQuemfaz .square .block {
+        background: url(../images/bordsomb.png);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        text-align: left;
+        margin: auto; }
+        .about-us .quemfaz li .userQuemfaz .square .block img {
+          height: 80%;
+          width: 80%;
+          padding-top: 7%;
+          margin-left: 7%; }
+      .about-us .quemfaz li .userQuemfaz .userhome {
+        color: #ed7d00;
+        text-align: left; }
+        .about-us .quemfaz li .userQuemfaz .userhome p {
+          font-size: 20px;
+          line-height: 16px;
+          margin-bottom: 0;
+          color: #565656; }
+        .about-us .quemfaz li .userQuemfaz .userhome .socialuser {
+          font-size: 2rem;
+          float: right; }
+          .about-us .quemfaz li .userQuemfaz .userhome .socialuser a i {
+            color: #ed7d00; }
+
+/*#endregion */

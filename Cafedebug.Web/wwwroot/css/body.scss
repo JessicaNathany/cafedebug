@@ -1,10 +1,23 @@
 ﻿$ThemeColor: #ed7d00;
 $paragraph: #565656;
 
+/*#region comon classes*/
 
+.title-page {
+    text-align: left;
+    margin-left: 3%;
+    width: 100%;
+    p {
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 15px;
+        color: dimgray;
+    }
+}
 
-/*Home*/
-
+/*#endregion */
+                                               
+/*#region Home*/
 
 //Banner
 .owl-carousel {
@@ -31,6 +44,7 @@ $paragraph: #565656;
             justify-content: center;
             flex-direction: column;
             padding-top: 8%;
+
             strong {
                 color: white;
                 background-color: $ThemeColor;
@@ -162,7 +176,6 @@ $paragraph: #565656;
     }
 }
 
-
 .noticias {
     background-color: $ThemeColor;
     margin-top: 3%;
@@ -212,7 +225,6 @@ $paragraph: #565656;
         }
     }
 }
-
 
 .quemfaz {
     margin-bottom: 5%;
@@ -276,7 +288,6 @@ $paragraph: #565656;
     }
 }
 
-
 .loading {
     background: url('../images/Ripple-1s-200px.gif') no-repeat center center;
     position: absolute;
@@ -291,7 +302,76 @@ $paragraph: #565656;
     display: none;
 }
 
-/*End Home*/
+/*#endregion */
+                                            
+/*#region About us*/
+.about-us {
+    .logo{
+        margin: 5%;
+    }
+    .text-1 {
+        color: gray;
+        font-size: 22px;
+        padding: 5%;
+    }
+
+    .quemfaz {
+        width: 100%;
+        list-style-type: none;
+
+        li {
+            margin-top: 3%;
+            margin-left: 0;
+
+            .userQuemfaz {
+                display: flex;
+                justify-content: flex-start;
+                align-content: flex-start;
+
+                .square {
 
 
+                    .block {
+                        background: url(../images/bordsomb.png);
+                        background-repeat: no-repeat;
+                        background-size: 80%;
+                        text-align: left;
+                        margin: auto;
+
+                        img {
+                            height: 80%;
+                            width: 80%;
+                            padding-top: 7%;
+                            margin-left: 7%;
+                        }
+                    }
+                }
+
+                .userhome {
+                    color: $ThemeColor;
+                    text-align: left;
+
+                    p {
+                        font-size: 20px;
+                        line-height: 16px;
+                        margin-bottom: 0;
+                        color: $paragraph;
+                    }
+
+                    .socialuser {
+                        font-size: 2rem;
+                        float: right;
+                        a {
+                            i {
+                                color: $ThemeColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*#endregion */
 
