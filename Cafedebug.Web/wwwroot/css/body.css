@@ -56,10 +56,10 @@
       .owl-carousel .banner .content .buttons .oucaagora,
       .owl-carousel .banner .content .buttons .spotifybt {
         display: inline-block;
-        font-size: 20px;
+        font-size: 14px;
         color: white;
         border-radius: 20px;
-        font-weight: 600;
+        font-weight: 400;
         margin-left: 20px; }
         .owl-carousel .banner .content .buttons .oucaagora i,
         .owl-carousel .banner .content .buttons .spotifybt i {
@@ -73,7 +73,9 @@
         background-color: #1bba54;
         text-align: center;
         border: none;
-        padding: 7px; }
+        padding: 7px;
+        width: 52%;
+        height: 52%; }
 
 .novosepisodios {
   margin-top: 5%; }
@@ -283,7 +285,7 @@
       flex-direction: column; }
       .owl-carousel .banner .content .buttons .oucaagora {
         border: 2px solid white;
-        font-size: 18px; }
+        font-size: 14px; }
       .owl-carousel .banner .content .buttons .spotifybt {
         background-color: #1bba54;
         text-align: center;
