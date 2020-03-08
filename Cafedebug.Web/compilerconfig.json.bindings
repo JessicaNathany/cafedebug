@@ -1,0 +1,1 @@
+﻿///<binding BeforeBuild='Scss' AfterBuild='Scss, All files' Clean='Scss' ProjectOpened='Scss' />

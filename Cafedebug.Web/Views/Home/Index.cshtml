@@ -10,10 +10,11 @@
         <div class="content">
             <strong>Cafê Debug <b>#24</b></strong>
             <p>Startups e Aceleradoras</p>
-            <a href="#" class="oucaagora"><i class="fas fa-plus-circle"></i> ver mais episodios</a>
-            <a href="#" class="spotifybt"><i class="fab fa-spotify"></i> ver mais episodios</a>
+            <div class="buttons">
+                <a href="#" class="oucaagora btn" target="_blank"><i class="fas fa-plus-circle"></i> ver mais episodios</a>
+                <a href="#" class="spotifybt btn" target="_blank"><i class="fab fa-spotify"></i> ver mais episodios</a>
+            </div>
         </div>
-
     </div>
 </div>
 <!-- FECHA BANNER -->
@@ -161,19 +162,20 @@
     </div>
 </section>
 
-@section Scripts {
-    <script type="text/jscript">    
-        $(document).ready(function () {
-           var owl = $('.owl-carousel');
-            owl.owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 10,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true
-            });
-            $('.loading').addClass('hide');
+@section Scripts{
+    <script type="text/jscript">
+
+        debugger;
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true
         });
+
+        $('.loading').addClass('hide');
     </script>
 }

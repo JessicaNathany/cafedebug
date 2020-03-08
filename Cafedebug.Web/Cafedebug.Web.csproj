@@ -29,6 +29,7 @@
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.4.1" />
     <PackageReference Include="bootstrap.sass" Version="4.4.1" />
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.435" />
     <PackageReference Include="BuildWebCompiler" Version="1.12.405" />
     <PackageReference Include="jQuery" Version="3.4.1" />
     <PackageReference Include="jQuery.Validation" Version="1.19.1" />
