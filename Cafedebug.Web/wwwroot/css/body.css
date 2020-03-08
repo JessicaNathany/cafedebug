@@ -9,48 +9,71 @@
     margin: 15px;
     color: dimgray; }
 
+.hide {
+  display: none; }
+
 /*#endregion */
 /*#region Home*/
 .owl-carousel .banner {
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 70vh;
+  max-width: 100%;
+  max-height: 70vh;
+  min-height: 50vh;
   background: url(../images/banner.jpg) center content-box no-repeat;
   background-size: cover; }
   .owl-carousel .banner .banner-mask {
+    max-width: 100%;
+    max-height: 70vh;
+    min-height: 50vh;
+    z-index: 250; }
+  .owl-carousel .banner .content {
     position: absolute;
     top: 0;
     left: 0;
-    height: 70vh; }
-  .owl-carousel .banner .content {
     display: flex;
     align-content: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 8%; }
+    padding-top: 8%;
+    width: 100%; }
     .owl-carousel .banner .content strong {
       color: white;
       background-color: #ed7d00;
       font-size: 2rem; }
     .owl-carousel .banner .content p {
       color: white;
-      font-size: 5rem; }
-    .owl-carousel .banner .content .bottoms {
+      font-size: 4rem;
+      padding-top: 3%; }
+    .owl-carousel .banner .content .buttons {
       display: flex;
       align-content: center;
       align-items: center;
       justify-content: center;
       flex-direction: row; }
-      .owl-carousel .banner .content .bottoms .oucaagora,
-      .owl-carousel .banner .content .bottoms .spotifybt {
-        text-decoration: none;
-        margin: 5px;
-        font-size: x-large; }
-      .owl-carousel .banner .content .bottoms .spotifybt {
-        border: 2px solid white; }
+      .owl-carousel .banner .content .buttons .oucaagora,
+      .owl-carousel .banner .content .buttons .spotifybt {
+        display: inline-block;
+        font-size: 20px;
+        color: white;
+        border-radius: 20px;
+        font-weight: 600;
+        margin-left: 20px; }
+        .owl-carousel .banner .content .buttons .oucaagora i,
+        .owl-carousel .banner .content .buttons .spotifybt i {
+          color: white;
+          padding-right: 5px;
+          padding-left: 5px; }
+      .owl-carousel .banner .content .buttons .oucaagora {
+        border: 3px solid white;
+        padding: 5px; }
+      .owl-carousel .banner .content .buttons .spotifybt {
+        background-color: #1bba54;
+        text-align: center;
+        border: none;
+        padding: 7px; }
 
 .novosepisodios {
   margin-top: 5%; }
@@ -197,9 +220,6 @@
   width: 100%;
   z-index: 9999999; }
 
-.hide {
-  display: none; }
-
 /*#endregion */
 /*#region About us*/
 .about-us .logo {
@@ -246,3 +266,125 @@
             color: #ed7d00; }
 
 /*#endregion */
+/*Media Queries*/
+/*#region Media Queries*/
+@media only screen and (max-width: 480px) {
+  /*Banner*/
+  .owl-carousel .banner .content {
+    padding: 10%;
+    margin-top: 10%; }
+    .owl-carousel .banner .content strong {
+      font-size: 18px; }
+    .owl-carousel .banner .content p {
+      padding-top: 5%;
+      font-size: 22px;
+      text-align: center; }
+    .owl-carousel .banner .content .buttons {
+      flex-direction: column; }
+      .owl-carousel .banner .content .buttons .oucaagora {
+        border: 2px solid white;
+        font-size: 18px; }
+      .owl-carousel .banner .content .buttons .spotifybt {
+        background-color: #1bba54;
+        text-align: center;
+        border: none;
+        font-size: 18px;
+        margin-top: 2%; }
+  /*Home*/
+  .novosepisodios .ladoinfoseps {
+    margin-top: 10%; }
+    .novosepisodios .ladoinfoseps h1 {
+      font-size: 2rem; }
+      .novosepisodios .ladoinfoseps h1 span {
+        left: 0; }
+    .novosepisodios .ladoinfoseps p {
+      font-size: 20px; }
+    .novosepisodios .ladoinfoseps h4 {
+      font-size: 2rem; }
+      .novosepisodios .ladoinfoseps h4 span {
+        left: 0; }
+    .novosepisodios .ladoinfoseps .compartilharhome a {
+      height: 100%;
+      width: 100%; }
+      .novosepisodios .ladoinfoseps .compartilharhome a i {
+        font-size: 30px; }
+  .novosepisodios .ver-mais a {
+    font-size: 22px; }
+  .noticias .tituloNoticias h3 {
+    font-size: 2rem; }
+    .noticias .tituloNoticias h3 span::after {
+      margin-left: 0;
+      margin-top: 25px; }
+  .noticias .boxnoticia {
+    font-size: 1rem;
+    padding-top: 5%; }
+    .noticias .boxnoticia .tag {
+      padding-bottom: 2%; }
+  .quemfaz .tituloquem {
+    margin-top: 5%; }
+    .quemfaz .tituloquem h3 {
+      font-size: 2rem; }
+    .quemfaz .tituloquem h3::after {
+      margin-left: 0; } }
+
+@media only screen and (min-width: 479px) and (max-width: 768px) {
+  /*Banner*/
+  .owl-carousel .banner .content {
+    padding: 10%; }
+    .owl-carousel .banner .content strong {
+      font-size: 18px; }
+    .owl-carousel .banner .content p {
+      padding-top: 5%;
+      font-size: 33px;
+      text-align: center; }
+    .owl-carousel .banner .content .buttons {
+      flex-direction: column; }
+      .owl-carousel .banner .content .buttons .oucaagora {
+        border: 2px solid white;
+        font-size: 18px; }
+      .owl-carousel .banner .content .buttons .spotifybt {
+        background-color: #1bba54;
+        text-align: center;
+        border: none;
+        font-size: 18px;
+        margin-top: 2%; }
+  /*Home*/
+  .novosepisodios .ladoinfoseps {
+    margin-top: 10%; }
+    .novosepisodios .ladoinfoseps h1 {
+      font-size: 3rem; }
+      .novosepisodios .ladoinfoseps h1 span {
+        left: 0; }
+    .novosepisodios .ladoinfoseps p {
+      font-size: 20px; }
+    .novosepisodios .ladoinfoseps h4 {
+      font-size: 3rem; }
+      .novosepisodios .ladoinfoseps h4 span {
+        left: 0; }
+    .novosepisodios .ladoinfoseps .compartilharhome a {
+      height: 100%;
+      width: 100%; }
+      .novosepisodios .ladoinfoseps .compartilharhome a i {
+        font-size: 30px; }
+  .novosepisodios .ver-mais a {
+    font-size: 22px; }
+  .noticias .tituloNoticias h3 {
+    font-size: 3rem; }
+    .noticias .tituloNoticias h3 span::after {
+      margin-left: 0;
+      margin-top: 25px; }
+  .noticias .boxnoticia {
+    font-size: 1rem; }
+    .noticias .boxnoticia .tag {
+      padding-bottom: 1%;
+      margin-bottom: 2%; }
+    .noticias .boxnoticia span {
+      font-size: 20px; }
+  .quemfaz .tituloquem {
+    margin-top: 5%; }
+    .quemfaz .tituloquem h3 {
+      font-size: 3rem; }
+    .quemfaz .tituloquem h3::after {
+      margin-left: 0; } }
+
+/*#endregion*/

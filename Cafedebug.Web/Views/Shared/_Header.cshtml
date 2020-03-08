@@ -1,33 +1,33 @@
-﻿@{
-    ViewData["Title"] = "Café Debug | Seu Podcast de Tecnologia";
-}
-
-<header>
+﻿
+<div class="container-fluid">
     <div class="row">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class=" col-sm-12 col-md-3 col-lg-3">
+        <nav class="navbar navbar-expand-lg">
+            <!-- Logo -->
+            <div class="col-5 col-sm-6 col-md-4 col-lg-2 col-xl-2">
                 <div class="nav-logo">
-                    <a class="Logo" href="#">
+                    <a class="Logo" href="@Url.Action("Index", "Home")">
                         <img src="~/images/logo-cafedebug.png" />
                     </a>
                 </div>
             </div>
-            <div class="col-sm-9 d-md-none d-lg-none">
-                <a class="soical-media" href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw"><i class="fab fa-youtube"></i></a>
-                <a class="soical-media" href="https://twitter.com/cafedebug" target="_blank"><i class="fab fa-twitter-square"></i></a>
-
+            <!-- Soical Media -->
+            <div class="col-4 col-sm-3 col-md-3 d-lg-none">
+                <div class="soical">
+                    <a class="soical-media" href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="soical-media" href="https://twitter.com/cafedebug" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                </div>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <div id="wrapper">
-                    <div class="circle icon">
-                        <span class="line top"></span>
-                        <span class="line middle"></span>
-                        <span class="line bottom"></span>
-                    </div>
+            <!-- Collapse button -->
+            <button class="navbar-toggler Toggle-button" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="animated-icon1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </button>
 
-            <div class="col-sm-12 col-md-9 col-lg-9">
+            <!-- Menu -->
+            <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
                 <div class="navbar-collapse collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
@@ -45,24 +45,30 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">@Html.ActionLink("Patrocinadores", "Index", "Sponsor")</a>
                         </li>
-
                     </ul>
-                    <a class="soical-media" href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw"><i class="fab fa-youtube"></i></a>
-                    <a class="soical-media" href="https://twitter.com/cafedebug" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Soical Media -->
+            <div class="d-none d-lg-block d-xl-block col-lg-1 col-xl-1">
+                <div class="soical">
+                    <a class="soical-media" href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="soical-media" href="https://twitter.com/cafedebug" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </nav>
     </div>
-</header>
-@section Scripts{
-    <script type="text/javascript">
-        debugger;
-        $("#wrapper").click(function () {
-            $(".icon").toggleClass("close");
-        });
+</div>
 
-    </script>
-}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.Toggle-button').on('click', function () {
+            $('.animated-icon1').toggleClass('open');
+        });
+    });
+</script>
+
+
 
 
 
