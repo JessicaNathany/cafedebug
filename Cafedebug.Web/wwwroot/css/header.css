@@ -80,7 +80,7 @@
       border: none; }
       nav .navbar-nav .nav-item a {
         color: black;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 600;
         text-decoration: none; }
   nav .soical {
@@ -90,7 +90,7 @@
       margin: 5px; }
       nav .soical .soical-media i {
         color: #eb6c01;
-        font-size: 35px; }
+        font-size: 30px; }
 
 @media only screen and (max-width: 480px) {
   nav {
