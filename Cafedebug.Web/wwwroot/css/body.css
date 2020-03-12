@@ -9,8 +9,9 @@
     margin: 15px;
     color: dimgray; }
 
-.hide {
-  display: none; }
+.body-content {
+  margin-left: 4%;
+  margin-right: 4%; }
 
 /*#endregion */
 /*#region Home*/
@@ -73,9 +74,7 @@
         background-color: #1bba54;
         text-align: center;
         border: none;
-        padding: 7px;
-        width: 52%;
-        height: 52%; }
+        padding: 7px; }
 
 .novosepisodios {
   margin-top: 5%; }
@@ -84,7 +83,7 @@
     margin-top: 55%; }
     .novosepisodios .ladoinfoseps h1 {
       color: #ed7d00;
-      font-size: 6rem;
+      font-size: 5rem;
       font-weight: 600;
       line-height: 0.8;
       position: relative;
@@ -268,7 +267,6 @@
             color: #ed7d00; }
 
 /*#endregion */
-/*Media Queries*/
 /*#region Media Queries*/
 @media only screen and (max-width: 480px) {
   /*Banner*/
@@ -290,7 +288,6 @@
         background-color: #1bba54;
         text-align: center;
         border: none;
-        font-size: 18px;
         margin-top: 2%; }
   /*Home*/
   .novosepisodios .ladoinfoseps {
@@ -388,5 +385,65 @@
       font-size: 3rem; }
     .quemfaz .tituloquem h3::after {
       margin-left: 0; } }
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  /*Banner*/
+  .owl-carousel .banner .content {
+    padding: 10%; }
+    .owl-carousel .banner .content strong {
+      font-size: 24px; }
+    .owl-carousel .banner .content p {
+      padding-top: 10%;
+      font-size: 43px;
+      text-align: center; }
+    .owl-carousel .banner .content .buttons {
+      flex-direction: row;
+      margin-top: 5%; }
+      .owl-carousel .banner .content .buttons .oucaagora {
+        border: 2px solid white;
+        font-size: 18px; }
+      .owl-carousel .banner .content .buttons .spotifybt {
+        background-color: #1bba54;
+        text-align: center;
+        border: none;
+        font-size: 18px; }
+  /*Home*/
+  .novosepisodios .ladoinfoseps {
+    margin-top: 10%; }
+    .novosepisodios .ladoinfoseps h1 {
+      font-size: 2rem; }
+      .novosepisodios .ladoinfoseps h1 span {
+        left: 0; }
+    .novosepisodios .ladoinfoseps p {
+      font-size: 20px; }
+    .novosepisodios .ladoinfoseps h4 {
+      font-size: 2rem; }
+      .novosepisodios .ladoinfoseps h4 span {
+        left: 0; }
+    .novosepisodios .ladoinfoseps .compartilharhome a {
+      height: 100%;
+      width: 100%; }
+      .novosepisodios .ladoinfoseps .compartilharhome a i {
+        font-size: 30px; }
+  .novosepisodios .ver-mais a {
+    font-size: 22px; }
+  .noticias .tituloNoticias h3 {
+    font-size: 2rem; }
+    .noticias .tituloNoticias h3 span::after {
+      margin-left: 0;
+      margin-top: 25px;
+      width: 36%; }
+  .noticias .boxnoticia {
+    font-size: 1rem;
+    padding-top: 5%; }
+    .noticias .boxnoticia .tag {
+      padding-bottom: 2%; }
+  .quemfaz .tituloquem {
+    margin-top: 5%; }
+    .quemfaz .tituloquem h3 {
+      font-size: 2rem; }
+    .quemfaz .tituloquem h3::after {
+      margin-left: 0;
+      width: 25%; } }
 
 /*#endregion*/

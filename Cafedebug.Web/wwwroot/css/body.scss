@@ -15,14 +15,12 @@ $paragraph: #565656;
         color: dimgray;
     }
 }
-.hide {
-    display: none;
+.body-content{
+    margin-left: 4%;
+    margin-right: 4%;
 }
-
 /*#endregion */
-
 /*#region Home*/
-
 //Banner
 .owl-carousel {
     .banner {
@@ -100,8 +98,6 @@ $paragraph: #565656;
                     text-align: center;
                     border: none;
                     padding: 7px;
-                    width: 52%;
-                    height: 52%;
                 }
             }
         }
@@ -118,7 +114,7 @@ $paragraph: #565656;
 
         h1 {
             color: $ThemeColor;
-            font-size: 6rem;
+            font-size: 5rem;
             font-weight: 600;
             line-height: 0.8;
             position: relative;
@@ -325,8 +321,6 @@ $paragraph: #565656;
     z-index: 9999999;
 }
 
-
-
 /*#endregion */
 
 /*#region About us*/
@@ -402,17 +396,11 @@ $paragraph: #565656;
 
 /*#endregion */
 
-/*Media Queries*/
-
 /*#region Media Queries*/
 @media only screen and (max-width: 480px) {
     /*Banner*/
     .owl-carousel {
         .banner {
-
-            .banner-mask {
-            }
-
             .content {
                 padding: 10%;
                 margin-top: 10%;
@@ -439,7 +427,6 @@ $paragraph: #565656;
                         background-color: #1bba54;
                         text-align: center;
                         border: none;
-                        font-size: 18px;
                         margin-top: 2%;
                     }
                 }
@@ -529,15 +516,10 @@ $paragraph: #565656;
     }
 }
 
-
 @media only screen and (min-width: 479px) and (max-width: 768px) {
     /*Banner*/
     .owl-carousel {
         .banner {
-
-            .banner-mask {
-            }
-
             .content {
                 padding: 10%;
 
@@ -656,10 +638,126 @@ $paragraph: #565656;
         }
     }
 
-
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
+    /*Banner*/
+    .owl-carousel {
+        .banner {
+            .content {
+                padding: 10%;
+
+                strong {
+                    font-size: 24px;
+                }
+
+                p {
+                    padding-top: 10%;
+                    font-size: 43px;
+                    text-align: center;
+                }
+
+                .buttons {
+                    flex-direction: row;
+                    margin-top: 5%;
+                    .oucaagora {
+                        border: 2px solid white;
+                        font-size: 18px;
+                    }
+
+                    .spotifybt {
+                        background-color: #1bba54;
+                        text-align: center;
+                        border: none;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    /*Home*/
+    .novosepisodios {
+
+        .ladoinfoseps {
+            margin-top: 10%;
+
+            h1 {
+                font-size: 2rem;
+
+                span {
+                    left: 0;
+                }
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            h4 {
+                font-size: 2rem;
+
+                span {
+                    left: 0;
+                }
+            }
+
+            .compartilharhome {
+                a {
+                    height: 100%;
+                    width: 100%;
+
+                    i {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+
+        .ver-mais {
+            a {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .noticias {
+
+        .tituloNoticias {
+            h3 {
+                font-size: 2rem;
+
+                span::after {
+                    margin-left: 0;
+                    margin-top: 25px;
+                    width: 36%;
+                }
+            }
+        }
+
+        .boxnoticia {
+            font-size: 1rem;
+            padding-top: 5%;
+
+            .tag {
+                padding-bottom: 2%;
+            }
+        }
+    }
+
+    .quemfaz {
+        .tituloquem {
+            margin-top: 5%;
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            h3::after {
+                margin-left: 0;
+                width: 25%;
+            }
+        }
+    }
 }
 
  /*#endregion*/
