@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-    <link href="~/lib/bootstrap/dist/css/bootstrap-grid.css" rel="stylesheet" />
-    <link href="~/lib/bootstrap/dist/css/bootstrap-reboot.css" rel="stylesheet" />
     <!-- Owl Carousel 2.3.4-->
     <link href="~/lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="~/lib/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet" />
@@ -39,13 +37,13 @@
 </head>
 <body>
     <partial name="_Header" />
-    <div class="container">
-        @RenderBody()
+    <div class="container-fluid">
+        <main class="body-content">
+            @RenderBody()
+        </main>
     </div>
     <partial name="_Footer" />
 
-    <script src="~/js/Mensagem.js"></script>
-    <script src="~/js/ValidaCampos.js"></script>
     <script src="~/js/cafeDebug.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>

@@ -15,14 +15,12 @@ $paragraph: #565656;
         color: dimgray;
     }
 }
-.hide {
-    display: none;
+.body-content{
+    margin-left: 4%;
+    margin-right: 4%;
 }
-
 /*#endregion */
-
 /*#region Home*/
-
 //Banner
 .owl-carousel {
     .banner {
@@ -116,7 +114,7 @@ $paragraph: #565656;
 
         h1 {
             color: $ThemeColor;
-            font-size: 6rem;
+            font-size: 5rem;
             font-weight: 600;
             line-height: 0.8;
             position: relative;
