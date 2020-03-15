@@ -6,14 +6,13 @@ footer {
     .logorodape {
         padding: 5% 2% 2% 5%;
         margin: 2%;
-
     }
 
     .nav-rodape2 {
         ul {
             margin-left: 3%;
-            margin-top: 10%;
-            border-top: 7px solid white;
+            margin-top: 9%;
+            border-top: 4px solid white;
             list-style-type: none;
             align-items: center;
             align-content: center;
@@ -35,11 +34,8 @@ footer {
 }
 
 
-
-
 @media only screen and (max-width: 480px) {
     footer {
-
 
         .logorodape {
             padding: 0;
@@ -48,11 +44,5 @@ footer {
             height: auto;
 
         }
-
     }
-
-
-
-
-
 }

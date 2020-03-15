@@ -1,4 +1,5 @@
-﻿/*#region Comon Classes*/
+﻿@charset "UTF-8";
+/*#region Comon Classes*/
 .title-page {
   text-align: left;
   margin-left: 3%;
@@ -10,7 +11,7 @@
     color: dimgray; }
 
 /*#endregion*/
-/*#region Home*/
+/* BANNER*/
 .owl-carousel .banner {
   position: relative;
   top: 0;
@@ -72,6 +73,8 @@
         border: none;
         padding: 7px; }
 
+/*FIM Banner */
+/* EPISODIOS */
 .novosepisodios {
   margin-top: 5%; }
   .novosepisodios .ladoinfoseps {
@@ -117,6 +120,49 @@
       max-height: 80%;
       margin-bottom: 10px; }
 
+.envieemail {
+  background-color: #ed7d00;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 47px;
+  margin-bottom: 12%; }
+  .envieemail p {
+    font-size: 22px;
+    display: inline-block;
+    color: #fff;
+    line-height: 26px;
+    margin-top: 16px;
+    text-align: left; }
+  .envieemail a {
+    color: #fff;
+    font-weight: bold; }
+  .envieemail img {
+    display: inline-block;
+    height: 70px;
+    margin-top: -3%; }
+
+.compartilheep {
+  margin-top: 50px; }
+  .compartilheep .eplinkshe {
+    width: 49%;
+    display: inline-block; }
+
+#conteudoepisodio h1, h2, h3, h4, h5, h6 {
+  color: #333333;
+  font-weight: bold; }
+  #conteudoepisodio h1 .tituloepisodio h1, h2 .tituloepisodio h1, h3 .tituloepisodio h1, h4 .tituloepisodio h1, h5 .tituloepisodio h1, h6 .tituloepisodio h1 {
+    font-size: 29px;
+    letter-spacing: -1px;
+    border-bottom: 2px solid #ed7d00;
+    display: inline-flex;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #ed7d00 !important;
+    margin-bottom: 20px; }
+
+/* FIM EPISODIOS */
+/* NOTÍCIAS */
 .noticias {
   background-color: #ed7d00;
   margin-top: 3%;
@@ -164,7 +210,7 @@
   z-index: 9999999; }
 
 /*#endregion */
-/*#region About us*/
+/* ABOUT US */
 .about-us .logo {
   margin: 5%; }
 
@@ -208,7 +254,7 @@
           .about-us .quemfaz li .userQuemfaz .userhome .socialuser a i {
             color: #ed7d00; }
 
-/*#endregion */
+/* FIM ABOUT US */
 /*#region Media Queries*/
 @media only screen and (max-width: 480px) {
   /*Banner*/
@@ -231,7 +277,7 @@
         text-align: center;
         border: none;
         margin-top: 2%; }
-  /*Home*/
+  /*HOME*/
   .novosepisodios .ladoinfoseps {
     margin-top: 10%;
     text-align: center; }
@@ -260,6 +306,7 @@
     .novosepisodios .ver-mais a {
       font-size: 22px;
       margin-right: 0; }
+  /* NOTÍCIAS */
   .noticias .tituloNoticias h3 {
     font-size: 2rem; }
     .noticias .tituloNoticias h3 span::after {
@@ -269,7 +316,8 @@
     font-size: 1rem;
     padding-top: 5%; }
     .noticias .boxnoticia .tag {
-      padding-bottom: 2%; } }
+      padding-bottom: 2%; }
+  /* FIM NOTÍCIAS */ }
 
 @media only screen and (min-width: 479px) and (max-width: 768px) {
   /*Banner*/
@@ -393,5 +441,3 @@
     .quemfaz .tituloquem h3::after {
       margin-left: 0;
       width: 25%; } }
-
-/*#endregion*/
