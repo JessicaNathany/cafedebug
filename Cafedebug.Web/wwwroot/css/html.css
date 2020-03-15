@@ -5,5 +5,13 @@ body {
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif; }
 
-button, a {
+.body-content {
+  margin-left: 4%;
+  margin-right: 4%; }
+
+button,
+a {
   outline: none !important; }
+
+a:hover {
+  color: #ed7d00 !important; }

@@ -1,4 +1,4 @@
-﻿/*#region comon classes*/
+﻿/*#region Comon Classes*/
 .title-page {
   text-align: left;
   margin-left: 3%;
@@ -9,11 +9,7 @@
     margin: 15px;
     color: dimgray; }
 
-.body-content {
-  margin-left: 4%;
-  margin-right: 4%; }
-
-/*#endregion */
+/*#endregion*/
 /*#region Home*/
 .owl-carousel .banner {
   position: relative;
@@ -80,48 +76,26 @@
   margin-top: 5%; }
   .novosepisodios .ladoinfoseps {
     text-align: left;
-    margin-top: 55%; }
+    margin-top: 15%; }
     .novosepisodios .ladoinfoseps h1 {
       color: #ed7d00;
-      font-size: 5rem;
+      font-size: 3rem;
       font-weight: 600;
       line-height: 0.8;
-      position: relative;
-      margin-bottom: 15%; }
-      .novosepisodios .ladoinfoseps h1 span {
-        position: absolute;
-        margin-left: 5px;
-        padding: 0;
-        line-height: 0.8;
-        height: 10px;
-        right: 37%;
-        top: 70%; }
+      margin-bottom: 15%;
+      padding-bottom: 5%;
+      border-bottom: 7px solid #ed7d00; }
     .novosepisodios .ladoinfoseps p {
       color: #565656;
       font-size: 22px;
       font-weight: 500; }
-    .novosepisodios .ladoinfoseps h4 {
-      color: #ed7d00;
-      font-size: 4rem;
-      font-weight: 600;
-      line-height: 0.8;
-      position: relative;
-      margin-bottom: 15%; }
-      .novosepisodios .ladoinfoseps h4 span {
-        position: absolute;
-        margin-left: 5px;
-        padding: 0;
-        line-height: 0.8;
-        height: 10px;
-        right: 59%;
-        top: 36%; }
     .novosepisodios .ladoinfoseps .compartilharhome a i {
       font-size: 3rem;
       color: #ed7d00;
       margin: 2%; }
   .novosepisodios .ver-mais {
     display: flex;
-    justify-content: end; }
+    justify-content: right; }
     .novosepisodios .ver-mais a {
       font-size: 23px;
       border: 4px solid #ed7d00;
@@ -131,13 +105,17 @@
       text-decoration: none;
       color: #ed7d00;
       font-weight: 500;
-      margin-right: 3%; }
+      margin-top: 5%;
+      margin-right: 8%; }
       .novosepisodios .ver-mais a i {
         color: #ed7d00; }
-  .novosepisodios .episodiounico img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 25px; }
+  .novosepisodios .episodiounico {
+    display: block;
+    text-align: center; }
+    .novosepisodios .episodiounico img {
+      max-width: 80%;
+      max-height: 80%;
+      margin-bottom: 10px; }
 
 .noticias {
   background-color: #ed7d00;
@@ -150,7 +128,7 @@
     color: white;
     margin-left: 1%;
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 3rem;
     margin-left: 3%;
     line-height: 0.5em;
     margin-bottom: 5%; }
@@ -161,56 +139,20 @@
       width: 65%;
       margin-left: 32%; }
   .noticias .boxnoticia {
-    margin: 5%;
+    margin: 2%;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 25px;
     border-left: 7px solid white;
     padding-left: 5%; }
     .noticias .boxnoticia .tag {
       background-color: white;
       color: #ed7d00;
-      font-size: 18px;
+      font-size: 16px;
       padding: 5px; }
     .noticias .boxnoticia .noticia {
       color: white;
       outline: none;
       text-decoration: none; }
-
-.quemfaz {
-  margin-bottom: 5%; }
-  .quemfaz .tituloquem h3 {
-    color: #ed7d00;
-    font-size: 4rem;
-    margin-left: 5%; }
-  .quemfaz .tituloquem h3::after {
-    content: "";
-    border: 3px solid #ed7d00;
-    display: block;
-    width: 65%;
-    margin-left: 32%;
-    margin-bottom: 5%; }
-  .quemfaz .userquemfaz {
-    background: url(../images/bordsomb.png);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    text-align: center;
-    margin: auto; }
-    .quemfaz .userquemfaz .square img {
-      height: 80%;
-      width: 80%;
-      padding-top: 8%; }
-    .quemfaz .userquemfaz .userhome {
-      color: #ed7d00; }
-      .quemfaz .userquemfaz .userhome p {
-        font-size: 20px;
-        line-height: 16px;
-        margin-bottom: 0;
-        color: #565656;
-        margin: 5%; }
-      .quemfaz .userquemfaz .userhome .socialuser {
-        font-size: 2rem; }
-        .quemfaz .userquemfaz .userhome .socialuser a i {
-          color: #ed7d00; }
 
 .loading {
   background: url("../images/Ripple-1s-200px.gif") no-repeat center center;
@@ -291,7 +233,8 @@
         margin-top: 2%; }
   /*Home*/
   .novosepisodios .ladoinfoseps {
-    margin-top: 10%; }
+    margin-top: 10%;
+    text-align: center; }
     .novosepisodios .ladoinfoseps h1 {
       font-size: 2rem; }
       .novosepisodios .ladoinfoseps h1 span {
@@ -302,13 +245,21 @@
       font-size: 2rem; }
       .novosepisodios .ladoinfoseps h4 span {
         left: 0; }
-    .novosepisodios .ladoinfoseps .compartilharhome a {
-      height: 100%;
-      width: 100%; }
-      .novosepisodios .ladoinfoseps .compartilharhome a i {
-        font-size: 30px; }
-  .novosepisodios .ver-mais a {
-    font-size: 22px; }
+    .novosepisodios .ladoinfoseps .compartilharhome {
+      margin-bottom: 5%; }
+      .novosepisodios .ladoinfoseps .compartilharhome a {
+        height: 100%;
+        width: 100%; }
+        .novosepisodios .ladoinfoseps .compartilharhome a i {
+          font-size: 30px; }
+  .novosepisodios .ver-mais {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%; }
+    .novosepisodios .ver-mais a {
+      font-size: 22px;
+      margin-right: 0; }
   .noticias .tituloNoticias h3 {
     font-size: 2rem; }
     .noticias .tituloNoticias h3 span::after {
@@ -318,13 +269,7 @@
     font-size: 1rem;
     padding-top: 5%; }
     .noticias .boxnoticia .tag {
-      padding-bottom: 2%; }
-  .quemfaz .tituloquem {
-    margin-top: 5%; }
-    .quemfaz .tituloquem h3 {
-      font-size: 2rem; }
-    .quemfaz .tituloquem h3::after {
-      margin-left: 0; } }
+      padding-bottom: 2%; } }
 
 @media only screen and (min-width: 479px) and (max-width: 768px) {
   /*Banner*/
@@ -360,11 +305,14 @@
       font-size: 3rem; }
       .novosepisodios .ladoinfoseps h4 span {
         left: 0; }
-    .novosepisodios .ladoinfoseps .compartilharhome a {
-      height: 100%;
-      width: 100%; }
-      .novosepisodios .ladoinfoseps .compartilharhome a i {
-        font-size: 30px; }
+    .novosepisodios .ladoinfoseps .compartilharhome {
+      text-align: center;
+      margin-bottom: 5%; }
+      .novosepisodios .ladoinfoseps .compartilharhome a {
+        height: 100%;
+        width: 100%; }
+        .novosepisodios .ladoinfoseps .compartilharhome a i {
+          font-size: 30px; }
   .novosepisodios .ver-mais a {
     font-size: 22px; }
   .noticias .tituloNoticias h3 {
