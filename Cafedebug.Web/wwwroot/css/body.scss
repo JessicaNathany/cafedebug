@@ -210,23 +210,75 @@ $paragraph-color: #565656;
     }
 }
 
+
 #conteudoepisodio h1, h2, h3, h4, h5, h6 {
     color: #333333;
     font-weight: bold;
-
-    .tituloepisodio h1 {
-        font-size: 29px;
-        letter-spacing: -1px;
-        border-bottom: 2px solid #ed7d00;
-        display: inline-flex;
-        padding-right: 30px;
-        padding-bottom: 10px;
-        font-weight: bold;
-        color: #ed7d00 !important;
-        margin-bottom: 20px;
-    }
 }
+
+.tituloepisodio h1 {
+    font-size: 29px;
+    letter-spacing: -1px;
+    border-bottom: 2px solid #ed7d00;
+    padding-top: 10%;
+    display: inline-flex;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #ed7d00 !important;
+    margin-bottom: 20px;
+}
+
+
+.bannerep {
+    width: 100%;
+    height: 215px;
+    background-size: 100%;
+    background-position: center center;
+    color: #fff;
+    text-align: center;
+}
+
+// imagem do banner deverá ser buscada a url da aws
+.maskmini {
+    display: block;
+    height: 215px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../img/mask.png);
+    background-size: 80%;
+    position: absolute;
+}
+
+.bannerep strong {
+    color: #fff;
+    margin-top: 40px;
+    background-color: #ed7d00;
+    padding: 5px 10px;
+    font-weight: normal;
+    margin-top: 50px !important;
+    display: inline-block;
+}
+
+.bannerep h2 {
+    color: #fff;
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+.coluna3{
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+#episodiounico{
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
                                                 /* FIM EPISODIOS */
+
 
                                                 /* NOTÍCIAS */
 .noticias {
