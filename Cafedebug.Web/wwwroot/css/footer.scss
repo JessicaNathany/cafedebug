@@ -6,17 +6,21 @@ footer {
     .logorodape {
         padding: 5% 2% 2% 5%;
         margin: 2%;
+        height: 59%;
+        margin-top: 3%;
+        margin-bottom: 3%;
     }
 
     .nav-rodape2 {
         ul {
             margin-left: 3%;
             margin-top: 9%;
-            border-top: 4px solid white;
+            border-top: 2px solid white;
             list-style-type: none;
             align-items: center;
             align-content: center;
             justify-content: center;
+            margin-right: 2%;
 
             li {
                 margin: 1%;
@@ -42,7 +46,6 @@ footer {
             margin: 5%;
             width: 80%;
             height: auto;
-
         }
     }
 }
