@@ -5,7 +5,6 @@
 }
 
 @addTagHelper "*,Cafedebug.Web"
-@System.Globalization.CultureInfo.CurrentCulture
 
 <section id="episodiounico">
     <div class="container">
@@ -13,7 +12,6 @@
 
             <!-- CONTEUDOEPISODIO -->
             <div id="conteudoepisodio" class="col-sm-8">
-
                 <a href="#" class="tituloepisodio">
                     <h1>Bancos de Dados NOSQL</h1>
                 </a>
@@ -25,7 +23,7 @@
                     <h2>Bancos de Dados NOSQL</h2>
                 </div>
                 <p>
-                    <!-- carregar do banco-->
+                    <!-- carregar do banco usando razor -->
                     Descrição do episódio, carregar do banco.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -34,13 +32,20 @@
                     <br /><br />
                 </p>
 
+                <h6>Participantes:</h6> <!--utilizar razor-->
+                <ul>
+                    <a href="#"><li>Jessica Nathany</li></a>
+                    <a href="#"><li>Douglas Pires</li></a>
+                    <a href="#"><li>Austin Felipe</li></a>
+                    <a href="#"><li>Yunnes Addul</li></a>
+                </ul>
+
                 <div id="boxsoundcloud">
-                    <h4>OUÇA através do player abaixo ou pelo <a href="">Sondcloud</a></h4><!--carregar url do soundcloud ou spotify da base-->
+                    <h4>OUÇA através do player abaixo ou pelo <a href="">Sondcloud</a></h4><!--carregar url do soundcloud da base-->
                     <p>Carregar o link dó episódio soundcloud</p>
                     <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/352561763&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
                     <div class="compartilheep">
-
                         <div class="eplinkshe">
                             <h4>Compartilhe:</h4>
                             <a href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw"><i class="fab fa-youtube"></i></a>
@@ -55,7 +60,7 @@
                                 <a href="#"><li class="bdnn">Spotify</li></a>
                             </ul>
                         </div>
-                        <div id="envieemail">
+                        <div class="envieemail">
                             <img src="~/images/iconbugemail.png">
                             <p>
                                 Dicas? Sugestões? Comentarios? Envie para:<br />

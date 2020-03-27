@@ -1,9 +1,5 @@
-﻿
-$theme_color: #ed7d00; 
+﻿$theme_color: #ed7d00; 
 $paragraph-color: #565656;
-
-
-
 
 
 /*#region Comon Classes*/
@@ -21,8 +17,8 @@ $paragraph-color: #565656;
 }
 /*#endregion*/
 
-/*#region Home*/
-//Banner
+
+                                                            /* BANNER*/
 .owl-carousel {
     .banner {
         position: relative;
@@ -104,8 +100,10 @@ $paragraph-color: #565656;
         }
     }
 }
-//End Banner
+                                                            /*FIM Banner */
 
+
+                                                            /* EPISODIOS */
 .novosepisodios {
     margin-top: 5%;
 
@@ -175,130 +173,340 @@ $paragraph-color: #565656;
     }
 }
 
-.noticias {
-    background-color: $theme_color;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    font-size: 2rem;
-    padding-top: 5%;
-    padding-bottom: 5%;
+.envieemail {
+    background-color: #ed7d00;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 47px;
+    margin-bottom: 12%;
 
-    .tituloNoticias {
+    p {
+        font-size: 22px;
+        display: inline-block;
+        color: #fff;
+        line-height: 26px;
+        margin-top: 16px;
+        text-align: left;
+    }
+
+    a {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    img {
+        display: inline-block;
+        height: 70px;
+        margin-top: -3%;
+    }
+}
+
+.compartilheep {
+    margin-top: 50px;
+}
+
+.eplinkshe {
+    width: 49%;
+    display: inline-block;
+
+    a {
+        color: #6c6c6c;
+    }
+
+    a:hover {
+        color: #8a8a8a;
+    }
+
+    h4 {
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .linksrepositorios {
+        width: 49%;
+        display: inline-block;
+        text-align: right;
+
+        a {
+            color: #6c6c6c;
+        }
+
+        a:hover {
+            color: #8a8a8a;
+        }
+    }
+
+    .linksrepositorios ul li {
+        display: inline;
+    }
+
+    .linksrepositorios li {
+        border-right: 1px solid #6c6c6c;
+        padding-right: 10px;
+    }
+
+    #conteudoepisodio h1, h2, h3, h4, h5, h6 {
+        color: #333333;
+        font-weight: bold;
+    }
+
+    .tituloepisodio h1 {
+        font-size: 29px;
+        letter-spacing: -1px;
+        border-bottom: 2px solid #ed7d00;
+        padding-top: 10%;
+        display: inline-flex;
+        padding-right: 30px;
+        padding-bottom: 10px;
+        font-weight: bold;
+        color: #ed7d00 !important;
+        margin-bottom: 20px;
+    }
+
+
+    .bannerep {
+        width: 100%;
+        height: 215px;
+        background-size: 100%;
+        background-position: center center;
+        color: #fff;
+        text-align: center;
+    }
+    // imagem do banner deverá ser buscada a url da aws
+    .maskmini {
+        display: block;
+        height: 215px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(../img/mask.png);
+        background-size: 80%;
+        position: absolute;
+    }
+
+    .bannerep strong {
+        color: #fff;
+        margin-top: 40px;
+        background-color: #ed7d00;
+        padding: 5px 10px;
+        font-weight: normal;
+        margin-top: 50px !important;
+        display: inline-block;
+    }
+
+    .bannerep h2 {
+        color: #fff;
+        font-size: 35px;
+        margin-top: 15px;
+    }
+
+    .coluna3 {
+        margin-top: 80px;
+        margin-bottom: 20px;
+
         h3 {
-            color: white;
-            margin-left: 1%;
-            font-weight: 600;
-            font-size: 3rem;
-            margin-left: 3%;
-            line-height: 0.5em;
-            margin-bottom: 5%;
+            color: #ec8d1b;
+            font-weight: normal;
+            font-size: 37px;
+            margin-top: 40px;
+            line-height: 31px;
+        }
 
-            span::after {
-                content: "";
-                border: 3px solid white;
-                display: block;
-                width: 65%;
-                margin-left: 32%;
+        strong {
+            margin-top: -20px;
+            letter-spacing: -2px;
+            display: block;
+        }
+    }
+
+    .noticialista {
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        text-decoration: none;
+        overflow: hidden;
+        border-left: 8px solid #ed7d00;
+        padding-left: 20px;
+        width: 100%;
+        display: table;
+        padding-bottom: 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        ul {
+            padding: 0px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+    }
+
+    .noticialista:hover span {
+        color: #fff !important;
+    }
+
+    .taglista {
+        background-color: #474747;
+        padding: 2px 10px;
+        text-transform: uppercase;
+        color: #fff;
+        display: table;
+        font-size: 10px;
+        margin-top: 10px;
+        z-index: 1;
+    }
+
+    .coluna3 h3 {
+        color: #ec8d1b;
+        font-weight: normal;
+        font-size: 37px;
+        margin-top: 40px;
+        line-height: 31px
+    }
+
+    #episodiounico {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    #anunciobrlateral {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 70px;
+    }
+
+    #anunciobrlateral img {
+        width: 70%;
+        display: block;
+        margin: auto;
+    }
+    /* FIM EPISODIOS */
+    /* NOTÍCIAS */
+    .noticias {
+        background-color: $theme_color;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        font-size: 2rem;
+        padding-top: 5%;
+        padding-bottom: 5%;
+
+        .tituloNoticias {
+            h3 {
+                color: white;
+                margin-left: 1%;
+                font-weight: 600;
+                font-size: 3rem;
+                margin-left: 3%;
+                line-height: 0.5em;
+                margin-bottom: 5%;
+
+                span::after {
+                    content: "";
+                    border: 3px solid white;
+                    display: block;
+                    width: 65%;
+                    margin-left: 32%;
+                }
+            }
+        }
+
+        .boxnoticia {
+            margin: 2%;
+            font-weight: 600;
+            font-size: 25px;
+            border-left: 7px solid white;
+            padding-left: 5%;
+
+            .tag {
+                background-color: white;
+                color: $theme_color;
+                font-size: 16px;
+                padding: 5px;
+            }
+
+            .noticia {
+                color: white;
+                outline: none;
+                text-decoration: none;
             }
         }
     }
 
-    .boxnoticia {
-        margin: 2%;
-        font-weight: 600;
-        font-size: 25px;
-        border-left: 7px solid white;
-        padding-left: 5%;
-
-        .tag {
-            background-color: white;
-            color: $theme_color;
-            font-size: 16px;
-            padding: 5px;
-        }
-
-        .noticia {
-            color: white;
-            outline: none;
-            text-decoration: none;
-        }
-    }
-}
-
-.loading {
-    background: url('../images/Ripple-1s-200px.gif') no-repeat center center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 9999999;
-}
-
-/*#endregion */
-
-/*#region About us*/
-.about-us {
-    .logo {
-        margin: 5%;
-    }
-
-    .text-1 {
-        color: gray;
-        font-size: 22px;
-        padding: 5%;
-    }
-
-    .quemfaz {
+    .loading {
+        background: url('../images/Ripple-1s-200px.gif') no-repeat center center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
         width: 100%;
-        list-style-type: none;
+        z-index: 9999999;
+    }
+    /*#endregion */
+    /* ABOUT US */
+    .about-us {
+        .logo {
+            margin: 5%;
+        }
 
-        li {
-            margin-top: 3%;
-            margin-left: 0;
+        .text-1 {
+            color: gray;
+            font-size: 22px;
+            padding: 5%;
+        }
 
-            .userQuemfaz {
-                display: flex;
-                justify-content: flex-start;
-                align-content: flex-start;
+        .quemfaz {
+            width: 100%;
+            list-style-type: none;
 
-                .square {
+            li {
+                margin-top: 3%;
+                margin-left: 0;
+
+                .userQuemfaz {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-content: flex-start;
+
+                    .square {
 
 
-                    .block {
-                        background: url(../images/bordsomb.png);
-                        background-repeat: no-repeat;
-                        background-size: 80%;
-                        text-align: left;
-                        margin: auto;
+                        .block {
+                            background: url(../images/bordsomb.png);
+                            background-repeat: no-repeat;
+                            background-size: 80%;
+                            text-align: left;
+                            margin: auto;
 
-                        img {
-                            height: 80%;
-                            width: 80%;
-                            padding-top: 7%;
-                            margin-left: 7%;
+                            img {
+                                height: 80%;
+                                width: 80%;
+                                padding-top: 7%;
+                                margin-left: 7%;
+                            }
                         }
                     }
-                }
 
-                .userhome {
-                    color: $theme_color;
-                    text-align: left;
+                    .userhome {
+                        color: $theme_color;
+                        text-align: left;
 
-                    p {
-                        font-size: 20px;
-                        line-height: 16px;
-                        margin-bottom: 0;
-                        color: $paragraph-color;
-                    }
+                        p {
+                            font-size: 20px;
+                            line-height: 16px;
+                            margin-bottom: 0;
+                            color: $paragraph-color;
+                        }
 
-                    .socialuser {
-                        font-size: 2rem;
-                        float: right;
+                        .socialuser {
+                            font-size: 2rem;
+                            float: right;
 
-                        a {
-                            i {
-                                color: $theme_color;
+                            a {
+                                i {
+                                    color: $theme_color;
+                                }
                             }
                         }
                     }
@@ -306,371 +514,369 @@ $paragraph-color: #565656;
             }
         }
     }
-}
+    /* FIM ABOUT US */
+    /*#region Media Queries*/
+    @media only screen and (max-width: 480px) {
+        /*Banner*/
+        .owl-carousel {
+            .banner {
+                .content {
+                    padding: 10%;
+                    margin-top: 10%;
 
-/*#endregion */
+                    strong {
+                        font-size: 18px;
+                    }
 
-/*#region Media Queries*/
-@media only screen and (max-width: 480px) {
-    /*Banner*/
-    .owl-carousel {
-        .banner {
-            .content {
-                padding: 10%;
+                    p {
+                        padding-top: 5%;
+                        font-size: 22px;
+                        text-align: center;
+                    }
+
+                    .buttons {
+                        flex-direction: column;
+
+                        .oucaagora {
+                            border: 2px solid white;
+                            font-size: 14px;
+                        }
+
+                        .spotifybt {
+                            background-color: #1bba54;
+                            text-align: center;
+                            border: none;
+                            margin-top: 2%;
+                        }
+                    }
+                }
+            }
+        }
+        /*HOME*/
+        .novosepisodios {
+
+            .ladoinfoseps {
+                margin-top: 10%;
+                text-align: center;
+
+                h1 {
+                    font-size: 2rem;
+
+                    span {
+                        left: 0;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                }
+
+                h4 {
+                    font-size: 2rem;
+
+                    span {
+                        left: 0;
+                    }
+                }
+
+                .compartilharhome {
+                    margin-bottom: 5%;
+
+                    a {
+                        height: 100%;
+                        width: 100%;
+
+                        i {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+
+            .ver-mais {
+                display: block;
+                text-align: center;
+                margin-top: 5%;
+                margin-bottom: 5%;
+
+                a {
+                    font-size: 22px;
+                    margin-right: 0;
+                }
+            }
+        }
+        /* NOTÍCIAS */
+        .noticias {
+
+            .tituloNoticias {
+                h3 {
+                    font-size: 2rem;
+
+                    span::after {
+                        margin-left: 0;
+                        margin-top: 25px;
+                    }
+                }
+            }
+
+            .boxnoticia {
+                font-size: 1rem;
+                padding-top: 5%;
+
+                .tag {
+                    padding-bottom: 2%;
+                }
+            }
+        }
+        /* FIM NOTÍCIAS */
+    }
+
+    @media only screen and (min-width: 479px) and (max-width: 768px) {
+        /*Banner*/
+        .owl-carousel {
+            .banner {
+                .content {
+                    padding: 10%;
+
+                    strong {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        padding-top: 5%;
+                        font-size: 33px;
+                        text-align: center;
+                    }
+
+                    .buttons {
+                        flex-direction: column;
+
+                        .oucaagora {
+                            border: 2px solid white;
+                            font-size: 18px;
+                        }
+
+                        .spotifybt {
+                            background-color: #1bba54;
+                            text-align: center;
+                            border: none;
+                            font-size: 18px;
+                            margin-top: 2%;
+                        }
+                    }
+                }
+            }
+        }
+        /*Home*/
+        .novosepisodios {
+
+            .ladoinfoseps {
                 margin-top: 10%;
 
-                strong {
-                    font-size: 18px;
+                h1 {
+                    font-size: 3rem;
+
+                    span {
+                        left: 0;
+                    }
                 }
 
                 p {
-                    padding-top: 5%;
+                    font-size: 20px;
+                }
+
+                h4 {
+                    font-size: 3rem;
+
+                    span {
+                        left: 0;
+                    }
+                }
+
+                .compartilharhome {
+                    text-align: center;
+                    margin-bottom: 5%;
+
+                    a {
+                        height: 100%;
+                        width: 100%;
+
+                        i {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+
+            .ver-mais {
+                a {
                     font-size: 22px;
-                    text-align: center;
-                }
-
-                .buttons {
-                    flex-direction: column;
-
-                    .oucaagora {
-                        border: 2px solid white;
-                        font-size: 14px;
-                    }
-
-                    .spotifybt {
-                        background-color: #1bba54;
-                        text-align: center;
-                        border: none;
-                        margin-top: 2%;
-                    }
                 }
             }
         }
-    }
 
-     /*Home*/
-    .novosepisodios {
+        .noticias {
 
-        .ladoinfoseps {
-            margin-top: 10%;
-            text-align: center;
-            h1 {
-                font-size: 2rem;
+            .tituloNoticias {
+                h3 {
+                    font-size: 3rem;
+
+                    span::after {
+                        margin-left: 0;
+                        margin-top: 25px;
+                    }
+                }
+            }
+
+            .boxnoticia {
+                font-size: 1rem;
+
+                .tag {
+                    padding-bottom: 1%;
+                    margin-bottom: 2%;
+                }
 
                 span {
-                    left: 0;
-                }
-            }
-
-            p {
-                font-size: 20px;
-            }
-
-            h4 {
-                font-size: 2rem;
-
-                span {
-                    left: 0;
-                }
-            }
-
-            .compartilharhome {
-                margin-bottom: 5%;
-
-                a {
-                    height: 100%;
-                    width: 100%;
-
-                    i {
-                        font-size: 30px;
-                    }
+                    font-size: 20px;
                 }
             }
         }
 
-        .ver-mais {
-            display: block;
-            text-align: center;
-            margin-top: 5%;
-            margin-bottom: 5%;
+        .quemfaz {
+            .tituloquem {
+                margin-top: 5%;
 
-            a {
-                font-size: 22px;
-                margin-right: 0;
-            }
-        }
-    }
+                h3 {
+                    font-size: 3rem;
+                }
 
-    .noticias {
-
-        .tituloNoticias {
-            h3 {
-                font-size: 2rem;
-
-                span::after {
+                h3::after {
                     margin-left: 0;
-                    margin-top: 25px;
                 }
-            }
-        }
-
-        .boxnoticia {
-            font-size: 1rem;
-            padding-top: 5%;
-
-            .tag {
-                padding-bottom: 2%;
             }
         }
     }
 
-}
+    @media only screen and (min-width: 769px) and (max-width: 991px) {
+        /*Banner*/
+        .owl-carousel {
+            .banner {
+                .content {
+                    padding: 10%;
 
-@media only screen and (min-width: 479px) and (max-width: 768px) {
-    /*Banner*/
-    .owl-carousel {
-        .banner {
-            .content {
-                padding: 10%;
+                    strong {
+                        font-size: 24px;
+                    }
 
-                strong {
-                    font-size: 18px;
+                    p {
+                        padding-top: 10%;
+                        font-size: 43px;
+                        text-align: center;
+                    }
+
+                    .buttons {
+                        flex-direction: row;
+                        margin-top: 5%;
+
+                        .oucaagora {
+                            border: 2px solid white;
+                            font-size: 18px;
+                        }
+
+                        .spotifybt {
+                            background-color: #1bba54;
+                            text-align: center;
+                            border: none;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        /*Home*/
+        .novosepisodios {
+
+            .ladoinfoseps {
+                margin-top: 10%;
+
+                h1 {
+                    font-size: 2rem;
+
+                    span {
+                        left: 0;
+                    }
                 }
 
                 p {
-                    padding-top: 5%;
-                    font-size: 33px;
-                    text-align: center;
+                    font-size: 20px;
                 }
 
-                .buttons {
-                    flex-direction: column;
+                h4 {
+                    font-size: 2rem;
 
-                    .oucaagora {
-                        border: 2px solid white;
-                        font-size: 18px;
-                    }
-
-                    .spotifybt {
-                        background-color: #1bba54;
-                        text-align: center;
-                        border: none;
-                        font-size: 18px;
-                        margin-top: 2%;
+                    span {
+                        left: 0;
                     }
                 }
-            }
-        }
-    }
 
-    /*Home*/
-    .novosepisodios {
+                .compartilharhome {
+                    a {
+                        height: 100%;
+                        width: 100%;
 
-        .ladoinfoseps {
-            margin-top: 10%;
-
-            h1 {
-                font-size: 3rem;
-
-                span {
-                    left: 0;
+                        i {
+                            font-size: 30px;
+                        }
+                    }
                 }
             }
 
-            p {
-                font-size: 20px;
-            }
-
-            h4 {
-                font-size: 3rem;
-
-                span {
-                    left: 0;
-                }
-            }
-
-            .compartilharhome {
-                text-align: center;
-                margin-bottom: 5%;
-
+            .ver-mais {
                 a {
-                    height: 100%;
-                    width: 100%;
-
-                    i {
-                        font-size: 30px;
-                    }
+                    font-size: 22px;
                 }
             }
         }
 
-        .ver-mais {
-            a {
-                font-size: 22px;
+        .noticias {
+
+            .tituloNoticias {
+                h3 {
+                    font-size: 2rem;
+
+                    span::after {
+                        margin-left: 0;
+                        margin-top: 25px;
+                        width: 36%;
+                    }
+                }
+            }
+
+            .boxnoticia {
+                font-size: 1rem;
+                padding-top: 5%;
+
+                .tag {
+                    padding-bottom: 2%;
+                }
             }
         }
-    }
 
-    .noticias {
+        .quemfaz {
+            .tituloquem {
+                margin-top: 5%;
 
-        .tituloNoticias {
-            h3 {
-                font-size: 3rem;
+                h3 {
+                    font-size: 2rem;
+                }
 
-                span::after {
+                h3::after {
                     margin-left: 0;
-                    margin-top: 25px;
-                }
-            }
-        }
-
-        .boxnoticia {
-            font-size: 1rem;
-
-            .tag {
-                padding-bottom: 1%;
-                margin-bottom: 2%;
-            }
-            span{
-                font-size: 20px;
-            }
-        }
-    }
-
-    .quemfaz {
-        .tituloquem {
-            margin-top: 5%;
-
-            h3 {
-                font-size: 3rem;
-            }
-
-            h3::after {
-                margin-left: 0;
-            }
-        }
-    }
-
-}
-
-@media only screen and (min-width: 769px) and (max-width: 991px) {
-    /*Banner*/
-    .owl-carousel {
-        .banner {
-            .content {
-                padding: 10%;
-
-                strong {
-                    font-size: 24px;
-                }
-
-                p {
-                    padding-top: 10%;
-                    font-size: 43px;
-                    text-align: center;
-                }
-
-                .buttons {
-                    flex-direction: row;
-                    margin-top: 5%;
-                    .oucaagora {
-                        border: 2px solid white;
-                        font-size: 18px;
-                    }
-
-                    .spotifybt {
-                        background-color: #1bba54;
-                        text-align: center;
-                        border: none;
-                        font-size: 18px;
-                    }
+                    width: 25%;
                 }
             }
         }
     }
-    /*Home*/
-    .novosepisodios {
-
-        .ladoinfoseps {
-            margin-top: 10%;
-
-            h1 {
-                font-size: 2rem;
-
-                span {
-                    left: 0;
-                }
-            }
-
-            p {
-                font-size: 20px;
-            }
-
-            h4 {
-                font-size: 2rem;
-
-                span {
-                    left: 0;
-                }
-            }
-
-            .compartilharhome {
-                a {
-                    height: 100%;
-                    width: 100%;
-
-                    i {
-                        font-size: 30px;
-                    }
-                }
-            }
-        }
-
-        .ver-mais {
-            a {
-                font-size: 22px;
-            }
-        }
-    }
-
-    .noticias {
-
-        .tituloNoticias {
-            h3 {
-                font-size: 2rem;
-
-                span::after {
-                    margin-left: 0;
-                    margin-top: 25px;
-                    width: 36%;
-                }
-            }
-        }
-
-        .boxnoticia {
-            font-size: 1rem;
-            padding-top: 5%;
-
-            .tag {
-                padding-bottom: 2%;
-            }
-        }
-    }
-
-    .quemfaz {
-        .tituloquem {
-            margin-top: 5%;
-
-            h3 {
-                font-size: 2rem;
-            }
-
-            h3::after {
-                margin-left: 0;
-                width: 25%;
-            }
-        }
-    }
-}
-
- /*#endregion*/
+ }
+    
+    
