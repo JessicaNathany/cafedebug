@@ -36,7 +36,7 @@ namespace Cafedebug.UnitTest.Service
                 Name = "Banco de dados"
             };
 
-            _categoryRepositoryMock.Setup(c => c.Save(It.IsAny<Category>())).Returns(categoryObjectExpected);
+           // _categoryRepositoryMock.Setup(c => c.Save(It.IsAny<Category>())).Returns(categoryObjectExpected);
 
            _categoryService.Save(categoryActual);
 

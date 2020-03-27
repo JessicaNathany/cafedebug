@@ -4,6 +4,8 @@ using Cafedebug.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace Cafedebug.Data.Repository
 {
@@ -19,12 +21,12 @@ namespace Cafedebug.Data.Repository
             DbSet = Db.Set<TEntity>();
         }
 
-        public void Delete(int entity)
+        public void Dispose()
         {
-            throw new NotImplementedException();
+            Db?.Dispose();
         }
-
-        public IList<TEntity> GetAll()
+        
+        public IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate)
         {
             throw new NotImplementedException();
         }
@@ -34,14 +36,32 @@ namespace Cafedebug.Data.Repository
             throw new NotImplementedException();
         }
 
-        public TEntity Save(TEntity entity)
+        public void Save(TEntity entity)
         {
-            throw new NotImplementedException();
+            DbSet.Add(entity);
+            SaveChanges();
         }
 
-        public void Update(int entity)
+        public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            DbSet.Update(entity);
+              SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            DbSet.Remove(new TEntity { Id = id });
+            SaveChanges();
+        }
+
+        public int Count()
+        {
+            return DbSet.Count();
+        }
+
+        public int SaveChanges()
+        {
+            return Db.SaveChanges();
         }
     }
 }

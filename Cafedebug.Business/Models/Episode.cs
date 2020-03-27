@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cafedebug.Business.Models
 {
@@ -14,9 +16,10 @@ namespace Cafedebug.Business.Models
         /// </summary>
         public string Url { get; set; }
 
-        public int ImageId { get; set; }
+        public string ImageUrl { get; set; }
 
-        public Image Image { get; set; }
+        [NotMappedAttribute]
+        public IFormFile ImageUpload { get; set; }
 
         public IList<EpisodeTag> EpisodiesTags { get; set; }
 
