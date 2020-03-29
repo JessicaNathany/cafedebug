@@ -19,7 +19,7 @@ namespace Cafedebug.Business.Services
 
         public void Save(Category category)
         {
-            if(!ExecutarValidacao(new CategoryValidation(), category)) return;
+            if(!ExecuteValidation(new CategoryValidation(), category)) return;
 
             _categoriaRepository.Save(category);
         }

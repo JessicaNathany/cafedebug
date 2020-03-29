@@ -4,14 +4,16 @@ using Cafedebug.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cafedebug.Data.Migrations
 {
     [DbContext(typeof(CafedebugContext))]
-    partial class CafedebugContextModelSnapshot : ModelSnapshot
+    [Migration("20200327223620_RenameColumn-Image-to-ImageUrl-Episodie")]
+    partial class RenameColumnImagetoImageUrlEpisodie
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

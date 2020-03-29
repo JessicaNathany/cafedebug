@@ -20,7 +20,6 @@ namespace Cafedebug.Web.Controllers
 
         protected bool ValidOperation()
         {
-
             return !_notifier.HasNotification();
         }
     }

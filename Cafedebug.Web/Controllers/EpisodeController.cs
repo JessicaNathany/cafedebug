@@ -1,13 +1,20 @@
-﻿using log4net;
+﻿using Cafedebug.Business.Interfaces;
+using Cafedebug.Business.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
 {
-    public class EpisodeController : Controller
+    public class EpisodeController : BaseController
     {
-        private static readonly ILog Log = LogManager.GetLogger(typeof(EpisodeController));
-        public ActionResult Index()
+        private readonly IEpisodeRepository _episodeRepository;
+        public EpisodeController(INotifier notifier, IEpisodeRepository episodeRepository) : base(notifier)
         {
+            _episodeRepository = episodeRepository;
+        }
+
+        public ActionResult Index(PageRequest page)
+        {
+            var result = _episodeRepository.GetPaged(page); 
             return View();
         }
 

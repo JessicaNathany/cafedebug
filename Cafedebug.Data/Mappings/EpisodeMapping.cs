@@ -22,7 +22,7 @@ namespace Cafedebug.Data.Mappings
                .IsRequired()
                .HasColumnType("varchar(250)");
 
-            builder.Property(b => b.ImageId)
+            builder.Property(b => b.ImageUrl)
                 .IsRequired();
 
             builder.Property(b => b.PublicationDate)

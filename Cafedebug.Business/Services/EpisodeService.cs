@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Cafedebug.Business.Interfaces;
 using Cafedebug.Business.Models;
-using FluentValidation;
+using Cafedebug.Business.Models.Validations;
 using log4net;
 
 namespace Cafedebug.Business.Services
@@ -11,37 +11,41 @@ namespace Cafedebug.Business.Services
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(EpisodeService));
 
-        public Lazy<IEpisodeRepository> EpisodioRepository { get; set; }
+        private readonly IEpisodeRepository _episodeRepository;
 
-        public EpisodeService(INotifier notifier) : base(notifier)
+        public EpisodeService(INotifier notifier, IEpisodeRepository episodeRepository) : base(notifier)
         {
-
+            _episodeRepository = episodeRepository;
         }
 
-        public void Save(Episode episodio)
+        public void Save(Episode episode)
         {
             try
             {
-                
+                if (!ExecuteValidation(new EpisodeValidation(), episode)) return;
 
-                EpisodioRepository.Value.Save(episodio);
+                _episodeRepository.Save(episode);
             }
             catch (Exception ex)
             {
-                Log.ErrorFormat("Erro ao salvar um episódio", ex.Message, episodio);
+                Notify("Erro ao salvar o episódio");
+                Log.ErrorFormat("Erro ao salvar um episódio", ex.Message, episode);
                 throw;
             }
         }
 
-        public void Update(int id)
+        public void Update(Episode episode)
         {
             try
             {
-                EpisodioRepository.Value.Update(id);
+                if (!ExecuteValidation(new EpisodeValidation(), episode)) return;
+
+                _episodeRepository.Update(episode);
             }
             catch (Exception ex)
             {
-                Log.ErrorFormat("Erro ao atualizar um episódio", ex.Message, id);
+                Notify("Erro ao atualizar o episódio");
+                Log.ErrorFormat("Erro ao atualizar um episódio", ex.Message, episode);
                 throw;
             }
         }
@@ -63,7 +67,7 @@ namespace Cafedebug.Business.Services
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _episodeRepository?.Dispose();
         }
     }
 }
