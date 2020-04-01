@@ -4,13 +4,14 @@
 }
 @using Cafedebug.Web.Models;
 @model ContactModelView
+
 @*asp-controller="Contact" asp-action="ContactUs"*@
 <div class="container">
     <div class="row">
         <div class="col-sm-8">
             <div class="contact-us-form">
                 <div class="logo-contact-us">
-                    <img src="~/images/logo-quemsomos.png" />
+                    <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/logo-quemsomos.png" />
                 </div>
                 <form id="Form-contact" method="post">
                     <div class="form-group">
@@ -53,8 +54,6 @@
                                         {
                                             <option value="@item.Value">@item.Text</option>
                                         }
-
-
                                     </select>
                                 </div>
                                 <!-- Textarea -->
@@ -178,13 +177,7 @@
                 }).done(function () {
                     $(this).addClass("done");
                 });
-
-
-
-
             }
-
-
         })
     });
 

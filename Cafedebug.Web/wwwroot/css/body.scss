@@ -43,7 +43,7 @@ select.vaild {
 
 /*#endregion*/
 
-/*#region Home*/
+      /* Home*/
 //Banner
 .owl-carousel {
     .banner {
@@ -53,7 +53,7 @@ select.vaild {
         max-width: 100%;
         max-height: 70vh;
         min-height: 50vh;
-        background: url(../images/banner.jpg)center content-box no-repeat;
+        background: url('https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/banner.jpg')center content-box no-repeat;
         background-size: cover;
 
         .banner-mask {
@@ -102,7 +102,6 @@ select.vaild {
                     border-radius: 20px;
                     font-weight: 400;
                     margin-left: 20px;
-
 
                     i {
                         color: white;
@@ -248,7 +247,7 @@ select.vaild {
 }
 
 .loading {
-    background: url('../images/Ripple-1s-200px.gif') no-repeat center center;
+    background: url('https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Ripple-1s-200px.gif') no-repeat center center;
     position: absolute;
     top: 0;
     left: 0;
@@ -257,9 +256,7 @@ select.vaild {
     z-index: 9999999;
 }
 
-/*#endregion */
-
-/*#region About us*/
+/* About us*/
 .about-us {
     .logo {
         margin: 5%;
@@ -286,9 +283,8 @@ select.vaild {
 
                 .square {
 
-
                     .block {
-                        background: url(../images/bordsomb.png);
+                        background: url('https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/bordsomb.png');
                         background-repeat: no-repeat;
                         background-size: 80%;
                         text-align: left;
@@ -330,11 +326,9 @@ select.vaild {
     }
 }
 
-/*#endregion */
-
 /*#region contact-us*/
 .contact-us-form {
-    // logo contact
+   
     .logo-contact-us {
         display: block;
 
@@ -384,13 +378,9 @@ select.vaild {
             transform: rotate(360deg);
         }
     }
-    // End button Enviar
 }
 
-
-/*#endregion*/
-
-/*#region Media Queries*/
+/* Media Queries*/
 @media only screen and (max-width: 480px) {
     /*Banner*/
     .owl-carousel {
@@ -507,6 +497,7 @@ select.vaild {
 }
 
 @media only screen and (min-width: 479px) and (max-width: 768px) {
+   
     /*Banner*/
     .owl-carousel {
         .banner {
@@ -634,6 +625,7 @@ select.vaild {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
+    
     /*Banner*/
     .owl-carousel {
         .banner {
@@ -669,6 +661,7 @@ select.vaild {
             }
         }
     }
+
     /*Home*/
     .novosepisodios {
 
@@ -754,5 +747,4 @@ select.vaild {
     }
 }
 
-/*#endregion*/
 

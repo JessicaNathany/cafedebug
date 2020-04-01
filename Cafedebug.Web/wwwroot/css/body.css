@@ -29,7 +29,7 @@ select.vaild {
   border: 2px solid green; }
 
 /*#endregion*/
-/*#region Home*/
+/* Home*/
 .owl-carousel .banner {
   position: relative;
   top: 0;
@@ -37,7 +37,7 @@ select.vaild {
   max-width: 100%;
   max-height: 70vh;
   min-height: 50vh;
-  background: url(../images/banner.jpg) center content-box no-repeat;
+  background: url("https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/banner.jpg") center content-box no-repeat;
   background-size: cover; }
   .owl-carousel .banner .banner-mask {
     max-width: 100%;
@@ -174,7 +174,7 @@ select.vaild {
       text-decoration: none; }
 
 .loading {
-  background: url("../images/Ripple-1s-200px.gif") no-repeat center center;
+  background: url("https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Ripple-1s-200px.gif") no-repeat center center;
   position: absolute;
   top: 0;
   left: 0;
@@ -182,8 +182,7 @@ select.vaild {
   width: 100%;
   z-index: 9999999; }
 
-/*#endregion */
-/*#region About us*/
+/* About us*/
 .about-us .logo {
   margin: 5%; }
 
@@ -203,7 +202,7 @@ select.vaild {
       justify-content: flex-start;
       align-content: flex-start; }
       .about-us .quemfaz li .userQuemfaz .square .block {
-        background: url(../images/bordsomb.png);
+        background: url("https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/bordsomb.png");
         background-repeat: no-repeat;
         background-size: 80%;
         text-align: left;
@@ -227,7 +226,6 @@ select.vaild {
           .about-us .quemfaz li .userQuemfaz .userhome .socialuser a i {
             color: #ed7d00; }
 
-/*#endregion */
 /*#region contact-us*/
 .contact-us-form .logo-contact-us {
   display: block; }
@@ -266,8 +264,7 @@ select.vaild {
   100% {
     transform: rotate(360deg); } }
 
-/*#endregion*/
-/*#region Media Queries*/
+/* Media Queries*/
 @media only screen and (max-width: 480px) {
   /*Banner*/
   .owl-carousel .banner .content {
@@ -451,5 +448,3 @@ select.vaild {
     .quemfaz .tituloquem h3::after {
       margin-left: 0;
       width: 25%; } }
-
-/*#endregion*/
