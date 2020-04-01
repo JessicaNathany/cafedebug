@@ -1,6 +1,7 @@
 ﻿using Cafedebug.Business.Interfaces;
 using Cafedebug.Business.Notificacoes;
 using Cafedebug.Business.Services;
+using Cafedebug.Data.Repository;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Cafedebug.Web.Configurations
@@ -11,6 +12,8 @@ namespace Cafedebug.Web.Configurations
         {
             service.AddScoped<ICategoryService, CategoryService>();
             service.AddScoped<INotifier, Notifier>();
+
+            service.AddScoped<IEpisodeRepository, EpisodioRepository>();
 
             return service;
         }

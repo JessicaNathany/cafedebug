@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using log4net;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
 {
     public class CategoryController : Controller
     {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(CategoryController));
         public ActionResult Index()
         {
             return View();

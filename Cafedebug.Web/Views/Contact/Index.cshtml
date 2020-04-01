@@ -1,70 +1,184 @@
 ﻿@{
     ViewData["Title"] = "Contato | Café Debug";
-}
 
-    <!-- FECHA TOPO -->
-    <section id="quemsomos">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 colcenter">
-                    <img src="~/images/logo-quemsomos.png" />
-                    <div class="form-group w-100">
+}
+@using Cafedebug.Web.Models;
+@model ContactModelView
+
+@*asp-controller="Contact" asp-action="ContactUs"*@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="contact-us-form">
+                <div class="logo-contact-us">
+                    <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/logo-quemsomos.png" />
+                </div>
+                <form id="Form-contact" method="post">
+                    <div class="form-group">
                         <div class="col-md-4 control-label  text-left">
-                            <label class="control-label  " for="textinput">Nome</label>
+                            <label class="control-label" for="Nome">Nome</label>
                         </div>
                         <div class="form-group col-md-12 ">
                             <div class="">
-                                <input id="nome" name="textinput" type="text" class="form-control input-md" required>
+                                <input id="contact_name" name="Nome" type="text" class="form-control input-md">
                             </div>
                         </div>
                         <fieldset>
                             <div class="form-group">
                                 <div class="form-group col-md-2  text-left">
-                                    <label class="control-label  " for="textinput">Email</label>
+                                    <label class="control-label  " for="Email">Email</label>
                                 </div>
                                 <div class="form-group col-md-12 ">
                                     <div class="">
-                                        <input id="email" name="textinput" type="text" class="form-control input-md" required>
+                                        <input id="contact_email" name="Email" type="text" class="form-control input-md">
                                     </div>
                                 </div>
                                 <div class="form-group col-md-2  text-left">
-                                    <label class="control-label  " for="textinput">Telefone</label>
+                                    <label class="control-label  " for="Telefone">Telefone</label>
                                 </div>
                                 <div class="form-group col-md-12 ">
                                     <div class="">
-                                        <input id="telefone" name="textinput" type="text" class="form-control input-md" required>
+                                        <input id="contact_phone" name="Telefone" type="text" class="form-control input-md">
                                     </div>
                                 </div><br />
+
                                 <!--Assunto-->
                                 <div class="form-group col-md-2  text-left">
-                                    <label class="control-label  " for="textinput">Assunto</label>
+                                    <label class="control-label  " for="Assunto">Assunto</label>
                                 </div>
+
                                 <div class="col-md-6 floatl">
-                                    <select class="browser-default custom-select mb-4" id="select">
-                                        <option value="" disabled="" selected="" required>Selecione um assunto</option>
-                                        <option value="1">Sugestões</option>
-                                        <option value="2">Elogios</option>
-                                        <option value="2">Críticas</option>
-                                        <option value="2">Parceria</option>
-                                        <option value="2">Eventos</option>
-                                        <option value="2">Outros</option>
+                                    <select class="browser-default custom-select mb-5" name="Assunto" id="selectOp">
+                                        <option value="" disabled="" selected="">Selecione um assunto</option>
+                                        @foreach (var item in Model.Assuntos)
+                                        {
+                                            <option value="@item.Value">@item.Text</option>
+                                        }
                                     </select>
                                 </div>
                                 <!-- Textarea -->
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="noticia">Mensagem</label>
+                                    <label class="col-md-4 control-label" for="Mensagem">Mensagem</label>
                                     <div class="col-md-12">
-                                        <textarea class="form-control " id="campobio" name="campobio" required></textarea>
+                                        <textarea id="contact_message" class="form-control" name="Mensagem"></textarea>
                                     </div>
                                 </div>
-                                <div class="text-right">
-                                    <a href="#" class="btn btn-sm btn-success">Enviar</a>
+
+                                <div class="float-right">
+                                    @*<button class="btn btn-primary" id="button-send">
+                                            Enviar <i class="glyphicon glyphicon-envelope"></i>
+                                        </button>*@
+                                    <button id="btnSubmit" type="submit" class="btn btn-outline-primary btn-lg btn-block">Enviar</button>
                                 </div>
                             </div>
                         </fieldset>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
+
+<script type="text/javascript">
+
+    $(function () {
+        //form validation
+
+        $('#contact_name').on('input', function () {
+            var input = $(this);
+            var is_name = input.val();
+            if (is_name.length >= 2 && is_name.length <= 30 && is_name !== "") {
+                input.removeClass("invalid").addClass("valid");
+            }
+            else {
+                input.removeClass("valid").addClass("invalid");
+            }
+        });
+
+        $('#contact_email').on('input', function () {
+            var input = $(this);
+            var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            var is_email = re.test(input.val());
+            if (is_email) {
+                input.removeClass("invalid").addClass("valid");
+                input.append('&#10004;');
+            }
+            else {
+                input.removeClass("valid").addClass("invalid");
+            }
+        });
+
+        $('#contact_phone').on('input', function () {
+            var input = $(this);
+            var re = /(0?[1-9]{2})*\D*(9?)\D?(\d{4})+\D?(\d{4})\b/g;
+            var is_name = re.test(input.val());
+            if (is_name) {
+                input.removeClass("invalid").addClass("valid");
+            }
+            else {
+                input.removeClass("valid").addClass("invalid");
+            }
+        });
+
+        $('#contact_message').keyup(function () {
+            var input = $(this);
+            var message = $(this).val();
+            if (message.length > 25) {
+                input.removeClass("invalid").addClass("valid");
+            }
+            else {
+                input.removeClass("valid").addClass("invalid");
+            }
+        });
+
+        $('[name="Assunto"]').on("change", function () {
+            var value = $('option:selected').val();
+            if (value > 0) {
+                $('[name="Assunto"]').removeClass("invalid").addClass("valid");
+            }
+            else {
+                $('[name="Assunto"]').removeClass("valid").addClass("invalid");
+            }
+
+        }).change();
+
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+            debugger
+            var form_data = $("#Form-contact").serializeArray();
+            var error_free = true;
+            for (var input in form_data) {
+                var element = $("#contact_" + form_data[input]['name']);
+                var valid = element.hasClass("valid");
+                var error_element = $("span", element.parent());
+                if (!valid) {
+                    error_element.removeClass("error").addClass("error_show"); error_free = false;
+                }
+                else {
+                    error_element.removeClass("error_show").addClass("error");
+                }
+            }
+            if (!error_free) {
+                event.preventDefault();
+            }
+            else {
+                alert('Form will be submitted');
+                var button = $(this).find('[type="submit"]').toggleClass('sending').blur();
+                setTimeout(function () {
+                    button.removeClass('sending').blur();
+                }, 4500);
+                $.ajax({
+                    type: "post",
+                    url: "@Url.Action("ContactUs","Contact")",
+                    data: form_data,
+                    dataType: 'json',
+
+                }).done(function () {
+                    $(this).addClass("done");
+                });
+            }
+        })
+    });
+
+</script>

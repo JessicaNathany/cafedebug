@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using log4net;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
 {
     public class AboutController : Controller
     {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(AboutController));
         /// <summary>
         /// Tela QuemSomos área do visitante
         /// </summary>

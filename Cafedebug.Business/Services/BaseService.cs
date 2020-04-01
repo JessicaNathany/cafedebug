@@ -28,7 +28,7 @@ namespace Cafedebug.Business.Services
             _notifier.Handle(new Notification(message));
         }
 
-        protected bool ExecutarValidacao<TV, TE>(TV validation, TE entity) where TV : AbstractValidator<TE> where TE : Entity
+        protected bool ExecuteValidation<TV, TE>(TV validation, TE entity) where TV : AbstractValidator<TE> where TE : Entity
         {
             var validator = validation.Validate(entity);
 
