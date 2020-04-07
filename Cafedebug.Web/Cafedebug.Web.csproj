@@ -57,6 +57,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Administrador\Models\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
