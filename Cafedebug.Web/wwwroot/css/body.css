@@ -184,7 +184,8 @@ select.vaild {
 
 /* About us*/
 .about-us .logo {
-  margin: 5%; }
+  margin: 5%;
+  width: 20%; }
 
 .about-us .text-1 {
   color: gray;
@@ -194,6 +195,15 @@ select.vaild {
 .about-us .quemfaz {
   width: 100%;
   list-style-type: none; }
+  .about-us .quemfaz .tituloquem h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: #ed7d00; }
+  .about-us .quemfaz .quemfaz .tituloquem h3::after {
+    margin-left: 0; }
   .about-us .quemfaz li {
     margin-top: 3%;
     margin-left: 0; }
@@ -211,7 +221,8 @@ select.vaild {
           height: 80%;
           width: 80%;
           padding-top: 7%;
-          margin-left: 7%; }
+          margin-left: 7%;
+          width: 52%; }
       .about-us .quemfaz li .userQuemfaz .userhome {
         color: #ed7d00;
         text-align: left; }

@@ -260,6 +260,7 @@ select.vaild {
 .about-us {
     .logo {
         margin: 5%;
+        width: 20%;
     }
 
     .text-1 {
@@ -271,6 +272,19 @@ select.vaild {
     .quemfaz {
         width: 100%;
         list-style-type: none;
+
+        .tituloquem h3 {
+            font-size: 3rem;
+            font-weight: 500;
+            letter-spacing: -1px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            color: #ed7d00;
+        }
+
+        .quemfaz .tituloquem h3::after {
+            margin-left: 0;
+        }
 
         li {
             margin-top: 3%;
@@ -295,6 +309,7 @@ select.vaild {
                             width: 80%;
                             padding-top: 7%;
                             margin-left: 7%;
+                            width: 52%;
                         }
                     }
                 }
