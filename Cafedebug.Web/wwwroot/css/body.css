@@ -184,7 +184,8 @@ select.vaild {
 
 /* About us*/
 .about-us .logo {
-  margin: 5%; }
+  margin: 5%;
+  width: 20%; }
 
 .about-us .text-1 {
   color: gray;
@@ -194,6 +195,15 @@ select.vaild {
 .about-us .quemfaz {
   width: 100%;
   list-style-type: none; }
+  .about-us .quemfaz .tituloquem h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: #ed7d00; }
+  .about-us .quemfaz .quemfaz .tituloquem h3::after {
+    margin-left: 0; }
   .about-us .quemfaz li {
     margin-top: 3%;
     margin-left: 0; }
@@ -211,7 +221,8 @@ select.vaild {
           height: 80%;
           width: 80%;
           padding-top: 7%;
-          margin-left: 7%; }
+          margin-left: 7%;
+          width: 52%; }
       .about-us .quemfaz li .userQuemfaz .userhome {
         color: #ed7d00;
         text-align: left; }
@@ -232,37 +243,52 @@ select.vaild {
   .contact-us-form .logo-contact-us img {
     margin: 5%; }
 
-.contact-us-form #btnSubmit {
-  position: relative;
-  width: 160px; }
-  .contact-us-form #btnSubmit:before {
-    content: '';
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    margin-top: -12px;
-    width: 24px;
-    height: 24px;
-    border: 2px solid;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.5s;
-    animation: 0.8s linear infinite rotate; }
-  .contact-us-form #btnSubmit.sending {
-    pointer-events: none;
-    cursor: not-allowed; }
-    .contact-us-form #btnSubmit.sending:before {
-      transition-delay: 0.5s;
-      transition-duration: 1s;
-      opacity: 1; }
+.contact-us-form .btn-send {
+  float: right;
+  margin-bottom: 5%; }
+  .contact-us-form .btn-send button {
+    width: 100%;
+    border: 1px solid green;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 1; }
+    .contact-us-form .btn-send button span {
+      letter-spacing: 0.7px; }
+    .contact-us-form .btn-send button i {
+      color: green; }
+  .contact-us-form .btn-send button:hover {
+    animation: rotate 0.7s ease-in-out both; }
+    .contact-us-form .btn-send button:hover span {
+      animation: storm 0.7s ease-in-out both;
+      animation-delay: 0.06s; }
 
 @keyframes rotate {
   0% {
-    transform: rotate(0deg); }
+    transform: rotate(0deg) translate3d(0, 0, 0); }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0); }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0); }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0); }
   100% {
-    transform: rotate(360deg); } }
+    transform: rotate(0deg) translate3d(0, 0, 0); } }
+
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0); }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0); }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0); }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0); }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0); } }
 
 /* Media Queries*/
 @media only screen and (max-width: 480px) {

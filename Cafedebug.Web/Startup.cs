@@ -19,7 +19,7 @@ namespace Cafedebug.Web
 {
     public class Startup
     {
-       // recebe a injeção da classe configuration
+        // recebe a injeção da classe configuration
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -70,9 +70,20 @@ namespace Cafedebug.Web
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
+                routes.MapAreaRoute(
+                    name: "Administrador",
+                    areaName: "Administrador",
+                    template: "Administrador/{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapAreaRoute(
                     name: "default",
+                    areaName: "Site",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+
+                //routes.MapRoute(
+                //    name: "default",
+                //    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

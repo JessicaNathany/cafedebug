@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home | Café Debug";
+}
+
+<partial name="../Shared/_Banner.cshtml" />
+
+<section class="novosepisodios">
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--Carrega a lista de episódios-->
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div>
+                    <a href="#">
+                        <div class="episodiounico"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Image-EP.jpg" /></div>
+                    </a>
+                    <a href="#">
+                        <div class="episodiounico"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Image-EP.jpg" /></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div>
+                    <a href="#">
+                        <div class="episodiounico"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Image-EP.jpg" /></div>
+                    </a>
+                    <a href="#">
+                        <div class="episodiounico"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Image-EP.jpg" /></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="ver-mais  ">
+                    @*<li class="fas fa-plus-circle">@Html.ActionLink("ver mais episódios", "MaisEpisodios", "Episodio", new { @class = "vermaiseps" })</li>*@
+                    <a href="#" class="vermaiseps"><i class="fas fa-plus-circle"></i> ver mais episodios</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts{
+    <script type="text/javascript">
+
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 7000,
+            autoplayHoverPause: true
+        });
+
+    </script>
+}
