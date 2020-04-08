@@ -43,7 +43,7 @@ select.vaild {
 
 /*#endregion*/
 
-      /* Home*/
+/* Home*/
 //Banner
 .owl-carousel {
     .banner {
@@ -343,7 +343,7 @@ select.vaild {
 
 /*#region contact-us*/
 .contact-us-form {
-   
+
     .logo-contact-us {
         display: block;
 
@@ -352,45 +352,81 @@ select.vaild {
         }
     }
     // button Enviar
-    #btnSubmit {
-        position: relative;
-        width: 160px;
+    .btn-send {
+        float: right;
+        margin-bottom: 5%;
 
-        &:before {
-            content: '';
-            position: absolute;
-            right: 16px;
-            top: 50%;
-            margin-top: -12px;
-            width: 24px;
-            height: 24px;
-            border: 2px solid;
-            border-left-color: transparent;
-            border-right-color: transparent;
-            border-radius: 50%;
-            opacity: 0;
-            transition: opacity 0.5s;
-            animation: 0.8s linear infinite rotate;
-        }
+        button {
+            width: 100%;
+            border: 1px solid green;
+            text-decoration: none;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 1;
 
-        &.sending {
-            pointer-events: none;
-            cursor: not-allowed;
+            span {
+                letter-spacing: 0.7px
+            }
 
-            &:before {
-                transition-delay: 0.5s;
-                transition-duration: 1s;
-                opacity: 1;
+            i {
+                color: green;
             }
         }
-    }
-    @keyframes rotate {
-        0% {
-            transform: rotate(0deg);
+
+        button:hover {
+            animation: rotate 0.7s ease-in-out both;
+
+            span {
+                animation: storm 0.7s ease-in-out both;
+                animation-delay: 0.06s;
+            }
         }
 
-        100% {
-            transform: rotate(360deg);
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg) translate3d(0, 0, 0);
+            }
+
+            25% {
+                transform: rotate(3deg) translate3d(0, 0, 0);
+            }
+
+            50% {
+                transform: rotate(-3deg) translate3d(0, 0, 0);
+            }
+
+            75% {
+                transform: rotate(1deg) translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: rotate(0deg) translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes storm {
+            0% {
+                transform: translate3d( 0, 0, 0) translateZ(0);
+            }
+
+            25% {
+                transform: translate3d( 4px, 0, 0) translateZ(0);
+            }
+
+            50% {
+                transform: translate3d( -3px, 0, 0) translateZ(0);
+            }
+
+            75% {
+                transform: translate3d( 2px, 0, 0) translateZ(0);
+            }
+
+            100% {
+                transform: translate3d( 0, 0, 0) translateZ(0);
+            }
         }
     }
 }
@@ -512,7 +548,7 @@ select.vaild {
 }
 
 @media only screen and (min-width: 479px) and (max-width: 768px) {
-   
+
     /*Banner*/
     .owl-carousel {
         .banner {
@@ -640,7 +676,7 @@ select.vaild {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
-    
+
     /*Banner*/
     .owl-carousel {
         .banner {
@@ -761,5 +797,3 @@ select.vaild {
         }
     }
 }
-
-

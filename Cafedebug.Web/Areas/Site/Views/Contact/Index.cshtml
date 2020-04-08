@@ -5,7 +5,6 @@
 @using Cafedebug.Web.Models;
 @model ContactModelView
 
-@*asp-controller="Contact" asp-action="ContactUs"*@
 <div class="container">
     <div class="row">
         <div class="col-sm-8">
@@ -23,162 +22,60 @@
                                 <input id="contact_name" name="Nome" type="text" class="form-control input-md">
                             </div>
                         </div>
-                        <fieldset>
-                            <div class="form-group">
-                                <div class="form-group col-md-2  text-left">
-                                    <label class="control-label  " for="Email">Email</label>
-                                </div>
-                                <div class="form-group col-md-12 ">
-                                    <div class="">
-                                        <input id="contact_email" name="Email" type="text" class="form-control input-md">
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-2  text-left">
-                                    <label class="control-label  " for="Telefone">Telefone</label>
-                                </div>
-                                <div class="form-group col-md-12 ">
-                                    <div class="">
-                                        <input id="contact_phone" name="Telefone" type="text" class="form-control input-md">
-                                    </div>
-                                </div><br />
 
-                                <!--Assunto-->
-                                <div class="form-group col-md-2  text-left">
-                                    <label class="control-label  " for="Assunto">Assunto</label>
-                                </div>
-
-                                <div class="col-md-6 floatl">
-                                    <select class="browser-default custom-select mb-5" name="Assunto" id="selectOp">
-                                        <option value="" disabled="" selected="">Selecione um assunto</option>
-                                        @foreach (var item in Model.Assuntos)
-                                        {
-                                            <option value="@item.Value">@item.Text</option>
-                                        }
-                                    </select>
-                                </div>
-                                <!-- Textarea -->
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label" for="Mensagem">Mensagem</label>
-                                    <div class="col-md-12">
-                                        <textarea id="contact_message" class="form-control" name="Mensagem"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="float-right">
-                                    @*<button class="btn btn-primary" id="button-send">
-                                            Enviar <i class="glyphicon glyphicon-envelope"></i>
-                                        </button>*@
-                                    <button id="btnSubmit" type="submit" class="btn btn-outline-primary btn-lg btn-block">Enviar</button>
+                        <div class="form-group">
+                            <div class="form-group col-md-2  text-left">
+                                <label class="control-label  " for="Email">Email</label>
+                            </div>
+                            <div class="form-group col-md-12 ">
+                                <div class="">
+                                    <input id="contact_email" name="Email" type="text" class="form-control input-md">
                                 </div>
                             </div>
-                        </fieldset>
+                            <div class="form-group col-md-2  text-left">
+                                <label class="control-label  " for="Telefone">Telefone</label>
+                            </div>
+                            <div class="form-group col-md-12 ">
+                                <div class="">
+                                    <input id="contact_phone" name="Telefone" type="text" class="form-control input-md">
+                                </div>
+                            </div><br />
+
+                            <!--Assunto-->
+                            <div class="form-group col-md-2  text-left">
+                                <label class="control-label  " for="Assunto">Assunto</label>
+                            </div>
+
+                            <div class="col-md-6 floatl">
+                                <select class="browser-default custom-select mb-5" name="Assunto" id="selectOp">
+                                    <option value="" disabled="" selected="">Selecione um assunto</option>
+                                    @foreach (var item in Model.Assuntos)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                            </div>
+                            <!-- Textarea -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="Mensagem">Mensagem</label>
+                                <div class="col-md-12">
+                                    <textarea id="contact_message" class="form-control" name="Mensagem"></textarea>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-md-12">
+                                <div class="btn-send">
+                                    <button id="btnSubmit" type="submit" class="btn btn-lg btn-block">
+                                        <i class="far fa-paper-plane"></i><span>&nbsp;Enviar</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-
-
-<script type="text/javascript">
-
-    $(function () {
-        //form validation
-
-        $('#contact_name').on('input', function () {
-            var input = $(this);
-            var is_name = input.val();
-            if (is_name.length >= 2 && is_name.length <= 30 && is_name !== "") {
-                input.removeClass("invalid").addClass("valid");
-            }
-            else {
-                input.removeClass("valid").addClass("invalid");
-            }
-        });
-
-        $('#contact_email').on('input', function () {
-            var input = $(this);
-            var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-            var is_email = re.test(input.val());
-            if (is_email) {
-                input.removeClass("invalid").addClass("valid");
-                input.append('&#10004;');
-            }
-            else {
-                input.removeClass("valid").addClass("invalid");
-            }
-        });
-
-        $('#contact_phone').on('input', function () {
-            var input = $(this);
-            var re = /(0?[1-9]{2})*\D*(9?)\D?(\d{4})+\D?(\d{4})\b/g;
-            var is_name = re.test(input.val());
-            if (is_name) {
-                input.removeClass("invalid").addClass("valid");
-            }
-            else {
-                input.removeClass("valid").addClass("invalid");
-            }
-        });
-
-        $('#contact_message').keyup(function () {
-            var input = $(this);
-            var message = $(this).val();
-            if (message.length > 25) {
-                input.removeClass("invalid").addClass("valid");
-            }
-            else {
-                input.removeClass("valid").addClass("invalid");
-            }
-        });
-
-        $('[name="Assunto"]').on("change", function () {
-            var value = $('option:selected').val();
-            if (value > 0) {
-                $('[name="Assunto"]').removeClass("invalid").addClass("valid");
-            }
-            else {
-                $('[name="Assunto"]').removeClass("valid").addClass("invalid");
-            }
-
-        }).change();
-
-        $('form').on('submit', function (e) {
-            e.preventDefault();
-            debugger
-            var form_data = $("#Form-contact").serializeArray();
-            var error_free = true;
-            for (var input in form_data) {
-                var element = $("#contact_" + form_data[input]['name']);
-                var valid = element.hasClass("valid");
-                var error_element = $("span", element.parent());
-                if (!valid) {
-                    error_element.removeClass("error").addClass("error_show"); error_free = false;
-                }
-                else {
-                    error_element.removeClass("error_show").addClass("error");
-                }
-            }
-            if (!error_free) {
-                event.preventDefault();
-            }
-            else {
-                alert('Form will be submitted');
-                var button = $(this).find('[type="submit"]').toggleClass('sending').blur();
-                setTimeout(function () {
-                    button.removeClass('sending').blur();
-                }, 4500);
-                $.ajax({
-                    type: "post",
-                    url: "@Url.Action("ContactUs","Contact")",
-                    data: form_data,
-                    dataType: 'json',
-
-                }).done(function () {
-                    $(this).addClass("done");
-                });
-            }
-        })
-    });
-
-</script>
