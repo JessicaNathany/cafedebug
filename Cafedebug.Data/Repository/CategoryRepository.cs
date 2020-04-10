@@ -1,7 +1,6 @@
 ﻿using Cafedebug.Business.Interfaces;
 using Cafedebug.Business.Models;
 using Cafedebug.Data.Context;
-using log4net;
 
 namespace Cafedebug.Data.Repository
 {
@@ -10,5 +9,10 @@ namespace Cafedebug.Data.Repository
         
         public CategoriaRepository(CafedebugContext context) : base(context)
         { }
+
+        public PageResult<Category> GetPaged(PageRequest page)
+        {
+            return new PageResult<Category>();
+        }
     }
 }

@@ -43,5 +43,10 @@ namespace Cafedebug.Business.Services
         {
             throw new NotImplementedException();
         }
+
+        public PageResult<Category> GetPaged(PageRequest page)
+        {
+            return _categoriaRepository.GetPaged(page);
+        }
     }
 }
