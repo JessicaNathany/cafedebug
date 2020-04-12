@@ -238,33 +238,37 @@ select.vaild {
             color: #ed7d00; }
 
 /*#region contact-us*/
-.contact-us-form .logo-contact-us {
-  display: block; }
-  .contact-us-form .logo-contact-us img {
-    margin: 5%; }
-
-.contact-us-form .btn-send {
-  float: right;
-  margin-bottom: 5%; }
-  .contact-us-form .btn-send button {
-    width: 100%;
-    border: 1px solid green;
-    text-decoration: none;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    opacity: 1; }
-    .contact-us-form .btn-send button span {
-      letter-spacing: 0.7px; }
-    .contact-us-form .btn-send button i {
-      color: green; }
-  .contact-us-form .btn-send button:hover {
-    animation: rotate 0.7s ease-in-out both; }
-    .contact-us-form .btn-send button:hover span {
-      animation: storm 0.7s ease-in-out both;
-      animation-delay: 0.06s; }
+.contact-us-form {
+  width: 75%;
+  margin: auto; }
+  .contact-us-form .logo-contact-us {
+    display: block; }
+    .contact-us-form .logo-contact-us img {
+      margin: 5%;
+      max-height: 100%;
+      max-width: 100%; }
+  .contact-us-form .btn-send {
+    float: right;
+    margin-bottom: 5%; }
+    .contact-us-form .btn-send button {
+      width: 100%;
+      border: 1px solid green;
+      text-decoration: none;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      opacity: 1; }
+      .contact-us-form .btn-send button span {
+        letter-spacing: 0.7px; }
+      .contact-us-form .btn-send button i {
+        color: green; }
+    .contact-us-form .btn-send button:hover {
+      animation: rotate 0.7s ease-in-out both; }
+      .contact-us-form .btn-send button:hover span {
+        animation: storm 0.7s ease-in-out both;
+        animation-delay: 0.06s; }
 
 @keyframes rotate {
   0% {
@@ -350,7 +354,9 @@ select.vaild {
     font-size: 1rem;
     padding-top: 5%; }
     .noticias .boxnoticia .tag {
-      padding-bottom: 2%; } }
+      padding-bottom: 2%; }
+  .contact-us-form {
+    width: 100%; } }
 
 @media only screen and (min-width: 479px) and (max-width: 768px) {
   /*Banner*/

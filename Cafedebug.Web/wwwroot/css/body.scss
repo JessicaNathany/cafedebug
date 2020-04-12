@@ -343,12 +343,15 @@ select.vaild {
 
 /*#region contact-us*/
 .contact-us-form {
-
+    width: 75%;
+    margin: auto;
     .logo-contact-us {
         display: block;
 
         img {
             margin: 5%;
+            max-height: 100%;
+            max-width: 100%;
         }
     }
     // button Enviar
@@ -544,6 +547,10 @@ select.vaild {
                 padding-bottom: 2%;
             }
         }
+    }
+
+    .contact-us-form{
+        width: 100%;
     }
 }
 
