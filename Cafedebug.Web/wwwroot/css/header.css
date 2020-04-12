@@ -6,10 +6,11 @@
   color: white;
   z-index: 100;
   transition: background-color 1s ease 0s;
-  border-bottom: 15px solid #ed7d00; }
+  border-bottom: 15px solid #ed7d00;
+  border-bottom: 4px solid #ed7d00; }
   nav .nav-logo {
     height: auto;
-    width: 100%; }
+    width: 70%; }
     nav .nav-logo .Logo {
       height: auto;
       width: 100%; }
