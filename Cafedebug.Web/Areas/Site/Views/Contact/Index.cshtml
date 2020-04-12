@@ -7,8 +7,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-8">
-            <div class="contact-us-form">
+        <div class="col-md-12">
+            <div class="contact-us-form ">
                 <div class="logo-contact-us">
                     <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/logo-quemsomos.png" />
                 </div>
@@ -19,7 +19,7 @@
                         </div>
                         <div class="form-group col-md-12 ">
                             <div class="">
-                                <input id="contact_name" name="Nome" type="text" class="form-control input-md">
+                                <input id="contact_name" name="Nome" type="text" class="form-control input-md" required>
                             </div>
                         </div>
 
@@ -29,7 +29,7 @@
                             </div>
                             <div class="form-group col-md-12 ">
                                 <div class="">
-                                    <input id="contact_email" name="Email" type="text" class="form-control input-md">
+                                    <input id="contact_email" name="Email" type="text" class="form-control input-md" required>
                                 </div>
                             </div>
                             <div class="form-group col-md-2  text-left">
@@ -37,7 +37,7 @@
                             </div>
                             <div class="form-group col-md-12 ">
                                 <div class="">
-                                    <input id="contact_phone" name="Telefone" type="text" class="form-control input-md">
+                                    <input id="contact_phone" name="Telefone" type="text" class="form-control input-md" required>
                                 </div>
                             </div><br />
 
@@ -47,7 +47,7 @@
                             </div>
 
                             <div class="col-md-6 floatl">
-                                <select class="browser-default custom-select mb-5" name="Assunto" id="selectOp">
+                                <select class="browser-default custom-select mb-5" name="Assunto" id="selectOp" required>
                                     <option value="" disabled="" selected="">Selecione um assunto</option>
                                     @foreach (var item in Model.Assuntos)
                                     {
@@ -59,23 +59,21 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label" for="Mensagem">Mensagem</label>
                                 <div class="col-md-12">
-                                    <textarea id="contact_message" class="form-control" name="Mensagem"></textarea>
+                                    <textarea id="contact_message" class="form-control" name="Mensagem" required></textarea>
                                 </div>
                             </div>
-                            <br />
                             <div class="col-md-12">
                                 <div class="btn-send">
                                     <button id="btnSubmit" type="submit" class="btn btn-lg btn-block">
-                                        <i class="far fa-paper-plane"></i><span>&nbsp;Enviar</span>
+                                        <span><i class="far fa-paper-plane"></i> Enviar</span>
                                     </button>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </form>
             </div>
         </div>
+
     </div>
 </div>
