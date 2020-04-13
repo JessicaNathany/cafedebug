@@ -35,8 +35,25 @@ textarea.valid,
 select.vaild {
   border: 2px solid green; }
 
+a {
+  text-decoration: none !important; }
+
 /*#endregion*/
 /* Home*/
+.card {
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
+  -moz-box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
+  box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
+  text-decoration: none;
+  margin: 5% 7% 10% 5%; }
+  .card img {
+    width: 100%;
+    height: auto; }
+  .card .card-body {
+    background-color: rgba(244, 244, 244, 0.75); }
+    .card .card-body p {
+      color: #ed7d00; }
+
 .owl-carousel .banner {
   position: relative;
   top: 0;
@@ -178,13 +195,6 @@ select.vaild {
       margin-right: 8%; }
       .novosepisodios .ver-mais a i {
         color: #ed7d00; }
-  .novosepisodios .episodiounico {
-    display: block;
-    text-align: center; }
-    .novosepisodios .episodiounico img {
-      max-width: 80%;
-      max-height: 80%;
-      margin-bottom: 10px; }
 
 .loading {
   background: url("https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Ripple-1s-200px.gif") no-repeat center center;

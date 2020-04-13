@@ -52,15 +52,10 @@ namespace Cafedebug.Business.Services
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _episodeRepository.Delete(id);
         }
 
         public IList<Episode> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int GetById(int id)
         {
             throw new NotImplementedException();
         }

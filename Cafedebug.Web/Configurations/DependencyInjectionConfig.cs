@@ -11,9 +11,14 @@ namespace Cafedebug.Web.Configurations
         public static IServiceCollection ResolveDependencies(this IServiceCollection service)
         {
             service.AddScoped<ICategoryService, CategoryService>();
+            service.AddScoped<ICategoryRepository, CategoryRepository>();
             service.AddScoped<INotifier, Notifier>();
 
             service.AddScoped<IEpisodeRepository, EpisodioRepository>();
+            service.AddScoped<IEpisodeService, EpisodeService>();
+
+
+
 
             return service;
         }

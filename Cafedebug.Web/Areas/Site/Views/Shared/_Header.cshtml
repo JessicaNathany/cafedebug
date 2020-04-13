@@ -10,13 +10,6 @@
                     </a>
                 </div>
             </div>
-            <!-- Soical Media -->
-            <div class="col-4 col-sm-3 col-md-3 d-lg-none">
-                <div class="soical">
-                    <a class="soical-media" href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="soical-media" href="https://twitter.com/cafedebug" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                </div>
-            </div>
             <!-- Collapse button -->
             <button class="navbar-toggler Toggle-button" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="animated-icon1">
@@ -25,29 +18,20 @@
                     <span></span>
                 </div>
             </button>
-
             <!-- Menu -->
             <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
                 <div class="navbar-collapse collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">@Html.ActionLink("Home", "Index", "Home") <span class="sr-only">(current)</span></a>
+                    <ul class="navbar-nav" id="navigation">
+                        <li class="nav-item selected">
+                            <a class="nav-link" href="#">@Html.ActionLink("Home", "Index", "Home")</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="about">
                             <a class="nav-link" href="#">@Html.ActionLink("Quem Somos", "Index", "About")</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="episods">
                             <a class="nav-link" href="#">@Html.ActionLink("Episódios", "Index", "Episode")</a>
                         </li>
                     </ul>
-                </div>
-            </div>
-
-            <!-- Soical Media -->
-            <div class="d-none d-lg-block d-xl-block col-lg-1 col-xl-1">
-                <div class="soical">
-                    <a class="soical-media" href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="soical-media" href="https://twitter.com/cafedebug" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </nav>
@@ -55,6 +39,27 @@
 </div>
 
 <script type="text/javascript">
+
+    let link = window.location.href;
+
+    if (link.includes('About'))
+    {
+        SetActiveClass(document.querySelector("#about"));
+    }
+    else if (link.includes('Episode'))
+    {
+        SetActiveClass(document.querySelector("#episods"));
+    }
+
+
+
+    function SetActiveClass(selector)
+    {
+        let navItems = document.querySelectorAll(".nav-item");
+        navItems.forEach(item => item.classList.remove("selected"));
+        selector.classList.toggle("selected");
+    } 
+
     $(document).ready(function () {
         $('.Toggle-button').on('click', function () {
             $('.animated-icon1').toggleClass('open');

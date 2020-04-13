@@ -1,5 +1,7 @@
-﻿using Cafedebug.Business.Interfaces;
+﻿using AutoMapper;
+using Cafedebug.Business.Interfaces;
 using Cafedebug.Business.Models;
+using Cafedebug.Web.Areas.Administrador.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
@@ -7,9 +9,13 @@ namespace Cafedebug.Web.Controllers
     public class EpisodeController : BaseController
     {
         private readonly IEpisodeRepository _episodeRepository;
-        public EpisodeController(INotifier notifier, IEpisodeRepository episodeRepository) : base(notifier)
+        private readonly IEpisodeService _episodeService;
+        private IMapper _mapper;
+        public EpisodeController(INotifier notifier, IEpisodeRepository episodeRepository, IEpisodeService episodeService, IMapper mapper) : base(notifier)
         {
             _episodeRepository = episodeRepository;
+            _episodeService = episodeService;
+            _mapper = mapper;
         }
 
         public ActionResult Index(PageRequest page)
@@ -18,19 +24,43 @@ namespace Cafedebug.Web.Controllers
             return View();
         }
 
-        public ActionResult NewEpisode()
+        public ActionResult Create()
         {
             return View();
         }
 
-        public ActionResult GetEpisodies()
+        public ActionResult Create(EpisodeViewModel model)
         {
-            return View();
+            if (!ModelState.IsValid) return View(model);
+
+            _episodeService.Save(_mapper.Map<Episode>(model));
+
+            return Redirect("Index");
         }
 
-        public ActionResult MoreEpisode()
+        public ActionResult Update(int id)
         {
-            return View();
+           if(id == 0) return Redirect("Index");
+
+            var episode = _episodeRepository.GetById(id);
+
+            return View("Create", _mapper.Map<EpisodeViewModel>(episode));
         }
+
+        public ActionResult Update(EpisodeViewModel model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            _episodeService.Save(_mapper.Map<Episode>(model));
+
+            return Redirect("Index");
+        }
+
+        public void Delete(int id)
+        {
+            _episodeService.Delete(id);
+
+        }
+
     }
 }
