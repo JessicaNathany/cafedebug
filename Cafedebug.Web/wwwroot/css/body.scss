@@ -46,10 +46,31 @@ select.vaild {
     border: 2px solid green;
 }
 
-
+a {
+    text-decoration: none !important;
+}
 /*#endregion*/
 
 /* Home*/
+.card {
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
+    box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
+    text-decoration: none;
+    margin: 5% 7% 10% 5%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-body {
+        background-color: rgba(244, 244, 244, 0.75);
+        p {
+            color: $theme_color;
+        }
+    }
+}
 //Banner
 .owl-carousel {
     .banner {
@@ -160,7 +181,6 @@ select.vaild {
     font-weight: bold;
 }
 
-
 .envieemail img {
     display: inline-block;
     height: 70px;
@@ -184,8 +204,6 @@ select.vaild {
     margin-top: 20px;
     letter-spacing: -1px;
 }
-
-
 // End Episódios
 
 .novosepisodios {
@@ -246,16 +264,6 @@ select.vaild {
         }
     }
 
-    .episodiounico {
-        display: block;
-        text-align: center;
-
-        img {
-            max-width: 80%;
-            max-height: 80%;
-            margin-bottom: 10px;
-        }
-    }
 }
 
 .loading {
