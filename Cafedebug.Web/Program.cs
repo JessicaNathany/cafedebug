@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Cafedebug.Web.Configurations;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -11,7 +12,7 @@ namespace Cafedebug.Web
 
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args).Build().RunMigrations().Run();
 
             var builder = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())

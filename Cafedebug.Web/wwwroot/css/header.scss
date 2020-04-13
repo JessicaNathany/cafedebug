@@ -10,10 +10,12 @@ nav {
     z-index: 100;
     transition: background-color 1s ease 0s;
     border-bottom: 15px solid #ed7d00;
+    border-bottom: 4px solid #ed7d00;
+    font-weight: 600;
 
     .nav-logo {
         height: auto;
-        width: 100%;
+        width: 70%;
 
         .Logo {
             height: auto;
@@ -22,6 +24,30 @@ nav {
             img {
                 max-height: 100%;
                 max-width: 100%;
+            }
+        }
+    }
+
+    .navbar-nav {
+        width: 100%;
+        list-style-type: none;
+        border: none;
+
+        .nav-item {
+            margin: 2%;
+            text-align: center;
+            border: none;
+
+            a {
+                color: black;
+                font-size: 20px;
+                text-decoration: none;
+            }
+        }
+
+        .selected {
+            a {
+                color: #ed7d00;
             }
         }
     }
@@ -96,40 +122,6 @@ nav {
         -o-transform: rotate(-135deg);
         transform: rotate(-135deg);
     }
-
-    .navbar-nav {
-        width: 100%;
-        list-style-type: none;
-        border: none;
-        margin: 3% 0 0 2%;
-
-        .nav-item {
-            margin: 2%;
-            text-align: center;
-            border: none;
-
-            a {
-                color: black;
-                font-size: 20px;
-                text-decoration: none;
-            }
-        }
-    }
-
-    .soical {
-        width: 100%;
-
-        .soical-media {
-            height: auto;
-            margin: 5px;
-
-
-            i {
-                color: #eb6c01;
-                font-size: 30px;
-            }
-        }
-    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -145,15 +137,6 @@ nav {
                 img {
                     height: 100%;
                     width: 100%;
-                }
-            }
-        }
-
-        .soical {
-            .soical-media {
-
-                i {
-                    font-size: 22px;
                 }
             }
         }

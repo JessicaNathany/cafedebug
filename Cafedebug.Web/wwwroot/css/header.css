@@ -6,16 +6,32 @@
   color: white;
   z-index: 100;
   transition: background-color 1s ease 0s;
-  border-bottom: 15px solid #ed7d00; }
+  border-bottom: 15px solid #ed7d00;
+  border-bottom: 4px solid #ed7d00;
+  font-weight: 600; }
   nav .nav-logo {
     height: auto;
-    width: 100%; }
+    width: 70%; }
     nav .nav-logo .Logo {
       height: auto;
       width: 100%; }
       nav .nav-logo .Logo img {
         max-height: 100%;
         max-width: 100%; }
+  nav .navbar-nav {
+    width: 100%;
+    list-style-type: none;
+    border: none; }
+    nav .navbar-nav .nav-item {
+      margin: 2%;
+      text-align: center;
+      border: none; }
+      nav .navbar-nav .nav-item a {
+        color: black;
+        font-size: 20px;
+        text-decoration: none; }
+    nav .navbar-nav .selected a {
+      color: #ed7d00; }
   nav .animated-icon1 {
     width: 30px;
     height: 20px;
@@ -69,27 +85,6 @@
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg); }
-  nav .navbar-nav {
-    width: 100%;
-    list-style-type: none;
-    border: none;
-    margin: 3% 0 0 2%; }
-    nav .navbar-nav .nav-item {
-      margin: 2%;
-      text-align: center;
-      border: none; }
-      nav .navbar-nav .nav-item a {
-        color: black;
-        font-size: 20px;
-        text-decoration: none; }
-  nav .soical {
-    width: 100%; }
-    nav .soical .soical-media {
-      height: auto;
-      margin: 5px; }
-      nav .soical .soical-media i {
-        color: #eb6c01;
-        font-size: 30px; }
 
 @media only screen and (max-width: 480px) {
   nav {
@@ -101,7 +96,5 @@
       nav .nav-logo .Logo img {
         height: 100%;
         width: 100%; }
-    nav .soical .soical-media i {
-      font-size: 22px; }
     nav .navbar-nav .nav-item a {
       font-size: 19px; } }

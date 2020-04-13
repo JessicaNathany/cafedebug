@@ -12,9 +12,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="Views\**" />
     <Compile Remove="wwwroot\js\ValidationMessages\**" />
+    <Content Remove="Controllers\**" />
+    <Content Remove="Models\**" />
+    <Content Remove="Views\**" />
     <Content Remove="wwwroot\js\ValidationMessages\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="Views\**" />
     <EmbeddedResource Remove="wwwroot\js\ValidationMessages\**" />
+    <None Remove="Controllers\**" />
+    <None Remove="Models\**" />
+    <None Remove="Views\**" />
     <None Remove="wwwroot\js\ValidationMessages\**" />
   </ItemGroup>
 
@@ -60,9 +72,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Administrador\Models\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
-    <Folder Include="Views\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
