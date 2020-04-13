@@ -5,10 +5,10 @@ using log4net;
 
 namespace Cafedebug.Data.Repository
 {
-    public class CategoriaRepository : Repository<Category>, ICategoryRepository
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
         
-        public CategoriaRepository(CafedebugContext context) : base(context)
+        public CategoryRepository(CafedebugContext context) : base(context)
         { }
     }
 }

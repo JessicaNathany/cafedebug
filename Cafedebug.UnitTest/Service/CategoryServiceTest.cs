@@ -13,7 +13,7 @@ namespace Cafedebug.UnitTest.Service
         private Mock<ICategoryRepository> _categoryRepositoryMock;
         private Mock<INotifier> _notifierMock;
         private CategoryService _categoryService;
-        
+
         [TestMethod]
         public void Save_Category_IsSuccessFull()
         {
@@ -36,33 +36,34 @@ namespace Cafedebug.UnitTest.Service
                 Name = "Banco de dados"
             };
 
-           // _categoryRepositoryMock.Setup(c => c.Save(It.IsAny<Category>())).Returns(categoryObjectExpected);
+            // _categoryRepositoryMock.Setup(c => c.Save(It.IsAny<Category>())).Returns(categoryObjectExpected);
 
-           _categoryService.Save(categoryActual);
+            _categoryService.Save(categoryActual);
 
             _categoryRepositoryMock.Verify(c => c.Save(It.IsAny<Category>()), Times.Once());
         }
 
-        [TestMethod]
-        public void Get_Category_ById()
-        {
-            _categoryRepositoryMock = new Mock<ICategoryRepository>();
-            _notifierMock = new Mock<INotifier>();
-            _categoryService = new CategoryService(_categoryRepositoryMock.Object, _notifierMock.Object);
+        //    [TestMethod]
+        //    public void Get_Category_ById()
+        //    {
+        //        _categoryRepositoryMock = new Mock<ICategoryRepository>();
+        //        _notifierMock = new Mock<INotifier>();
+        //        _categoryService = new CategoryService(_categoryRepositoryMock.Object, _notifierMock.Object);
 
 
-            var category = new Category
-            {
-                Id = 1,
-                Code = Guid.NewGuid(),
-                Name = "Tecnologia"
-            };
+        //        var category = new Category
+        //        {
+        //            Id = 1,
+        //            Code = Guid.NewGuid(),
+        //            Name = "Tecnologia"
+        //        };
 
-            _categoryRepositoryMock.Setup(c => c.GetById(It.IsAny<int>())).Returns(category);
+        //        _categoryRepositoryMock.Setup(c => c.GetById(It.IsAny<int>())).Returns(category);
 
-            var categoryReturn = _categoryService.GetById(It.IsAny<int>());
+        //        var categoryReturn = _categoryService.GetById(It.IsAny<int>());
 
-            Assert.AreEqual(category, categoryReturn);
-        }
+        //        Assert.AreEqual(category, categoryReturn);
+        //    }
+        //}
     }
 }

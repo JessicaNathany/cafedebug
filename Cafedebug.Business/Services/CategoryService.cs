@@ -24,24 +24,35 @@ namespace Cafedebug.Business.Services
             _categoriaRepository.Save(category);
         }
 
-        public Category Update(Category category)
+        public void Update(Category category)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (!ExecuteValidation(new CategoryValidation(), category)) return;
+
+                _categoriaRepository.Update(category);
+            }
+            catch (Exception ex)
+            {
+                Notify("Erro ao atualizar a categoria");
+                Log.ErrorFormat("Erro ao atualizar a categoria", ex.Message, category);
+                throw;
+            }
         }
 
-        public Category Remove(int id)
+        public void Remove(int id)
         {
-            throw new NotImplementedException();
+           _categoriaRepository.Delete(id);
         }
 
-        public Category GetById(int id)
+        public void GetById(int id)
         {
-            return _categoriaRepository.GetById(id);
+             _categoriaRepository.GetById(id);
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _categoriaRepository?.Dispose();
         }
     }
 }

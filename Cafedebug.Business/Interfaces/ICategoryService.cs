@@ -7,8 +7,8 @@ namespace Cafedebug.Business.Interfaces
     {
         void Save(Category category);
 
-        Category Update(Category category);
+        void Update(Category category);
 
-        Category Remove(int id);
+        void Remove(int id);
     }
 }
