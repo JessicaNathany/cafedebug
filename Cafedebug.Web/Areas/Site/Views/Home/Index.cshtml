@@ -2,7 +2,9 @@
     ViewData["Title"] = "Home | Café debug";
 }
 
+
 <partial name="../Shared/_Banner.cshtml" />
+
 
 <section class="novosepisodios">
     <div class="container">
@@ -76,11 +78,13 @@
         </div>
     </div>
 </section>
+<partial name="../Shared/_Time.cshtml" />
+
 
 @section scripts{
     <script type="text/javascript">
 
-        var owl = $('.owl-carousel');
+        var owl = $('.owl-carousel-banner');
         owl.owlCarousel({
             items: 1,
             loop: true,
@@ -90,5 +94,24 @@
             autoplayHoverPause: true
         });
 
+
+
+        $('.owl-carousel-time').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoPlay: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        })
     </script>
 }

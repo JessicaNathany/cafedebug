@@ -4,14 +4,16 @@ using Cafedebug.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cafedebug.Data.Migrations
 {
     [DbContext(typeof(CafedebugContext))]
-    partial class CafedebugContextModelSnapshot : ModelSnapshot
+    [Migration("20200414210107_AlterSponsotoTeam")]
+    partial class AlterSponsotoTeam
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
