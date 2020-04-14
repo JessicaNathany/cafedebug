@@ -66,6 +66,7 @@ a {
 
     .card-body {
         background-color: rgba(244, 244, 244, 0.75);
+
         p {
             color: $theme_color;
         }
@@ -263,7 +264,6 @@ a {
             }
         }
     }
-
 }
 
 .loading {
@@ -769,7 +769,7 @@ a {
             }
         }
     }
-                                                            /* Episódios */
+    /* Episódios */
 
 
     .bannerep {
@@ -834,5 +834,67 @@ a {
         margin-top: 20px;
         letter-spacing: -1px;
     }
-                                                                    /* Fim Episódios */
+    /* Fim Episódios */
+}
+
+.time-colaboradores {
+    width: 10em;
+    margin: 10px;
+}
+
+.time-description {
+    padding: 1rem 0;
+    width: 14rem;
+    text-align: center;
+    margin-top: 3em;
+}
+
+.time-description-detalhes {
+
+    p {
+        font-weight: bold;
+        margin-bottom: 0.3em;
+        text-align: center;
+    }
+
+    i {
+        color: #e77d03;
+        font-size: 1.75em;
+    }
+}
+
+.time-name-colaborador {
+    color: #E77D03;
+    padding-top: 1em;
+}
+
+
+.owl-carousel {
+    .owl-item {
+        img {
+            width: 6em;
+            display: inline-block;
+        }
+    }
+}
+
+.owl-carousel-time {
+    background: white;
+    position: relative;
+    margin: 20px 0;
+
+    img {
+        width: 6em;
+    }
+}
+
+.debuggers-time {
+    padding-top: 0;
+    font-size: 1.25em;
+    margin-bottom: 10em;
+}
+
+.title-nosso-time {
+    padding-top: 0.5em;
+    font-size: 2.125em;
 }
