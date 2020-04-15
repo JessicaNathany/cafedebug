@@ -1,5 +1,4 @@
-﻿
-<div class="header">
+﻿<div class="header">
     <div class="container">
         <div class="row">
             <nav class="navbar navbar-expand-lg">
@@ -43,9 +42,25 @@
     $(document).ready(function () {
         let link = window.location.href;
 
+
+        $(window).scroll(function () {
+            console.log($(window).scrollTop())
+            if ($(window).scrollTop() > 180) {
+                $('.header').addClass('scroll');
+            }
+            if ($(window).scrollTop() < 181) {
+                $('.header').removeClass('scroll');
+            }
+        });
+
+
         if (link.includes('Episode')) {
             SetActiveClass(document.querySelector("#episods"));
         }
+
+
+
+
 
 
         function SetActiveClass(selector) {
@@ -60,10 +75,10 @@
         $(".owl-carousel-banner ")
             .css("position", "relative");
 
-        $(".header").css("position", "absolute")
-            .css("top", "0")
-            .css("z-index", "5")
-            .css("padding-top", "2%");
+        //$(".header").css("position", "absolute")
+        //    .css("top", "0")
+        //    .css("z-index", "5")
+        //    .css("padding-top", "2%");
 
         if (link.includes('Episode')) {
             $(".header ").css("position", "relative")
