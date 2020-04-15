@@ -953,3 +953,45 @@ a {
  }
 
 /*Fim Time*/
+
+.container-form-contact {
+    background: #F7F7F7;
+}
+.input-form {
+    margin-top: 1em;
+    height: 8vh;
+    width: 51%;
+    margin-left: 1.7em;
+    padding-left: 1em;
+    border-radius: 2px;
+    border: 1px;
+}
+.input-form-nome {
+    width: 46%;
+    margin-left: 0;
+}
+
+.textarea-form {
+    width: 100%;
+    margin-top: 1em;
+    height: 25vh;
+    padding-left: 1em;
+    padding-top: 1em;
+    border-radius: 2px;
+    border: 1px;
+}
+
+.container-form-button {
+    display: flex;
+    justify-content: flex-end;
+
+    .input-button {
+        margin: 2em 0;
+        background: #fff;
+        width: 15%;
+        height: 5vh;
+        border-radius: 19px;
+        border: 1px solid #E77D03;
+        font-weight: bold;
+    }
+}
