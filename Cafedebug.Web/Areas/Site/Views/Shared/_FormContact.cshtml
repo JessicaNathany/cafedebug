@@ -9,19 +9,15 @@
         <p class="debuggers-time time-name-colaborador">Debuggers</p>
     </div>
     <form method="POST">
-        <div class="container">
-            <div>
-                <div>
-                    <input  class="input-form input-form-nome" placeholder="Nome" />
-                    <input class="input-form" placeholder="Email" />
-                </div>
-                <div>
-                    <textarea class="textarea-form" placeholder="Envie sugestões, elogios e critícas"></textarea>
-                </div>
-                <div class="container-form-button">
-                    <input class="input-button" type="submit" asp-page-handler="JoinList" value="Enviar" />
-                </div>
-            </div>
+        <div class="container-input-form">
+            <input class="input-form" placeholder="Nome" />
+            <input class="input-form" placeholder="Email" />
+        </div>
+        <div>
+            <textarea class="textarea-form" placeholder="Envie sugestões, elogios e critícas"></textarea>
+        </div>
+        <div class="container-form-button">
+            <input class="input-button" type="submit" asp-page-handler="JoinList" value="Enviar" />
         </div>
     </form>
 </div>
