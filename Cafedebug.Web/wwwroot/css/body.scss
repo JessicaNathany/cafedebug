@@ -824,6 +824,7 @@ a {
     /* Fim Episódios */
 }
 
+/*Time*/
 .time-colaboradores {
     width: 10em;
     margin: 10px;
@@ -858,21 +859,21 @@ a {
 .owl-carousel {
     .owl-item {
         img {
-            width: 7em;
+            width: 8em;
             display: inline-block;
-            border-radius: 50%
+            height: 8em;
         }
     }
+}
+
+.image-time{
+    border-radius: 50%;
 }
 
 .owl-carousel-time {
     background: white;
     position: relative;
     margin: 20px 0;
-
-    img {
-        width: 6em;
-    }
 }
 
 .debuggers-time {
@@ -950,3 +951,5 @@ a {
     }
 
  }
+
+/*Fim Time*/
