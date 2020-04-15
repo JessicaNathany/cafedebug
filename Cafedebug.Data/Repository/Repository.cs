@@ -36,10 +36,11 @@ namespace Cafedebug.Data.Repository
             throw new NotImplementedException();
         }
 
-        public void Save(TEntity entity)
+        public TEntity Save(TEntity entity)
         {
             DbSet.Add(entity);
             SaveChanges();
+            return entity;
         }
 
         public void Update(TEntity entity)

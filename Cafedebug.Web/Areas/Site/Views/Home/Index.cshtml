@@ -2,44 +2,72 @@
     ViewData["Title"] = "Home | Café debug";
 }
 
+
 <partial name="../Shared/_Banner.cshtml" />
 
-<section class="novosepisodios">
-    <div class="container-fluid">
-        <div class="row">
 
+<section class="novosepisodios">
+    <div class="container">
+        <div class="row">
             <!--Carrega a lista de episódios-->
             <div class="col-sm-4 col-md-4 col-lg-4">
-                <div>
-                    <a href="#">
-                        <div class="episodiounico"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" /></div>
-                    </a>
-                    <a href="#">
-                        <div class="episodiounico"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" /></div>
-                    </a>
-                </div>
+                <a href="#">
+                    <div class="card">
+                        <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" alt="Imagem de capa do card" />
+                        <div class="card-body">
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="card">
+                        <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" alt="Imagem de capa do card" />
+                        <div class="card-body">
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
+
             <div class="col-sm-4 col-md-4 col-lg-4">
-                <div>
-                    <a href="#">
-                        <div class="episodiounico"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" /></div>
-                    </a>
-                    <a href="#">
-                        <div class="episodiounico"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" /></div>
-                    </a>
-                </div>
+                <a href="#">
+                    <div class="card">
+                        <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" alt="Imagem de capa do card" />
+                        <div class="card-body">
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="card">
+                        <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" alt="Imagem de capa do card" />
+                        <div class="card-body">
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
+
             <div class="col-sm-4 col-md-4 col-lg-4">
-                <div>
-                    <a href="#">
-                        <div class="episodiounico"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" /></div>
-                    </a>
-                    <a href="#">
-                        <div class="episodiounico"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" /></div>
-                    </a>
-                </div>
+                <a href="#">
+                    <div class="card">
+                        <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" alt="Imagem de capa do card" />
+                        <div class="card-body">
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="card">
+                        <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Image-EP.jpg" alt="Imagem de capa do card" />
+                        <div class="card-body">
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
+
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div class="ver-mais  ">
@@ -50,11 +78,13 @@
         </div>
     </div>
 </section>
+<partial name="../Shared/_Team.cshtml" />
+
 
 @section scripts{
     <script type="text/javascript">
 
-        var owl = $('.owl-carousel');
+        var owl = $('.owl-carousel-banner');
         owl.owlCarousel({
             items: 1,
             loop: true,
@@ -64,5 +94,24 @@
             autoplayHoverPause: true
         });
 
+
+
+        $('.owl-carousel-time').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoPlay: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        })
     </script>
 }

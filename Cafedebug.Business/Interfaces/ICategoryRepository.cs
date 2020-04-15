@@ -4,5 +4,6 @@ namespace Cafedebug.Business.Interfaces
 {
     public interface ICategoryRepository : IBaseRepository<Category>
     {
+        PageResult<Category> GetPaged(PageRequest page);
     }
 }

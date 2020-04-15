@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Localization;
 using Cafedebug.Web.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Cafedebug.Web.Configurations;
-
+using AutoMapper;
 
 namespace Cafedebug.Web
 {
@@ -38,6 +38,8 @@ namespace Cafedebug.Web
 
             services.AddDbContext<CafedebugIdentityContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("CafedebugConnectionString")));
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(Microsoft.AspNetCore.Identity.UI.UIFramework.Bootstrap4)

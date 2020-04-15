@@ -1,66 +1,87 @@
 ﻿
-<div class="container-fluid">
-    <div class="row">
-        <nav class="navbar navbar-expand-lg">
-            <!-- Logo -->
-            <div class="col-5 col-sm-6 col-md-4 col-lg-2 col-xl-2">
-                <div class="nav-logo">
-                    <a class="Logo" href="@Url.Action("Index", "Home")">
-                        <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/logo-cafedebug.png" />
-                    </a>
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg">
+                <div class="col-5 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+                    <!-- Logo -->
+                    <div class="nav-logo">
+                        <a class="logo-herf" href="@Url.Action("Index", "Home")">
+                            <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/logo-cafedebug.png" />
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Soical Media -->
-            <div class="col-4 col-sm-3 col-md-3 d-lg-none">
-                <div class="soical">
-                    <a class="soical-media" href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="soical-media" href="https://twitter.com/cafedebug" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                <!-- Collapse button -->
+                <button class="navbar-toggler Toggle-button" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon1">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <!-- Menu -->
+                <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
+                    <div class="navbar-collapse collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav" id="navigation">
+                            <li class="nav-item underline selected">
+                                <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
+                            </li>
+                            <li class="nav-item underline" id="episods">
+                                <a class="nav-link" href="@Url.Action("Index", "Episode")">Episódios</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <!-- Collapse button -->
-            <button class="navbar-toggler Toggle-button" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="animated-icon1">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-
-            <!-- Menu -->
-            <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
-                <div class="navbar-collapse collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">@Html.ActionLink("Home", "Index", "Home") <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">@Html.ActionLink("Quem Somos", "Index", "About")</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">@Html.ActionLink("Episódios", "Index", "Episode")</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Soical Media -->
-            <div class="d-none d-lg-block d-xl-block col-lg-1 col-xl-1">
-                <div class="soical">
-                    <a class="soical-media" href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="soical-media" href="https://twitter.com/cafedebug" target="_blank"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </div>
 </div>
 
+
 <script type="text/javascript">
+
     $(document).ready(function () {
+        let link = window.location.href;
+
+        if (link.includes('Episode')) {
+            SetActiveClass(document.querySelector("#episods"));
+        }
+
+
+        function SetActiveClass(selector) {
+            let navItems = document.querySelectorAll(".nav-item");
+            navItems.forEach(item => item.classList.remove("selected"));
+            selector.classList.toggle("selected");
+        }
         $('.Toggle-button').on('click', function () {
             $('.animated-icon1').toggleClass('open');
         });
+
+        $(".owl-carousel-banner ")
+            .css("position", "relative");
+
+        $(".header").css("position", "absolute")
+            .css("top", "0")
+            .css("z-index", "5")
+            .css("padding-top", "2%");
+
+        if (link.includes('Episode')) {
+            $(".header ").css("position", "relative")
+                .css("top", "0")
+                .css("z-index", "0")
+                .css("padding-top", "0");
+            $(".header a").css("color", "black");
+
+
+        }
+
     });
+
 </script>
+
+
+
+
 
 
 

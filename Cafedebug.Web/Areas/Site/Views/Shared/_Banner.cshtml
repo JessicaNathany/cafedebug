@@ -4,35 +4,11 @@
 }
 
 <!-- BANNER -->
-<div class="owl-carousel">
+<div class="owl-carousel owl-carousel-banner">
     <div class="banner">
-        <div class="content">
-            <strong>Cafê Debug <b>#24</b></strong> <!--razor trazer titulo do banco-->
-            <p>Startups e Aceleradoras</p>
-        </div>
-    </div>
-    <div class="banner">
-        <div class="content">
-            <strong>Cafê Debug <b>#24</b></strong>
-            <p>Startups e Aceleradoras</p>
-        </div>
+        <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/banner.jpg" alt="Banner" />
     </div>
 </div>
 <!-- FECHA BANNER -->
 
-@section scripts{
-    <script type="text/javascript">
 
-        var owl = $('.owl-carousel');
-        owl.owlCarousel({
-            items: 1,
-            loop: true,
-            margin: 10,
-            autoplay: true,
-            autoplayTimeout: 7000,
-            autoplayHoverPause: true
-        });
-
-        $('.loading').addClass('hide');
-    </script>
-}

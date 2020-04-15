@@ -1,14 +1,18 @@
 ﻿using Cafedebug.Business.Interfaces;
 using Cafedebug.Business.Models;
 using Cafedebug.Data.Context;
-using log4net;
 
 namespace Cafedebug.Data.Repository
 {
-    public class CategoriaRepository : Repository<Category>, ICategoryRepository
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
         
-        public CategoriaRepository(CafedebugContext context) : base(context)
+        public CategoryRepository(CafedebugContext context) : base(context)
         { }
+
+        public PageResult<Category> GetPaged(PageRequest page)
+        {
+            return new PageResult<Category>();
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace Cafedebug.Business.Interfaces
 {
     public interface IBaseRepository<TEntity> : IDisposable where TEntity : Entity
     {
-        void Save(TEntity entity);
+        TEntity Save(TEntity entity);
 
         void Update(TEntity entity);
 
