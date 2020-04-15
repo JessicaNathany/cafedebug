@@ -5,11 +5,13 @@ body {
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   -webkit-appearance: none;
-  -moz-appearance: none; }
+  -moz-appearance: none;
+  border: 0;
+  clear: both; }
 
 .body-content {
-  margin-left: 4%;
-  margin-right: 4%; }
+  margin: 0;
+  clear: both; }
 
 button,
 a {

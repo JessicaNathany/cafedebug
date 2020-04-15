@@ -1,5 +1,4 @@
 ﻿@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:600");
 /*#region Comon Classes*/
 .title-page {
   text-align: left;
@@ -54,67 +53,53 @@ a {
     .card .card-body p {
       color: #ed7d00; }
 
-.owl-carousel .banner {
+.time-colaboradores {
+  width: 10em;
+  margin: 10px; }
+
+.time-description {
+  padding: 1rem 0;
+  width: 14rem;
+  text-align: center;
+  margin-top: 3em; }
+
+.time-description-detalhes p {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  text-align: center; }
+
+.time-description-detalhes i {
+  color: #e77d03;
+  font-size: 1.75em; }
+
+.time-name-colaborador {
+  color: #E77D03;
+  padding-top: 1em; }
+
+.owl-carousel .owl-item img {
+  width: 6em;
+  display: inline-block; }
+
+.owl-carousel-time {
+  background: white;
   position: relative;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  max-height: 70vh;
-  min-height: 50vh;
-  background: url("https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/banner.jpg") center content-box no-repeat;
-  background-size: cover;
-  margin-top: 9px; }
-  .owl-carousel .banner .banner-mask {
-    max-width: 100%;
-    max-height: 70vh;
-    min-height: 50vh;
-    z-index: 250; }
-  .owl-carousel .banner .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 8%;
-    width: 100%; }
-    .owl-carousel .banner .content strong {
-      color: white;
-      background-color: #ed7d00;
-      font-size: 2rem; }
-    .owl-carousel .banner .content p {
-      color: white;
-      font-size: 4rem;
-      padding-top: 3%; }
-    .owl-carousel .banner .content .buttons {
-      display: flex;
-      align-content: center;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row; }
-      .owl-carousel .banner .content .buttons .oucaagora,
-      .owl-carousel .banner .content .buttons .spotifybt {
-        display: inline-block;
-        font-size: 14px;
-        color: white;
-        border-radius: 20px;
-        font-weight: 400;
-        margin-left: 20px; }
-        .owl-carousel .banner .content .buttons .oucaagora i,
-        .owl-carousel .banner .content .buttons .spotifybt i {
-          color: white;
-          padding-right: 5px;
-          padding-left: 5px; }
-      .owl-carousel .banner .content .buttons .oucaagora {
-        border: 3px solid white;
-        padding: 5px; }
-      .owl-carousel .banner .content .buttons .spotifybt {
-        background-color: #1bba54;
-        text-align: center;
-        border: none;
-        padding: 7px; }
+  margin: 20px 0; }
+  .owl-carousel-time img {
+    width: 6em; }
+
+.owl-carousel .owl-item .banner img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.debuggers-time {
+  padding-top: 0;
+  font-size: 1.25em;
+  margin-bottom: 10em; }
+
+.title-nosso-time {
+  padding-top: 0.5em;
+  font-size: 2.125em; }
 
 .bannerep {
   width: 100%;
@@ -517,46 +502,3 @@ a {
     margin-top: 20px;
     letter-spacing: -1px; }
   /* Fim Episódios */ }
-
-.time-colaboradores {
-  width: 10em;
-  margin: 10px; }
-
-.time-description {
-  padding: 1rem 0;
-  width: 14rem;
-  text-align: center;
-  margin-top: 3em; }
-
-.time-description-detalhes p {
-  font-weight: bold;
-  margin-bottom: 0.3em;
-  text-align: center; }
-
-.time-description-detalhes i {
-  color: #e77d03;
-  font-size: 1.75em; }
-
-.time-name-colaborador {
-  color: #E77D03;
-  padding-top: 1em; }
-
-.owl-carousel .owl-item img {
-  width: 6em;
-  display: inline-block; }
-
-.owl-carousel-time {
-  background: white;
-  position: relative;
-  margin: 20px 0; }
-  .owl-carousel-time img {
-    width: 6em; }
-
-.debuggers-time {
-  padding-top: 0;
-  font-size: 1.25em;
-  margin-bottom: 10em; }
-
-.title-nosso-time {
-  padding-top: 0.5em;
-  font-size: 2.125em; }
