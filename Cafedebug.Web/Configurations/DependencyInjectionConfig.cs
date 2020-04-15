@@ -17,6 +17,9 @@ namespace Cafedebug.Web.Configurations
             service.AddScoped<IEpisodeRepository, EpisodioRepository>();
             service.AddScoped<IEpisodeService, EpisodeService>();
 
+            service.AddScoped<ITeamRepository, TeamRepository>();
+            service.AddScoped<ITeamService, TeamService>();
+
 
 
 

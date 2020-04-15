@@ -3,10 +3,43 @@ $barheight: 3px;
 
 
 
+.scroll {
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,.25);
+    transition: .3s;
+
+    .nav-item {
+        a {
+            color: #2c2a2b !important;
+
+            &::after {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 50px;
+                height: 2px;
+                background: #ed7d00 !important;
+                margin: 10px;
+            }
+        }
+
+        .selected {
+            a {
+                color: #ed7d00 !important;
+            }
+        }
+    }
+}
+
 .header {
-    width: 100%;
+    width: 100vw;
     height: auto;
     border-top: 0.9em solid #ed7d00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: .7s;
 
     nav {
         height: auto;
@@ -45,36 +78,16 @@ $barheight: 3px;
                     font-size: 20px;
                     text-decoration: none;
                     cursor: pointer;
-                }
-            }
 
-            .underline {
-                text-decoration: none;
-                position: relative;
-            }
-
-            .underline:after {
-                position: absolute;
-                content: '';
-                height: 2px;
-                bottom: -4px;
-                margin: 0 auto;
-                left: 0;
-                right: 0;
-                width: 80%;
-                background: white;
-                /* optional animation */
-                -o-transition: .5s;
-                -ms-transition: .5s;
-                -moz-transition: .5s;
-                -webkit-transition: .5s;
-                transition: .5s;
-            }
-
-            .underline:hover {
-                &:after {
-                    width: 80%;
-                    background: #ed7d00;
+                    &::after {
+                        position:absolute;
+                        content: '';
+                        display: block;
+                        width: 50px;
+                        height: 2px;
+                        background: #fff;
+                        margin: 10px;
+                    }
                 }
             }
 

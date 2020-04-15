@@ -1,50 +1,83 @@
-﻿
-footer {
-    background-color: #2c2a2b;
+﻿.footer {
+    .social-networks {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px calc((100% - 1040px) / 2);
+        min-width: 260px;
 
-    .logorodape {
-        padding: 19% 2% 2% 5%;
-        margin: 2%;
-        height: 61%;
-        margin-top: 3%;
-        margin-bottom: 3%;
+        i {
+            font-size: 2.5em;
+            color: #000;
+        }
     }
 
-    .nav-rodape2 {
-        ul {
-            margin-left: 0%;
-            margin-top: 9%;
-            border-top: 1px solid #fff;
-            list-style-type: none;
-            align-items: center;
-            align-content: center;
-            justify-content: right;
-            margin-right: 0%;
-            width: 80%;
 
-            li {
-                margin: 1%;
+    .info-footer {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px calc((100% - 1040px) / 2);
+        margin: 0 auto;
+        background: #2C2A2B;
+
+        .about {
+            display: flex;
+            flex: 1 1 260px;
+            max-width: 300px;
+            flex-direction: column;
+
+            img {
+                display: block;
+                align-self: center;
+                max-width: 100%;
+                width: 120px;
+                height: 55px;
                 text-align: center;
-                color: white;
+            }
 
-                a {
-                    color: white;
-                    font-size: 20px;
-                    text-decoration: none;
+            p {
+                font-weight: 600;
+                color: #fff;
+                line-height: 1.5;
+                font-size: .75em;
+                margin-top: 24px;
+                text-align: center;
+            }
+        }
+
+        .quick-links {
+            display: flex;
+            flex: 1 1 260px;
+            justify-content: center;
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 0.95em;
+                        font-weight:bold;
+                    }
                 }
             }
         }
     }
-}
 
-@media only screen and (max-width: 480px) {
-    footer {
+    .info-copyright {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        .logorodape {
-            padding: 0;
-            margin: 5%;
-            width: 80%;
-            height: auto;
+        p {
+            margin: 0;
+            font-weight: 600;
+            font-size: 0.85em;
         }
     }
 }

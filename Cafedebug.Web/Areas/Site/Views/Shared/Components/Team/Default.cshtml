@@ -1,0 +1,27 @@
+﻿@model List<Cafedebug.Web.Areas.Site.ViewModels.TeamViewModel>
+@{
+    ViewData["Title"] = "_Time";
+}
+<div class="container">
+    <div class="time-description-detalhes">
+        <p class="title-nosso-time">Nosso Time</p>
+        <p class="debuggers-time time-name-colaborador">Debuggers</p>
+    </div>
+    <div class="owl-carousel owl-carousel-time">
+        @foreach (var item in Model)
+        {
+            <div class="time-description">
+                <img src="@(item.UrlImage)" class="image-time" alt="Denis" />
+                <div class="time-description-detalhes">
+                    <p class="time-name-colaborador">@item.Name</p>
+                    <p>@item.Job</p>
+                    <div class="time-description-detalhes">
+                        <a href="@(item.UrlGitHub)" target="_blank"> <i class="fab fa-github"></i></a>
+                        <a href="@(item.UrlInstagram)" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="@(item.UrlLinkedin)" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

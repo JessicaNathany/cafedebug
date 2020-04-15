@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Cafedebug.Web.Models
 {
-    public class ContactModelView
+    public class ContactViewModel
     {
-        public ContactModelView()
+        public ContactViewModel()
         {
 
         }
