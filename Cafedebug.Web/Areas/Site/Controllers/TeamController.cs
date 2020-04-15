@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using AutoMapper;
 using Cafedebug.Business.Interfaces;
 using Cafedebug.Business.Models;
+using Cafedebug.Web.Areas.Site.ViewModels;
 using log4net;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,7 +22,9 @@ namespace Cafedebug.Web.Controllers
         }
         public ActionResult Index()
         {
-            return View();
+            var team = _teamRepository.GetAll();
+
+            return PartialView("_Team",_mapper.Map<List<TeamViewModel>>(team));
         }
     }
 }

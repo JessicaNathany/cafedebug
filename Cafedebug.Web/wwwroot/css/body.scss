@@ -824,3 +824,132 @@ a {
     /* Fim Episódios */
 }
 
+/*Time*/
+.time-colaboradores {
+    width: 10em;
+    margin: 10px;
+}
+
+.time-description {
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 3em;
+}
+
+.time-description-detalhes {
+
+    p {
+        font-weight: bold;
+        margin-bottom: 0.3em;
+        text-align: center;
+    }
+
+    i {
+        color: #e77d03;
+        font-size: 1.75em;
+    }
+}
+
+.time-name-colaborador {
+    color: #E77D03;
+    padding-top: 1em;
+}
+
+
+.owl-carousel {
+    .owl-item {
+        img {
+            width: 8em;
+            display: inline-block;
+            height: 8em;
+        }
+    }
+}
+
+.image-time{
+    border-radius: 50%;
+}
+
+.owl-carousel-time {
+    background: white;
+    position: relative;
+    margin: 20px 0;
+}
+
+.debuggers-time {
+    padding-top: 0;
+    font-size: 1.25em;
+    margin-bottom: 10em;
+}
+
+.title-nosso-time {
+    padding-top: 0.5em;
+    font-size: 2.125em;
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+
+    .time-colaboradores {
+        width: 10em;
+        margin: 10px;
+    }
+
+    .time-description {
+        padding: 1rem 0;
+        width: 14rem;
+        text-align: center;
+        margin-top: 3em;
+    }
+
+    .time-description-detalhes {
+
+        p {
+            font-weight: bold;
+            margin-bottom: 0.3em;
+            text-align: center;
+        }
+
+        i {
+            color: #e77d03;
+            font-size: 1.75em;
+        }
+    }
+
+    .time-name-colaborador {
+        color: #E77D03;
+        padding-top: 1em;
+    }
+
+
+    .owl-carousel {
+        .owl-item {
+            img {
+                width: 6em;
+                display: inline-block;
+            }
+        }
+    }
+
+    .owl-carousel-time {
+        background: white;
+        position: relative;
+        margin: 20px 0;
+
+        img {
+            width: 6em;
+        }
+    }
+
+    .debuggers-time {
+        padding-top: 0;
+        font-size: 1.25em;
+        margin-bottom: 10em;
+    }
+
+    .title-nosso-time {
+        padding-top: 0.5em;
+        font-size: 2.125em;
+    }
+
+ }
+
+/*Fim Time*/

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Cafedebug.Business.Models;
 using Cafedebug.Web.Areas.Administrador.ViewModels;
+using Cafedebug.Web.Areas.Site.ViewModels;
 
 namespace Cafedebug.Web.Configurations
 {
@@ -10,6 +11,7 @@ namespace Cafedebug.Web.Configurations
         {
             CreateMap<Category, CategoryViewModel>().ReverseMap();
             CreateMap<Episode, EpisodeViewModel>().ReverseMap();
+            CreateMap<Team, TeamViewModel>().ReverseMap();
         }
     }
 }

@@ -31,6 +31,12 @@ namespace Cafedebug.Data.Repository
             throw new NotImplementedException();
         }
 
+        public IEnumerable<TEntity> GetAll()
+        {
+           return DbSet.ToList(); 
+           
+        }
+
         public TEntity GetById(int id)
         {
             throw new NotImplementedException();
