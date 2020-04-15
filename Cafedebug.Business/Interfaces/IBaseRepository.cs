@@ -14,6 +14,7 @@ namespace Cafedebug.Business.Interfaces
         void Delete(int id);
 
         IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate);
+        IEnumerable<TEntity> GetAll();
 
         TEntity GetById(int id);
 

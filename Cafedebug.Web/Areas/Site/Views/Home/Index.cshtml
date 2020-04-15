@@ -1,4 +1,6 @@
-﻿@{
+﻿@addTagHelper "*, Cafedebug.Web"
+
+@{
     ViewData["Title"] = "Home | Café debug";
 }
 
@@ -78,8 +80,8 @@
         </div>
     </div>
 </section>
-<partial name="../Shared/_Time.cshtml" />
 
+<vc:Team></vc:Team>
 
 @section scripts{
     <script type="text/javascript">
@@ -97,7 +99,7 @@
 
 
         $('.owl-carousel-time').owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             autoPlay: false,
