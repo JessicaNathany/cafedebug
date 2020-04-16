@@ -1,5 +1,4 @@
 ﻿@addTagHelper "*, Cafedebug.Web"
-
 @{
     ViewData["Title"] = "Home | Café debug";
 }
@@ -11,6 +10,7 @@
 <section class="novosepisodios">
     <div class="container">
         <div class="row">
+            <!--Carrega a lista de episódios-->
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <a href="#">
                     <div class="card">
@@ -71,7 +71,8 @@
 
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="ver-mais">
+                <div class="ver-mais  ">
+                    @*<li class="fas fa-plus-circle">@Html.ActionLink("ver mais episódios", "MaisEpisodios", "Episodio", new { @class = "vermaiseps" })</li>*@
                     <a href="#" class="vermaiseps"><i class="fas fa-plus-circle"></i> ver mais episódios</a>
                 </div>
             </div>
@@ -79,8 +80,8 @@
     </div>
 </section>
 <vc:Team></vc:Team>
-<partial name="../Shared/_FormContact.cshtml" />
 
+<partial name="_FormContact" />
 
 @section scripts{
     <script type="text/javascript">
