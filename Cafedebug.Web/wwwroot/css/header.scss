@@ -3,10 +3,67 @@ $barheight: 3px;
 
 
 
+.scroll {
+    background-color: #2c2a2b;
+    box-shadow: 0 4px 15px rgba(0,0,0,.25);
+    transition: .3s;
+
+    .nav-item {
+        a {
+            color: white !important;
+            &::after {
+                position: absolute;
+                left: 15%;
+                content: '';
+                width: 70%;
+                height: 2px;
+                background: #ed7d00;
+                bottom: -5px;
+                transform: scale(0, 1);
+                transition: transform .3s;
+                transform-origin: right top;
+            }
+
+            &:hover::after {
+                transform-origin: left top;
+                transform: scale(1, 1);
+            }
+
+            &::before {
+                position: absolute;
+                left: 0;
+                content: '';
+                width: 70%;
+                height: 2px;
+                background: white;
+                bottom: -5px;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            &:hover::before {
+                display: none;
+            }
+        }
+
+        .selected {
+            a {
+                color: #ed7d00 !important;
+            }
+        }
+    }
+}
+
 .header {
-    width: 100%;
+    width: 100vw;
     height: auto;
     border-top: 0.9em solid #ed7d00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: .7s;
+
 
     nav {
         height: auto;
@@ -32,49 +89,57 @@ $barheight: 3px;
             width: 100%;
             list-style-type: none;
             border: none;
+            font-weight: 600;
+            display: flex;
             justify-content: flex-end;
             align-items: center;
-            font-weight: 600;
 
             .nav-item {
                 margin-left: 0.6em;
                 text-align: center;
+                display: inline-flex;
 
                 a {
                     color: white;
                     font-size: 20px;
                     text-decoration: none;
+                    display: inline-block;
                     cursor: pointer;
-                }
-            }
+                    position: relative;
 
-            .underline {
-                text-decoration: none;
-                position: relative;
-            }
+                    &::after {
+                        position: absolute;
+                        left: 15%;
+                        content: '';
+                        width: 70%;
+                        height: 2px;
+                        background: #ed7d00;
+                        bottom: -5px;
+                        transform: scale(0, 1);
+                        transition: transform .3s;
+                        transform-origin: right top;
+                    }
 
-            .underline:after {
-                position: absolute;
-                content: '';
-                height: 2px;
-                bottom: -4px;
-                margin: 0 auto;
-                left: 0;
-                right: 0;
-                width: 80%;
-                background: white;
-                /* optional animation */
-                -o-transition: .5s;
-                -ms-transition: .5s;
-                -moz-transition: .5s;
-                -webkit-transition: .5s;
-                transition: .5s;
-            }
+                    &:hover::after {
+                        transform-origin: left top;
+                        transform: scale(1, 1);
+                    }
 
-            .underline:hover {
-                &:after {
-                    width: 80%;
-                    background: #ed7d00;
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        content: '';
+                        width: 70%;
+                        height: 2px;
+                        background: white;
+                        bottom: -5px;
+                        left: 50%;
+                        transform: translate(-50%);
+                    }
+
+                    &:hover::before {
+                        display: none;
+                    }
                 }
             }
 
@@ -161,5 +226,28 @@ $barheight: 3px;
 
 
 @media only screen and (max-width: 480px) {
+    nav {
+        .navbar-nav {
+            .nav-item {
+                a {
+                    &::after {
+                        display:none;
+                    }
 
+                    &:hover::after {
+                        transform-origin: left top;
+                        transform: scale(1, 1);
+                    }
+
+                    &::before {
+                        display: none;
+                    }
+
+                    &:hover::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -130,8 +130,8 @@ a {
 
             img {
                 display: block;
-                width: 100%;
-                height: auto;
+                width: 100vw;
+                height: 100vh;
             }
         }
     }
@@ -823,4 +823,188 @@ a {
     }
     /* Fim Episódios */
 }
+
+/*Time*/
+.time-colaboradores {
+    width: 10em;
+    margin: 10px;
+}
+
+.time-description {
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 3em;
+}
+
+.time-description-detalhes {
+
+    p {
+        font-weight: bold;
+        margin-bottom: 0.3em;
+        text-align: center;
+    }
+
+    i {
+        color: #e77d03;
+        font-size: 1.75em;
+    }
+}
+
+.time-name-colaborador {
+    color: #E77D03;
+    padding-top: 1em;
+}
+
+
+.owl-carousel {
+    .owl-item {
+        img {
+            width: 8em;
+            display: inline-block;
+            height: 8em;
+        }
+    }
+}
+
+.image-time{
+    border-radius: 50%;
+}
+
+.owl-carousel-time {
+    background: white;
+    position: relative;
+    margin: 20px 0;
+}
+
+.debuggers-time {
+    padding-top: 0;
+    font-size: 1.25em;
+    margin-bottom: 10em;
+}
+
+.title-nosso-time {
+    padding-top: 0.5em;
+    font-size: 2.125em;
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+
+    .time-colaboradores {
+        width: 10em;
+        margin: 10px;
+    }
+
+    .time-description {
+        padding: 1rem 0;
+        width: 14rem;
+        text-align: center;
+        margin-top: 3em;
+    }
+
+    .time-description-detalhes {
+
+        p {
+            font-weight: bold;
+            margin-bottom: 0.3em;
+            text-align: center;
+        }
+
+        i {
+            color: #e77d03;
+            font-size: 1.75em;
+        }
+    }
+
+    .time-name-colaborador {
+        color: #E77D03;
+        padding-top: 1em;
+    }
+
+
+    .owl-carousel {
+        .owl-item {
+            img {
+                width: 6em;
+                display: inline-block;
+            }
+        }
+    }
+
+    .owl-carousel-time {
+        background: white;
+        position: relative;
+        margin: 20px 0;
+
+        img {
+            width: 6em;
+        }
+    }
+
+    .debuggers-time {
+        padding-top: 0;
+        font-size: 1.25em;
+        margin-bottom: 10em;
+    }
+
+    .title-nosso-time {
+        padding-top: 0.5em;
+        font-size: 2.125em;
+    }
+
+ }
+
+/*Fim Time*/
+
+.container-form-contact {
+    background: #F7F7F7;
+    padding: 30px calc((100% - 1040px)/2);
+
+    .container-input-form {
+        display: flex;
+
+        input:nth-child(1) {
+            margin-right: 1em;
+        }
+
+        .input-form {
+            margin-top: 1em;
+            height: 8vh;
+            padding-left: 1em;
+            border-radius: 2px;
+            border: 1px;
+            flex: 1;
+        }
+    }
+
+    .textarea-form {
+        width: 100%;
+        margin-top: 1em;
+        height: 25vh;
+        padding-left: 1em;
+        padding-top: 1em;
+        border-radius: 2px;
+        border: 1px;
+    }
+
+    .container-form-button {
+        display: flex;
+        justify-content: flex-end;
+
+        .input-button {
+            margin: 2em 0;
+            background: #fff;
+            width: 15%;
+            height: 5vh;
+            border-radius: 19px;
+            border: 1px solid #E77D03;
+            font-weight: bold;
+
+            &:hover {
+                background: #ed7d00;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+
 

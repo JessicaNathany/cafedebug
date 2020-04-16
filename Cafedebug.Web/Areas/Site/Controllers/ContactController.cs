@@ -13,7 +13,7 @@ namespace Cafedebug.Web.Controllers
 
         public ActionResult Index()
         {
-            var model = new ContactModelView();
+            var model = new ContactViewModel();
             return View(model);
         }
 

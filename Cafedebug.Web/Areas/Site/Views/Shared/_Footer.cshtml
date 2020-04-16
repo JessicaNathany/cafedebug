@@ -1,25 +1,59 @@
-﻿
-<footer class="border-top footer text-muted">
-    <div>
-        <div class="row">
-            <div class="col-sm-3 col-md-3 col-lg-2"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/logo-cafedebug-rodape.png" class="logorodape"></div>
-            <div class="col-sm-9 col-md-9 col-lg-9">
-                <div class="nav-rodape2">
-                    <ul class="navbar">
-                        <li class="nav-item">@Html.ActionLink("Notícias", "Index", "News")</li>
-                        <li class="nav-item">@Html.ActionLink("Anuncie", "Index", "Sponsor")</li>
-                        <li class="nav-item">@Html.ActionLink("Blog", "Index", "Blog")</li>
-                        <li class="nav-item"><a href="https://github.com/cafedebug" target="_blank">GitHub</a></li>
-                        <li class="nav-item">debugcafe@gmail.com</li>
-                        <li>
-                            <div class="soical">
-                                <a class="soical-media" href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw" target="_blank"><i class="fab fa-youtube"></i></a>
-                                <a class="soical-media" href="https://twitter.com/cafedebug" target="_blank"><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+﻿<section class="footer">
+    <div class="social-networks">
+        <a href="#" target="_blank"><i class="fab fa-soundcloud"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+    </div>
+    <div class="info-footer">
+        <div class="about">
+            <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/logo-cafedebug-rodape.png" alt="logo-cafe" />
+            <p>
+                Somos um podcast de tecnologia e entretenimento que tem como intuito compartilhar conhecimento,
+                trazendo novidades e informações sobre tecnologias.
+            </p>
+        </div>
+        <div class="quick-links">
+            <ul>
+                <li><a href="#">Anuncie</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div>
+            <h1>Newsletter</h1>
+            <span>Fique por dentro de todas as novidades</span>
+            <form>
+                <input type="email" name="email" placeholder="Seu melhor e-mail" />
+                <button>Cadastrar e-mail</button>
+            </form>
+        </div>
+    </div>
+    <div class="info-copyright">
+        <p> © Cafédebug - todos os direitos reservados</p>
+    </div>
+</section>
+
+
+@*<div>
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-2"><img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/logo-cafedebug-rodape.png" class="logorodape"></div>
+        <div class="col-sm-9 col-md-9 col-lg-9">
+            <div class="nav-rodape2">
+                <ul class="navbar">
+                    <li class="nav-item">@Html.ActionLink("Notícias", "Index", "News")</li>
+                    <li class="nav-item">@Html.ActionLink("Anuncie", "Index", "Sponsor")</li>
+                    <li class="nav-item">@Html.ActionLink("Blog", "Index", "Blog")</li>
+                    <li class="nav-item"><a href="https://github.com/cafedebug" target="_blank">GitHub</a></li>
+                    <li class="nav-item">debugcafe@gmail.com</li>
+                    <li>
+                        <div class="soical">
+                            <a class="soical-media" href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a class="soical-media" href="https://twitter.com/cafedebug" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-</footer>
+</div>*@
