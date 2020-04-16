@@ -7,6 +7,18 @@
   width: 100%; }
   .title-page p {
     font-size: 25px;
+    font-size: 23px;
+    border: 2px solid #ed7d00;
+    border-radius: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #ed7d00;
+    font-weight: 500;
+    margin-top: 5%;
+    margin-right: 8%;
+    width: 10.5em;
+    height: 2.8em;
     letter-spacing: -1px;
     border-bottom: 2px solid #ed7d00;
     display: inline-flex;
@@ -42,7 +54,7 @@ a {
 .card {
   -webkit-box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
   -moz-box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
-  box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
+  box-shadow: 3px 3px 9px 0px rgba(138, 131, 138, 0.75);
   text-decoration: none;
   margin: 5% 7% 10% 5%; }
   .card img {
@@ -89,8 +101,8 @@ a {
 
 .owl-carousel .owl-item .banner img {
   display: block;
-  width: 100%;
-  height: auto; }
+  width: 100vw;
+  height: 100vh; }
 
 .debuggers-time {
   padding-top: 0;
@@ -168,18 +180,22 @@ a {
     justify-content: center;
     margin-bottom: 20px; }
     .novosepisodios .ver-mais a {
-      font-size: 23px;
-      border: 4px solid #ed7d00;
+      font-size: 25px;
+      text-align: center;
+      color: #000000;
+      font-family: Segoe UI;
+      border: 3px solid #ed7d00;
       border-radius: 30px;
       padding-left: 10px;
       padding-right: 10px;
+      padding-top: 11px;
       text-decoration: none;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
       color: #ed7d00;
       font-weight: 500;
       margin-top: 5%;
-      margin-right: 8%; }
-      .novosepisodios .ver-mais a i {
-        color: #ed7d00; }
+      width: 10.5em;
+      height: 2.8em; }
 
 .loading {
   background: url("https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Ripple-1s-200px.gif") no-repeat center center;
@@ -503,6 +519,7 @@ a {
     letter-spacing: -1px; }
   /* Fim Episódios */ }
 
+/*Time*/
 .time-colaboradores {
   width: 10em;
   margin: 10px; }
@@ -526,16 +543,17 @@ a {
   padding-top: 1em; }
 
 .owl-carousel .owl-item img {
-  width: 7em;
+  width: 8em;
   display: inline-block;
+  height: 8em; }
+
+.image-time {
   border-radius: 50%; }
 
 .owl-carousel-time {
   background: white;
   position: relative;
   margin: 20px 0; }
-  .owl-carousel-time img {
-    width: 6em; }
 
 .debuggers-time {
   padding-top: 0;
@@ -581,3 +599,41 @@ a {
   .title-nosso-time {
     padding-top: 0.5em;
     font-size: 2.125em; } }
+
+/*Fim Time*/
+.container-form-contact {
+  background: #F7F7F7;
+  padding: 30px calc((100% - 1040px)/2); }
+  .container-form-contact .container-input-form {
+    display: flex; }
+    .container-form-contact .container-input-form input:nth-child(1) {
+      margin-right: 1em; }
+    .container-form-contact .container-input-form .input-form {
+      margin-top: 1em;
+      height: 8vh;
+      padding-left: 1em;
+      border-radius: 2px;
+      border: 1px;
+      flex: 1; }
+  .container-form-contact .textarea-form {
+    width: 100%;
+    margin-top: 1em;
+    height: 25vh;
+    padding-left: 1em;
+    padding-top: 1em;
+    border-radius: 2px;
+    border: 1px; }
+  .container-form-contact .container-form-button {
+    display: flex;
+    justify-content: flex-end; }
+    .container-form-contact .container-form-button .input-button {
+      margin: 2em 0;
+      background: #fff;
+      width: 15%;
+      height: 5vh;
+      border-radius: 19px;
+      border: 1px solid #E77D03;
+      font-weight: bold; }
+      .container-form-contact .container-form-button .input-button:hover {
+        background: #ed7d00;
+        color: #FFF; }
