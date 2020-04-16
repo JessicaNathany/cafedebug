@@ -6,7 +6,7 @@
                     <!-- Logo -->
                     <div class="nav-logo">
                         <a class="logo-herf" href="@Url.Action("Index", "Home")">
-                            <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/logo-cafedebug.png" />
+                            <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/logo-cafedebug-rodape.png" />
                         </a>
                     </div>
                 </div>
@@ -44,24 +44,34 @@
 
 
         $(window).scroll(function () {
-            console.log($(window).scrollTop())
-            if ($(window).scrollTop() > 180) {
+            console.log($(window).scrollTop());
+
+            if (90 < $(window).scrollTop() < 120) {
+                if (link.includes('Episode')) {
+                    $(".header").css("position", "relative").css("box-shadow", "none");
+                    $(".header").show("slow");
+                }
+                else {
+                    $('.header').removeClass('scroll');
+                    $(".header").css("position", "fixed").css("box-shadow", "none");
+                }
+                
+            }
+            if ($(window).scrollTop() > 120) {
                 $('.header').addClass('scroll');
+                $(".header").css("position", "fixed").css("box-shadow", "0 4px 15px rgba(0,0,0,.25)").css("transition", ".2s;");
             }
-            if ($(window).scrollTop() < 181) {
-                $('.header').removeClass('scroll');
-            }
+
+
         });
 
 
         if (link.includes('Episode')) {
             SetActiveClass(document.querySelector("#episods"));
+            $('.header').addClass('scroll');
+            $('.header').css("position", "relative").css("transition", ".2s;");
+
         }
-
-
-
-
-
 
         function SetActiveClass(selector) {
             let navItems = document.querySelectorAll(".nav-item");
@@ -74,21 +84,6 @@
 
         $(".owl-carousel-banner ")
             .css("position", "relative");
-
-        //$(".header").css("position", "absolute")
-        //    .css("top", "0")
-        //    .css("z-index", "5")
-        //    .css("padding-top", "2%");
-
-        if (link.includes('Episode')) {
-            $(".header ").css("position", "relative")
-                .css("top", "0")
-                .css("z-index", "0")
-                .css("padding-top", "0");
-            $(".header a").css("color", "black");
-
-
-        }
 
     });
 

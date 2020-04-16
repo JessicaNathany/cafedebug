@@ -4,22 +4,45 @@ $barheight: 3px;
 
 
 .scroll {
-    background-color: #fff;
+    background-color: #2c2a2b;
     box-shadow: 0 4px 15px rgba(0,0,0,.25);
     transition: .3s;
 
     .nav-item {
         a {
-            color: #2c2a2b !important;
-
+            color: white !important;
             &::after {
                 position: absolute;
+                left: 15%;
                 content: '';
-                display: block;
-                width: 50px;
+                width: 70%;
                 height: 2px;
-                background: #ed7d00 !important;
-                margin: 10px;
+                background: #ed7d00;
+                bottom: -5px;
+                transform: scale(0, 1);
+                transition: transform .3s;
+                transform-origin: right top;
+            }
+
+            &:hover::after {
+                transform-origin: left top;
+                transform: scale(1, 1);
+            }
+
+            &::before {
+                position: absolute;
+                left: 0;
+                content: '';
+                width: 70%;
+                height: 2px;
+                background: white;
+                bottom: -5px;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            &:hover::before {
+                display: none;
             }
         }
 
@@ -40,6 +63,7 @@ $barheight: 3px;
     left: 0;
     z-index: 9999;
     transition: .7s;
+
 
     nav {
         height: auto;
@@ -65,28 +89,56 @@ $barheight: 3px;
             width: 100%;
             list-style-type: none;
             border: none;
+            font-weight: 600;
+            display: flex;
             justify-content: flex-end;
             align-items: center;
-            font-weight: 600;
 
             .nav-item {
                 margin-left: 0.6em;
                 text-align: center;
+                display: inline-flex;
 
                 a {
                     color: white;
                     font-size: 20px;
                     text-decoration: none;
+                    display: inline-block;
                     cursor: pointer;
+                    position: relative;
 
                     &::after {
-                        position:absolute;
+                        position: absolute;
+                        left: 15%;
                         content: '';
-                        display: block;
-                        width: 50px;
+                        width: 70%;
                         height: 2px;
-                        background: #fff;
-                        margin: 10px;
+                        background: #ed7d00;
+                        bottom: -5px;
+                        transform: scale(0, 1);
+                        transition: transform .3s;
+                        transform-origin: right top;
+                    }
+
+                    &:hover::after {
+                        transform-origin: left top;
+                        transform: scale(1, 1);
+                    }
+
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        content: '';
+                        width: 70%;
+                        height: 2px;
+                        background: white;
+                        bottom: -5px;
+                        left: 50%;
+                        transform: translate(-50%);
+                    }
+
+                    &:hover::before {
+                        display: none;
                     }
                 }
             }
@@ -174,5 +226,28 @@ $barheight: 3px;
 
 
 @media only screen and (max-width: 480px) {
+    nav {
+        .navbar-nav {
+            .nav-item {
+                a {
+                    &::after {
+                        display:none;
+                    }
 
+                    &:hover::after {
+                        transform-origin: left top;
+                        transform: scale(1, 1);
+                    }
+
+                    &::before {
+                        display: none;
+                    }
+
+                    &:hover::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
