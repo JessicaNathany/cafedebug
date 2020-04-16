@@ -240,15 +240,20 @@ a {
 
         a {
             font-size: 23px;
-            border: 4px solid $theme_color;
-            border-radius: 30px;
+            color:#000000;
+            text-align: center;
+            padding-top: 14px;
+            border: 3px solid #ed7d00;
+            border-radius: 47px;
             padding-left: 10px;
             padding-right: 10px;
             text-decoration: none;
-            color: $theme_color;
-            font-weight: 500;
+            color: #ed7d00;
+            font-weight: 700;
             margin-top: 5%;
             margin-right: 8%;
+            height: 3.1em;
+            width: 10.1em;
 
             i {
                 color: $theme_color;
