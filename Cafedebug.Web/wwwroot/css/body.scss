@@ -122,9 +122,7 @@ a {
 
     p {
         color: white;
-        padding-top: 7px;
-        padding-left: 7px;
-        padding-right: 7px;
+        padding: 10px;
         text-align: justify;
         font-size: 14px;
     }
@@ -293,7 +291,8 @@ a {
     .episodios-card {
 
         h2 {
-            height: 67px;
+            margin-bottom: 1px;
+            height: 44px;
             font-weight: 700;
             font-size: 30px;
             text-align: center;
@@ -303,10 +302,9 @@ a {
         }
 
         h6 {
-            top: 968px;
+            margin-top: 2px;
+            font-size: 20px;
             font-weight: 700;
-            left: 871px;
-            height: 67px;
             text-align: center;
             font: Bold 50pxSegoe UI;
             letter-spacing: 0px;
