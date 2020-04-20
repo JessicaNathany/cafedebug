@@ -61,7 +61,7 @@
                         text-decoration: none;
                         color: #fff;
                         font-size: 0.95em;
-                        font-weight:bold;
+                        font-weight: bold;
                     }
                 }
             }
@@ -78,6 +78,52 @@
             margin: 0;
             font-weight: 600;
             font-size: 0.85em;
+        }
+    }
+
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        color: #FFFFFFF7;
+        font-weight: 700;
+
+        h1 {
+            font-size: 1em;
+            font-weight: bold;  //rever redundância
+        }
+
+        span {
+            font-size: 0.75em;
+        }
+
+        input {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            font-size: 0.80em;
+            padding: 13px 13px 8.5px;
+            display: block;
+            flex: 1 1 260px;
+            background: #FFF;
+            border: 0;
+            opacity: 1;
+            margin-top: 1em;
+            width: 20.5vw;
+            height: 5.2vh;
+        }
+
+        button {
+            font-family: 'Open Sans', sans-serif;
+            background: #EB9736;
+            border: 0;
+            border-radius: 30px;
+            opacity: 1;
+            text-align: center;
+            color: #FFF;
+            font-size: 0.80em;
+            font-weight: 600;   //rever redundância
+            width: 20.5vw;
+            padding: 5px;
+            margin-top: 1em;
         }
     }
 }
