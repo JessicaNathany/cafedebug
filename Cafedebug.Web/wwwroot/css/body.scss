@@ -52,7 +52,6 @@ a {
 
 /* Home*/
 .card {
-
     -webkit-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
     -moz-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
     box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
@@ -74,7 +73,6 @@ a {
 }
 
 .flip-card {
-
     -webkit-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
     -moz-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
     box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
@@ -110,12 +108,9 @@ a {
         width: 100%;
         height: auto;
     }
-
-    
 }
 
 .flip-card:hover .flip-card-inner {
-
     transform: rotateY(180deg);
 }
 
@@ -945,7 +940,7 @@ a {
     }
 }
 
-.image-time{
+.image-time {
     border-radius: 50%;
 }
 
@@ -965,6 +960,7 @@ a {
     padding-top: 0.5em;
     font-size: 2.125em;
 }
+
 @media only screen and (min-width: 769px) and (max-width: 991px) {
 
     .time-colaboradores {
@@ -1028,8 +1024,7 @@ a {
         padding-top: 0.5em;
         font-size: 2.125em;
     }
-
- }
+}
 
 /*Fim Time*/
 
@@ -1085,5 +1080,69 @@ a {
     }
 }
 
+/*LISTAGEM DE EPISODIOS*/
+.container-episode {
+    display: grid;
+    padding: 30px calc((100% - 1140px) / 2);
+    margin: 0 auto;
 
+    .last-episode {
+        display: flex;
+        background: #ed7d00;
+        margin-bottom: 40px;
 
+        .number-episode {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    .list-episodies {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+        grid-gap: 30px;
+
+        .ep-item {
+            display: flex;
+            background: green;
+
+            .number-episode {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                padding: 8px;
+                background: #ed7d00;
+
+                h1{
+                   color:#fff;
+                   font-size: 1.45em;
+                }
+
+                img{
+                    height:35px;
+                }
+            }
+
+            .thumbnail-episode {
+                height: auto;
+
+                img {
+                    display: block;
+                    height: 160px;
+                    width: 180px;
+                }
+            }
+
+            .info-episode {
+                background: #f7f7f7;
+
+                h1 {
+                    font-size: 1.25em;
+                }
+            }
+        }
+    }
+}
