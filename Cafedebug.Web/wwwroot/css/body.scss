@@ -51,17 +51,16 @@ a {
 /*#endregion*/
 
 /* Home*/
-.card {
+.flip-card {
+
     -webkit-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
     -moz-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
     box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
     text-decoration: none;
     margin: 5% 7% 10% 5%;
-
-    img {
-        width: 100%;
-        height: auto;
-    }
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
 
     .card-body {
         background-color: rgba(244, 244, 244, 0.75);
@@ -72,6 +71,64 @@ a {
     }
 }
 
+.flip-card-inner {
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
+    box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.flip-card:hover .flip-card-inner {
+
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: rgba(244,244,244,.75);
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #ed7d00;
+    transform: rotateY(180deg);
+
+    .card-body {
+        background-color: rgba(244, 244, 244, 0.75);
+
+        p {
+            color: $theme_color;
+        }
+    }
+
+    p {
+        color: white;
+        padding-top: 7px;
+        padding-left: 7px;
+        padding-right: 7px;
+        text-align: justify;
+        font-size: 14px;
+    }
+}
 
 .time-colaboradores {
     width: 10em;
@@ -233,6 +290,31 @@ a {
         }
     }
 
+    .episodios-card {
+
+        h2 {
+            height: 67px;
+            font-weight: 700;
+            font-size: 30px;
+            text-align: center;
+            letter-spacing: 0px;
+            color: #151515;
+            opacity: 1;
+        }
+
+        h6 {
+            top: 968px;
+            font-weight: 700;
+            left: 871px;
+            height: 67px;
+            text-align: center;
+            font: Bold 50pxSegoe UI;
+            letter-spacing: 0px;
+            color: #E77D03;
+            opacity: 1;
+        }
+    }
+
     .ver-mais {
         display: flex;
         justify-content: center;
@@ -240,7 +322,7 @@ a {
 
         a {
             font-size: 23px;
-            color:#000000;
+            color: #000000;
             text-align: center;
             padding-top: 14px;
             border: 3px solid #ed7d00;
@@ -248,16 +330,12 @@ a {
             padding-left: 10px;
             padding-right: 10px;
             text-decoration: none;
-            color: #ed7d00;
             font-weight: 700;
             margin-top: 5%;
             margin-right: 8%;
+            margin-left: 6%;
             height: 3.1em;
             width: 10.1em;
-
-            i {
-                color: $theme_color;
-            }
         }
     }
 }
