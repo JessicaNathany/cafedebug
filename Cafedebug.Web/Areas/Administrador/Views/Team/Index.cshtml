@@ -1,7 +1,53 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-}
+﻿@model List<Cafedebug.Web.Areas.Site.ViewModels.TeamViewModel>
 
-<h1>Index</h1>
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Team</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
 
+                                <th>Nome</th>
+                                <th>Função</th>
+                                <th>Redes Sociais</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+
+                                <td>@item.Name</td>
+                                <td>
+                                    @item.Job
+                                </td>
+                                <td>
+                                    @item.UrlGitHub
+                                    @item.UrlInstagram
+                                    @item.UrlLinkedin
+                                </td>
+                                <td>
+                                    create
+                                    edit
+                                    delete
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>

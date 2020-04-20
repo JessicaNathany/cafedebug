@@ -16,6 +16,7 @@ namespace Cafedebug.Data.Context
 
         public DbSet<Banner> Banners { get; set; }
         public DbSet<Episode> Episodes { get; set; }
+        public DbSet<Team> Team { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

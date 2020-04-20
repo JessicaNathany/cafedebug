@@ -28,7 +28,7 @@ namespace Cafedebug.Web.Controllers
         {
             var team = _teamRepository.GetAll();
 
-            return PartialView("_Team",_mapper.Map<List<TeamViewModel>>(team));
+            return View("Index",_mapper.Map<List<TeamViewModel>>(team));
         }
         public ActionResult Create()
         {

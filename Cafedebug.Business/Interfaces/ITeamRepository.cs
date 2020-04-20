@@ -7,5 +7,6 @@ namespace Cafedebug.Business.Interfaces
 {
     public interface ITeamRepository : IBaseRepository<Team>
     {
+         PageResult<Team> GetPaged(PageRequest page);
     }
 }
