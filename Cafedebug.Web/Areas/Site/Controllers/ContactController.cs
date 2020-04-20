@@ -1,8 +1,10 @@
-﻿using Cafedebug.Web.Models;
+﻿using AutoMapper;
+using Cafedebug.Business.Interfaces;
+using Cafedebug.Business.Models;
+using Cafedebug.Web.Areas.Site.ViewModels;
 using log4net;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections.Generic;
+
 
 namespace Cafedebug.Web.Controllers
 {
@@ -10,19 +12,23 @@ namespace Cafedebug.Web.Controllers
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(ContactController));
 
+        private readonly IContactService _contactService;
+        private IMapper _mapper;
 
-        public ActionResult Index()
+        public ContactController(IContactService contactService, IMapper mapper)
         {
-            var model = new ContactViewModel();
-            return View(model);
+            _contactService = contactService;
+            _mapper = mapper;
         }
 
         [HttpPost]
-        public ActionResult ContactUs()
+        public ActionResult ContactUs(ContactViewModel model)
         {
-            var obj = "";
-            
-            return Json(obj);
+            if (!ModelState.IsValid) return PartialView("_Contact");
+
+            _contactService.Save(_mapper.Map<Contact>(model));
+
+            return RedirectToAction("Index","Home");
         }
     }
 }

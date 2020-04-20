@@ -51,28 +51,6 @@ a {
 /*#endregion*/
 
 /* Home*/
-.card {
-
-    -webkit-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
-    -moz-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
-    box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
-    text-decoration: none;
-    margin: 5% 7% 10% 5%;
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    .card-body {
-        background-color: rgba(244, 244, 244, 0.75);
-
-        p {
-            color: $theme_color;
-        }
-    }
-}
-
 .flip-card {
 
     -webkit-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
@@ -110,8 +88,6 @@ a {
         width: 100%;
         height: auto;
     }
-
-    
 }
 
 .flip-card:hover .flip-card-inner {
@@ -128,14 +104,30 @@ a {
 }
 
 .flip-card-front {
-    background-color: #bbb;
+    background-color: rgba(244,244,244,.75);
     color: black;
 }
 
 .flip-card-back {
     background-color: #ed7d00;
-    color: white;
     transform: rotateY(180deg);
+
+    .card-body {
+        background-color: rgba(244, 244, 244, 0.75);
+
+        p {
+            color: $theme_color;
+        }
+    }
+
+    p {
+        color: white;
+        padding-top: 7px;
+        padding-left: 7px;
+        padding-right: 7px;
+        text-align: justify;
+        font-size: 14px;
+    }
 }
 
 .time-colaboradores {
@@ -296,19 +288,30 @@ a {
                 }
             }
         }
+    }
 
-        .episodios-card {
-            h3 {
-                top: 968px;
-                left: 871px;
-                width: 222px;
-                height: 67px;
-                text-align: left;
-                font: Bold 50px/67px Segoe UI;
-                letter-spacing: 0px;
-                color: #151515;
-                opacity: 1;
-            }
+    .episodios-card {
+
+        h2 {
+            height: 67px;
+            font-weight: 700;
+            font-size: 30px;
+            text-align: center;
+            letter-spacing: 0px;
+            color: #151515;
+            opacity: 1;
+        }
+
+        h6 {
+            top: 968px;
+            font-weight: 700;
+            left: 871px;
+            height: 67px;
+            text-align: center;
+            font: Bold 50pxSegoe UI;
+            letter-spacing: 0px;
+            color: #E77D03;
+            opacity: 1;
         }
     }
 
@@ -330,6 +333,7 @@ a {
             font-weight: 700;
             margin-top: 5%;
             margin-right: 8%;
+            margin-left: 6%;
             height: 3.1em;
             width: 10.1em;
         }
