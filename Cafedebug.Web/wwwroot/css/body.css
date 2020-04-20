@@ -7,18 +7,6 @@
   width: 100%; }
   .title-page p {
     font-size: 25px;
-    font-size: 23px;
-    border: 2px solid #ed7d00;
-    border-radius: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-decoration: none;
-    color: #ed7d00;
-    font-weight: 500;
-    margin-top: 5%;
-    margin-right: 8%;
-    width: 10.5em;
-    height: 2.8em;
     letter-spacing: -1px;
     border-bottom: 2px solid #ed7d00;
     display: inline-flex;
@@ -54,7 +42,7 @@ a {
 .card {
   -webkit-box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
   -moz-box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
-  box-shadow: 3px 3px 9px 0px rgba(138, 131, 138, 0.75);
+  box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
   text-decoration: none;
   margin: 5% 7% 10% 5%; }
   .card img {
@@ -180,22 +168,23 @@ a {
     justify-content: center;
     margin-bottom: 20px; }
     .novosepisodios .ver-mais a {
-      font-size: 25px;
-      text-align: center;
+      font-size: 23px;
       color: #000000;
-      font-family: Segoe UI;
+      text-align: center;
+      padding-top: 14px;
       border: 3px solid #ed7d00;
-      border-radius: 30px;
+      border-radius: 47px;
       padding-left: 10px;
       padding-right: 10px;
-      padding-top: 11px;
       text-decoration: none;
-      background: #FFFFFF 0% 0% no-repeat padding-box;
       color: #ed7d00;
-      font-weight: 500;
+      font-weight: 700;
       margin-top: 5%;
-      width: 10.5em;
-      height: 2.8em; }
+      margin-right: 8%;
+      height: 3.1em;
+      width: 10.1em; }
+      .novosepisodios .ver-mais a i {
+        color: #ed7d00; }
 
 .loading {
   background: url("https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Ripple-1s-200px.gif") no-repeat center center;

@@ -20,6 +20,9 @@ namespace Cafedebug.Web.Configurations
             service.AddScoped<ITeamRepository, TeamRepository>();
             service.AddScoped<ITeamService, TeamService>();
 
+            service.AddScoped<IContactRepository, ContactRepository>();
+            service.AddScoped<IContactService, ContactService>();
+
 
 
 
