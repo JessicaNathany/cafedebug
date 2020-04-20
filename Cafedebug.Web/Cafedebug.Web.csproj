@@ -71,7 +71,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Administrador\Views\Adm\" />
+    <Folder Include="Areas\Administrador\Content\" />
+    <Folder Include="wwwroot\Administrator\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
