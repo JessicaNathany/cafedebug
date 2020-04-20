@@ -5,6 +5,7 @@ using Cafedebug.Business.Interfaces;
 using Cafedebug.Business.Models;
 using Cafedebug.Business.Services;
 using Cafedebug.Web.Areas.Site.ViewModels;
+using Cafedebug.Web.Extensions;
 using log4net;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,12 +25,28 @@ namespace Cafedebug.Web.Controllers
             _mapper = mapper;
             _teamService = teamService;
         }
-        public ActionResult Index()
+        public ActionResult Index(DataTableParameters dtParameters)
         {
-            var team = _teamRepository.GetAll();
 
-            return View("Index",_mapper.Map<List<TeamViewModel>>(team));
+            if (!Request.IsAjaxRequest())
+            {
+                return View("Index");
+            }
+
+
+            var team = _teamRepository.GetPaged(new PageRequest { Page = dtParameters.Start, ItemsPerPage = dtParameters.Length});
+            var data = _mapper.Map<IEnumerable<TeamViewModel>>(team.Items);
+
+            return Json(new
+            {
+                draw = dtParameters.Draw,
+                recordsTotal = team.TotalItems,
+                recordsFiltered = team.Items.Count,
+                data
+            });            
         }
+
+
         public ActionResult Create()
         {
             return View();

@@ -18,7 +18,7 @@ namespace Cafedebug.Data.Repository
         {
             var result = _context.Team
                                     .OrderBy($"{page.SortBy}")
-                                    .Skip(page.ItemsPerPage * (page.Page - 1))
+                                    .Skip(page.ItemsPerPage * (page.Page))
                                     .Take(page.ItemsPerPage)
                                     .ToList();
 

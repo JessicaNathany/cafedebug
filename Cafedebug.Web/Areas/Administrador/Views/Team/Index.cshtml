@@ -7,9 +7,8 @@
                 <div class="card-header">
                     <h3 class="card-title">Team</h3>
                 </div>
-                <!-- /.card-header -->
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
+                    <table id="tbDados" class="table table-bordered table-hover">
                         <thead>
                             <tr>
 
@@ -19,35 +18,50 @@
                                 <th>Ações</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            @foreach (var item in Model)
-                            {
-                            <tr>
-
-                                <td>@item.Name</td>
-                                <td>
-                                    @item.Job
-                                </td>
-                                <td>
-                                    @item.UrlGitHub
-                                    @item.UrlInstagram
-                                    @item.UrlLinkedin
-                                </td>
-                                <td>
-                                    create
-                                    edit
-                                    delete
-                                </td>
-                            </tr>
-                            }
-                        </tbody>
                     </table>
                 </div>
-                <!-- /.card-body -->
             </div>
-            <!-- /.card -->
         </div>
-        <!-- /.col -->
     </div>
-    <!-- /.row -->
 </section>
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        $.fn.dataTableExt.sErrMode = "console";
+        $(document).ready(function () {
+
+            const ct = new CustomTable();
+
+            ct.ActionUrl = '@Url.Action("Index")';
+            ct.Order = [[2, "desc"]];
+            ct.FilterMessage = 'Digite o título para filtrar';
+            ct.Columns = [
+                { "data": "Title" },
+                {
+                    "data": "Cultures",
+                    "sortable": false,
+                    "searchable": false,
+                    "render": function (data, type, full, meta) {
+                        return data.join(', ');
+                    }
+                },
+                { "data": "ArtisticArea.Date" },
+                { "data": "ArtisticArea.IsFeatured" },
+                {
+                    "data": "Code",
+                    "sortable": false,
+                    "searchable": false,
+                    "className": "text-center",
+                    "render": function (data, type, full, meta) {
+                        return ct.Actions.replace(/{_Code_}/g, data);
+                    }
+                }
+            ];
+
+            ct.Bind();
+
+        })
+    </script>
+}

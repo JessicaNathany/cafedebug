@@ -26,6 +26,3 @@ namespace Cafedebug.Web.Areas.Site.ViewModels
         public string Message { get; set; }
     }
 }
-
-
-
