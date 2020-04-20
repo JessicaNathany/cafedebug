@@ -1,0 +1,35 @@
+﻿@model Cafedebug.Web.Areas.Site.ViewModels.TeamViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-form-contact">
+    <div class="time-description-detalhes">
+        <p class="title-nosso-time">Cadastre um Debugger!</p>
+        <p class="debuggers-time time-name-colaborador">Debuggers</p>
+    </div>
+    <form method="POST" asp-area="Administrador" asp-action="Create" asp-controller="Team">
+        <div class="container-input-form">
+            <input asp-for="Name" class="input-form" placeholder="Nome" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+
+            <input asp-for="UrlGitHub" class="input-form" placeholder="UrlGitHub" />
+            <span asp-validation-for="UrlGitHub" class="text-danger"></span>
+
+            <input asp-for="UrlInstagram" class="input-form" placeholder="UrlInstagram" />
+            <span asp-validation-for="UrlInstagram" class="text-danger"></span>
+
+            <input asp-for="UrlLinkedin" class="input-form" placeholder="UrlLinkedin" />
+            <span asp-validation-for="UrlLinkedin" class="text-danger"></span>
+
+            <input asp-for="Job" class="input-form" placeholder="Job" />
+            <span asp-validation-for="Job" class="text-danger"></span>
+
+            <input asp-for="UrlImage" class="input-form" placeholder="UrlImage" />
+            <span asp-validation-for="UrlImage" class="text-danger"></span>
+        </div>
+        <div class="container-form-button">
+            <input class="input-button" type="submit" value="Enviar" />
+        </div>
+    </form>
+</div>
