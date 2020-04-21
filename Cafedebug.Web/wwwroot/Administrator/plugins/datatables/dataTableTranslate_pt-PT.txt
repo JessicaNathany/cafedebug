@@ -1,0 +1,23 @@
+﻿{
+    "emptyTable":   	"Nenhum registo encontrado",
+	"info":         	"Página _PAGE_ de _PAGES_",
+	"infoEmpty":    	"",
+	"infoFiltered": 	"_MAX_",
+	"infoPostFix":  	"",
+	"infoThousands":  	".",
+	"lengthMenu":   	"_MENU_",
+	"loadingRecords": 	"carregando",
+	"processing":   	"<i class='fa fa-spinner'></i> carregando",
+	"search":       	"",
+	"zeroRecords":  	"Nenhum registo encontrado",
+	"paginate": {
+		"first":    	"Primeira",
+		"previous": 	"Anterior",
+		"next":     	"Próxima",
+		"last":     	"Última"
+	},
+	"aria": {
+		"sortAscending":  ": crescente",
+		"sortDescending": ": decrescente"
+	}
+}

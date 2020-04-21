@@ -25,6 +25,16 @@
     {
       "library": "jquery@3.4.1",
       "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "popper.js@1.16.0",
+      "destination": "wwwroot/lib/popper/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "font-awesome@5.13.0",
+      "destination": "wwwroot/lib/font-awesome/"
     }
   ]
 }

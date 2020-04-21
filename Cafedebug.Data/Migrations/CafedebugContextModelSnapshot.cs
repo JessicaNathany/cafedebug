@@ -68,6 +68,31 @@ namespace Cafedebug.Data.Migrations
                     b.ToTable("Category");
                 });
 
+            modelBuilder.Entity("Cafedebug.Business.Models.Contact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<Guid>("Code");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("varchar(150)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contact");
+                });
+
             modelBuilder.Entity("Cafedebug.Business.Models.Episode", b =>
                 {
                     b.Property<int>("Id")
