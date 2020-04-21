@@ -3,6 +3,7 @@
     this.TableId = '#tbDados',
     this.ActionUrl = '',
     this.Actions = '',
+    this.TranslateUrl = '/Administrator/plugins/datatables/dataTableTranslate_pt-PT.txt',
     this.FilterMessage = 'Digite para filtrar',
     this.Columns = [],
     this.ColumnDefs = [],
@@ -27,6 +28,7 @@
              })
             .on('xhr.dt', ts.OnCompletedAjaxLoad).dataTable({
             "serverSide": true,
+            "language": ts.TranslateUrl,
             "processing": true,
             "autoWidth": false,
             "responsive": true,
@@ -46,7 +48,7 @@
                 }
             },
             "columns": ts.Columns,
-            "order": ts.Order
+            //"order": ts.Order
         });
         
         $(ts.TableId).on('draw.dt', function () {

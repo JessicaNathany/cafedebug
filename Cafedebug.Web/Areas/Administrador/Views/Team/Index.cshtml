@@ -6,6 +6,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Team</h3>
+                    <button class="btn btn-success"><i class="fa fa-plus fa-fw"></i>Novo</button>
                 </div>
                 <div class="card-body">
                     <table id="tbDados" class="table table-bordered table-hover">
@@ -14,7 +15,6 @@
 
                                 <th>Nome</th>
                                 <th>Função</th>
-                                <th>Redes Sociais</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
@@ -32,36 +32,33 @@
         $.fn.dataTableExt.sErrMode = "console";
         $(document).ready(function () {
 
-            const ct = new CustomTable();
+            $.get("@Url.Action("Actions")", function (data) {
+                const ct = new CustomTable();
 
-            ct.ActionUrl = '@Url.Action("Index")';
-            ct.Order = [[2, "desc"]];
-            ct.FilterMessage = 'Digite o título para filtrar';
-            ct.Columns = [
-                { "data": "Title" },
-                {
-                    "data": "Cultures",
-                    "sortable": false,
-                    "searchable": false,
-                    "render": function (data, type, full, meta) {
-                        return data.join(', ');
-                    }
-                },
-                { "data": "ArtisticArea.Date" },
-                { "data": "ArtisticArea.IsFeatured" },
-                {
-                    "data": "Code",
-                    "sortable": false,
-                    "searchable": false,
-                    "className": "text-center",
-                    "render": function (data, type, full, meta) {
-                        return ct.Actions.replace(/{_Code_}/g, data);
-                    }
-                }
-            ];
+                ct.ActionUrl = '@Url.Action("Index")';
+                ct.Actions = data;
+                ct.Order = [[2, "desc"]];
+                ct.FilterMessage = 'Digite o título para filtrar';
+                ct.Columns = [
+                    { "data": "name" },
+                    {
+                        "data": "job",
+                        "sortable": false,
+                        "searchable": false,
+                    },
+                    {
+                        "data": "code",
+                        "sortable": false,
+                        "searchable": false,
+                        "className": "text-center",
+                        "render": function (data, type, full, meta) {
+                            return ct.Actions.replace(/{_Code_}/g, data);
+                        }
+                    },
+                ];
 
-            ct.Bind();
-
+                ct.Bind();
+            })
         })
     </script>
 }

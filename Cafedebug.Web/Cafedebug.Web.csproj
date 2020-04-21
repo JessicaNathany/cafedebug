@@ -75,7 +75,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Administrator\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 

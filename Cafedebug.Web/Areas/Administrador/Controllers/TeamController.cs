@@ -25,6 +25,7 @@ namespace Cafedebug.Web.Controllers
             _mapper = mapper;
             _teamService = teamService;
         }
+
         public ActionResult Index(DataTableParameters dtParameters)
         {
 
@@ -83,6 +84,11 @@ namespace Cafedebug.Web.Controllers
             _teamService.DeleteById(id);
 
             return Redirect("Index");
+        }
+
+        public ActionResult Actions()
+        {
+            return PartialView("Actions");
         }
     }
 }
