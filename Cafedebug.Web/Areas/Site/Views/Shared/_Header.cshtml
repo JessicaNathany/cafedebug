@@ -1,4 +1,4 @@
-﻿<div class="header">
+﻿<div class="header" id="header">
     <div class="container">
         <div class="row">
             <nav class="navbar navbar-expand-lg">
@@ -35,59 +35,6 @@
         </div>
     </div>
 </div>
-
-
-<script type="text/javascript">
-
-    $(document).ready(function () {
-        let link = window.location.href;
-
-
-        $(window).scroll(function () {
-            console.log($(window).scrollTop());
-
-            if (90 < $(window).scrollTop() < 120) {
-                if (link.includes('Episode')) {
-                    $(".header").css("position", "relative").css("box-shadow", "none");
-                    $(".header").show("slow");
-                }
-                else {
-                    $('.header').removeClass('scroll');
-                    $(".header").css("position", "fixed").css("box-shadow", "none");
-                }
-                
-            }
-            if ($(window).scrollTop() > 120) {
-                $('.header').addClass('scroll');
-                $(".header").css("position", "fixed").css("box-shadow", "0 4px 15px rgba(0,0,0,.25)").css("transition", ".2s;");
-            }
-
-
-        });
-
-
-        if (link.includes('Episode')) {
-            SetActiveClass(document.querySelector("#episods"));
-            $('.header').addClass('scroll');
-            $('.header').css("position", "relative").css("transition", ".2s;");
-
-        }
-
-        function SetActiveClass(selector) {
-            let navItems = document.querySelectorAll(".nav-item");
-            navItems.forEach(item => item.classList.remove("selected"));
-            selector.classList.toggle("selected");
-        }
-        $('.Toggle-button').on('click', function () {
-            $('.animated-icon1').toggleClass('open');
-        });
-
-        $(".owl-carousel-banner ")
-            .css("position", "relative");
-
-    });
-
-</script>
 
 
 
