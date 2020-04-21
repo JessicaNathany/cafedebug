@@ -1,0 +1,27 @@
+﻿@model Cafedebug.Web.Areas.Site.ViewModels.ContactViewModel
+
+@{
+    ViewData["Title"] = "_FormContact";
+}
+
+<div class="container-form-contact">
+    <div class="time-description-detalhes">
+        <p class="title-nosso-time">Fale Conosco</p>
+        <p class="debuggers-time time-name-colaborador">Debuggers</p>
+    </div>
+    <form method="POST" asp-action="ContactUs" asp-controller="Contact">
+        <div class="container-input-form">
+            <input asp-for="Name" class="input-form" placeholder="Nome " />
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <input asp-for="Email"class="input-form" placeholder="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div>
+            <textarea asp-for="Message" class="textarea-form" placeholder="Envie sugestões, elogios e critícas"></textarea>
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+        <div class="container-form-button">
+            <input class="input-button" type="submit" value="Enviar" />
+        </div>
+    </form>
+</div>

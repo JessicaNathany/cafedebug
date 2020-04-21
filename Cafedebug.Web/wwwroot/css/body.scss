@@ -51,8 +51,8 @@ a {
 /*#endregion*/
 
 /* Home*/
-.flip-card {
 
+.flip-card {
     -webkit-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
     -moz-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
     box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
@@ -85,19 +85,18 @@ a {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
     img {
-        width: 100%;
-        height: auto;
+        width: 104%;
+        height: 100%;
     }
 }
 
 .flip-card:hover .flip-card-inner {
-
     transform: rotateY(180deg);
 }
 
 .flip-card-front, .flip-card-back {
     position: absolute;
-    width: 100%;
+    width: 104%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -106,6 +105,7 @@ a {
 .flip-card-front {
     background-color: rgba(244,244,244,.75);
     color: black;
+    width: 113%;
 }
 
 .flip-card-back {
@@ -122,9 +122,7 @@ a {
 
     p {
         color: white;
-        padding-top: 7px;
-        padding-left: 7px;
-        padding-right: 7px;
+        padding: 16px;
         text-align: justify;
         font-size: 14px;
     }
@@ -293,7 +291,8 @@ a {
     .episodios-card {
 
         h2 {
-            height: 67px;
+            margin-bottom: 1px;
+            height: 44px;
             font-weight: 700;
             font-size: 30px;
             text-align: center;
@@ -303,10 +302,9 @@ a {
         }
 
         h6 {
-            top: 968px;
+            margin-top: 2px;
+            font-size: 20px;
             font-weight: 700;
-            left: 871px;
-            height: 67px;
             text-align: center;
             font: Bold 50pxSegoe UI;
             letter-spacing: 0px;
@@ -335,7 +333,7 @@ a {
             margin-right: 8%;
             margin-left: 6%;
             height: 3.1em;
-            width: 10.1em;
+            width: 8.1em;
         }
     }
 }
@@ -949,7 +947,7 @@ a {
     }
 }
 
-.image-time{
+.image-time {
     border-radius: 50%;
 }
 
@@ -969,6 +967,7 @@ a {
     padding-top: 0.5em;
     font-size: 2.125em;
 }
+
 @media only screen and (min-width: 769px) and (max-width: 991px) {
 
     .time-colaboradores {
@@ -1032,8 +1031,7 @@ a {
         padding-top: 0.5em;
         font-size: 2.125em;
     }
-
- }
+}
 
 /*Fim Time*/
 
@@ -1089,5 +1087,69 @@ a {
     }
 }
 
+/*LISTAGEM DE EPISODIOS*/
+.container-episode {
+    display: grid;
+    padding: 30px calc((100% - 1140px) / 2);
+    margin: 0 auto;
 
+    .last-episode {
+        display: flex;
+        background: #ed7d00;
+        margin-bottom: 40px;
 
+        .number-episode {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    .list-episodies {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+        grid-gap: 30px;
+
+        .ep-item {
+            display: flex;
+            background: green;
+
+            .number-episode {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                padding: 8px;
+                background: #ed7d00;
+
+                h1{
+                   color:#fff;
+                   font-size: 1.45em;
+                }
+
+                img{
+                    height:35px;
+                }
+            }
+
+            .thumbnail-episode {
+                height: auto;
+
+                img {
+                    display: block;
+                    height: 160px;
+                    width: 180px;
+                }
+            }
+
+            .info-episode {
+                background: #f7f7f7;
+
+                h1 {
+                    font-size: 1.25em;
+                }
+            }
+        }
+    }
+}

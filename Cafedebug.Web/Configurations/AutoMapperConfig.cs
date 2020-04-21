@@ -12,6 +12,7 @@ namespace Cafedebug.Web.Configurations
             CreateMap<Category, CategoryViewModel>().ReverseMap();
             CreateMap<Episode, EpisodeViewModel>().ReverseMap();
             CreateMap<Team, TeamViewModel>().ReverseMap();
+            CreateMap<Contact, ContactViewModel>().ReverseMap();
         }
     }
 }

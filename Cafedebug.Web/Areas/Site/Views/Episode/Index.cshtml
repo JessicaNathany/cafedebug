@@ -1,97 +1,100 @@
-﻿@model Cafedebug.Business.Models.Episode
-
-@{
+﻿@{
     ViewData["Title"] = "Episódio | Café debug";
 }
 
-@addTagHelper "*,Cafedebug.Web"
-
-<section id="episodiounico">
-    <div class="container">
-        <div class="row">
-
-            <!-- CONTEUDOEPISODIO -->
-            <div class="conteudoepisodio">
-                <div class="title-page">
-                    <p>Bancos de Dados NOSQL</p><br />
-                </div>
-
-                <div class="bannerep" style="background-image: url(https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/banner-ep.png);">
-                </div>
-                <p><br />
-                    <!-- carregar do banco usando razor -->
-                    NoSQL (Not Only SQL - Não Somente SQL) é um termo genérico utilizado para chamar uma classe definida de bancos de dados. O termo NoSQL foi re-introduzido no início de 2009 por um funcionário do Rackspace, Eric Evans, quando Johan Oskarsson da Last.fm queria organizar um evento para discutir bancos de dados open source distribuídos. O nome — uma tentativa de descrever o surgimento de um número crescente de banco de dados não relacionais, que não tinham a preocupação de fornecer garantias ACID — faz referência ao esquema de atribuição de nomes dos bancos de dados relacionais mais populares do mercado: MySQL, MS SQL, PostgreSQL etc (Wikipédia).
-                    Assuntos abordados no tema
-
-                    O que são bancos de dados NoSQL?
-                    Qual a diferença entre bancos relacionais x não-relacionais?
-                    Conceitos ACID
-                    Comentar sobre Modelos de bancos (orientado a documento, orientado a coluna, orientado a grafo e orientado a chave)
-                    Empresas e aplicações que utilizam NoSQL (Netflix, Twitter, Facebook, Twitter etc..)
-                    Quando aplicar NoSql na sua aplicação?
-                    Vale a pena manter o SQL na sua aplicação?
-                    Mercado de trabalho para profissionais da área
-
-                    Notícias e artigos:
-
-                    uolhost.uol.com.br/academia/notici…ngodb.html#rmcl
-                    aws.amazon.com/pt/nosql/
-                    www.cienciaedados.com/top-6-nosql-databases/
-
-                    Links úteis
-
-                    pt.wikipedia.org/wiki/NoSQL
-                    pt.wikipedia.org/wiki/ACID
-                    www.portaldba.com.br/utilizacao-de-…corportativas/
-                    bdm.unb.br/bitstream/10483/771…achecoWanzeller.pdf
-                    nosql-database.org/
-
-                    Participantes
-
-                    Jéssica Nathany (Developer e Host)
-                    Linkedin: www.linkedin.com/in/jessica-natha…reitas-38260868/
-
-                    Austin Felipe (Developer e Co-Host)
-                    Linkedin: www.linkedin.com/in/austinfelipe/
-
-                    Douglas Pires (Developer e Co-Host)
-                    Linkedin: www.linkedin.com/in/dpiresvilela/
-
-                    Yunnes Abdul (Co-Host e Editor)
-                    Linkedin: www.linkedin.com/in/yunnes-abdul-ghani-2b848a32/
-
-                    Daniela Monteiro (DBA Microsoft MVP | Senior Data Architect )
-                    Linkedin: www.linkedin.com/in/danimonteirodba/
-
-                    Jhonathan Soares (.Net Architect na Vortx Microsoft MVP e MongoDB Evangelist )
-
-                    Linkedin:www.linkedin.com/in/jhonathansouza/
-
-                    Dúvidas, sugestões ou críticas envie para: debugcafe@gmail.com =)
-                    <br /><br />
-                </p>
-                <div id="boxsoundcloud"><br />
-                    <h6>Clique no player abaixo para ouvir</h6>
-
-                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/352561763&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-
-                    <div class="compartilheep">
-                        <div class="eplinkshe">
-                            <h6>Compartilhe:</h6>
-                            <a href="https://www.youtube.com/channel/UCLI7ho2zV2apQ2WHPGxkCQw"><i class="fab fa-youtube"></i></a>
-                            <a href="https://twitter.com/cafedebug"><i class="fab fa-twitter"></i></a>
-                        </div>
-                        <div class="envieemail">
-                            <img src="https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/iconbugemail.png">
-                            <p>
-                                Dicas? Sugestões? Comentários? <br />
-                                Envie para: debugcafe@gmail.com
-                            </p>
-                        </div>
-                    </div>
-                </div>
+<div class="container-episode">
+    <div class="last-episode">
+        <div class="number-episode">
+            <h1>#26</h1>
+            <img src="~/images/iconbug.png" alt="icon-bug" />
+        </div>
+        <div class="thumbnail-episode">
+            <img src="~/images/ep.jpg" alt="thumbnail-ep" />
+        </div>
+        <div class="info-episode">
+            <h1>Mulheres na computação e Comunidades de TI</h1>
+            <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
         </div>
     </div>
-</section>
-
+    <div class="list-episodies">
+        <div class="ep-item">
+            <div class="number-episode">
+                <h1>#26</h1>
+                <img src="~/images/iconbug.png" alt="icon-bug" />
+            </div>
+            <div class="thumbnail-episode">
+                <img src="~/images/ep.jpg" alt="thumbnail-ep" />
+            </div>
+            <div class="info-episode">
+                <h1>Mulheres na computação e Comunidades de TI</h1>
+                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
+            </div>
+        </div>
+        <div class="ep-item">
+            <div class="number-episode">
+                <h1>#26</h1>
+                <img src="~/images/iconbug.png" alt="icon-bug" />
+            </div>
+            <div class="thumbnail-episode">
+                <img src="~/images/ep.jpg" alt="thumbnail-ep" />
+            </div>
+            <div class="info-episode">
+                <h1>Mulheres na computação e Comunidades de TI</h1>
+                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
+            </div>
+        </div>
+        <div class="ep-item">
+            <div class="number-episode">
+                <h1>#26</h1>
+                <img src="~/images/iconbug.png" alt="icon-bug" />
+            </div>
+            <div class="thumbnail-episode">
+                <img src="~/images/ep.jpg" alt="thumbnail-ep" />
+            </div>
+            <div class="info-episode">
+                <h1>Mulheres na computação e Comunidades de TI</h1>
+                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
+            </div>
+        </div>
+        <div class="ep-item">
+            <div class="number-episode">
+                <h1>#26</h1>
+                <img src="~/images/iconbug.png" alt="icon-bug" />
+            </div>
+            <div class="thumbnail-episode">
+                <img src="~/images/ep.jpg" alt="thumbnail-ep" />
+            </div>
+            <div class="info-episode">
+                <h1>Mulheres na computação e Comunidades de TI</h1>
+                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
+            </div>
+        </div>
+        <div class="ep-item">
+            <div class="number-episode">
+                <h1>#26</h1>
+                <img src="~/images/iconbug.png" alt="icon-bug" />
+            </div>
+            <div class="thumbnail-episode">
+                <img src="~/images/ep.jpg" alt="thumbnail-ep" />
+            </div>
+            <div class="info-episode">
+                <h1>Mulheres na computação e Comunidades de TI</h1>
+                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
+            </div>
+        </div>
+        <div class="ep-item">
+            <div class="number-episode">
+                <h1>#26</h1>
+                <img src="~/images/iconbug.png" alt="icon-bug" />
+            </div>
+            <div class="thumbnail-episode">
+                <img src="~/images/ep.jpg" alt="thumbnail-ep" />
+            </div>
+            <div class="info-episode">
+                <h1>Mulheres na computação e Comunidades de TI</h1>
+                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
+            </div>
+        </div>
+    </div>
+</div>
 

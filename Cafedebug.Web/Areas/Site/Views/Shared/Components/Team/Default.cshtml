@@ -13,7 +13,7 @@
             @foreach (var item in Model)
             {
                 <div class="time-description">
-                    <img src="@(item.UrlImage)" class="image-time" alt="Denis" />
+                    <img src="@(item.UrlImage)" class="image-time" alt="@(item.Name)" />
                     <div class="time-description-detalhes">
                         <p class="time-name-colaborador">@item.Name</p>
                         <p>@item.Job</p>

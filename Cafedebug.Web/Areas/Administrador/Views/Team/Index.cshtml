@@ -1,0 +1,64 @@
+﻿@model List<Cafedebug.Web.Areas.Site.ViewModels.TeamViewModel>
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Team</h3>
+                    <button class="btn btn-success"><i class="fa fa-plus fa-fw"></i>Novo</button>
+                </div>
+                <div class="card-body">
+                    <table id="tbDados" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+
+                                <th>Nome</th>
+                                <th>Função</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        $.fn.dataTableExt.sErrMode = "console";
+        $(document).ready(function () {
+
+            $.get("@Url.Action("Actions")", function (data) {
+                const ct = new CustomTable();
+
+                ct.ActionUrl = '@Url.Action("Index")';
+                ct.Actions = data;
+                ct.Order = [[2, "desc"]];
+                ct.FilterMessage = 'Digite o título para filtrar';
+                ct.Columns = [
+                    { "data": "name" },
+                    {
+                        "data": "job",
+                        "sortable": false,
+                        "searchable": false,
+                    },
+                    {
+                        "data": "code",
+                        "sortable": false,
+                        "searchable": false,
+                        "className": "text-center",
+                        "render": function (data, type, full, meta) {
+                            return ct.Actions.replace(/{_Code_}/g, data);
+                        }
+                    },
+                ];
+
+                ct.Bind();
+            })
+        })
+    </script>
+}
