@@ -28,7 +28,7 @@
              })
             .on('xhr.dt', ts.OnCompletedAjaxLoad).dataTable({
             "serverSide": true,
-            "language": ts.TranslateUrl,
+            "language": { "url": ts.TranslateUrl },
             "processing": true,
             "autoWidth": false,
             "responsive": true,
