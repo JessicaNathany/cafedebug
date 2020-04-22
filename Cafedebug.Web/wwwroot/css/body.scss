@@ -51,26 +51,6 @@ a {
 /*#endregion*/
 
 /* Home*/
-.card {
-    -webkit-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
-    -moz-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
-    box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
-    text-decoration: none;
-    margin: 5% 7% 10% 5%;
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    .card-body {
-        background-color: rgba(244, 244, 244, 0.75);
-
-        p {
-            color: $theme_color;
-        }
-    }
-}
 
 .flip-card {
     -webkit-box-shadow: 5px 5px 10px 0px rgba(138,131,138,0.75);
@@ -105,8 +85,8 @@ a {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
     img {
-        width: 100%;
-        height: auto;
+        width: 104%;
+        height: 100%;
     }
 }
 
@@ -116,7 +96,7 @@ a {
 
 .flip-card-front, .flip-card-back {
     position: absolute;
-    width: 100%;
+    width: 104%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -125,6 +105,7 @@ a {
 .flip-card-front {
     background-color: rgba(244,244,244,.75);
     color: black;
+    width: 113%;
 }
 
 .flip-card-back {
@@ -141,7 +122,7 @@ a {
 
     p {
         color: white;
-        padding: 10px;
+        padding: 16px;
         text-align: justify;
         font-size: 14px;
     }
@@ -352,7 +333,7 @@ a {
             margin-right: 8%;
             margin-left: 6%;
             height: 3.1em;
-            width: 10.1em;
+            width: 8.1em;
         }
     }
 }
