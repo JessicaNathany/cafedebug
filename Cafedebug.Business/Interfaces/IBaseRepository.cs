@@ -18,6 +18,8 @@ namespace Cafedebug.Business.Interfaces
 
         TEntity GetById(int id);
 
+        TEntity GetByCode(Guid code);
+
         int Count();
 
         int SaveChanges();

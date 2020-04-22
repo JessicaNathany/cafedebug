@@ -39,7 +39,12 @@ namespace Cafedebug.Data.Repository
 
         public TEntity GetById(int id)
         {
-            throw new NotImplementedException();
+            return DbSet.FirstOrDefault(x => x.Id == id);
+        }
+
+        public TEntity GetByCode(Guid code)
+        {
+            return DbSet.FirstOrDefault(x => x.Code == code);
         }
 
         public TEntity Save(TEntity entity)
