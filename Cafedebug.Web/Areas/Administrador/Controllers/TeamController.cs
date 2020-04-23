@@ -35,7 +35,7 @@ namespace Cafedebug.Web.Controllers
             }
 
 
-            var team = _teamRepository.GetPaged(new PageRequest { Page = dtParameters.Start, ItemsPerPage = dtParameters.Length});
+            var team = _teamRepository.GetPaged(new PageRequest { Page = dtParameters.Start, ItemsPerPage = dtParameters.Length });
             var data = _mapper.Map<IEnumerable<TeamViewModel>>(team.Items);
 
             return Json(new
@@ -44,7 +44,7 @@ namespace Cafedebug.Web.Controllers
                 recordsTotal = team.TotalItems,
                 recordsFiltered = team.Items.Count,
                 data
-            });            
+            });
         }
 
 
@@ -52,6 +52,7 @@ namespace Cafedebug.Web.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Create(TeamViewModel model)
         {
@@ -59,17 +60,20 @@ namespace Cafedebug.Web.Controllers
 
             _teamService.Save(_mapper.Map<Team>(model));
 
-            return RedirectToAction("Create","Team");
+            return RedirectToAction("Create", "Team");
         }
 
-        public ActionResult Update(int id)
+        [Route("{id:guid}")]
+        public ActionResult Update(Guid code)
         {
-            if (id == 0) return Redirect("Index");
+            if (code == Guid.Empty) return Redirect("Index");
 
-            var team = _teamRepository.GetById(id);
+            var team = _teamRepository.GetByCode(code);
 
             return View("Create", _mapper.Map<TeamViewModel>(team));
         }
+        
+        [HttpPost]
         public ActionResult Update(TeamViewModel model)
         {
             if (!ModelState.IsValid) return View("Create", model);

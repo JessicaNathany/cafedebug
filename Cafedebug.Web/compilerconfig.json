@@ -14,5 +14,9 @@
   {
     "outputFile": "wwwroot/css/html.css",
     "inputFile": "wwwroot/css/html.scss"
+  },
+  {
+    "outputFile": "wwwroot/Administrator/css/body.css",
+    "inputFile": "wwwroot/Administrator/css/body.scss"
   }
 ]
