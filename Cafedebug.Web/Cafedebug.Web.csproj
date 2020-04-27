@@ -13,24 +13,12 @@
 
   <ItemGroup>
     <Compile Remove="Areas\Administrador\Content\**" />
-    <Compile Remove="Controllers\**" />
-    <Compile Remove="Models\**" />
-    <Compile Remove="Views\**" />
     <Compile Remove="wwwroot\js\ValidationMessages\**" />
     <Content Remove="Areas\Administrador\Content\**" />
-    <Content Remove="Controllers\**" />
-    <Content Remove="Models\**" />
-    <Content Remove="Views\**" />
     <Content Remove="wwwroot\js\ValidationMessages\**" />
     <EmbeddedResource Remove="Areas\Administrador\Content\**" />
-    <EmbeddedResource Remove="Controllers\**" />
-    <EmbeddedResource Remove="Models\**" />
-    <EmbeddedResource Remove="Views\**" />
     <EmbeddedResource Remove="wwwroot\js\ValidationMessages\**" />
     <None Remove="Areas\Administrador\Content\**" />
-    <None Remove="Controllers\**" />
-    <None Remove="Models\**" />
-    <None Remove="Views\**" />
     <None Remove="wwwroot\js\ValidationMessages\**" />
   </ItemGroup>
 

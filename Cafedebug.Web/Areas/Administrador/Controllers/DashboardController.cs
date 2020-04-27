@@ -2,7 +2,7 @@
 
 namespace Cafedebug.Web.Areas.Adm.Controllers
 {
-    [Area("administrador")]
+    [Area(nameof(Administrador))]
     public class DashboardController : Controller
     {
         public DashboardController()

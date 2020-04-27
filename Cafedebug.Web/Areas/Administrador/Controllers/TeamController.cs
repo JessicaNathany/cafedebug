@@ -11,7 +11,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
 {
-    [Area("Administrador")]
+    [Area(nameof(Areas.Administrador))]
+    [Route("administrador/debbuguers")]
     public class TeamController : BaseController
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(TeamController));
@@ -48,9 +49,8 @@ namespace Cafedebug.Web.Controllers
             });
         }
 
-
-        [Route("novo")]
-        public IActionResult Create(Guid id)
+        [Route("novo-debbuger")]
+        public IActionResult Create()
         {
             return View();
         }
@@ -66,10 +66,10 @@ namespace Cafedebug.Web.Controllers
         }
 
 
-        [Route("editar-produto/{code:int}")]
-        public ActionResult Update(Guid id)
+        [Route("editar-debbuger/{code:guid}")]
+        public ActionResult Update(Guid code)
         {
-            var team = _teamRepository.GetByCode(id);
+            var team = _teamRepository.GetByCode(code);
 
             return View("Create", _mapper.Map<TeamViewModel>(team));
         }
@@ -84,6 +84,7 @@ namespace Cafedebug.Web.Controllers
             return Redirect("Index");
         }
 
+        [Route("delete-debbuger")]
         public ActionResult Delete(int id)
         {
             _teamService.DeleteById(id);
@@ -91,6 +92,7 @@ namespace Cafedebug.Web.Controllers
             return Redirect("Index");
         }
 
+        [Route("actions")]
         public ActionResult Actions()
         {
             return PartialView("Actions");
