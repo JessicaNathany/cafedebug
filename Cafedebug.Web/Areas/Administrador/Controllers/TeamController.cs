@@ -11,7 +11,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
 {
-    public class TeamController : Controller
+    [Area("Administrador")]
+    public class TeamController : BaseController
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(TeamController));
         private readonly ITeamRepository _teamRepository;
@@ -19,7 +20,7 @@ namespace Cafedebug.Web.Controllers
 
         private readonly IMapper _mapper;
 
-        public TeamController(ITeamRepository teamRepository, IMapper mapper, ITeamService teamService)
+        public TeamController(ITeamRepository teamRepository, IMapper mapper, ITeamService teamService, INotifier notifier) : base(notifier)
         {
             _teamRepository = teamRepository;
             _mapper = mapper;
@@ -48,7 +49,8 @@ namespace Cafedebug.Web.Controllers
         }
 
 
-        public ActionResult Create()
+        [Route("novo")]
+        public IActionResult Create(Guid id)
         {
             return View();
         }
@@ -63,16 +65,15 @@ namespace Cafedebug.Web.Controllers
             return RedirectToAction("Create", "Team");
         }
 
-        [Route("{id:guid}")]
-        public ActionResult Update(Guid code)
-        {
-            if (code == Guid.Empty) return Redirect("Index");
 
-            var team = _teamRepository.GetByCode(code);
+        [Route("editar-produto/{code:int}")]
+        public ActionResult Update(Guid id)
+        {
+            var team = _teamRepository.GetByCode(id);
 
             return View("Create", _mapper.Map<TeamViewModel>(team));
         }
-        
+
         [HttpPost]
         public ActionResult Update(TeamViewModel model)
         {

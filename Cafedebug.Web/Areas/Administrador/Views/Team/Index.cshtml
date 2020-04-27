@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="box box-default header-team">
                     <h3 class="card-title">Team</h3>
-                    <button class="btn btn-success"><i class="fa fa-plus fa-fw"></i>Novo</button>
+                    <a class="btn btn-success" asp-controller="Team" asp-action="Create" asp-route-id="90"><i class="fa fa-plus fa-fw"></i>Novo</a>
                 </div>
                 <div class="card-body">
                     <table id="tbDados" class="table table-bordered table-hover">
@@ -22,6 +22,7 @@
         </div>
     </div>
 </section>
+
 
 @section scripts
 {
@@ -50,7 +51,7 @@
                         "searchable": false,
                         "className": "text-center",
                         "render": function (data, type, full, meta) {
-                            return ct.Actions.replace(/{_Code_}/g, data);
+                            return ct.Actions.replace(/_Code_/g, data);
                         }
                     },
                 ];

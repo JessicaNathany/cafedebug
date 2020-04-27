@@ -5,16 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Cafedebug.Data;
 using Cafedebug.Data.Context;
-using System.Globalization;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Localization;
 using Cafedebug.Web.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Cafedebug.Web.Configurations;
 using AutoMapper;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Routing;
 
 namespace Cafedebug.Web
 {
