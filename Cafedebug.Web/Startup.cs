@@ -14,6 +14,7 @@ using Cafedebug.Web.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Cafedebug.Web.Configurations;
 using AutoMapper;
+using Microsoft.Extensions.Hosting;
 
 namespace Cafedebug.Web
 {
@@ -41,7 +42,6 @@ namespace Cafedebug.Web
             services.AddAutoMapper(typeof(Startup));
 
             services.AddDefaultIdentity<IdentityUser>()
-                .AddDefaultUI(Microsoft.AspNetCore.Identity.UI.UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<CafedebugIdentityContext>();
 
             services.ResolveDependencies();
@@ -51,7 +51,7 @@ namespace Cafedebug.Web
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -69,17 +69,17 @@ namespace Cafedebug.Web
             //configura a autenticação do identity para funcionar na aplicação
             app.UseAuthentication();
 
-            app.UseMvc(routes =>
-            {
-                routes.MapAreaRoute(
-                    name: "Administrador",
-                    areaName: "Administrador",
-                    template: "Administrador/{controller=Home}/{action=Index}/{id?}");
+            app.UseRouting();
 
-                routes.MapAreaRoute(
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "Administrador",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
                     name: "default",
-                    areaName: "Site",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
