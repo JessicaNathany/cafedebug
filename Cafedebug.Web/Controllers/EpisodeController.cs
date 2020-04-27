@@ -18,9 +18,9 @@ namespace Cafedebug.Web.Controllers
             _mapper = mapper;
         }
 
-        public ActionResult Index(PageRequest page)
+        public ActionResult Index(PageRequest pagination)
         {
-            var result = _episodeRepository.GetPaged(page); 
+            var result = _episodeRepository.GetPaged(pagination); 
             return View();
         }
 

@@ -11,7 +11,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
 {
-    public class TeamController : Controller
+    [Area(nameof(Areas.Administrador))]
+    [Route("administrador/debbuguers")]
+    public class TeamController : BaseController
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(TeamController));
         private readonly ITeamRepository _teamRepository;
@@ -19,7 +21,7 @@ namespace Cafedebug.Web.Controllers
 
         private readonly IMapper _mapper;
 
-        public TeamController(ITeamRepository teamRepository, IMapper mapper, ITeamService teamService)
+        public TeamController(ITeamRepository teamRepository, IMapper mapper, ITeamService teamService, INotifier notifier) : base(notifier)
         {
             _teamRepository = teamRepository;
             _mapper = mapper;
@@ -47,8 +49,8 @@ namespace Cafedebug.Web.Controllers
             });
         }
 
-
-        public ActionResult Create()
+        [Route("novo-debbuger")]
+        public IActionResult Create()
         {
             return View();
         }
@@ -63,16 +65,15 @@ namespace Cafedebug.Web.Controllers
             return RedirectToAction("Create", "Team");
         }
 
-        [Route("{id:guid}")]
+
+        [Route("editar-debbuger/{code:guid}")]
         public ActionResult Update(Guid code)
         {
-            if (code == Guid.Empty) return Redirect("Index");
-
             var team = _teamRepository.GetByCode(code);
 
             return View("Create", _mapper.Map<TeamViewModel>(team));
         }
-        
+
         [HttpPost]
         public ActionResult Update(TeamViewModel model)
         {
@@ -83,6 +84,7 @@ namespace Cafedebug.Web.Controllers
             return Redirect("Index");
         }
 
+        [Route("delete-debbuger")]
         public ActionResult Delete(int id)
         {
             _teamService.DeleteById(id);
@@ -90,6 +92,7 @@ namespace Cafedebug.Web.Controllers
             return Redirect("Index");
         }
 
+        [Route("actions")]
         public ActionResult Actions()
         {
             return PartialView("Actions");

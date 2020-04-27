@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
 {
+ 
     public class HomeController : Controller
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(HomeController));
