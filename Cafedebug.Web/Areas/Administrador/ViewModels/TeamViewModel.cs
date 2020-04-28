@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Cafedebug.Web.ViewModels
+namespace Cafedebug.Web.Areas.Administrador.ViewModels
 {
     public class TeamViewModel
     {
@@ -29,12 +30,13 @@ namespace Cafedebug.Web.ViewModels
 
         public string UrlLinkedin { get; set; }
 
-        [Required(ErrorMessage = "O campo Url Image é obrigatório")]
-        [StringLength(50, ErrorMessage = "O campo Nome precisa ter entre {0} e {1} caracteres.", MinimumLength = 5)]
+        //[Required(ErrorMessage = "O campo Url Image é obrigatório")]
+        //[StringLength(50, ErrorMessage = "O campo Nome precisa ter entre {0} e {1} caracteres.", MinimumLength = 5)]
         public string UrlImage { get; set; }
 
         [Required(ErrorMessage = "O campo Função é obrigatório")]
         [StringLength(50, ErrorMessage = "O campo Nome precisa ter entre {0} e {1} caracteres.", MinimumLength = 5)]
         public string Job { get; set; }
+        public IFormFile ImagemUpload { get; set; }
     }
 }

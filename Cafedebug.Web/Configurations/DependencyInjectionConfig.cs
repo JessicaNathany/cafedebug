@@ -23,6 +23,7 @@ namespace Cafedebug.Web.Configurations
             service.AddScoped<IContactRepository, ContactRepository>();
             service.AddScoped<IContactService, ContactService>();
 
+            service.AddScoped<IFileService, FileService>();
 
 
 

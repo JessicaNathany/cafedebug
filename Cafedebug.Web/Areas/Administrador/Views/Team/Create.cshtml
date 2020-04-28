@@ -1,4 +1,4 @@
-﻿@model Cafedebug.Web.Areas.Site.ViewModels.TeamViewModel
+﻿@model Cafedebug.Web.Areas.Administrador.ViewModels.TeamViewModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -8,7 +8,7 @@
         <p class="title-nosso-time">Cadastre um Debugger!</p>
         <p class="debuggers-time time-name-colaborador">Debuggers</p>
     </div>
-    <form method="POST" asp-area="Administrador" asp-action="Create" asp-controller="Team">
+    <form method="POST" asp-area="Administrador" asp-action="Create" asp-controller="Team" enctype="multipart/form-data">
         <div class="container-input-form">
             <input asp-for="Name" class="input-form" placeholder="Nome" />
             <span asp-validation-for="Name" class="text-danger"></span>
@@ -25,7 +25,10 @@
             <input asp-for="Job" class="input-form" placeholder="Job" />
             <span asp-validation-for="Job" class="text-danger"></span>
 
-            <input asp-for="UrlImage" class="input-form" placeholder="UrlImage" />
+            <input asp-for="ImagemUpload" type="file" class="input-form" placeholder="Imagem" />
+            <span asp-validation-for="ImagemUpload" class="text-danger"></span>
+
+            <input asp-for="UrlImage" class="input-form" placeholder="Imagem" />
             <span asp-validation-for="UrlImage" class="text-danger"></span>
         </div>
         <div class="container-form-button">

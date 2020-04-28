@@ -19,10 +19,10 @@ namespace Cafedebug.Business.Models.Validations
               .Length(2, 50)
               .WithMessage("O campo Função deve ter entre {MinLength} e {MaxLenght} caracteres");
 
-            RuleFor(e => e.UrlImage)
-             .NotEmpty().WithMessage("O campo Imagem é obrigátorio")
-             .Length(2, 50)
-             .WithMessage("O campo Imagem deve ter entre {MinLength} e {MaxLenght} caracteres");
+            //RuleFor(e => e.UrlImage)
+            // .NotEmpty().WithMessage("O campo Imagem é obrigátorio")
+            // .Length(2, 50)
+            // .WithMessage("O campo Imagem deve ter entre {MinLength} e {MaxLenght} caracteres");
 
             RuleFor(e => e.UrlGitHub)
             .NotEmpty().WithMessage("O campo GitHub é obrigátorio")

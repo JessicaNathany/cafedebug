@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Cafedebug.Business.Interfaces;
 using Cafedebug.Business.Models;
-using Cafedebug.Web.Areas.Site.ViewModels;
+using Cafedebug.Web.ViewModels;
 using log4net;
 using Microsoft.AspNetCore.Mvc;
 

@@ -62,11 +62,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\tmp\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="bundleconfig.json" />
+    <None Include="wwwroot\tmp\8bdf4616-1291-4df7-96eb-6e0a3bc67a61_euu.jfif" />
   </ItemGroup>
 
 </Project>
