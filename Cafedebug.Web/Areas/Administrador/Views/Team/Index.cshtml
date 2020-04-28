@@ -37,7 +37,7 @@
                 ct.ActionUrl = '@Url.Action("Index")';
                 ct.Actions = data;
                 ct.Order = [[2, "desc"]];
-                ct.FilterMessage = 'Digite o título para filtrar';
+                ct.FilterMessage = 'Digite para filtrar';
                 ct.Columns = [
                     { "data": "name" },
                     {
@@ -51,7 +51,7 @@
                         "searchable": false,
                         "className": "text-center",
                         "render": function (data, type, full, meta) {
-                            return ct.Actions.replace(/_Code_/g, data);
+                            return ct.Actions.replace(/02f3dc6e-cb41-4e35-9390-4bc92b1fb80d/g, data);
                         }
                     },
                 ];
