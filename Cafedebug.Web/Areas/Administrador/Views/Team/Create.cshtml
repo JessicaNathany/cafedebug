@@ -3,15 +3,15 @@
     ViewData["Title"] = "Index";
 }
 
-<div class="container-form-contact">
-    <div class="time-description-detalhes">
-        <p class="title-nosso-time">Cadastre um Debugger!</p>
-        <p class="debuggers-time time-name-colaborador">Debuggers</p>
-    </div>
+<div class="container-form-team">
+    
     <form method="POST" asp-area="Administrador" asp-action="Create" asp-controller="Team" enctype="multipart/form-data">
         <div class="container-input-form">
             <input asp-for="Name" class="input-form" placeholder="Nome" />
             <span asp-validation-for="Name" class="text-danger"></span>
+
+            <input asp-for="Job" class="input-form" placeholder="Job" />
+            <span asp-validation-for="Job" class="text-danger"></span>
 
             <input asp-for="UrlGitHub" class="input-form" placeholder="UrlGitHub" />
             <span asp-validation-for="UrlGitHub" class="text-danger"></span>
@@ -22,17 +22,38 @@
             <input asp-for="UrlLinkedin" class="input-form" placeholder="UrlLinkedin" />
             <span asp-validation-for="UrlLinkedin" class="text-danger"></span>
 
-            <input asp-for="Job" class="input-form" placeholder="Job" />
-            <span asp-validation-for="Job" class="text-danger"></span>
-
-            <input asp-for="ImagemUpload" type="file" class="input-form" placeholder="Imagem" />
-            <span asp-validation-for="ImagemUpload" class="text-danger"></span>
-
             <input asp-for="UrlImage" class="input-form" placeholder="Imagem" />
             <span asp-validation-for="UrlImage" class="text-danger"></span>
+
+            <input asp-for="ImagemUpload" type="file" class="input-form-upload" onchange="showImagePreview(this)" />
+            <span asp-validation-for="ImagemUpload" class="text-danger"></span>
+            <br />
+            <img id="imgPreview" alt="Preview image" width="200" />
         </div>
+
+        
+
         <div class="container-form-button">
             <input class="input-button" type="submit" value="Enviar" />
         </div>
     </form>
 </div>
+
+
+<script type="text/javascript">
+    function showImagePreview(input) {
+        if (input.files && input.files[0]) {
+            var filerdr = new FileReader();
+            filerdr.onload = function (e) {
+                $('#imgPreview').attr('src', e.target.result);
+            }
+            filerdr.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+
+
+
+
+
