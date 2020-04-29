@@ -30,13 +30,15 @@ namespace Cafedebug.Web.Areas.Administrador.ViewModels
 
         public string UrlLinkedin { get; set; }
 
-        //[Required(ErrorMessage = "O campo Url Image é obrigatório")]
-        //[StringLength(50, ErrorMessage = "O campo Nome precisa ter entre {0} e {1} caracteres.", MinimumLength = 5)]
+        [Required(ErrorMessage = "O campo Url Image é obrigatório")]
+        [StringLength(50, ErrorMessage = "O campo Nome precisa ter entre {0} e {1} caracteres.", MinimumLength = 5)]
         public string UrlImage { get; set; }
 
         [Required(ErrorMessage = "O campo Função é obrigatório")]
         [StringLength(50, ErrorMessage = "O campo Nome precisa ter entre {0} e {1} caracteres.", MinimumLength = 5)]
         public string Job { get; set; }
+
+        [Required(ErrorMessage = "O campo Upload é obrigátorio")]
         public IFormFile ImagemUpload { get; set; }
     }
 }
