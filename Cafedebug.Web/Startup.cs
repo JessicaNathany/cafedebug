@@ -12,6 +12,7 @@ using Cafedebug.Web.Configurations;
 using AutoMapper;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Routing;
+using Amazon.S3;
 
 namespace Cafedebug.Web
 {
@@ -46,6 +47,9 @@ namespace Cafedebug.Web
             //configuração da classe DbContext
             services.AddDbContext<CafedebugContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CafedebugConnectionString")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
+            services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
+            services.AddAWSService<IAmazonS3>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

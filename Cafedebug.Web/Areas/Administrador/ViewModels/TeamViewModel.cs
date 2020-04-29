@@ -31,7 +31,7 @@ namespace Cafedebug.Web.Areas.Administrador.ViewModels
         public string UrlLinkedin { get; set; }
 
         [Required(ErrorMessage = "O campo Url Image é obrigatório")]
-        [StringLength(50, ErrorMessage = "O campo Url Image precisa ter entre {2}e {1} caracteres.", MinimumLength = 5)]
+        [StringLength(50, ErrorMessage = "O campo Url Image precisa ter entre {2} e {1} caracteres.", MinimumLength = 5)]
         public string UrlImage { get; set; }
 
         [Required(ErrorMessage = "O campo Função é obrigatório")]
