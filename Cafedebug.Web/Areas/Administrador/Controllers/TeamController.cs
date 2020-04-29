@@ -66,7 +66,10 @@ namespace Cafedebug.Web.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
+            model.UrlImage = "";
+
             _teamService.Save(_mapper.Map<Team>(model));
+
 
             _fileService.UploadImage(model.ImagemUpload);
 
