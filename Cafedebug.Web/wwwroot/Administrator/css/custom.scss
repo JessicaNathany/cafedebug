@@ -1,4 +1,8 @@
-﻿.header-team {
+﻿.card-header::after{
+    content:none;
+}
+
+.header-team {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,4 +92,3 @@
         width: 12.5em;
     }
 }
-
