@@ -56,6 +56,7 @@ namespace Cafedebug.Web.Controllers
         }
 
         [HttpPost]
+        [Route("novo-debbuger")]
         public ActionResult Create(TeamViewModel model)
         {
             if (!ModelState.IsValid) return View(model);
