@@ -45,12 +45,12 @@
                     <label class="input-label">
                         <i class="fas fa-download"></i>
                         Selecionar Imagem
-                        <input asp-for="ImagemUpload" type="file" class="input-form-upload" onchange="showImagePreview(this)"/>
-                        <span asp-validation-for="ImagemUpload" class="text-danger"></span>
+                        <input asp-for="ImagemUpload" type="file" class="input-form-upload" onchange="showImagePreview(this)" />
                     </label>
                 </div>
+                <span asp-validation-for="ImagemUpload" class="text-danger"></span>
                 <div class="preview-container">
-                    <img id="imgPreview" alt="Preview image"  />
+                    <img id="imgPreview" alt="Preview image" />
                 </div>
             </div>
 
