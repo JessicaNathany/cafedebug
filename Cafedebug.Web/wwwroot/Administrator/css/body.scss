@@ -31,3 +31,29 @@
         color: #E77D03;
     }
 }
+
+.container-form-team {
+    background: #FFFFFF;
+
+}
+
+.container-input-form {
+    display: flex;
+    flex-wrap: wrap;
+
+    .input-form {
+        width: 26em;
+        height: 3em;
+        margin: 1em;
+        padding: 1em;
+        justify-content: space-between;
+    }
+
+    .input-form-image {
+        width: 26em;
+        height: 3em;
+        margin: 1em;
+        padding: 1em;
+    }
+}
+

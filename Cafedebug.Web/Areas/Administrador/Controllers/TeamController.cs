@@ -4,9 +4,10 @@ using AutoMapper;
 using Cafedebug.Business.Interfaces;
 using Cafedebug.Business.Models;
 using Cafedebug.Business.Services;
-using Cafedebug.Web.Areas.Site.ViewModels;
+using Cafedebug.Web.Areas.Administrador.ViewModels;
 using Cafedebug.Web.Extensions;
 using log4net;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cafedebug.Web.Controllers
@@ -18,14 +19,16 @@ namespace Cafedebug.Web.Controllers
         private static readonly ILog Log = LogManager.GetLogger(typeof(TeamController));
         private readonly ITeamRepository _teamRepository;
         private readonly ITeamService _teamService;
+        private readonly IFileService _fileService;
 
         private readonly IMapper _mapper;
 
-        public TeamController(ITeamRepository teamRepository, IMapper mapper, ITeamService teamService, INotifier notifier) : base(notifier)
+        public TeamController(ITeamRepository teamRepository, IMapper mapper, ITeamService teamService, IFileService fileService, INotifier notifier) : base(notifier)
         {
             _teamRepository = teamRepository;
             _mapper = mapper;
             _teamService = teamService;
+            _fileService = fileService;
         }
 
         public ActionResult Index(DataTableParameters dtParameters)
@@ -49,6 +52,7 @@ namespace Cafedebug.Web.Controllers
             });
         }
 
+     
         [Route("novo-debbuger")]
         public IActionResult Create()
         {
@@ -58,10 +62,16 @@ namespace Cafedebug.Web.Controllers
         [HttpPost]
         [Route("novo-debbuger")]
         public ActionResult Create(TeamViewModel model)
+        
         {
             if (!ModelState.IsValid) return View(model);
 
+            model.UrlImage = "";
+
             _teamService.Save(_mapper.Map<Team>(model));
+
+
+            _fileService.UploadImage(model.ImagemUpload);
 
             return RedirectToAction("Create", "Team");
         }
