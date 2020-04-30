@@ -37,23 +37,23 @@
 
 }
 
-.container-input-form {
-    display: flex;
-    flex-wrap: wrap;
+.form-control {
+    height: 6vh;
+    margin-bottom: 1em;
 
-    .input-form {
-        width: 26em;
-        height: 3em;
-        margin: 1em;
-        padding: 1em;
-        justify-content: space-between;
-    }
-
-    .input-form-image {
-        width: 26em;
-        height: 3em;
-        margin: 1em;
-        padding: 1em;
+    &:focus {
+        border: 0.9px solid #e77d03;
     }
 }
 
+.fundo-laranja {
+    background-color: #E77D03;
+    color: #FFF;
+}
+.card-footer{
+    margin-top: 1em;
+
+    button{
+        margin-right: 1em;
+    }
+}
