@@ -34,12 +34,10 @@
 
 .container-form-team {
     background: #FFFFFF;
-
 }
 
 .form-control {
     height: 6vh;
-    margin-bottom: 1em;
 
     &:focus {
         border: 0.9px solid #e77d03;
@@ -50,10 +48,44 @@
     background-color: #E77D03;
     color: #FFF;
 }
-.card-footer{
+
+.card-footer {
     margin-top: 1em;
 
-    button{
+    button {
         margin-right: 1em;
     }
 }
+
+
+.input-label {
+    background: #e77d03;
+    color: #fff;
+    margin: 14px 0px 7px 1px;
+    border-radius: 5px;
+    padding: 8px;
+    width: 11vw;
+    height: 5vh;
+
+
+    input[type=file] {
+        display: none;
+    }
+
+    i {
+        padding: 2px 4px 1px 3px;
+    }
+}
+
+.label-title {
+    margin-top: 1em;
+}
+
+.preview-container {
+    img {
+        margin-left: 0.5em;
+        display: none;
+        width: 12.5em;
+    }
+}
+
