@@ -1,0 +1,85 @@
+﻿@charset "UTF-8";
+.card-header::after {
+  content: none; }
+
+.header-team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dee2e6; }
+  .header-team h3 {
+    font-size: 1.7em; }
+
+.icons-action {
+  color: #E77D03; }
+
+.page-item.active .page-link {
+  background-color: #E77D03;
+  border-color: #E77D03; }
+
+.badge-info {
+  background-color: #E77D03; }
+
+.link-breadcrumb {
+  color: #E77D03; }
+  .link-breadcrumb:hover {
+    color: #E77D03; }
+
+.container-form-team {
+  background: #FFFFFF; }
+
+.form-control {
+  height: 6vh; }
+  .form-control:focus {
+    border: 0.9px solid #e77d03; }
+
+.fundo-laranja {
+  background-color: #E77D03;
+  color: #FFF; }
+
+.card-footer {
+  margin-top: 1em; }
+  .card-footer button {
+    margin-right: 1em; }
+
+.input-label {
+  background: #e77d03;
+  color: #fff;
+  margin: 14px 0px 7px 1px;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  font-weight: 400 !important; }
+  .input-label input[type=file] {
+    display: none; }
+  .input-label i {
+    padding: 2px 4px 1px 3px; }
+
+.label-title {
+  margin-top: 1em; }
+
+.preview-container img {
+  margin-left: 0.5em;
+  display: none;
+  width: 12.5em; }
+
+.brand-link {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding: 0.5rem .5rem;
+  transition: width .3s ease-in-out;
+  white-space: nowrap; }
+  .brand-link .logo-café {
+    margin-left: 5em;
+    line-height: .8;
+    margin-left: .6rem;
+    margin-right: .9rem;
+    margin-top: -3px;
+    width: auto;
+    height: 2em; }
+  .brand-link .logo-letra {
+    height: 2em;
+    margin-left: 0.44em; }
