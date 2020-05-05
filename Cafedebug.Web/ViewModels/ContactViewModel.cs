@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Cafedebug.Web.Areas.Site.ViewModels
+namespace Cafedebug.Web.ViewModels
 {
     public class ContactViewModel
     {

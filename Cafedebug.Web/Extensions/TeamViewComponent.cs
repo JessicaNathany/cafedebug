@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Cafedebug.Business.Interfaces;
-using Cafedebug.Web.Areas.Site.ViewModels;
+using Cafedebug.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;

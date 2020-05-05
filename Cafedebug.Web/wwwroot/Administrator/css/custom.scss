@@ -1,0 +1,94 @@
+﻿.card-header::after{
+    content:none;
+}
+
+.header-team {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dee2e6;
+
+    h3 {
+        font-size: 1.7em;
+    }
+}
+
+.icons-action {
+    color: #E77D03;
+}
+
+.page-item.active .page-link {
+    background-color: #E77D03;
+    border-color: #E77D03;
+}
+
+.badge-info {
+    background-color: #E77D03;
+}
+
+.link-breadcrumb {
+    color: #E77D03;
+
+    &:hover {
+        color: #E77D03;
+    }
+}
+
+.container-form-team {
+    background: #FFFFFF;
+}
+
+.form-control {
+    height: 6vh;
+
+    &:focus {
+        border: 0.9px solid #e77d03;
+    }
+}
+
+.fundo-laranja {
+    background-color: #E77D03;
+    color: #FFF;
+}
+
+.card-footer {
+    margin-top: 1em;
+
+    button {
+        margin-right: 1em;
+    }
+}
+
+
+.input-label {
+    background: #e77d03;
+    color: #fff;
+    margin: 14px 0px 7px 1px;
+    border-radius: 5px;
+    padding: 8px;
+    cursor:pointer;
+    font-weight:400 !important;
+
+
+    input[type=file] {
+        display: none;
+    }
+
+    i {
+        padding: 2px 4px 1px 3px;
+    }
+}
+
+.label-title {
+    margin-top: 1em;
+}
+
+.preview-container {
+    img {
+        margin-left: 0.5em;
+        display: none;
+        width: 12.5em;
+    }
+}
