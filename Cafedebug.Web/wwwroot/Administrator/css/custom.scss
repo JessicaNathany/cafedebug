@@ -1,5 +1,5 @@
-﻿.card-header::after{
-    content:none;
+﻿.card-header::after {
+    content: none;
 }
 
 .header-team {
@@ -58,6 +58,7 @@
 
     button {
         margin-right: 1em;
+
     }
 }
 
@@ -68,8 +69,8 @@
     margin: 14px 0px 7px 1px;
     border-radius: 5px;
     padding: 8px;
-    cursor:pointer;
-    font-weight:400 !important;
+    cursor: pointer;
+    font-weight: 400 !important;
 
 
     input[type=file] {
@@ -90,5 +91,21 @@
         margin-left: 0.5em;
         display: none;
         width: 12.5em;
+    }
+}
+
+.callout {
+    margin: 1em;
+    background: #ecf2f5;
+    box-shadow: none;
+    height: 7.3vh;
+
+    p {
+        color: #849aa5;
+
+        i {
+            padding-right: 0.5em;
+            color: #849aa5;
+        }
     }
 }

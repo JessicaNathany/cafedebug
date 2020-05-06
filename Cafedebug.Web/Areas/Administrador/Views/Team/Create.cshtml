@@ -4,63 +4,66 @@
 }
 
 
-<div class="card">
-    <div class="card-header fundo-laranja">
+    <div class="card">
+        <div class="card-header fundo-laranja">
+        </div>
+        <div class="callout">
+            <p> <i class="fas fa-exclamation-triangle"></i>Campos marcados com * são obrigatórios!</p>
+        </div>
+        <div class="card-body">
+            <form method="POST" asp-area="Administrador" asp-action="Create" asp-controller="Team" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-6">
+                        <label>Nome *</label>
+                        <input asp-for="Name" class="form-control" placeholder="ex: Madalena Silva Barbosa" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="col-6">
+                        <label>Job *</label>
+                        <input asp-for="Job" class="form-control" placeholder="ex: Desenvolvedora Frontend" />
+                        <span asp-validation-for="Job" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label class="label-title">Git Hub *</label>
+                        <input asp-for="UrlGitHub" class="form-control" placeholder="ex: https:/github.com/carolfelix" />
+                        <span asp-validation-for="UrlGitHub" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-4">
+                        <label class="label-title">Instagram</label>
+                        <input asp-for="UrlInstagram" class="form-control" placeholder="ex: https:/instagram.com/_carolfelix" />
+                        <span asp-validation-for="UrlInstagram" class="text-danger"></span>
+                    </div>
+                    <div class="col-4">
+                        <label class="label-title">Linkedin</label>
+                        <input asp-for="UrlLinkedin" class="form-control" placeholder="ex: https:/linkedin.com/carolfelix" />
+                        <span asp-validation-for="UrlLinkedin" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <label class="input-label">
+                            <i class="fas fa-download"></i>
+                            Selecionar Imagem
+                            <input asp-for="ImagemUpload" type="file" class="input-form-upload" onchange="showImagePreview(this)" />
+                        </label>
+                    </div>
+                    <span asp-validation-for="ImagemUpload" class="text-danger"></span>
+                    <div class="preview-container">
+                        <img id="imgPreview" alt="Preview image" />
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn fundo-laranja float-right">Cadastrar</button>
+                    <button type="submit" class="btn btn-default float-right">Cancelar</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="card-body">
-        <form method="POST" asp-area="Administrador" asp-action="Create" asp-controller="Team" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col-6">
-                    <label>Nome</label>
-                    <input asp-for="Name" class="form-control" placeholder="ex: Madalena Silva Barbosa"/>
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <div class="col-6">
-                    <label>Job</label>
-                    <input asp-for="Job" class="form-control" placeholder="ex: Desenvolvedora Frontend" />
-                    <span asp-validation-for="Job" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <label class="label-title">Git Hub</label>
-                    <input asp-for="UrlGitHub" class="form-control" placeholder="ex: https:/github.com/carolfelix" />
-                    <span asp-validation-for="UrlGitHub" class="text-danger"></span>
-                </div>
-
-                <div class="col-4">
-                    <label class="label-title">Instagram</label>
-                    <input asp-for="UrlInstagram" class="form-control" placeholder="ex: https:/instagram.com/_carolfelix" />
-                    <span asp-validation-for="UrlInstagram" class="text-danger"></span>
-                </div>
-                <div class="col-4">
-                    <label class="label-title">Linkedin</label>
-                    <input asp-for="UrlLinkedin" class="form-control" placeholder="ex: https:/linkedin.com/carolfelix" />
-                    <span asp-validation-for="UrlLinkedin" class="text-danger"></span>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <label class="input-label">
-                        <i class="fas fa-download"></i>
-                        Selecionar Imagem
-                        <input asp-for="ImagemUpload" type="file" class="input-form-upload" onchange="showImagePreview(this)" />
-                    </label>
-                </div>
-                <span asp-validation-for="ImagemUpload" class="text-danger"></span>
-                <div class="preview-container">
-                    <img id="imgPreview" alt="Preview image" />
-                </div>
-            </div>
-
-            <div class="card-footer">
-                <button type="submit" class="btn btn-default float-right">Cancelar</button>
-                <button type="submit" class="btn fundo-laranja float-right">Cadastrar</button>
-            </div>
-        </form>
-    </div>
-</div>
 
 <script type="text/javascript">
     function showImagePreview(input) {
