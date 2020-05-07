@@ -41,7 +41,8 @@
       margin: 0;
       padding: 0; }
       .footer .info-footer .quick-links ul li {
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        text-align: center; }
         .footer .info-footer .quick-links ul li a {
           text-decoration: none;
           color: #fff;

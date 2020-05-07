@@ -39,28 +39,14 @@ a {
 
 /*#endregion*/
 /* Home*/
-.card {
-  -webkit-box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
-  -moz-box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
-  box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
-  text-decoration: none;
-  margin: 5% 7% 10% 5%; }
-  .card img {
-    width: 100%;
-    height: auto; }
-  .card .card-body {
-    background-color: rgba(244, 244, 244, 0.75); }
-    .card .card-body p {
-      color: #ed7d00; }
-
 .flip-card {
   -webkit-box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
   -moz-box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
   box-shadow: 5px 5px 10px 0px rgba(138, 131, 138, 0.75);
   text-decoration: none;
   margin: 5% 7% 10% 5%;
-  width: 300px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   perspective: 1000px; }
   .flip-card .card-body {
     background-color: rgba(244, 244, 244, 0.75); }
@@ -81,7 +67,7 @@ a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
   .flip-card-inner img {
     width: 100%;
-    height: auto; }
+    height: 100%; }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg); }
@@ -94,13 +80,22 @@ a {
   backface-visibility: hidden; }
 
 .flip-card-front {
-  background-color: #bbb;
-  color: black; }
+  background-color: rgba(244, 244, 244, 0.75);
+  color: black;
+  width: 100%; }
 
 .flip-card-back {
   background-color: #ed7d00;
-  color: white;
   transform: rotateY(180deg); }
+  .flip-card-back .card-body {
+    background-color: rgba(244, 244, 244, 0.75); }
+    .flip-card-back .card-body p {
+      color: #ed7d00; }
+  .flip-card-back p {
+    color: white;
+    padding: 16px;
+    text-align: justify;
+    font-size: 14px; }
 
 .time-colaboradores {
   width: 10em;
@@ -212,16 +207,23 @@ a {
       font-size: 3rem;
       color: #ed7d00;
       margin: 2%; }
-    .novosepisodios .ladoinfoseps .episodios-card h3 {
-      top: 968px;
-      left: 871px;
-      width: 222px;
-      height: 67px;
-      text-align: left;
-      font: Bold 50px/67px Segoe UI;
-      letter-spacing: 0px;
-      color: #151515;
-      opacity: 1; }
+  .novosepisodios .episodios-card h2 {
+    margin-bottom: 1px;
+    height: 44px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #151515;
+    opacity: 1; }
+  .novosepisodios .episodios-card h6 {
+    margin-top: 2px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #E77D03;
+    opacity: 1; }
   .novosepisodios .ver-mais {
     display: flex;
     justify-content: center;
@@ -230,17 +232,13 @@ a {
       font-size: 23px;
       color: #000000;
       text-align: center;
-      padding-top: 14px;
+      padding: 10px;
       border: 3px solid #ed7d00;
       border-radius: 47px;
-      padding-left: 10px;
-      padding-right: 10px;
       text-decoration: none;
       font-weight: 700;
-      margin-top: 5%;
-      margin-right: 8%;
-      height: 3.1em;
-      width: 10.1em; }
+      width: 8.1em;
+      margin-top: 10px; }
 
 .loading {
   background: url("https://cafedebug.s3.us-east-2.amazonaws.com/Imagens/Ripple-1s-200px.gif") no-repeat center center;
@@ -682,3 +680,47 @@ a {
       .container-form-contact .container-form-button .input-button:hover {
         background: #ed7d00;
         color: #FFF; }
+
+/*LISTAGEM DE EPISODIOS*/
+.container-episode {
+  display: grid;
+  padding: 30px calc((100% - 1140px) / 2);
+  margin: 0 auto; }
+  .container-episode .last-episode {
+    display: flex;
+    background: #ed7d00;
+    margin-bottom: 40px; }
+    .container-episode .last-episode .number-episode {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+  .container-episode .list-episodies {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    grid-gap: 30px; }
+    .container-episode .list-episodies .ep-item {
+      display: flex;
+      background: green; }
+      .container-episode .list-episodies .ep-item .number-episode {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 8px;
+        background: #ed7d00; }
+        .container-episode .list-episodies .ep-item .number-episode h1 {
+          color: #fff;
+          font-size: 1.45em; }
+        .container-episode .list-episodies .ep-item .number-episode img {
+          height: 35px; }
+      .container-episode .list-episodies .ep-item .thumbnail-episode {
+        height: auto; }
+        .container-episode .list-episodies .ep-item .thumbnail-episode img {
+          display: block;
+          height: 160px;
+          width: 180px; }
+      .container-episode .list-episodies .ep-item .info-episode {
+        background: #f7f7f7; }
+        .container-episode .list-episodies .ep-item .info-episode h1 {
+          font-size: 1.25em; }
