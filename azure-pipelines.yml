@@ -1,0 +1,34 @@
+trigger:
+- master
+pool:
+    vmImage: 'vs2017-win2016'
+variables: 
+    buildConfiguration: 'Release'
+
+steps:
+  - script: |
+      dotnet build --configuration $(buildConfiguration)
+    failOnStderr: true
+  
+  - task: DotNetCoreCLI@2
+    displayName: Publish
+    inputs:
+      command: publish
+      publishWebProjects: False
+      arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+      zipAfterPublish: True
+  - task: PublishBuildArtifacts@1
+  - task: OctopusPack@4
+    inputs:
+      PackageId: 'cafedebug'
+      PackageFormat: 'NuPkg'
+      PackageVersion: '$(Build.BuildNumber)'
+      SourcePath: '$(Build.ArtifactStagingDirectory)'
+      OutputPath: '$(Build.ArtifactStagingDirectory)'
+  
+  - task: OctopusPush@4
+    inputs:
+      OctoConnectedServiceName: 'Octopus Café'
+      Space: 'Spaces-1'
+      Package: '$(Build.ArtifactStagingDirectory)\cafedebug.$(Build.BuildNumber).nupkg'
+      Replace: 'false'
