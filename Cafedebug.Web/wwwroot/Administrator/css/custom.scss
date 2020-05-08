@@ -1,5 +1,5 @@
-﻿.card-header::after{
-    content:none;
+﻿.card-header::after {
+    content: none;
 }
 
 .header-team {
@@ -58,6 +58,7 @@
 
     button {
         margin-right: 1em;
+
     }
 }
 
@@ -68,8 +69,8 @@
     margin: 14px 0px 7px 1px;
     border-radius: 5px;
     padding: 8px;
-    cursor:pointer;
-    font-weight:400 !important;
+    cursor: pointer;
+    font-weight: 400 !important;
 
 
     input[type=file] {
