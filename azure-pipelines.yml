@@ -3,12 +3,17 @@ trigger:
 pool:
     vmImage: 'vs2017-win2016'
 variables: 
+    solution: '**/[projectname].csproj'
     buildConfiguration: 'Release'
 
 steps:
   - script: |
       dotnet build --configuration $(buildConfiguration)
     failOnStderr: true
+  - task: NuGetCommand@2
+    inputs:
+      restoreSolution: '$(solution)'
+      packagesdirectory: '..\packages'
   
   - task: DotNetCoreCLI@2
     displayName: Publish
