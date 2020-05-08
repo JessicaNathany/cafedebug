@@ -28,7 +28,7 @@ steps:
   
   - task: OctopusPush@4
     inputs:
-      OctoConnectedServiceName: 'Octopus Café'
+      OctoConnectedServiceName: 'cafedebug'
       Space: 'Spaces-1'
       Package: '$(Build.ArtifactStagingDirectory)\cafedebug.$(Build.BuildNumber).nupkg'
       Replace: 'false'
