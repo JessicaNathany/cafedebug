@@ -58,7 +58,6 @@
 
     button {
         margin-right: 1em;
-
     }
 }
 
@@ -116,5 +115,20 @@
     .logo-letra {
         height: 2em;
         margin-left: 0.44em;
+    }
+}
+
+.callout {
+    margin: 1em;
+    background: #f2f4fd;
+    box-shadow: none;
+    height: 7.3vh;
+
+    p {
+        color: #a5acc5;
+
+        i {
+            padding-right: 0.5em;
+        }
     }
 }
