@@ -1,7 +1,7 @@
 trigger:
 - master
 pool:
-    vmImage: 'vs2019-win2016'
+    vmImage: 'vs2019-win2019'
 variables: 
     buildConfiguration: 'Release'
 
