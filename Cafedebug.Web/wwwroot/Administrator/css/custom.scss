@@ -58,7 +58,6 @@
 
     button {
         margin-right: 1em;
-
     }
 }
 
@@ -94,18 +93,42 @@
     }
 }
 
+.brand-link {
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 0.5rem .5rem;
+    transition: width .3s ease-in-out;
+    white-space: nowrap;
+
+
+    .logo-café {
+        margin-left: 5em;
+        line-height: .8;
+        margin-left: .6rem;
+        margin-right: .9rem;
+        margin-top: -3px;
+        width: auto;
+        height: 2em;
+    }
+
+    .logo-letra {
+        height: 2em;
+        margin-left: 0.44em;
+    }
+}
+
 .callout {
     margin: 1em;
-    background: #ecf2f5;
+    background: #f2f4fd;
     box-shadow: none;
     height: 7.3vh;
 
     p {
-        color: #849aa5;
+        color: #a5acc5;
 
         i {
             padding-right: 0.5em;
-            color: #849aa5;
         }
     }
 }
