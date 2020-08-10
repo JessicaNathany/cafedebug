@@ -11,8 +11,10 @@
 
 O projeto é o site do podcast Café debug, que tem como objetivo publicar os episódios lançados, lançar noticias e artigos, divulgar conteúdo de parceiros e compartilhar conhecimento.
 
+## Linguagens e libs utilizadas :books:
+
+- [ASP.NET Core](https://https://docs.microsoft.com/pt-br/dotnet/core/introduction/): versão 3.1 
+- [Bootstrap.sass](https://getbootstrap.com.br/docs/4.1/getting-started/theming/): versão 4.4.1
+- [Jquery](https://jquery.com/): versão 3.3.1
 
 
-1. ASP.NetCore 3.1
-2. Bootstrap.sass: 4.4.1
-3. Jquery: 3.3.1
