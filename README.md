@@ -1,4 +1,5 @@
 # cafedebug
+![GitHub commit merge status](https://img.shields.io/github/commit-status/JessicaNathany/cafedebug/master/461a918587a797e33018f5587b57db5a27e94a3f?logoColor=orange)
 Novo site do Café debug na versão
 
 
